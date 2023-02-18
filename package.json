@@ -1,7 +1,7 @@
 {
   "name": "industry",
   "version": "0.1.0",
-  "homepage": "https://industry.dexignzone.com/react/demo",
+  "homepage": "https://industry.dexignzone.com/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
