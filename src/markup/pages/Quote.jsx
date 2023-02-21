@@ -1,8 +1,9 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 // import { Link } from 'react-router-dom';
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 // import Footer from "../layout/footer";
+import { freeQuote } from "../../fetchers";
 import { companyDetails, headerDetails } from "../../data/websiteData";
 const bg = require("../../images/background/bg5.jpg");
 
@@ -39,9 +40,27 @@ const Quote = () => {
     industry: "",
     message: "",
   });
+  const [alert, setAlert] = useState({
+    success: false,
+    error: false,
+  });
+  const alertToggle = (type) => {
+    if (type === "success") {
+      setAlert({ success: true, error: false });
+      setTimeout(() => {
+        setAlert({ success: false, error: false });
+      }, 5500);
+    } else if (type === "error") {
+      setAlert({ success: false, error: true });
+      setTimeout(() => {
+        setAlert({ success: false, error: false });
+      }, 5500);
+    }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(state);
+    freeQuote(state);
   };
   return (
     <>
@@ -250,6 +269,20 @@ const Quote = () => {
                         {" "}
                         <span>Get A Free Quote!</span>{" "}
                       </button>
+
+                      <div className="section-content box-sort-in ">
+                        {(alert.success && (
+                          <div className="alert alert-success mt-3 mx-auto">
+                            Your message has been sent successfully.
+                          </div>
+                        )) ||
+                          (alert.error && (
+                            <div className="alert alert-danger mt-3 mx-auto">
+                              There was an error sending your message. Please
+                              try again.
+                            </div>
+                          ))}
+                      </div>
                     </div>
                   </div>
                 </form>

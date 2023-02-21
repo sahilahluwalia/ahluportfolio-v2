@@ -45,7 +45,7 @@ const activePageDetector = (window) => {
 };
 
 const Header = () => {
-  console.log(window.location.pathname);
+  // console.log(window.location.pathname);
 
   var btn = document.querySelector(".navicon");
   var nav = document.querySelector(".header-nav");

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
-
+import { contactForm } from "../../fetchers";
 import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 const bg = require("../../images/banner/bnr1.jpg");
 
@@ -13,9 +13,29 @@ const Contact = () => {
     message: "",
   });
 
+  const [alert, setAlert] = useState({
+    success: false,
+    error: false,
+  });
+
+  const alertToggle = (type) => {
+    if (type === "success") {
+      setAlert({ success: true, error: false });
+      setTimeout(() => {
+        setAlert({ success: false, error: false });
+      }, 5500);
+    } else if (type === "error") {
+      setAlert({ success: false, error: true });
+      setTimeout(() => {
+        setAlert({ success: false, error: false });
+      }, 5500);
+    }
+  };
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log(inputValues);
+    contactForm(inputValues);
   };
 
   return (
@@ -122,7 +142,6 @@ const Contact = () => {
                   <h3 className="m-b10">Send Message</h3>
                   <div className="dzFormMsg"></div>
                   <form onSubmit={handleFormSubmit}>
-                    <input type="hidden" value="Contact" name="dzToDo" />
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="form-group">
@@ -134,7 +153,7 @@ const Contact = () => {
                                   name: e.target.value,
                                 });
                               }}
-                              name="dzName"
+                              name="name"
                               type="text"
                               required
                               className="form-control"
@@ -153,7 +172,7 @@ const Contact = () => {
                                   email: e.target.value,
                                 });
                               }}
-                              name="dzEmail"
+                              name="email"
                               type="email"
                               className="form-control"
                               required
@@ -172,31 +191,12 @@ const Contact = () => {
                                   message: e.target.value,
                                 });
                               }}
-                              name="dzMessage"
+                              name="message"
                               rows="8"
                               className="form-control"
                               required
                               placeholder="Your Message..."
                             ></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col-lg-12">
-                        <div className="form-group">
-                          <div className="input-group">
-                            <div
-                              className="g-recaptcha"
-                              data-sitekey="6LefsVUUAAAAADBPsLZzsNnETChealv6PYGzv3ZN"
-                              data-callback="verifyRecaptchaCallback"
-                              data-expired-callback="expiredRecaptchaCallback"
-                            ></div>
-                            <input
-                              className="form-control d-none"
-                              style={{ display: "none" }}
-                              data-recaptcha="true"
-                              required
-                              data-error="Please complete the Captcha"
-                            />
                           </div>
                         </div>
                       </div>
@@ -212,6 +212,22 @@ const Contact = () => {
                       </div>
                     </div>
                   </form>
+                  <div className="section-content box-sort-in ">
+                    {
+                      // show success message if form is submitted
+                      (alert.success && (
+                        <div className="alert alert-success mt-3 mx-auto">
+                          Your message has been sent successfully.
+                        </div>
+                      )) ||
+                        (alert.error && (
+                          <div className="alert alert-danger mt-3 mx-auto">
+                            There was an error sending your message. Please try
+                            again.
+                          </div>
+                        ))
+                    }
+                  </div>
                 </div>
               </div>
 
