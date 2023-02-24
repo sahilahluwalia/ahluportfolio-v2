@@ -348,21 +348,7 @@ class Homepage extends Component {
         </div>
         <Footer hideContactInfo displayNewsLetter />
 
-        <Footer1 />
-        <Footer2 />
-        <Footer3 />
-        <Footer4 />
-        <Footer5 />
-        <Footer6 />
-        <Footer7 />
-        <Footer8 />
-        <Footer9 />
-        <Footer10 />
-        <Footer11 />
-        <Footer12 />
-        <Footer13 />
-        <Footer14 />
-        <Footer15 />
+      
 
         <ScrollToTop className="icon-up" />
       </div>

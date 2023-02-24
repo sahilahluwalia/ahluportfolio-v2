@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Index from "./pages/index";
 import About1 from "./pages/about-1";
 import About2 from "./pages/about-2";
@@ -80,142 +80,132 @@ import shortTeam from "./pages/shortcode-team";
 import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
-class Router extends Component {
-  render() {
-    return (
-      //<BrowserRouter>
-      <BrowserRouter>
-        <div className="page-wraper">
-          <Switch>
-            <Route path="/about-1" component={About1} />
-            <Route path="/about-2" component={About2} />
-            <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />
-            <Route path="/blog-grid-3" component={BlogGrid3} />
-            <Route path="/blog-grid-2" component={BlogGrid2} />
-            <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />
-            <Route
-              path="/blog-grid-2-sidebar-left"
-              component={BlogGrid2SidebarLeft}
-            />
-            <Route path="/blog-grid-3" component={BlogGrid3} />
-            <Route path="/blog-grid-3-sidebar" component={BlogGrid3Sidebar} />
-            <Route
-              path="/blog-grid-3-sidebar-left"
-              component={BlogGrid3SidebarLeft}
-            />
-            <Route path="/blog-grid-4" component={BlogGrid4} />
-            <Route path="/blog-half-img" component={BlogHalfImg} />
-            <Route
-              path="/blog-half-img-left-sidebar"
-              component={BlogHalfImgSidebarLeft}
-            />
-            <Route
-              path="/blog-half-img-sidebar"
-              component={BlogHalfImgSidebar}
-            />
-            <Route path="/blog-large-img" component={BlogLargeImg} />
-            <Route
-              path="/blog-large-img-left-sidebar"
-              component={BlogLargeImgSidebarLeft}
-            />
-            <Route
-              path="/blog-large-img-sidebar"
-              component={BlogLargeImgSidebar}
-            />
-            <Route path="/blog-single" component={BlogSingle} />
-            <Route
-              path="/blog-single-left-sidebar"
-              component={BlogSingleSidebarLeft}
-            />
-            <Route path="/blog-single-sidebar" component={BlogSingleSidebar} />
-            <Route path="/coming-soon-1" component={ComingSoon1} />
-            <Route path="/contact-1" component={Contact1} />
-            <Route path="/contact-2" component={Contact2} />
-            <Route path="/contact-3" component={Contact3} />
-            <Route path="/contact-4" component={Contact4} />
-            <Route path="/error-403" component={Error403} />
-            <Route path="/error-404" component={Error404} />
-            <Route path="/error-405" component={Error405} />
-            <Route path="/faq-1" component={Faq1} />
-            <Route path="/faq-2" component={Faq2} />
-            <Route path="/help-desk" component={HelpDesk} />
-            <Route path="/portfolio-details" component={PortfolioDetails} />
-            <Route path="/portfolio-grid-2" component={PortfolioGrid2} />
-            <Route path="/portfolio-grid-3" component={PortfolioGrid3} />
-            <Route path="/portfolio-grid-4" component={PortfolioGrid4} />
-            <Route path="/privacy-policy" component={PrivacyPolicy} />
-            <Route path="/services-1" component={Services1} />
-            <Route path="/services-2" component={Services2} />
-            <Route path="/services-details" component={ServicesDetails} />
-            <Route path="/shop-cart" component={ShopCart} />
-            <Route path="/shop-checkout" component={ShopCheckout} />
-            <Route path="/shop-login" component={ShopLogin} />
-            <Route
-              path="/shop-product-details"
-              component={shopProductDetails}
-            />
-            <Route path="/shop-register" component={ShopRegister} />
-            <Route path="/shop-sidebar" component={ShopSidebar} />
-            <Route path="/shop-wishlist" component={ShopWishlist} />
-            <Route path="/shop" component={Shop} />
-            <Route path="/team-1" component={Team1} />
-            <Route path="/team-2" component={Team2} />
-            <Route path="/index-2" component={Index2} />
-            <Route path="/index-3" component={Index3} />
-            <Route path="/index-4" component={Index4} />
-            <Route path="/index-5" component={Index5} />
-            <Route path="/index-6" component={Index6} />
-            <Route path="/index-7" component={Index7} />
-            <Route path="/index-8" component={Index8} />
-            <Route path="/index-9" component={Index9} />
-            <Route path="/index-10" component={Index10} />
-            <Route path="/index-11" component={Index11} />
-            <Route path="/index-12" component={Index12} />
-            <Route path="/index-13" component={Index13} />
-            <Route path="/index-14" component={Index14} />
-            <Route path="/index-15" component={Index15} />
-            <Route path="/shortcode-buttons" component={shortButtons} />
-            <Route path="/shortcode-alert-box" component={shortAlertBox} />
-            <Route
-              path="/shortcode-icon-box-styles"
-              component={shortIconBoxStyles}
-            />
-            <Route path="/shortcode-icon-box" component={shortIconBox} />
-            <Route
-              path="/shortcode-pricing-table"
-              component={shortPricingTable}
-            />
-            <Route path="/shortcode-dividers" component={shortDividers} />
-            <Route path="/shortcode-list-group" component={shortListGroup} />
-            <Route
-              path="/shortcode-title-separators"
-              component={shortTitleSeparators}
-            />
-            <Route
-              path="/shortcode-image-box-content"
-              component={shortImageBoxContent}
-            />
-            <Route path="/shortcode-pagination" component={shortPagination} />
-            <Route path="/shortcode-counters" component={shortCounters} />
-            <Route
-              path="/shortcode-testimonials"
-              component={shortTestimonials}
-            />
-            <Route
-              path="/shortcode-images-effects"
-              component={shortImagesEffects}
-            />
-            <Route path="/shortcode-shop-widgets" component={shopWidgets} />
-            <Route path="/shortcode-team" component={shortTeam} />
-            <Route path="/" component={Homepage} />
-            <Route path="/quote" component={Quote} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/gg" exact component={Index} />
-          </Switch>
-        </div>
-      </BrowserRouter>
-    );
-  }
-}
+const Router = () => {
+  return (
+    //<BrowserRouter>
+    <BrowserRouter>
+      <div className="page-wraper">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="quote" element={<Quote />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="gg" element={<Index />} />
+          <Route path="/about" element={<About1 />} />
+          <Route path="/products" element={<About1 />} />
+          {/* <Route path="/about-2" component={About2} />
+          <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />
+          <Route path="/blog-grid-3" component={BlogGrid3} />
+          <Route path="/blog-grid-2" component={BlogGrid2} />
+          <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />
+          <Route
+            path="/blog-grid-2-sidebar-left"
+            component={BlogGrid2SidebarLeft}
+          />
+          <Route path="/blog-grid-3" component={BlogGrid3} />
+          <Route path="/blog-grid-3-sidebar" component={BlogGrid3Sidebar} />
+          <Route
+            path="/blog-grid-3-sidebar-left"
+            component={BlogGrid3SidebarLeft}
+          />
+          <Route path="/blog-grid-4" component={BlogGrid4} />
+          <Route path="/blog-half-img" component={BlogHalfImg} />
+          <Route
+            path="/blog-half-img-left-sidebar"
+            component={BlogHalfImgSidebarLeft}
+          />
+          <Route path="/blog-half-img-sidebar" component={BlogHalfImgSidebar} />
+          <Route path="/blog-large-img" component={BlogLargeImg} />
+          <Route
+            path="/blog-large-img-left-sidebar"
+            component={BlogLargeImgSidebarLeft}
+          />
+          <Route
+            path="/blog-large-img-sidebar"
+            component={BlogLargeImgSidebar}
+          />
+          <Route path="/blog-single" component={BlogSingle} />
+          <Route
+            path="/blog-single-left-sidebar"
+            component={BlogSingleSidebarLeft}
+          />
+          <Route path="/blog-single-sidebar" component={BlogSingleSidebar} />
+          <Route path="/coming-soon-1" component={ComingSoon1} />
+          <Route path="/contact-1" component={Contact1} />
+          <Route path="/contact-2" component={Contact2} />
+          <Route path="/contact-3" component={Contact3} />
+          <Route path="/contact-4" component={Contact4} />
+          <Route path="/error-403" component={Error403} />
+          <Route path="/error-404" component={Error404} />
+          <Route path="/error-405" component={Error405} />
+          <Route path="/faq-1" component={Faq1} />
+          <Route path="/faq-2" component={Faq2} />
+          <Route path="/help-desk" component={HelpDesk} />
+          <Route path="/portfolio-details" component={PortfolioDetails} />
+          <Route path="/portfolio-grid-2" component={PortfolioGrid2} />
+          <Route path="/portfolio-grid-3" component={PortfolioGrid3} />
+          <Route path="/portfolio-grid-4" component={PortfolioGrid4} />
+          <Route path="/privacy-policy" component={PrivacyPolicy} />
+          <Route path="/services-1" component={Services1} />
+          <Route path="/services-2" component={Services2} />
+          <Route path="/services-details" component={ServicesDetails} />
+          <Route path="/shop-cart" component={ShopCart} />
+          <Route path="/shop-checkout" component={ShopCheckout} />
+          <Route path="/shop-login" component={ShopLogin} />
+          <Route path="/shop-product-details" component={shopProductDetails} />
+          <Route path="/shop-register" component={ShopRegister} />
+          <Route path="/shop-sidebar" component={ShopSidebar} />
+          <Route path="/shop-wishlist" component={ShopWishlist} />
+          <Route path="/shop" component={Shop} />
+          <Route path="/team-1" component={Team1} />
+          <Route path="/team-2" component={Team2} />
+          <Route path="/index-2" component={Index2} />
+          <Route path="/index-3" component={Index3} />
+          <Route path="/index-4" component={Index4} />
+          <Route path="/index-5" component={Index5} />
+          <Route path="/index-6" component={Index6} />
+          <Route path="/index-7" component={Index7} />
+          <Route path="/index-8" component={Index8} />
+          <Route path="/index-9" component={Index9} />
+          <Route path="/index-10" component={Index10} />
+          <Route path="/index-11" component={Index11} />
+          <Route path="/index-12" component={Index12} />
+          <Route path="/index-13" component={Index13} />
+          <Route path="/index-14" component={Index14} />
+          <Route path="/index-15" component={Index15} />
+          <Route path="/shortcode-buttons" component={shortButtons} />
+          <Route path="/shortcode-alert-box" component={shortAlertBox} />
+          <Route
+            path="/shortcode-icon-box-styles"
+            component={shortIconBoxStyles}
+          />
+          <Route path="/shortcode-icon-box" component={shortIconBox} />
+          <Route
+            path="/shortcode-pricing-table"
+            component={shortPricingTable}
+          />
+          <Route path="/shortcode-dividers" component={shortDividers} />
+          <Route path="/shortcode-list-group" component={shortListGroup} />
+          <Route
+            path="/shortcode-title-separators"
+            component={shortTitleSeparators}
+          />
+          <Route
+            path="/shortcode-image-box-content"
+            component={shortImageBoxContent}
+          />
+          <Route path="/shortcode-pagination" component={shortPagination} />
+          <Route path="/shortcode-counters" component={shortCounters} />
+          <Route path="/shortcode-testimonials" component={shortTestimonials} />
+          <Route
+            path="/shortcode-images-effects"
+            component={shortImagesEffects}
+          />
+          <Route path="/shortcode-shop-widgets" component={shopWidgets} />
+          <Route path="/shortcode-team" component={shortTeam} /> */}
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+};
 
 export default Router;
