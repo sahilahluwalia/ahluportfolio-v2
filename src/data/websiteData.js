@@ -3,7 +3,7 @@ import ahluLogoWithName from "../asserts/ahluLogoWithName.png";
 const headerDetails = {
   phoneNumber: "(+91) 82951 50210",
   phoneNumberTo: "tel:+918295150210",
-  addressTitle: "Dombivali MIDC",
+  addressTitle: "Opp. Dombivali MIDC",
   address: "Thane, Maharashtra",
   officeHoursTitle: "10:00 AM - 06:30 PM",
   officeHours: "Sunday close",

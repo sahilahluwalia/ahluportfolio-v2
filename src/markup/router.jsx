@@ -80,6 +80,7 @@ import shortTeam from "./pages/shortcode-team";
 import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
+import About from "./pages/About";
 const Router = () => {
   return (
     //<BrowserRouter>
@@ -90,7 +91,7 @@ const Router = () => {
           <Route path="quote" element={<Quote />} />
           <Route path="contact" element={<Contact />} />
           <Route path="gg" element={<Index />} />
-          <Route path="about" element={<About1 />} />
+          <Route path="about" element={<About />} />
           <Route path="products" element={<Quote />} />
           <Route path="enguiry" element={<Quote />} />
 
