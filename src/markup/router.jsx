@@ -87,10 +87,6 @@ class Router extends Component {
       <BrowserRouter>
         <div className="page-wraper">
           <Switch>
-            <Route path="/quote" component={Quote} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/" component={Homepage} />
-            <Route path="/gg" exact component={Index} />
             <Route path="/about-1" component={About1} />
             <Route path="/about-2" component={About2} />
             <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />
@@ -211,6 +207,10 @@ class Router extends Component {
             />
             <Route path="/shortcode-shop-widgets" component={shopWidgets} />
             <Route path="/shortcode-team" component={shortTeam} />
+            <Route path="/" component={Homepage} />
+            <Route path="/quote" component={Quote} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/gg" exact component={Index} />
           </Switch>
         </div>
       </BrowserRouter>
