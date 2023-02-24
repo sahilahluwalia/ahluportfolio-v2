@@ -86,7 +86,13 @@ class Header extends Component {
     return (
       <>
         <header className="site-header mo-left header header-curve ext-header ">
-          <div className="middle-bar">
+          <div
+            className="middle-bar"
+            style={{
+              maxWidth: "1535px",
+              margin: "auto",
+            }}
+          >
             <div className="container-fluid">
               <div className="middle-area">
                 <div className="logo-header">
@@ -128,7 +134,15 @@ class Header extends Component {
           </div>
 
           <Sticky innerZ={999} enabled={true}>
-            <div className="sticky-header main-bar-wraper navbar-expand-lg">
+            <div
+              className="sticky-header main-bar-wraper navbar-expand-lg"
+              style={
+                {
+                  // maxWidth: "1535px",
+                  // margin: "auto",
+                }
+              }
+            >
               <div className="main-bar clearfix ">
                 <div className="container-fluid clearfix">
                   <div className="logo-header mostion">
@@ -152,6 +166,7 @@ class Header extends Component {
                   </button>
 
                   <Link to="/quote">
+                    {" "}
                     <div className="extra-nav border-0">
                       <h5 className="text-black text-nowrap fw-bold fs-3">
                         GET FREE QUOTE
