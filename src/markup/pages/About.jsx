@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import Testimonial1 from "../element/testimonial1";
-import "./style.css";
+import parse from "html-react-parser";
 var bnr3 = require("./../../images/banner/bnr3.jpg");
 var bg1 = require("./../../images/background/bg-video.png");
 var bg2 = require("./../../images/background/bg1.jpg");
@@ -14,35 +14,35 @@ const timeLineData = [
     yearNumber: "2017-18",
     title: "Visual Art & Design",
     description:
-      "Finally Incorporated as a Private Limited firm to build & integrate technological advanced projects to a next level with a vision to build a systematic portfolio to strengthen Indian Manufactures.",
+      "Finally Incorporated as a Private Limited firm to build & integrate technological advanced projects to a next level <span> with a vision in building a systematic portfolio</span> to strengthen Indian Manufactures.",
   },
   {
     year: "1 Year",
     yearNumber: "2018-19",
     title: "Visual Art & Design",
     description:
-      "Designed, Build & Successfully commissioned 2 Axis Servo based Transfer system for a Tier 1 Automobile compoennt manufacturer as a made in India product.",
+      "Designed, Build & Successfully <span> commissioned 2 Axis Servo based Transfer system for a Tier 1 Automobile compoennt manufacturer</span> as a made in India product.",
   },
   {
     year: "1 Year",
     yearNumber: "2019-20",
     title: "Visual Art & Design",
     description:
-      "Apart from SPMs & Press Automation solutions, started delivering  Assembly machines & Vision System solutions in Electrical industry respectively.",
+      "Apart from SPMs & Press Automation solutions, <span>started delivering  Assembly machines & Vision System solutions</span> in Electrical industry respectively.",
   },
   {
     year: "2 Years",
     yearNumber: "2020-22",
     title: "Visual Art & Design",
     description:
-      "Majorly involved in Complete line setup for Sheetmetal products starting from Raw material to Finished goods for Pharma & Electrical products.",
+      "Majorly involved in <span> Complete line setup </span> for Sheetmetal products starting <span> from Raw material to Finished </span> goods for Pharma & Electrical products.",
   },
   {
     year: "1 Year",
     yearNumber: "2022-23",
     title: "Visual Art & Design",
     description:
-      "Designed & Successfully commisioned Multi Press Transfer System as a Made in India Product",
+      "Designed & Successfully commisioned <span> Multi Press Transfer System </span> as a Made in India Product",
   },
 ];
 
@@ -134,7 +134,7 @@ const About = () => {
                       </div>
                       <div className="timeline-content">
                         {/* <h5 className="title">{item.title}</h5> */}
-                        {item.description}
+                        {parse(item.description)}
                         {/* <p className="description">{item.description}</p> */}
                       </div>
                     </div>
