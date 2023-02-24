@@ -90,8 +90,10 @@ const Router = () => {
           <Route path="quote" element={<Quote />} />
           <Route path="contact" element={<Contact />} />
           <Route path="gg" element={<Index />} />
-          <Route path="/about" element={<About1 />} />
-          <Route path="/products" element={<About1 />} />
+          <Route path="about" element={<About1 />} />
+          <Route path="products" element={<Quote />} />
+          <Route path="enguiry" element={<Quote />} />
+
           {/* <Route path="/about-2" component={About2} />
           <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />
           <Route path="/blog-grid-3" component={BlogGrid3} />
