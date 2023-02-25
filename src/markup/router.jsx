@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import React from "react";
+import { BrowserRouter, Route } from "react-router-dom";
 import Index from "./pages/index";
 import About1 from "./pages/about-1";
 import About2 from "./pages/about-2";
@@ -81,12 +81,13 @@ import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import About from "./pages/About";
+import Routes from "./Routes";
 const Router = () => {
   return (
     //<BrowserRouter>
     <BrowserRouter>
       <div className="page-wraper">
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="quote" element={<Quote />} />
           <Route path="contact" element={<Contact />} />
@@ -205,7 +206,8 @@ const Router = () => {
           />
           <Route path="/shortcode-shop-widgets" component={shopWidgets} />
           <Route path="/shortcode-team" component={shortTeam} /> */}
-        </Routes>
+        {/* </Routes>  */}
+        <Routes />
       </div>
     </BrowserRouter>
   );

@@ -1,10 +1,15 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 // import { Link } from 'react-router-dom';
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 // import Footer from "../layout/footer";
-import { freeQuote } from "../../fetchers";
+import {
+  freeQuote,
+  currentUrlSender,
+  ipDataToLocalStorage,
+} from "../../fetchers";
 import { companyDetails, headerDetails } from "../../data/websiteData";
+
 const bg = require("../../images/background/bg5.jpg");
 
 const Quote = () => {
@@ -32,6 +37,7 @@ const Quote = () => {
   const handleChange = (e) => {
     dispatch({ type: e.target.name, payload: e.target.value });
   };
+  
 
   const [state, dispatch] = useReducer(reducer, {
     name: "",
