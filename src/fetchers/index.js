@@ -1,7 +1,8 @@
 import axios from "axios";
-// import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
-// dotenv.config();
+import { decode as base64_decode, encode as base64_encode } from "base-64";
+
 const API_URL = process.env.REACT_APP_API_URL;
+const LOCAL_ENV = process.env.REACT_APP_DEVELOPEMENT_ENV;
 const contactForm = (payload) => {
   console.log(payload);
 };
@@ -27,56 +28,63 @@ const locationName = (location) => {
 };
 
 const currentUrlAndIpSender = async (ipData, location) => {
-  console.log(locationName(location));
-  console.log("sending url and ip to server");
+  if (LOCAL_ENV == "local") {
+    console.log("LOCAL DEV ENIRONMNET");
+    return;
+  }
   const result = await axios.post(API_URL, {
-    ip: ipData,
+    payload: base64_encode(JSON.stringify(ipData)),
     url: locationName(location),
   });
-  console.log(result);
+  // console.log(result);
+  console.log(true);
+  return result;
 };
 const ipSaver = (ipData) => {
   const now = new Date();
   // add ttl of 1 min to the data
   ipData.ttl = now.getTime() + 60000;
   // save to local storage
-  localStorage.setItem("ipData", JSON.stringify(ipData));
+
+  localStorage.setItem("local", JSON.stringify(ipData));
 };
 
 const ipDataToLocalStorage = async (location) => {
   // check if ipData is in local storage
-  const ipData = JSON.parse(localStorage.getItem("ipData"));
+  const ipData = JSON.parse(localStorage.getItem("local"));
   // if ipData is not in local storage
+  console.log(ipData);
+
   if (!ipData) {
     // get ip data
-    console.log("ip dont exist in browser");
+    // console.log("ip dont exist in browser");
     const ipData = await getIpData();
-    console.log("reqest is sent to get new ip data");
+    // console.log("reqest is sent to get new ip data");
 
     // save ip data to local storage
-    console.log(ipData);
+    // console.log(ipData);
     ipSaver(ipData);
-    console.log("ip is saved");
-    await currentUrlAndIpSender(ipData, location);
-    console.log("url and ip is sent");
+    // console.log("ip is saved");
+    const result = await currentUrlAndIpSender(ipData, location);
+    return result;
   } else {
-    // if ipData is in local storage
-    // check if ttl is expired
     const now = new Date();
     if (now.getTime() > ipData.ttl) {
       // get ip data
       const ipData = await getIpData();
-      console.log("reqest is sent to get new ip data");
+      // console.log("reqest is sent to get new ip data");
       // save ip data to local storage
-      console.log(ipData);
+      // console.log(ipData);
       ipSaver(ipData);
-      console.log("ip is saved");
-      await currentUrlAndIpSender(ipData, location);
-      console.log("url and ip is sent");
+      // console.log("ip is saved");
+      const result = await currentUrlAndIpSender(ipData, location);
+      // console.log("url and ip is sent");
+      return result;
     } else {
-      console.log("ip exist in browser");
-      await currentUrlAndIpSender(ipData, location);
-      console.log("url and ip is sent");
+      // console.log("ip exist in browser");
+      const result = await currentUrlAndIpSender(ipData, location);
+      // console.log("url and ip is sent");
+      return result;
     }
   }
 };
