@@ -17,7 +17,7 @@ import Footer12 from "../layout/footer12";
 import Footer13 from "../layout/footer13";
 import Footer14 from "../layout/footer14";
 import Footer15 from "../layout/footer15";
-
+import FooterDemo from "../layout/footerdemo";
 import ClientSlider1 from "../element/clientSlider1";
 import BlogSlider1 from "../element/blogSlider1";
 import { blogContent3, servicesContent4 } from "../element/SliderContent";
@@ -347,8 +347,6 @@ class Homepage extends Component {
           </div>
         </div>
         <Footer hideContactInfo displayNewsLetter />
-
-      
 
         <ScrollToTop className="icon-up" />
       </div>

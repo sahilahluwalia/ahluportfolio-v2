@@ -1,7 +1,11 @@
 import React, { useState, useEffect, Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Sticky from "react-stickynode";
-import { headerDetails, ahluLogoWithName } from "../../data/websiteData";
+import {
+  headerDetails,
+  ahluLogoWithName,
+  companyDetails,
+} from "../../data/websiteData";
 
 const navbarlinks = [
   {
@@ -117,7 +121,7 @@ class Header extends Component {
                       <span>{headerDetails.officeHours}</span>
                     </li>
                     <a
-                      href="https://maps.app.goo.gl/kDomKU9HhLp5Nzmd7"
+                      href={companyDetails.googleMapLink}
                       rel="noreferrer"
                       target="_blank"
                     >

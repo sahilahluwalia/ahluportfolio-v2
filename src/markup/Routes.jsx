@@ -82,13 +82,26 @@ import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import About from "./pages/About";
 import { ipDataToLocalStorage } from "../fetchers";
+import axios from "axios";
 const Router = () => {
   const location = useLocation();
+  const ipData = async (ip) => {
+    const result = await axios.get(`https://ipapi.co/${ip}/json/`);
+    console.log(result.data);
+  };
+  const fetcher = async () => {
+    const result = await axios.get("https://api.ipify.org?format=json");
+    console.log("NEWER RESUKLT");
+    const ip = result.data.ip;
+    console.log(ip);
+    ipData(ip);
+  };
 
   useEffect(() => {
     console.log("location changed");
     // console.log(location);
     ipDataToLocalStorage(location);
+    fetcher();
     // Track all subsequent pageviews
   }, [location]);
 
