@@ -11,8 +11,14 @@ const freeQuote = (payload) => {
   console.log(payload);
 };
 
+const getIp = async () => {
+  const result = await axios.get("https://api.ipify.org?format=json");
+  return result.data.ip;
+};
+
 const getIpData = async () => {
-  const ipData = await axios.get("http://ip-api.com/json/?fields=126975");
+  const ip = await getIp();
+  const ipData = await axios.get(`https://ipapi.co/${ip}/json/`);
   return ipData.data;
 };
 
@@ -53,7 +59,7 @@ const ipDataToLocalStorage = async (location) => {
   // check if ipData is in local storage
   const ipData = JSON.parse(localStorage.getItem("local"));
   // if ipData is not in local storage
-  console.log(ipData);
+  // console.log(ipData);
 
   if (!ipData) {
     // get ip data
