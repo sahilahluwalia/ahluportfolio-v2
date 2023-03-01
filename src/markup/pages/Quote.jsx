@@ -37,7 +37,6 @@ const Quote = () => {
   const handleChange = (e) => {
     dispatch({ type: e.target.name, payload: e.target.value });
   };
-  
 
   const [state, dispatch] = useReducer(reducer, {
     name: "",
@@ -87,7 +86,7 @@ const Quote = () => {
                           <span className="icon-sm text-primary">
                             <i className="ti-location-pin"></i>
                           </span>
-                          Company Address
+                          Factory Address
                         </h5>
                         <p>{companyDetails.address}</p>
                         <h6 className="m-b15 font-weight-400">
@@ -109,6 +108,11 @@ const Quote = () => {
                         </h5>
                         <a href={`mailto:${companyDetails.email}`}>
                           <p className="m-b0">{companyDetails.email}</p>
+                        </a>
+                        <a href={companyDetails.secondaryEmailTo}>
+                          <p className="m-b0">
+                            {companyDetails.secondaryEmail}
+                          </p>
                         </a>
                         {/* <p className="m-b0">hr@example.com</p>
                         <p className="m-b0">support@example.com</p> */}
@@ -140,7 +144,7 @@ const Quote = () => {
                   onSubmit={handleSubmit}
                 >
                   <h3 className="title-box font-weight-300 m-t0 m-b10">
-                    Let's Convert Your Idea into Reality{" "}
+                    Let's Automate your Application into Reality{" "}
                     <span className="bg-primary"></span>
                   </h3>
                   <p>

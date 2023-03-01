@@ -99,22 +99,28 @@ const About = () => {
                   <div className="our-story">
                     <span>OUR STORY</span>
                     <h2 className="title">
-                      Driving Growth & Innovation in Manufacturing
-                      <br />
-                      <span className="text-primary">since 2017</span>
+                      Revolutionizing your mass production with our cutting-edge
+                      SPM technology
+                      {/* Driving Growth & Innovation in Manufacturing */}
+                      {/* <br /> */}
+                      {/* <span className="text-primary">since 2017</span> */}
                     </h2>
                     <h4 className="title">
-                      Revolutionize your mass production with our cutting-edge
-                      SPM technology
-                    </h4>
-                    <p>
-                      We are the manufacturers of Special Purpose Machines (SPM)
+                      We are the manufacturers of{" "}
+                      <span className="text-primary">
+                        Special Purpose Machines (SPM)
+                      </span>{" "}
+                      and{" "}
+                      <span className="text-primary">
+                        Power Press Automation solutions
+                      </span>{" "}
                       for mass production. We deal with technologies of Servo
                       systems, Hydraulic & Pneumohydraulic systems, Vision
                       Systems, I.I.O.T & Factory Automation and Rejection
                       systems with customized accuracy as per the requirement of
                       customers.
-                    </p>
+                    </h4>
+                    <p></p>
                     {/* <Link to={"/#"} className="site-button">
                       Read More
                     </Link> */}
@@ -141,16 +147,11 @@ const About = () => {
                 />
               </div>
               <div className="col-lg-6 col-md-12 m-b30">
-                <div
-                  style={{
-                    marginLeft: "1rem",
-                  }}
-                  className="our-story"
-                >
+                <div className="our-story">
                   <span>OUR VISION</span>
                   <h2 className="title">At Ahlu Engineers,</h2>
                   <h4 className="title">
-                    our vision is to be the leading provider of{" "}
+                    Our vision is to be the leading provider of{" "}
                     <span className="text-primary">
                       cutting-edge manufacturing automation solutions
                     </span>{" "}
@@ -216,19 +217,30 @@ const About = () => {
                       <h2 className="m-b15 title">
                         A company involved in
                         <br />
-                        <span className="text-primary">manufacturing</span> and
+                        <span className="text-primary">
+                          customized manufacturing
+                        </span>{" "}
+                        and
                         <span className="text-primary">
                           {" "}
                           industrial automation solutions
-                        </span>
+                        </span>{" "}
+                        provider.
                       </h2>
-                      <img
+                      {/* <img
                         src={require("../../images/sign.png")}
                         width="200"
                         alt=""
                       />
                       <h4 className="m-b0">Tejendra Singh Ahluwalia</h4>
-                      <span className="font-14">Company Director</span>
+                      <span className="font-14">Company Director</span> */}
+                      <img
+                        src={require("../../images/sign.png")}
+                        width="200"
+                        alt=""
+                      />
+                      <h4 className="m-b0">Satyam Ahluwalia</h4>
+                      <span className="font-14">Project Manager</span>
                     </div>
                   </div>
                   <div className="col-lg-6 col-md-12 m-b30">
@@ -263,8 +275,8 @@ const About = () => {
             }}
           >
             <div className="section-head text-black text-center">
-              <h2 className="title">Timeline</h2>
-              <p>Innovating Manufacuring since 2017</p>
+              <h2 className="title">Past Timeline</h2>
+              {/* <p>Innovating Manufacuring since 2017</p> */}
             </div>
             <div class="main-timeline">
               {timeLineData.reverse().map((item, index) => {

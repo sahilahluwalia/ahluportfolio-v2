@@ -1,38 +1,38 @@
 import ahluLogoWithName from "../asserts/ahluLogoWithName.png";
 
 const headerDetails = {
-  phoneNumber: "(+91) 82951 50210",
+  phoneNumber: "(+91) 8295 150 210",
   phoneNumberTo: "tel:+918295150210",
   addressTitle: "Opp. Dombivali MIDC",
   address: "Thane, Maharashtra",
-  officeHoursTitle: "10:00 AM - 06:30 PM",
+  officeHoursTitle: "10:00 AM - 07:00 PM",
   officeHours: "Sunday close",
 };
 
 const socialMediaLinks = [
-  {
-    name: "facebook",
-    link: "https://www.facebook.com/ahluindia",
-    icon: "fa fa-facebook",
-  },
-  {
-    name: "twitter",
-    link: "https://twitter.com/ahluindia",
-    icon: "fa fa-twitter",
-  },
-  {
-    name: "instagram",
-    link: "https://www.instagram.com/ahluindia/",
-    icon: "fa fa-instagram",
-  },
+  // {
+  //   name: "facebook",
+  //   link: "https://www.facebook.com/ahluindia",
+  //   icon: "fa fa-facebook",
+  // },
+  // {
+  //   name: "twitter",
+  //   link: "https://twitter.com/ahluindia",
+  //   icon: "fa fa-twitter",
+  // },
+  // {
+  //   name: "instagram",
+  //   link: "https://www.instagram.com/ahluindia/",
+  //   icon: "fa fa-instagram",
+  // },
   {
     name: "linkedin",
-    link: "https://www.linkedin.com/company/ahluindia/",
+    link: "https://www.linkedin.com/company/ahlu-engineers/",
     icon: "fa fa-linkedin",
   },
   {
     name: "youtube",
-    link: "https://www.youtube.com/channel/UCZQY4Z5ZQZQZQZQZQZQZQZQ",
+    link: "https://www.youtube.com/channel/UCPhDoFi0nlojklbst-BT-LA",
     icon: "fa fa-youtube",
   },
 ];
@@ -44,8 +44,12 @@ const companyDetails = {
   aboutAhluDescription:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   email: "sales@ahluengineers.com",
+  secondaryEmail: "ahluengineers@gmail.com",
+  secondaryEmailTo: "mailto:ahluengineers@gmail.com",
   phone: headerDetails.phoneNumber,
   phoneTo: headerDetails.phoneNumberTo,
 };
 
 export { headerDetails, ahluLogoWithName, socialMediaLinks, companyDetails };
+
+// footer font size 20 of email and phone and clean the alignment on screen change

@@ -13772,6 +13772,7 @@ ol.commentlist li .star-rating {
 .our-story p ul li::before {
     content: "• ";
     color: var(--color-primary);
+    /* margin-left: 1rem; */
     /* or whatever color you prefer */
 }
 .our-story h2.title{
@@ -15991,12 +15992,27 @@ ol.commentlist li .star-rating {
     font-weight: 500;
 }
 
+
+
+
+/* custom */
+/* footer */
+.footer-col{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* about us page font */
 .titlespan {
     color: var(--color-primary);
     font-size: 22px;
     display: block;
     margin-bottom: 10px;
 }
+
+/* timeline */
 
 .main-timeline {
     position: relative;

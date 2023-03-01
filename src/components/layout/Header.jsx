@@ -13,7 +13,7 @@ const navbarlinks = [
     link: "/",
   },
   {
-    name: "About",
+    name: "About Us",
     link: "/about",
   },
   {
@@ -21,11 +21,11 @@ const navbarlinks = [
     link: "/products",
   },
   {
-    name: "Enquiry",
-    link: "/enguiry",
+    name: "Catalogues",
+    link: "/catalogues",
   },
   {
-    name: "Contact",
+    name: "Contact Us",
     link: "/contact",
   },
 ];
@@ -110,7 +110,7 @@ class Header extends Component {
                       <li>
                         <i className="la la-phone"></i>
                         <h4 className="title">{headerDetails.phoneNumber}</h4>
-                        <span>Free Call</span>
+                        <span>Connect us via</span>
                       </li>
                     </a>
                     <li>

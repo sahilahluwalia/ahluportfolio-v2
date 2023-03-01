@@ -13,7 +13,7 @@ const Footer = () => {
       link: "/",
     },
     {
-      title: "About",
+      title: "About Us",
       link: "/about",
     },
     {
@@ -22,10 +22,10 @@ const Footer = () => {
     },
     {
       title: "Enquiry",
-      link: "/enquiry",
+      link: "/quote",
     },
     {
-      title: "Contact",
+      title: "Contact Us",
       link: "/contact",
     },
     {
@@ -36,10 +36,10 @@ const Footer = () => {
       title: "Download Catalogues",
       link: "/download-catalogues",
     },
-    {
-      title: "Download Brochures",
-      link: "/download-brochures",
-    },
+    // {
+    //   title: "Download Brochures",
+    //   link: "/download-brochures",
+    // },
   ];
   const form = useRef();
   const sendEmail = (e) => {
@@ -79,7 +79,7 @@ const Footer = () => {
                   target="_blank"
                 >
                   <img src={icon1} alt="" />
-                  <h4 className="title">Address</h4>
+                  <h4 className="title">Company Address</h4>
                   <p
                     style={{
                       fontSize: "0.8rem",
@@ -91,7 +91,7 @@ const Footer = () => {
               </div>
 
               <div className="ft-contact-bx">
-                <a href={companyDetails.phoneTo}>
+                <a className="footer-col" href={companyDetails.phoneTo}>
                   <img src={icon2} alt="" />
                   <h4 className="title">Phone</h4>
                   <p>{companyDetails.phone}</p>
@@ -99,10 +99,13 @@ const Footer = () => {
               </div>
 
               <div className="ft-contact-bx">
+                <img src={icon3} alt="" />
+                <h4 className="title">Connect us via</h4>
                 <a href={`mailto:${companyDetails.email}`}>
-                  <img src={icon3} alt="" />
-                  <h4 className="title">Email Contact</h4>
                   <p>{companyDetails.email}</p>
+                </a>
+                <a href={companyDetails.secondaryEmailTo}>
+                  <p>{companyDetails.secondaryEmail}</p>
                 </a>
               </div>
             </div>
@@ -111,22 +114,19 @@ const Footer = () => {
         <div className="footer-top">
           <div className="container">
             <div className="row">
-              {/* <div className="col-md-4 col-sm-6">
+              <div className="col-md-4 col-sm-6">
                 <div className="widget widget_about">
                   <h4 className="footer-title">About AhluEngineers</h4>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard.
+                    Serving in 3+ countries in Industrial automation solutions
+                    for customized developement.
                   </p>
-                  <Link to={"/about-2"} className="readmore">
-                    Read More
-                  </Link>
+                  <Link to={"/about"}>Read More</Link>
                 </div>
-              </div> */}
+              </div>
               <div className="col-md-4 col-sm-6">
                 <div className="widget">
-                  <h4 className="footer-title">Usefull Link</h4>
+                  <h4 className="footer-title">Other related Links</h4>
                   <ul
                     className="list-2"
                     style={{
@@ -179,22 +179,22 @@ const Footer = () => {
                   </form>
                 </div>
               </div>
-              <div
+              {/* <div
                 className="col-lg-4 col-md-12 col-sm-12 wow fadeIn"
                 data-wow-delay="0.6s"
               >
                 <div className="icon-bx-wraper bx-style-1 m-b15 p-a30 radius-sm br-col-w1 bg-tpw1">
                   <h5 className="text-white font-weight-300">
-                    Serving in 70+ countries for web, software and mobile app
-                    development
+                    Serving in 3+ countries in Industrial automation solutions
+                    for customized developement
                   </h5>
-                  <p>
+                  {/* <p>
                     United States (USA), United Kingdom (UK), Singapore, Kenya,
                     South Africa Germany, Canada, Australia, Netherlands,
                     Norway, United Arab Emirates (UAE) , Finland etc.{" "}
-                  </p>
-                </div>
-              </div>
+                  </p> */}
+              {/* </div> */}
+              {/* </div> */}
             </div>
           </div>
         </div>
@@ -229,3 +229,8 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// mid-> other related links srtart icons remove underline
+// left -> ahlu enigneers
+// serving in 3 plus conutriy  read me about pageXOffset
+// right -> subscribe to our newsletter

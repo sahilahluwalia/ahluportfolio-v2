@@ -68,7 +68,7 @@ const Contact = () => {
                 <div className="p-a30 border contact-area border-1 align-self-stretch radius-sm">
                   <h3 className="m-b5">Quick Contact</h3>
                   <p>
-                    If you have any questions simply use the following contact
+                    If you have any Enquires, simply use the following contact
                     details.
                   </p>
                   <ul className="no-margin">
@@ -81,8 +81,19 @@ const Contact = () => {
                       </div>
                       <div className="icon-content">
                         <h6 className="text-uppercase m-tb0 dlab-tilte">
-                          Address:
+                          Factory Address:
                         </h6>
+                        <span
+                          style={{
+                            display: "block",
+                            fontWeight: 600,
+                            color: "black",
+                          }}
+                        >
+                          Ahlu Engineers Pvt. Ltd.
+                        </span>
+                       
+
                         <p>{companyDetails.address}</p>
                       </div>
                     </li>
@@ -99,6 +110,9 @@ const Contact = () => {
                         </h6>
                         <a href={`mailto:${companyDetails.email}`}>
                           <p>{companyDetails.email}</p>
+                        </a>
+                        <a href={companyDetails.secondaryEmailTo}>
+                          <p>{companyDetails.secondaryEmail}</p>
                         </a>
                       </div>
                     </li>
