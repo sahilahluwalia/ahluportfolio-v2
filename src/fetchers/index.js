@@ -80,7 +80,7 @@ const locationName = (location) => {
 };
 
 const currentUrlAndIpSender = async (ipData, location) => {
-  if (LOCAL_ENV == "localy") {
+  if (LOCAL_ENV == "local") {
     console.log("LOCAL DEV ENIRONMNET");
     return;
   }

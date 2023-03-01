@@ -13748,15 +13748,31 @@ ol.commentlist li .star-rating {
 }
 /* Our Story */
 .our-story > span{
-    color:var(--color-primary);
     font-size: 22px;
     display: block;
     margin-bottom: 10px;
 }
+
 .our-story p{
     font-size: 16px;
     line-height: 32px;
     color: #000;
+}
+.our-story p ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.our-story p ul li {
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+
+.our-story p ul li::before {
+    content: "• ";
+    color: var(--color-primary);
+    /* or whatever color you prefer */
 }
 .our-story h2.title{
 	font-size: 50px;
@@ -15971,6 +15987,16 @@ ol.commentlist li .star-rating {
     border: 0;
 }
 
+.strong-text {
+    font-weight: 500;
+}
+
+.titlespan {
+    color: var(--color-primary);
+    font-size: 22px;
+    display: block;
+    margin-bottom: 10px;
+}
 
 .main-timeline {
     position: relative;
