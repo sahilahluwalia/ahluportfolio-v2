@@ -52,7 +52,7 @@ const Contact = () => {
               <div className="breadcrumb-row">
                 <ul className="list-inline">
                   <li>
-                    <Link to="/index">Home</Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>Contact</li>
                 </ul>
@@ -92,7 +92,6 @@ const Contact = () => {
                         >
                           Ahlu Engineers Pvt. Ltd.
                         </span>
-                       
 
                         <p>{companyDetails.address}</p>
                       </div>
@@ -135,17 +134,38 @@ const Contact = () => {
                   </ul>
                   <div className="m-t20">
                     <ul className="dlab-social-icon border dlab-social-icon-lg">
-                      {socialMediaLinks.map(({ icon, link, name }) => (
-                        <li key={name}>
-                          <a
-                            href={link}
-                            // open in new tab
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={`${icon} bg-primary`}
-                          ></a>
-                        </li>
-                      ))}
+                      {socialMediaLinks.map(({ icon, link, name, image }) => {
+                        if (image)
+                          return (
+                            <li key={name}>
+                              <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                href={link}
+                              >
+                                <img
+                                  style={{
+                                    width: "1.5rem",
+                                  }}
+                                  src={image}
+                                  alt={name}
+                                />
+                              </a>
+                            </li>
+                          );
+                        else
+                          return (
+                            <li key={name}>
+                              <a
+                                href={link}
+                                // open in new tab
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`${icon} bg-primary`}
+                              ></a>
+                            </li>
+                          );
+                      })}
                     </ul>
                   </div>
                 </div>

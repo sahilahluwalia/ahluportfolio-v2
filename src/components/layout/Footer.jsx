@@ -34,7 +34,7 @@ const Footer = () => {
     },
     {
       title: "Download Catalogues",
-      link: "/download-catalogues",
+      link: "/catalogues",
     },
     // {
     //   title: "Download Brochures",
@@ -98,12 +98,18 @@ const Footer = () => {
                 </a>
               </div>
 
-              <div className="ft-contact-bx">
+              <div
+                style={{
+                  wordWrap: "break-word",
+                }}
+                className="ft-contact-bx"
+              >
                 <img src={icon3} alt="" />
                 <h4 className="title">Connect us via</h4>
                 <a href={`mailto:${companyDetails.email}`}>
                   <p>{companyDetails.email}</p>
                 </a>
+
                 <a href={companyDetails.secondaryEmailTo}>
                   <p>{companyDetails.secondaryEmail}</p>
                 </a>
@@ -208,16 +214,40 @@ const Footer = () => {
               </div>
               <div className="footer-bottom-social">
                 <ul className="dlab-social-icon dez-border">
-                  {socialMediaLinks.map((item, index) => (
-                    <li key={index}>
-                      <a
-                        className={item.icon}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={item.link}
-                      ></a>
-                    </li>
-                  ))}
+                  {socialMediaLinks.map((item, index) => {
+                    if (item.image)
+                      return (
+                        <li key={index}>
+                          <a
+                            className={item.icon}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={item.link}
+                          >
+                            <img
+                              style={{
+                                width: "1.5rem",
+                              }}
+                              src={item.image}
+                              alt=""
+                            />
+                          </a>
+                        </li>
+                      );
+                    else
+                      return (
+                        <li key={index}>
+                          <a
+                            className={item.icon}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={item.link}
+                          >
+                            .
+                          </a>
+                        </li>
+                      );
+                  })}
                 </ul>
               </div>
             </div>

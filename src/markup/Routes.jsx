@@ -81,6 +81,7 @@ import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import About from "./pages/About";
+import Catalogues from "./pages/Catalogues";
 import { ipDataToLocalStorage } from "../fetchers";
 import axios from "axios";
 const Router = () => {
@@ -114,6 +115,7 @@ const Router = () => {
       <Route path="about" element={<About />} />
       <Route path="products" element={<Quote />} />
       <Route path="enguiry" element={<Quote />} />
+      <Route path="catalogues" element={<Catalogues />} />
 
       {/* <Route path="/about-2" component={About2} />
           <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />

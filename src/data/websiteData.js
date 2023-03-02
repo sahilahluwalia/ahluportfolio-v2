@@ -1,5 +1,8 @@
 import ahluLogoWithName from "../asserts/ahluLogoWithName.png";
-
+import indiaMartImage from "../asserts/socialIcons/indiaMart.png";
+import tradeIndiaImage from "../asserts/socialIcons/tradeIndia.png";
+import youtubeImage from "../asserts/socialIcons/youtube.png";
+import linkedinImage from "../asserts/socialIcons/linkedin.png";
 const headerDetails = {
   phoneNumber: "(+91) 8295 150 210",
   phoneNumberTo: "tel:+918295150210",
@@ -28,12 +31,26 @@ const socialMediaLinks = [
   {
     name: "linkedin",
     link: "https://www.linkedin.com/company/ahlu-engineers/",
-    icon: "fa fa-linkedin",
+    // icon: "fa fa-linkedin",
+    image: linkedinImage,
   },
   {
     name: "youtube",
     link: "https://www.youtube.com/channel/UCPhDoFi0nlojklbst-BT-LA",
-    icon: "fa fa-youtube",
+    // icon: "fa fa-youtube",
+    image: youtubeImage,
+  },
+  {
+    name: "indiamart",
+    link: "https://www.indiamart.com/ahluengineers/",
+    // icon: "fa fa-industry",
+    image: indiaMartImage,
+  },
+  {
+    name: "tradeindia",
+    link: "https://g.page/ahluengineers?share",
+    // icon: "fa fa-google",
+    image: tradeIndiaImage,
   },
 ];
 

@@ -19,6 +19,7 @@ import Footer14 from "../layout/footer14";
 import Footer15 from "../layout/footer15";
 import FooterDemo from "../layout/footerdemo";
 import ClientSlider1 from "../element/clientSlider1";
+import ImageSlider from "../../components/ImageSlider/ImageSlider";
 import BlogSlider1 from "../element/blogSlider1";
 import { blogContent3, servicesContent4 } from "../element/SliderContent";
 import ServicesSlider1 from "../element/servicesSlider1";
@@ -88,7 +89,7 @@ class Homepage extends Component {
                   </p>
                 </div>
 
-                <ServicesSlider1 slidesToShow={3} data={servicesContent4} />
+                {/* <ServicesSlider1 slidesToShow={3} data={servicesContent4} /> */}
               </div>
             </div>
 
@@ -270,9 +271,9 @@ class Homepage extends Component {
               </div>
             </div>
 
-            <CounterSection backgroundImage={bg2} />
+            {/* <CounterSection backgroundImage={bg2} /> */}
 
-            <div className="section-full bg-gray content-inner">
+            {/* <div className="section-full bg-gray content-inner">
               <div className="container">
                 <div className="section-head text-center ">
                   <h2 className="title"> Meet The Team</h2>
@@ -284,9 +285,9 @@ class Homepage extends Component {
                 </div>
                 <Team1 />
               </div>
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
               className="section-full overlay-black-middle bg-secondry content-inner-2 wow fadeIn"
               data-wow-duration="2s"
               data-wow-delay="0.2s"
@@ -305,9 +306,9 @@ class Homepage extends Component {
                   <Testimonial12 />
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div
+            {/* <div
               className="section-full content-inner bg-gray wow fadeIn"
               data-wow-duration="2s"
               data-wow-delay="0.4s"
@@ -322,31 +323,30 @@ class Homepage extends Component {
                   </p>
                 </div>
 
-                <BlogSlider1
+                {/* <BlogSlider1
                   data={blogContent3}
                   blogPostCls="post-style-1"
                   imgEffect="rotate"
                   noDes
-                />
-              </div>
-            </div>
+                /> */}
+              {/* </div> */}
+            {/* </div>  */}
 
             <div
               className="section-full dlab-we-find bg-img-fix p-t20 p-b20 bg-white wow fadeIn"
-              data-wow-duration="2s"
-              data-wow-delay="0.6s"
+              data-wow-duration="0.51s"
+              data-wow-delay="0.1s"
             >
               <div className="container">
                 <div className="section-content">
-                  <ClientSlider1 hideBorder />
+                  <ImageSlider hideBorder />
                 </div>
               </div>
             </div>
           </div>
         </div>
         <Footer hideContactInfo displayNewsLetter />
-        Footer
-        <Footer1 />
+        {/* <Footer1 />
         <Footer2 />
         <Footer3 />
         <Footer4 />
@@ -361,7 +361,7 @@ class Homepage extends Component {
         <Footer13 />
         <Footer14 />
         <Footer15 />
-        <FooterDemo />
+        <FooterDemo /> */}
         <ScrollToTop className="icon-up" />
       </div>
     );

@@ -6,6 +6,7 @@ import {
   ahluLogoWithName,
   companyDetails,
 } from "../../data/websiteData";
+import { catlogueListItemsWithSubmenu } from "../../utils/catalogues";
 
 const navbarlinks = [
   {
@@ -172,7 +173,7 @@ class Header extends Component {
                   <Link to="/quote">
                     {" "}
                     <div className="extra-nav border-0">
-                      <h5 className="text-black text-nowrap fw-bold fs-3">
+                      <h5 className="text-nowrap fw-bold fs-3">
                         GET FREE QUOTE
                       </h5>
                     </div>
@@ -204,21 +205,25 @@ class Header extends Component {
                     </div>
                     <ul className="nav navbar-nav">
                       {navbarlinks.map((link, index) => {
-                        return (
-                          <li
-                            key={index}
-                            className={
-                              activePageDetector(window) ==
-                              link.name.toLowerCase()
-                                ? "active"
-                                : ""
-                            }
-                          >
-                            <Link to={link.link}>{link.name}</Link>
-                          </li>
-                        );
+                        if (link.name === "Catalogues") {
+                          return catlogueListItemsWithSubmenu;
+                        } else
+                          return (
+                            <li
+                              key={index}
+                              className={
+                                activePageDetector(window) ==
+                                link.name.toLowerCase()
+                                  ? "active"
+                                  : ""
+                              }
+                            >
+                              <Link to={link.link}>{link.name}</Link>
+                            </li>
+                          );
                       })}
                     </ul>
+
                     <div className="dlab-social-icon">
                       <ul>
                         <li>
