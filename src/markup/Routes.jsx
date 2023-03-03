@@ -84,6 +84,7 @@ import About from "./pages/About";
 import Catalogues from "./pages/Catalogues";
 import { ipDataToLocalStorage } from "../fetchers";
 import axios from "axios";
+import Layout from "../components/layout/Layout";
 const Router = () => {
   const location = useLocation();
   // const ipData = async (ip) => {
@@ -108,16 +109,21 @@ const Router = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="quote" element={<Quote />} />
-      <Route path="contact" element={<Contact />} />
-      <Route path="gg" element={<Index />} />
-      <Route path="about" element={<About />} />
-      <Route path="products" element={<Quote />} />
-      <Route path="enguiry" element={<Quote />} />
-      <Route path="catalogues" element={<Catalogues />} />
-
-      {/* <Route path="/about-2" component={About2} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Homepage />} />
+        <Route path="quote" element={<Quote />} />
+        <Route path="contact" element={<Contact />} />
+        <Route path="gg" element={<Index />} />
+        <Route path="about" element={<About />} />
+        <Route path="products" element={<Quote />} />
+        <Route path="enguiry" element={<Quote />} />
+        <Route path="catalogues" element={<Catalogues />} />
+      </Route>
+    </Routes>
+  );
+};
+// {
+  /* <Route path="/about-2" component={About2} />
           <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />
           <Route path="/blog-grid-3" component={BlogGrid3} />
           <Route path="/blog-grid-2" component={BlogGrid2} />
@@ -226,9 +232,7 @@ const Router = () => {
             component={shortImagesEffects}
           />
           <Route path="/shortcode-shop-widgets" component={shopWidgets} />
-          <Route path="/shortcode-team" component={shortTeam} /> */}
-    </Routes>
-  );
-};
+          <Route path="/shortcode-team" component={shortTeam} /> */
+// }
 
 export default Router;

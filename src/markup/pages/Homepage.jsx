@@ -44,7 +44,6 @@ class Homepage extends Component {
   render() {
     return (
       <div className="skin-1">
-        <Header />
         <Parallax bgImage={bg4} strength={200}>
           <div className="hero-section pt-50 home-bnr1">
             <div className="container">
@@ -329,7 +328,7 @@ class Homepage extends Component {
                   imgEffect="rotate"
                   noDes
                 /> */}
-              {/* </div> */}
+            {/* </div> */}
             {/* </div>  */}
 
             <div
@@ -345,7 +344,7 @@ class Homepage extends Component {
             </div>
           </div>
         </div>
-        <Footer hideContactInfo displayNewsLetter />
+
         {/* <Footer1 />
         <Footer2 />
         <Footer3 />

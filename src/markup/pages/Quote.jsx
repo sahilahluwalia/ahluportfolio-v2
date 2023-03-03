@@ -69,7 +69,7 @@ const Quote = () => {
   };
   return (
     <>
-      <Header />
+ 
       <div className="page-content bg-white">
         <div
           className="section-full content-inner contact-page-9 overlay-black-dark"
@@ -301,7 +301,7 @@ const Quote = () => {
           </div>
         </div>
       </div>
-      <Footer />
+ 
     </>
   );
 };

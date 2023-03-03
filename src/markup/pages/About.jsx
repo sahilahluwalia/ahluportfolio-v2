@@ -49,8 +49,6 @@ const timeLineData = [
 const About = () => {
   return (
     <>
-      <Header />
-
       <div className="page-content bg-white">
         {/* <div
           className="dlab-bnr-inr overlay-black-middle text-center bg-pt"
@@ -614,8 +612,6 @@ const About = () => {
           </div> */}
         </div>
       </div>
-
-      <Footer />
     </>
   );
 };

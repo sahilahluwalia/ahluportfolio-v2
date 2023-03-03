@@ -82,10 +82,12 @@ import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import About from "./pages/About";
 import Routes from "./Routes";
+import ScrollToTop from "../components/helper/ScrollToTop";
 const Router = () => {
   return (
     //<BrowserRouter>
     <BrowserRouter>
+      <ScrollToTop />
       <div className="page-wraper">
         {/* <Routes>
           <Route path="/" element={<Homepage />} />

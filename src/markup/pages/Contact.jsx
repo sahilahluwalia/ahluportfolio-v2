@@ -40,7 +40,6 @@ const Contact = () => {
 
   return (
     <>
-      <Header />
       <div className="page-content bg-white">
         <div
           className="dlab-bnr-inr overlay-black-middle bg-pt"
@@ -278,7 +277,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

@@ -12,7 +12,6 @@ const Catalogues = () => {
   //   console.log();
   return (
     <>
-      <Header />
       <div className=" bg-white ">
         <div className="midContent">
           <div
@@ -70,7 +69,6 @@ const Catalogues = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
