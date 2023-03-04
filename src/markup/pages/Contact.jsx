@@ -94,26 +94,18 @@ const Contact = () => {
                         <h6 className="text-uppercase m-tb0 dlab-tilte">
                           Factory Address:
                         </h6>
-                        <a
-                          style={{
-                            color: "rgb(31 41 55)",
-                          }}
-                          href={companyDetails.googleMapLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <span
-                            style={{
-                              display: "block",
-                              fontWeight: 600,
-                              color: "black",
-                            }}
-                          >
-                            Ahlu Engineers Pvt. Ltd.
-                          </span>
 
-                          <p>{companyDetails.address}</p>
-                        </a>
+                        <span
+                          style={{
+                            display: "block",
+                            fontWeight: 600,
+                            color: "black",
+                          }}
+                        >
+                          Ahlu Engineers Pvt. Ltd.
+                        </span>
+
+                        <p>{companyDetails.address}</p>
                       </div>
                     </li>
                     <li className="icon-bx-wraper left  m-b30">
