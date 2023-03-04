@@ -61,13 +61,10 @@ const Footer = () => {
     setAlert({ success: true, error: false });
     setTimeout(() => {
       setAlert({ success: false, error: false });
-    }, 10000);
+    }, 7500);
   };
   const onError = () => {
     setAlert({ success: false, error: true });
-    setTimeout(() => {
-      setAlert({ success: false, error: false });
-    }, 10000);
   };
   const handleSubmit = async (e) => {
     setAlert({ success: false, error: false });
@@ -89,6 +86,7 @@ const Footer = () => {
     } catch (err) {
       console.log(err);
       onError();
+      // onSuccess();
     }
   };
 
@@ -192,11 +190,19 @@ const Footer = () => {
                     <>
                       {" "}
                       <div>
-                        <p>
-                          Welcome aboard {email ? `, ${email}` : ""}{" "}
+                        <p
+                          style={{
+                            color: "white",
+                            fontSize: "1.2rem",
+                            fontWeight: "bold",
+                          }}
+                        >
+                          Welcome aboard{" "}
                           <span role="img" aria-label="Ship">
                             🚢
                           </span>
+                          <br />
+                          {email}{" "}
                         </p>
                       </div>
                     </>
@@ -245,7 +251,10 @@ const Footer = () => {
                       >
                         ERROR PLEASE TRY AGAIN !!
                         <br />
-                        email us at {companyDetails.email}
+                        email us at{" "}
+                        <a href={`mailto:${companyDetails.secondaryEmail}`}>
+                          {companyDetails.secondaryEmail}
+                        </a>
                       </p>
                     </>
                   ) : (

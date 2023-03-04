@@ -5,6 +5,7 @@ import {
   headerDetails,
   ahluLogoWithName,
   companyDetails,
+  socialMediaLinks,
 } from "../../data/websiteData";
 import { catalogueListItemsWithSubmenu } from "../../utils/catalogues";
 
@@ -227,30 +228,40 @@ class Header extends Component {
 
                     <div className="dlab-social-icon">
                       <ul>
-                        <li>
-                          <Link
-                            className="site-button sharp-sm fa fa-facebook"
-                            to="/#"
-                          ></Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="site-button sharp-sm fa fa-twitter"
-                            to="/#"
-                          ></Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="site-button sharp-sm fa fa-linkedin"
-                            to="/#"
-                          ></Link>
-                        </li>
-                        <li>
-                          <Link
-                            className="site-button sharp-sm fa fa-instagram"
-                            to="/#"
-                          ></Link>
-                        </li>
+                        {socialMediaLinks.map((item, index) => {
+                          if (item.image)
+                            return (
+                              <li key={index}>
+                                <a
+                                  className={item.icon}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href={item.link}
+                                >
+                                  <img
+                                    style={{
+                                      width: "1.5rem",
+                                    }}
+                                    src={item.image}
+                                    alt=""
+                                  />
+                                </a>
+                              </li>
+                            );
+                          else
+                            return (
+                              <li key={index}>
+                                <a
+                                  className={item.icon}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  href={item.link}
+                                >
+                                  .
+                                </a>
+                              </li>
+                            );
+                        })}
                       </ul>
                     </div>
                   </div>

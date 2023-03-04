@@ -10,6 +10,7 @@ const Contact = () => {
   const [inputValues, setInputValues] = useState({
     name: "",
     email: "",
+    subject: "",
     message: "",
   });
 
@@ -32,10 +33,21 @@ const Contact = () => {
     }
   };
 
-  const handleFormSubmit = (e) => {
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     console.log(inputValues);
-    contactForm(inputValues);
+    try {
+      const result = await contactForm(inputValues);
+      console.log(result);
+      if (result.status === 200) {
+        alertToggle("success");
+        setInputValues({ name: "", email: "", message: "" });
+      } else {
+        alertToggle("error");
+      }
+    } catch (err) {
+      alertToggle("error");
+    }
   };
 
   return (
@@ -217,6 +229,25 @@ const Contact = () => {
                       <div className="col-lg-12">
                         <div className="form-group">
                           <div className="input-group">
+                            <input
+                              onChange={(e) => {
+                                setInputValues({
+                                  ...inputValues,
+                                  subject: e.target.value,
+                                });
+                              }}
+                              name="subject"
+                              type="text"
+                              className="form-control"
+                              required
+                              placeholder="Subject"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-lg-12">
+                        <div className="form-group">
+                          <div className="input-group">
                             <textarea
                               onChange={(e) => {
                                 setInputValues({
@@ -225,7 +256,7 @@ const Contact = () => {
                                 });
                               }}
                               name="message"
-                              rows="8"
+                              rows="11"
                               className="form-control"
                               required
                               placeholder="Your Message..."

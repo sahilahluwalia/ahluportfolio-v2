@@ -4,8 +4,14 @@ import { decode as base64_decode, encode as base64_encode } from "base-64";
 import jsonp from "jsonp";
 const API_URL = process.env.REACT_APP_API_URL;
 const LOCAL_ENV = process.env.REACT_APP_DEVELOPEMENT_ENV;
-const contactForm = (payload) => {
-  const result = axios.post(`${API_URL}/api/contact`, payload);
+const contactForm = async (payload) => {
+  const result = await axios.post(`${API_URL}/api/contact`, payload);
+  console.log(result);
+  if (result.status === 200) {
+    return result;
+  } else {
+    return false;
+  }
 };
 
 const subscribeToNewsletter = async (payload) => {
@@ -17,8 +23,13 @@ const subscribeToNewsletter = async (payload) => {
   }
 };
 
-const freeQuote = (payload) => {
-  console.log(payload);
+const freeQuote = async (payload) => {
+  const result = await axios.post(`${API_URL}/api/quote`, payload);
+  if (result.status === 200) {
+    return result;
+  } else {
+    return false;
+  }
 };
 
 const getIp = async () => {

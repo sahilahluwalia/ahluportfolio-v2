@@ -54,22 +54,30 @@ const Quote = () => {
       setAlert({ success: true, error: false });
       setTimeout(() => {
         setAlert({ success: false, error: false });
-      }, 5500);
+      }, 7500);
     } else if (type === "error") {
       setAlert({ success: false, error: true });
       setTimeout(() => {
         setAlert({ success: false, error: false });
-      }, 5500);
+      }, 7500);
     }
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(state);
-    freeQuote(state);
+    try {
+      const result = await freeQuote(state);
+      if (result.status === 200) {
+        alertToggle("success");
+      } else {
+        alertToggle("error");
+      }
+    } catch (error) {
+      alertToggle("error");
+    }
   };
   return (
     <>
- 
       <div className="page-content bg-white">
         <div
           className="section-full content-inner contact-page-9 overlay-black-dark"
@@ -301,7 +309,6 @@ const Quote = () => {
           </div>
         </div>
       </div>
- 
     </>
   );
 };
