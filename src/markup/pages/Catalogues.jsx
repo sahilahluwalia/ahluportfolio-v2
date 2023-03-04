@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "../../components/layout/Header";
-import Footer from "../../components/layout/Footer";
 import { contactForm } from "../../fetchers";
-import { catlogueList } from "../../utils/catalogues";
+import { catalogueList } from "../../utils/catalogues";
 
 import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 const bg = require("../../images/banner/bnr1.jpg");
 const Catalogues = () => {
-  console.log(catlogueList);
+  console.log(catalogueList);
   //   console.log();
   return (
     <>
@@ -47,17 +45,17 @@ const Catalogues = () => {
                 </p>
                 <div className="dlab-separator bg-primary"></div>
                 <div className="row">
-                  {catlogueList.map((catlogue) => {
+                  {catalogueList.map((catalogue) => {
                     return (
                       <>
                         <div className="col-xl-3 d-flex align-items-stretch col-md-4 col-sm-6 g-3 service-box style3">
                           <a
-                            href={catlogue.link}
+                            href={catalogue.link}
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <h4 className="m-b10">{catlogue.name}</h4>
-                            <img src={catlogue.image} />
+                            <h4 className="m-b10">{catalogue.name}</h4>
+                            <img src={catalogue.image} />
                           </a>
                         </div>
                       </>

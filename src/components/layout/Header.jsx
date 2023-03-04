@@ -6,7 +6,7 @@ import {
   ahluLogoWithName,
   companyDetails,
 } from "../../data/websiteData";
-import { catlogueListItemsWithSubmenu } from "../../utils/catalogues";
+import { catalogueListItemsWithSubmenu } from "../../utils/catalogues";
 
 const navbarlinks = [
   {
@@ -207,7 +207,7 @@ class Header extends Component {
                     <ul className="nav navbar-nav">
                       {navbarlinks.map((link, index) => {
                         if (link.name === "Catalogues") {
-                          return catlogueListItemsWithSubmenu;
+                          return catalogueListItemsWithSubmenu;
                         } else
                           return (
                             <li

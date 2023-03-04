@@ -5,7 +5,16 @@ import jsonp from "jsonp";
 const API_URL = process.env.REACT_APP_API_URL;
 const LOCAL_ENV = process.env.REACT_APP_DEVELOPEMENT_ENV;
 const contactForm = (payload) => {
-  console.log(payload);
+  const result = axios.post(`${API_URL}/api/contact`, payload);
+};
+
+const subscribeToNewsletter = async (payload) => {
+  const result = await axios.post(`${API_URL}/api/subscribe`, payload);
+  if (result.status === 200) {
+    return result;
+  } else {
+    return false;
+  }
 };
 
 const freeQuote = (payload) => {
@@ -141,4 +150,4 @@ const ipDataToLocalStorage = async (location) => {
   }
 };
 
-export { contactForm, freeQuote, ipDataToLocalStorage };
+export { contactForm, freeQuote, ipDataToLocalStorage, subscribeToNewsletter };

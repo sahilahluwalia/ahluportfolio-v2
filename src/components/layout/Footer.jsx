@@ -7,6 +7,7 @@ import icon3 from "../../images/icon/icon3.png";
 import { ahluLogoWithName, socialMediaLinks } from "../../data/websiteData";
 import { companyDetails } from "../../data/websiteData";
 import SubscribeForm from "../SubscribeForm";
+import { subscribeToNewsletter } from "../../fetchers";
 import axios from "axios";
 const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 const privateKey = process.env.REACT_APP_PRIVATE_KEY;
@@ -50,32 +51,33 @@ const usefulLinks = [
 const Footer = () => {
   const form = useRef();
   const [email, setEmail] = useState("");
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(false);
+
+  const [alert, setAlert] = useState({
+    success: false,
+    error: false,
+  });
 
   const onSuccess = () => {
-    setSuccess(true);
-    setError(false);
+    setAlert({ success: true, error: false });
     setTimeout(() => {
-      setSuccess(false);
-    }, 6000);
+      setAlert({ success: false, error: false });
+    }, 10000);
   };
   const onError = () => {
-    setError(true);
-    setSuccess(false);
+    setAlert({ success: false, error: true });
     setTimeout(() => {
-      setError(false);
+      setAlert({ success: false, error: false });
     }, 10000);
   };
   const handleSubmit = async (e) => {
-    setError(false);
+    setAlert({ success: false, error: false });
     e.preventDefault();
     const data = {
       email,
     };
     console.log(API_URL);
     try {
-      const result = await axios.post(`${API_URL}/api/subscribe`, data);
+      const result = await subscribeToNewsletter(data);
       console.log(result);
       if (result.status === 200) {
         console.log("success");
@@ -186,7 +188,7 @@ const Footer = () => {
                 <div className="widget widget_subscribe">
                   <h4 className="footer-title">Subscribe to our Newsletter</h4>
 
-                  {success ? (
+                  {alert.success ? (
                     <>
                       {" "}
                       <div>
@@ -234,7 +236,7 @@ const Footer = () => {
                     </>
                   )}
 
-                  {error ? (
+                  {alert.error ? (
                     <>
                       <p
                         style={{
