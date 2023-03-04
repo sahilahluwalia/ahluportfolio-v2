@@ -80,11 +80,11 @@ const locationName = (location) => {
 };
 
 const currentUrlAndIpSender = async (ipData, location) => {
-  if (LOCAL_ENV == "local") {
+  if (LOCAL_ENV == "locals") {
     console.log("LOCAL DEV ENIRONMNET");
     return;
   }
-  const result = await axios.post(API_URL, {
+  const result = await axios.post(`${API_URL}/payload`, {
     payload: base64_encode(JSON.stringify(ipData)),
     url: locationName(location),
   });

@@ -5,10 +5,10 @@ function importAll(r) {
 }
 
 const pdfs = importAll(
-  require.context("../asserts/Catlogue PDF Files", false, /\.pdf$/)
+  require.context("../asserts/Catalogue PDF Files", false, /\.pdf$/)
 );
 const images = importAll(
-  require.context("../asserts/Catlogue PDF Files", false, /\.jpg$/)
+  require.context("../asserts/Catalogue PDF Files", false, /\.jpg$/)
 );
 
 console.log(pdfs);

@@ -149,7 +149,7 @@ class Header extends Component {
               }
             >
               <div className="main-bar clearfix ">
-                <div className="container-fluid clearfix">
+                <div className="container-fluid clearfix ">
                   <div className="logo-header mostion">
                     <Link to="/">
                       <img src={ahluLogoWithName} alt="ahlu ahluLogoWithName" />
@@ -172,8 +172,9 @@ class Header extends Component {
 
                   <Link to="/quote">
                     {" "}
+                    {/* <div className="bigger-hover">helo</div> */}
                     <div className="extra-nav border-0">
-                      <h5 className="text-nowrap fw-bold fs-3">
+                      <h5 className="text-nowrap fw-bold fs-3 bigger-hover">
                         GET FREE QUOTE
                       </h5>
                     </div>
