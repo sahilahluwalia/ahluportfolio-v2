@@ -3,6 +3,9 @@ import indiaMartImage from "../asserts/socialIcons/indiaMart.png";
 import tradeIndiaImage from "../asserts/socialIcons/tradeIndia.png";
 import youtubeImage from "../asserts/socialIcons/youtube.png";
 import linkedinImage from "../asserts/socialIcons/linkedin.png";
+import whatsappImage from "../asserts/socialIcons/whatsapp.png";
+import tataNexcImage from "../asserts/socialIcons/tata.png";
+import googleMyBusinessImage from "../asserts/socialIcons/googleMyBusiness.png";
 const headerDetails = {
   phoneNumber: "(+91) 8295 150 210",
   phoneNumberTo: "tel:+918295150210",
@@ -42,7 +45,7 @@ const socialMediaLinks = [
   },
   {
     name: "indiamart",
-    link: "https://www.indiamart.com/ahluengineers/",
+    link: "https://www.indiamart.com/ahlu-engineers-private-limited-kalyan",
     // icon: "fa fa-industry",
     image: indiaMartImage,
   },
@@ -51,6 +54,21 @@ const socialMediaLinks = [
     link: "https://g.page/ahluengineers?share",
     // icon: "fa fa-google",
     image: tradeIndiaImage,
+  },
+  {
+    name: "whatsapp",
+    link: "https://wa.me/c/918295150210",
+    image: whatsappImage,
+  },
+  {
+    name: "tatanexc",
+    link: "https://www.tatanexarc.com/company/ahlu-engineers-private-utn9590ahl63ija/",
+    image: tataNexcImage,
+  },
+  {
+    name: "googleMyBusiness",
+    link: "https://www.google.com/search?q=Ahlu+Engineers+Pvt+Ltd&stick=H4sIAAAAAAAA_-NgU1I1qDBOSjW3NDU2Nkm2SEuyTDa1MqhINDQ1t0w1SDFMSTFKM0tMXsQq5piRU6rgmpeemZeaWlSsEFBWouBTkgIA6NxU1UIAAAA&hl=en&mat=CUwytyU0qK4TElcB8pgkaG5HhNejivEnLl_v3d2qdQ4ft_mNK2WenVnlHwV8OzrAWca_0_EGkIIH5gxp-hwuWJx2ei_RN5FiT6bILuEswPv3PYel3XBgRQwPDQzgcNIdG2o&authuser=0",
+    image: googleMyBusinessImage,
   },
 ];
 

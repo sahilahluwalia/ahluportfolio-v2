@@ -99,6 +99,18 @@ const locationName = (location) => {
   return pathname;
 };
 
+const ping = async (location) => {
+  if (LOCAL_ENV == "locals") {
+    console.log("LOCAL DEV ENIRONMNET");
+    return;
+  }
+  const result = await axios.post(`${API_URL}/ping`, {
+    url: locationName(location),
+  });
+  console.log(result);
+  return result;
+};
+
 const currentUrlAndIpSender = async (ipData, location) => {
   if (LOCAL_ENV == "locals") {
     console.log("LOCAL DEV ENIRONMNET");
@@ -161,4 +173,10 @@ const ipDataToLocalStorage = async (location) => {
   }
 };
 
-export { contactForm, freeQuote, ipDataToLocalStorage, subscribeToNewsletter };
+export {
+  contactForm,
+  freeQuote,
+  ipDataToLocalStorage,
+  subscribeToNewsletter,
+  ping,
+};

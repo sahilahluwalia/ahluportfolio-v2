@@ -42,6 +42,16 @@ const bg4 = require("../../images/main-slider/slide8.jpg");
 
 class Homepage extends Component {
   render() {
+    // new WAChatBox({
+    //   link: "https://wa.me/919999999999",
+    //   user: {
+    //     name: "Alice",
+    //     avatar: "https://randomuser.me/api/portraits/women/66.jpg",
+    //     status: "Typically replies within an hour",
+    //   },
+    //   text: `Hey There 👋<br><br>I'm here to help, so let me know what's up and I'll be happy to find a solution 🤓`,
+    //   button_text: "Need Help?",
+    // });
     return (
       <div className="skin-1">
         <Parallax bgImage={bg4} strength={200}>

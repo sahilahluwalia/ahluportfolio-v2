@@ -82,7 +82,7 @@ import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import About from "./pages/About";
 import Catalogues from "./pages/Catalogues";
-import { ipDataToLocalStorage } from "../fetchers";
+import { ipDataToLocalStorage, ping } from "../fetchers";
 import axios from "axios";
 import Layout from "../components/layout/Layout";
 const Router = () => {
@@ -101,8 +101,10 @@ const Router = () => {
 
   useEffect(() => {
     console.log("location changed");
-    // console.log(location);
-    ipDataToLocalStorage(location);
+    console.log(location.pathname);
+    ping(location);
+
+    // ipDataToLocalStorage(location);
     // fetcher();
     // Track all subsequent pageviews
   }, [location]);
@@ -123,7 +125,7 @@ const Router = () => {
   );
 };
 // {
-  /* <Route path="/about-2" component={About2} />
+/* <Route path="/about-2" component={About2} />
           <Route path="/blog-grid-2-sidebar" component={BlogGrid2Sidebar} />
           <Route path="/blog-grid-3" component={BlogGrid3} />
           <Route path="/blog-grid-2" component={BlogGrid2} />
