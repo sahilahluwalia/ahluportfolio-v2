@@ -104,7 +104,7 @@ const ping = async (location) => {
     console.log("LOCAL DEV ENIRONMNET");
     return;
   }
-  const result = await axios.post(`${API_URL}/ping`, {
+  const result = await axios.post(`${API_URL}/api/ping`, {
     url: locationName(location),
   });
   console.log(result);
