@@ -81,27 +81,27 @@ import Homepage from "./pages/Homepage";
 import Contact from "./pages/Contact";
 import Quote from "./pages/Quote";
 import About from "./pages/About";
+import Products from "./pages/Products/Products";
+import ProductBase from "./pages/Products/ProductBase";
 import Catalogues from "./pages/Catalogues";
+import PowerPressAutomation from "./pages/Products/PowerPressAutomation/PowerPressAutomation";
+import TransferSystem from "./pages/Products/PowerPressAutomation/TransferSystem";
+import SheetMetalDies from "./pages/Products/PowerPressAutomation/SheetMetalDies";
+import PressFeeders from "./pages/Products/PowerPressAutomation/PressFeeders";
+import SpecialPurposeMachines from "./pages/Products/SpecialPurposeMachines/SpecialPurposeMachines";
+import AssemblySPMS from "./pages/Products/SpecialPurposeMachines/AssemblySPMS";
+import OperationalSPMS from "./pages/Products/SpecialPurposeMachines/OperationalSPMS";
+import VisionInspectionSystems from "./pages/Products/VisionInspectionSystems/VisionInspectionSystems";
+import Base from "./pages/Base";
 import { ipDataToLocalStorage, ping } from "../fetchers";
 import axios from "axios";
 import Layout from "../components/layout/Layout";
 const Router = () => {
   const location = useLocation();
-  // const ipData = async (ip) => {
-  //   const result = await axios.get(`https://ipapi.co/${ip}/json/`);
-  //   console.log(result.data);
-  // };
-  // const fetcher = async () => {
-  //   const result = await axios.get("https://api.ipify.org?format=json");
-  //   console.log("NEWER RESUKLT");
-  //   const ip = result.data.ip;
-  //   console.log(ip);
-  //   ipData(ip);
-  // };
 
   useEffect(() => {
-    console.log("location changed");
-    console.log(location.pathname);
+    // console.log("location changed");
+    // console.log(location.pathname);
     ping(location);
 
     // ipDataToLocalStorage(location);
@@ -117,7 +117,30 @@ const Router = () => {
         <Route path="contact" element={<Contact />} />
         <Route path="gg" element={<Index />} />
         <Route path="about" element={<About />} />
-        <Route path="products" element={<Quote />} />
+        <Route path="/products" element={<ProductBase />}>
+          <Route index element={<Products />} />
+          {/* <Route path="transfer-system" element={<h2>sdvsdv</h2>} /> */}
+          <Route path="power-press-automation" element={<Base />}>
+            <Route index element={<PowerPressAutomation />} />
+            <Route path="transfer-system" element={<TransferSystem />} />
+            <Route path="sheet-metal-dies" element={<SheetMetalDies />} />
+            <Route path="press-feeders" element={<PressFeeders />} />
+          </Route>
+          <Route path="special-purpose-machines" element={<Base />}>
+            <Route index element={<SpecialPurposeMachines />} />
+            <Route path="assembly-spms" element={<AssemblySPMS />} />
+            <Route path="operational-spms" element={<OperationalSPMS />} />
+          </Route>
+
+          <Route path="vision-inspection-system" element={<Base />}>
+            <Route index element={<VisionInspectionSystems />} />
+          </Route>
+        </Route>
+        <Route path="blog" element={<Products />}>
+          {/* <Route path="transfer-system" element={<Products />} />
+          <Route path="special-purpose-machines" element={<Products />} />
+          <Route path="vision-inspection-system" element={<Products />} /> */}
+        </Route>
         <Route path="enguiry" element={<Quote />} />
         <Route path="catalogues" element={<Catalogues />} />
       </Route>
