@@ -11,7 +11,7 @@ const images = importAll(
   require.context("../asserts/Catalogue PDF Files", false, /\.jpg$/)
 );
 
-console.log(pdfs);
+// console.log(pdfs);
 
 const removeCatalogueFromStr = (str) => {
   const catalogue = "Catalogue";
@@ -38,13 +38,13 @@ const pdfNames = pdfs.map((pdf) => {
   const pdfName = pdf.split("/").pop();
   const pdfNameWithoutExtension = pdfName.split(".")[1];
   // remove first letter space if it is there
-  console.log("runsss");
+  // console.log("runsss");
 
   if (pdfNameWithoutExtension[0] === " ") {
     pdfNameWithoutExtension.slice(1);
   }
   // scan the whole string and remove catalogue from the name if it is there
-  console.log("run");
+  // console.log("run");
 
   // remove Series catalogue from the name
   return removeCatalogueFromStr(pdfNameWithoutExtension);

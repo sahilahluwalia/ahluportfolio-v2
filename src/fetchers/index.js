@@ -100,10 +100,10 @@ const locationName = (location) => {
 };
 
 const ping = async (location) => {
-  if (LOCAL_ENV == "locals") {
-    console.log("LOCAL DEV ENIRONMNET");
-    return;
-  }
+  // if (LOCAL_ENV == "locals") {
+  //   console.log("LOCAL DEV ENIRONMNET");
+  //   return;
+  // }
   const result = await axios.post(`${API_URL}/api/ping`, {
     url: locationName(location),
   });

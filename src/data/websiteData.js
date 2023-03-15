@@ -67,7 +67,7 @@ const socialMediaLinks = [
   },
   {
     name: "googleMyBusiness",
-    link: "https://www.google.com/search?q=Ahlu+Engineers+Pvt+Ltd&stick=H4sIAAAAAAAA_-NgU1I1qDBOSjW3NDU2Nkm2SEuyTDa1MqhINDQ1t0w1SDFMSTFKM0tMXsQq5piRU6rgmpeemZeaWlSsEFBWouBTkgIA6NxU1UIAAAA&hl=en&mat=CUwytyU0qK4TElcB8pgkaG5HhNejivEnLl_v3d2qdQ4ft_mNK2WenVnlHwV8OzrAWca_0_EGkIIH5gxp-hwuWJx2ei_RN5FiT6bILuEswPv3PYel3XBgRQwPDQzgcNIdG2o&authuser=0",
+    link: "https://www.google.com/search?q=Ahlu+Engineers+Pvt+Ltd&stick=H4sIAAAAAAAA_-NgU1I1qDBOSjW3NDU2Nkm2SEuyTDa1MqhINDQ1t0w1SDFMSTFKM0tMXsQq5piRU6rgmpeemZeaWlSsEFBWouBTkgIA6NxU1UIAAAA&hl=en&mat=CUwytyU0qK4TElcB8pgkaG5HhNejivEnLl_v3d2qdQ4ft_mNK2WenVnlHwV8OzrAWca_0_EGkIIH5gxp-hwuWJx2ei_RN5FiT6bILuEswPv3PYel3XBgRQwPDQzgcNIdG2o&authuser=0#lpc=lpc&scso=_NQcQZKjRI5OC4-EPgNCGsAU_54:113.91999816894531",
     image: googleMyBusinessImage,
   },
 ];
