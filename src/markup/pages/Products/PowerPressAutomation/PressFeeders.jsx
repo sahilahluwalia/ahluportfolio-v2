@@ -1,20 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import asrf from "../../../../asserts/machine-pics/asrf.png";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
-
-const productList = [
+import ImageRows from "../../../../components/Products/ImageRows";
+const rollingServoFeeder = [
   {
     name: "Rolling Servo Feeders",
-    link: "rolling-servo-feeders",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
-  },
-  {
-    name: "Blank Feeders",
-    link: "blank-feeders",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    link: "asrf",
+    image: asrf,
   },
 ];
 
@@ -40,13 +33,15 @@ const PressFeeders = () => {
                 <div className="container"></div>
 
                 <div className="row gx-5">
-                  {productList.map((item) => {
-                    return (
-                      <>
-                        <h4 className="m-b10">{item.name}</h4>
-                      </>
-                    );
-                  })}
+                  <h4 className="m-b10">Rolling Servo feeders</h4>
+                  <div>
+                    <p>
+                      Rolling Servo feeders are used to feed the material to the
+                      press. The material is fed to the press by the rolling
+                      action of the feeder.{" "}
+                    </p>
+                  </div>
+                  <ImageRows data={rollingServoFeeder} />
                 </div>
               </div>
             </div>

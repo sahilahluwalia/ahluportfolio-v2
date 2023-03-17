@@ -3,26 +3,27 @@ import { Link, Outlet } from "react-router-dom";
 
 import { companyDetails, socialMediaLinks } from "../../../data/websiteData";
 // import {  } from "react-router-dom";
-const productList = [
-  {
-    name: "Power Press Automation",
-    link: "power-press-automation",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
-  },
-  {
-    name: "Special Purpose Machines",
-    link: "special-purpose-machines",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
-  },
-  {
-    name: "Vision Inspection System",
-    link: "vision-inspection-system",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
-  },
-];
+import {masterProductLink as productList} from "../../../data/productsData";
+// const productList = [
+//   {
+//     name: "Power Press Automation",
+//     link: "power-press-automation",
+//     image:
+//       "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+//   },
+//   {
+//     name: "Special Purpose Machines",
+//     link: "special-purpose-machines",
+//     image:
+//       "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+//   },
+//   {
+//     name: "Vision Inspection System",
+//     link: "vision-inspection-system",
+//     image:
+//       "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
+//   },
+// ];
 
 const Products = () => {
   //   console.log(catalogueList);

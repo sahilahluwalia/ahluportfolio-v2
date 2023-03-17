@@ -92,6 +92,7 @@ import SpecialPurposeMachines from "./pages/Products/SpecialPurposeMachines/Spec
 import AssemblySPMS from "./pages/Products/SpecialPurposeMachines/AssemblySPMS";
 import OperationalSPMS from "./pages/Products/SpecialPurposeMachines/OperationalSPMS";
 import VisionInspectionSystems from "./pages/Products/VisionInspectionSystems/VisionInspectionSystems";
+import RootProduct from "./pages/Products/RootProduct";
 import Base from "./pages/Base";
 import { ipDataToLocalStorage, ping } from "../fetchers";
 import axios from "axios";
@@ -123,6 +124,7 @@ const Router = () => {
           <Route path="power-press-automation" element={<Base />}>
             <Route index element={<PowerPressAutomation />} />
             <Route path="transfer-system" element={<TransferSystem />} />
+            <Route path="transfer-system/*" element={<RootProduct />} />
             <Route path="sheet-metal-dies" element={<SheetMetalDies />} />
             <Route path="press-feeders" element={<PressFeeders />} />
           </Route>

@@ -1,26 +1,36 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
+import ast2all from "../../../../asserts/machine-pics/ast2all.png";
+import ast3all from "../../../../asserts/machine-pics/ast3all.png";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
+import acsts from "../../../../asserts/machine-pics/acsts.png";
+import ampts from "../../../../asserts/machine-pics/ampts.png";
+import ImageRows from "../../../../components/Products/ImageRows";
+const doubleBarSystem = [
+  {
+    name: "AST2AII Series",
+    link: "ast2all",
+    image: ast2all,
+  },
+  {
+    name: "AST3AII Series",
+    link: "ast3all",
+    image: ast3all,
+  },
+];
 
-const productList = [
+const singleBarSystem = [
   {
-    name: "Double Bar System",
-    link: "double-bar-system",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+    name: "ACSTS Series",
+    link: "acsts",
+    image: acsts,
   },
+];
+
+const multiPressType = [
   {
-    name: "Single Bar System",
-    link: "single-bar-system",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
-  },
-  {
-    name: "Multi Press Type",
-    link: "multi-press-type",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
+    name: "AMPTS Series",
+    link: "ampts",
+    image: ampts,
   },
 ];
 
@@ -46,14 +56,25 @@ const TransferSystem = () => {
                 <div className="container"></div>
 
                 <div className="row gx-5">
-                  {productList.map((item) => {
-                    return (
-                      <>
-                        <h4 className="m-b10">{item.name}</h4>
-                      </>
-                    );
-                  })}
+                  <h4 className="m-b10">Double Bar System</h4>
+                  <div>
+                    <p>We have a wide range of Double Bar System.</p>
+                  </div>
+                  <ImageRows data={doubleBarSystem} />
+
+                  <h4 className="m-b10 m-t30">Single Bar System</h4>
+                  <div>
+                    <p>We have a wide range of Single Bar System.</p>
+                  </div>
+                  <ImageRows data={singleBarSystem} />
+
+                  <h4 className="m-b10 m-t30"> Multi Press Type</h4>
+                  <div>
+                    <p>We have a wide range of Multi Press Type.</p>
+                  </div>
+                  <ImageRows data={multiPressType} />
                 </div>
+                <div className="row gx-5"></div>
               </div>
             </div>
           </div>

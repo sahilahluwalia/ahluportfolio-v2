@@ -8,7 +8,7 @@ import {
   socialMediaLinks,
 } from "../../data/websiteData";
 import { catalogueListItemsWithSubmenu } from "../../utils/catalogues";
-
+import { masterProductsListItemsWithSubmenu } from "../../data/productsData";
 const navbarlinks = [
   {
     name: "Home",
@@ -209,6 +209,8 @@ class Header extends Component {
                       {navbarlinks.map((link, index) => {
                         if (link.name === "Catalogues") {
                           return catalogueListItemsWithSubmenu;
+                        } else if (link.name === "Products") {
+                          return masterProductsListItemsWithSubmenu;
                         } else
                           return (
                             <li
