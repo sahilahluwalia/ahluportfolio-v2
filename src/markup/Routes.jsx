@@ -90,7 +90,7 @@ import PowerPressAutomation from "./pages/Products/PowerPressAutomation/PowerPre
 import TransferSystem from "./pages/Products/PowerPressAutomation/TransferSystem";
 import SheetMetalDies from "./pages/Products/PowerPressAutomation/SheetMetalDies";
 import PressFeeders from "./pages/Products/PowerPressAutomation/PressFeeders";
-import Ast2all from "./pages/Products/PowerPressAutomation/TransferSystem/Ast2all";
+import Ast2all from "./pages/Products/PowerPressAutomation/TransferSystem/Ast2aii";
 import SpecialPurposeMachines from "./pages/Products/SpecialPurposeMachines/SpecialPurposeMachines";
 import AssemblySPMS from "./pages/Products/SpecialPurposeMachines/AssemblySPMS";
 import OperationalSPMS from "./pages/Products/SpecialPurposeMachines/OperationalSPMS";
@@ -127,7 +127,7 @@ const Router = () => {
           <Route path="power-press-automation" element={<Base />}>
             <Route index element={<PowerPressAutomation />} />
             <Route path="transfer-system" element={<TransferSystem />} />
-            <Route path="transfer-system/ast2all" element={<Ast2all />} />
+            <Route path="transfer-system/ast2aii" element={<Ast2all />} />
             <Route path="sheet-metal-dies" element={<SheetMetalDies />} />
             <Route path="press-feeders" element={<PressFeeders />} />
           </Route>

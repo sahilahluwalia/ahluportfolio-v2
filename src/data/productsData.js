@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { catalogueList } from "../utils/catalogues";
+import ast2aii from "../asserts/machine-pics/ast2aii.png";
+
 const masterProductLink = [
   {
     name: "Power Press Automation",
@@ -23,20 +26,6 @@ const masterProductLink = [
       "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
   },
 ];
-
-const productListMaker = (masterProductLink) => {
-  const List = [];
-  for (let i = 0; i < masterProductLink.length; i++) {
-    List.push({
-      name: masterProductLink[i],
-      link: masterProductLink[i],
-    });
-  }
-  return List;
-};
-
-const masterProductList = productListMaker(masterProductLink);
-
 const masterProductListItems = masterProductLink.map((item) => {
   return (
     <li>
@@ -47,7 +36,6 @@ const masterProductListItems = masterProductLink.map((item) => {
     </li>
   );
 });
-
 const masterProductsListItemsWithSubmenu = (
   <li>
     <Link to={"#"}>
@@ -56,5 +44,51 @@ const masterProductsListItemsWithSubmenu = (
     <ul className="sub-menu">{masterProductListItems}</ul>
   </li>
 );
+const addCatalogueFromListByItsName = (name) => {
+  //clean all white spaces from the from catalogue.name in catalogueList
+  const catalogue = catalogueList.find((catalogue) => {
+    return catalogue.name.trim() === name.trim();
+  });
+  return catalogue.link;
+};
+const addCatalogueImageFromListByItsName = (name) => {
+  const catalogue = catalogueList.find((catalogue) => {
+    return catalogue.name.trim() === name.trim();
+  });
+  return catalogue.image;
+};
 
-export { masterProductLink, masterProductsListItemsWithSubmenu };
+const subProductList = [
+  {
+    code: "ast2aii",
+    name: "Ahlu Servo Transfer 2 Axis Double Bar type- AST2SAII",
+    link: "ast2ii",
+    catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
+    image: ast2aii,
+    catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
+  },
+  {
+    name: "Ahlu Mechanical Press Flap Series- AMPF ",
+  },
+  {
+    name: "Ahlu Servo Transfer 3 Axis Double Bar type- AST3SAII",
+  },
+  {
+    name: "Ahlu Cantilever Servo Transfer System- ACSTS Series",
+  },
+  {
+    name: "Ahlu Multi Press Transfer System- AMPTS Series",
+  },
+  {
+    name: "Ahlu Servo Roll Feeder type- ASRF Series",
+  },
+  {
+    name: "AST3AII / AST2AII Series Ahlu Servo Transfer Double Bar type",
+  },
+];
+
+export {
+  masterProductLink,
+  masterProductsListItemsWithSubmenu,
+  subProductList,
+};

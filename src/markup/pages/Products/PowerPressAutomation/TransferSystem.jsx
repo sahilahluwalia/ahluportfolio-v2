@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ast2all from "../../../../asserts/machine-pics/ast2all.png";
-import ast3all from "../../../../asserts/machine-pics/ast3all.png";
+import ast2aii from "../../../../asserts/machine-pics/ast2aii.png";
+import ast3aii from "../../../../asserts/machine-pics/ast3aii.png";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 import acsts from "../../../../asserts/machine-pics/acsts.png";
 import ampts from "../../../../asserts/machine-pics/ampts.png";
@@ -8,13 +8,13 @@ import ImageRows from "../../../../components/Products/ImageRows";
 const doubleBarSystem = [
   {
     name: "AST2AII Series",
-    link: "ast2all",
-    image: ast2all,
+    link: "ast2aii",
+    image: ast2aii,
   },
   {
     name: "AST3AII Series",
-    link: "ast3all",
-    image: ast3all,
+    link: "ast3aii",
+    image: ast3aii,
   },
 ];
 

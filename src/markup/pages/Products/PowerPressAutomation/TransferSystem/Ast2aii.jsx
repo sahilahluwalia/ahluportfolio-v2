@@ -1,10 +1,14 @@
 import React from "react";
-import ast2all from "../../../../../asserts/machine-pics/ast2all.png";
+import ast2aii from "../../../../../asserts/machine-pics/ast2aii.png";
 import catalogImage from "../../../../../asserts/Catalogue PDF Files/1. AST2AII Series Catalogue-1.jpg";
-import ast2all_layout from "../../../../../asserts/machine-pics/asr2all-layout.png";
+import asr2aii_layout from "../../../../../asserts/machine-pics/asr2aii-layout.png";
+import timingDiagram from "../../../../../asserts/machine-pics/timingAST2AII.png";
 import { Link } from "react-router-dom";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import DownloadCatalogue from "../../../../../components/Products/DownloadCatalogue";
+import { catalogueList } from "../../../../../utils/catalogues";
+import { subProductList } from "../../../../../data/productsData";
 const tableContentInJSON = [
   {
     Item: "X Axis / Transfer pitch",
@@ -88,7 +92,9 @@ const standardFeatures = [
   "Completely programmable system. ",
   "Large sized Operator display(HMI) for ease.",
 ];
-const Ast2all = () => {
+const Ast2aii = () => {
+  console.log(subProductList);
+  // const getProductByNameFromSubProductList =
   return (
     <>
       {" "}
@@ -101,7 +107,7 @@ const Ast2all = () => {
                 <div className="col-xl-9 col-lg-8 col-md-7 m-b30">
                   <div className="row">
                     <div className="col-xl-5">
-                      <img src={ast2all} alt="astall" />
+                      <img src={ast2aii} alt="astall" />
                     </div>
                     <div className="col-xl-7">
                       <h2 className=" box-title m-tb0">
@@ -112,29 +118,6 @@ const Ast2all = () => {
                     </div>
                   </div>
                   <div className="text-center section-head">
-                    <h2 className=" box-title m-tb0">
-                      Ahlu Servo Transfer 2 Axis Double Bar type- AST2SALL
-                      <span className="bg-primary"></span>
-                    </h2>
-                    <p>We have a wide range of AST2ALL.</p>
-                    <div className="dlab-separator bg-primary"></div>
-
-                    {/* create a reponsive 3 columns in desktop and 1 colum in mobile screen in bootstrap */}
-                    {/* <div className="container">
-                  <div>Specifications</div>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Item</th>
-                        <th>Unit</th>
-                        <th>AST2SALL-125L</th>
-                        <th>AST2SALL-250L</th>
-                        <th>AST2SALL-500L</th>
-                      </tr>
-                    </thead>
-                    <tbody></tbody>
-                  </table>
-                </div> */}
                     <div className="container">
                       <div className="row">
                         <div className="col-md-12">
@@ -174,13 +157,12 @@ const Ast2all = () => {
                           })}
                         </ol>
                       </Tab>
-                      <Tab eventKey="accessories" title="Accessories">
-                        3
-                      </Tab>
+
                       <Tab eventKey="specification" title="Specification">
-                        <h4>Specification</h4>
-                        <p>layout</p>
-                        <img src={ast2all_layout} alt="" srcset="" />
+                        <h4>Layout</h4>
+                        <img src={asr2aii_layout} alt="" srcset="" />
+
+                        <h4>Specifications</h4>
                         <div className="table-responsive">
                           <table className="table table-bordered table-striped">
                             <thead>
@@ -212,59 +194,21 @@ const Ast2all = () => {
                             *The contents are subject to change by manufacturer
                             without prior notice.
                           </p>
+                          <h4>Timing Diagram</h4>
+                          <img src={timingDiagram} alt="timing diagram" />
                         </div>
                       </Tab>
                     </Tabs>
-                    
 
                     <div className="row gx-5"></div>
                   </div>
                 </div>
                 <div className="col-xl-3 col-lg-4 col-md-5">
                   <div className="widget">
-                    <div className="download-file">
-                      <h4 className="title">Get your brochures</h4>
-                      <img src={catalogImage} alt="catalog" />
-                      <ul>
-                        <li>
-                          <Link to="#" target="_blank">
-                            <div className="text">Company Brochures</div>
-                            <i className="fa fa-download"></i>
-                          </Link>
-                        </li>
-                        <li>
-                          <Link to="#" target="_blank">
-                            <div className="text">Company Info</div>
-                            <i className="fa fa-download"></i>
-                          </Link>
-                        </li>
-                      </ul>
-                    </div>
+                    <DownloadCatalogue image={catalogImage} />
                   </div>
                   <div className="widget sidebar-widget ext-sidebar-menu widget_nav_menu">
-                    <ul className="menu">
-                      <li>
-                        <Link to="#">all services</Link>{" "}
-                      </li>
-                      <li className="active">
-                        <Link to="#">engine diagnostics</Link>{" "}
-                      </li>
-                      <li>
-                        <Link to="#">lube oil and filters</Link>{" "}
-                      </li>
-                      <li>
-                        <Link to="#">belts and hoses</Link>{" "}
-                      </li>
-                      <li>
-                        <Link to="#">air conditioning</Link>{" "}
-                      </li>
-                      <li>
-                        <Link to="#">brake repair</Link>{" "}
-                      </li>
-                      <li>
-                        <Link to="#">tire and wheel services</Link>{" "}
-                      </li>
-                    </ul>
+                    <div>nice</div>><div>nice</div>><div>nice</div>>
                   </div>
                 </div>
               </div>
@@ -276,4 +220,4 @@ const Ast2all = () => {
   );
 };
 
-export default Ast2all;
+export default Ast2aii;
