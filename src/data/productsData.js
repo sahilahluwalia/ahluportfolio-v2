@@ -11,7 +11,6 @@ const masterProductLink = [
     name: "Special Purpose Machines",
     link: "special-purpose-machines",
     fullLink: "/products/special-purpose-machines",
-
     image:
       "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
   },

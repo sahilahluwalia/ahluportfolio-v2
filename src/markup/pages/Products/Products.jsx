@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+import ImageRows from "../../../components/Products/ImageRows";
 
 import { companyDetails, socialMediaLinks } from "../../../data/websiteData";
 // import {  } from "react-router-dom";
-import {masterProductLink as productList} from "../../../data/productsData";
+import { masterProductLink as productList } from "../../../data/productsData";
 // const productList = [
 //   {
 //     name: "Power Press Automation",
@@ -47,39 +48,7 @@ const Products = () => {
                 <div className="container"></div>
 
                 <div className="row gx-5">
-                  {productList.map((item) => {
-                    return (
-                      <>
-                        <div
-                          key={item.link}
-                          className="col-xs-12 col-lg-4 col-md-6 col-sm-8 service-box style3"
-                        >
-                          <div className="m-3 border border-2 ">
-                            <a
-                              // href={item.link}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                src={item.image}
-                                alt=""
-                                style={{
-                                  height: "450px",
-                                  objectFit: "contain",
-                                }}
-                                className="card-img-top"
-                              />
-                            </a>
-
-                            <h4 className="m-b10">{item.name}</h4>
-                            <Link to={item.link}>
-                              <div className="mb-3">View All →</div>
-                            </Link>
-                          </div>
-                        </div>
-                      </>
-                    );
-                  })}
+                  <ImageRows data={productList} />
                 </div>
               </div>
             </div>
