@@ -108,8 +108,29 @@ const subProductList = [
   },
 ];
 
+const powerPressAutomationProductList = [
+  {
+    name: "Transfer System ",
+    link: "transfer-system",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+  },
+  {
+    name: "Sheet Metal Dies",
+    link: "sheet-metal-dies",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+  },
+  {
+    name: "Press Feeders",
+    link: "press-feeders",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+  },
+];
 export {
   masterProductLink,
   masterProductsListItemsWithSubmenu,
   subProductList,
+  powerPressAutomationProductList,
 };

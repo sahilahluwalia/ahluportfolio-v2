@@ -98,32 +98,35 @@ function OverviewTab() {
   return (
     <>
       <h4>Common Characteristics of Two Bar System</h4>
-      <ol type='1'>
-        {commonCharacteristics.map((item, index) => {
-          return (
-            <li style={{ textAlign: "left" }} key={index}>
-              {item}
-            </li>
-          );
-        })}
-      </ol>
+      <div className='px-3'>
+        <ol type='1'>
+          {commonCharacteristics.map((item, index) => {
+            return (
+              <li style={{ textAlign: "left" }} key={index}>
+                {item}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </>
   );
 }
 function Featurestab() {
   return (
     <>
-      {" "}
-      <h4>Standard Features of Two Bar System</h4>
-      <ol type='1'>
-        {standardFeatures.map((item, index) => {
-          return (
-            <li style={{ textAlign: "left" }} key={index}>
-              {item}
-            </li>
-          );
-        })}
-      </ol>
+      <div className='px-3'>
+        <h4>Standard Features of Two Bar System</h4>
+        <ol type='1'>
+          {standardFeatures.map((item, index) => {
+            return (
+              <li style={{ textAlign: "left" }} key={index}>
+                {item}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </>
   );
 }
