@@ -37,6 +37,7 @@ const multiPressType = [
 const TransferSystem = () => {
   //   console.log(catalogueList);
   //   console.log();
+  
   return (
     <>
       <div className="bg-white ">
