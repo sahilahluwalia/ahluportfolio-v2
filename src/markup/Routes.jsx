@@ -84,14 +84,18 @@ import About from "./pages/About";
 import Products from "./pages/Products/Products";
 import ProductBase from "./pages/Products/ProductBase";
 import Catalogues from "./pages/Catalogues";
+
+
 import PowerPressAutomation from "./pages/Products/PowerPressAutomation/PowerPressAutomation";
 import TransferSystem from "./pages/Products/PowerPressAutomation/TransferSystem";
 import SheetMetalDies from "./pages/Products/PowerPressAutomation/SheetMetalDies";
 import PressFeeders from "./pages/Products/PowerPressAutomation/PressFeeders";
+import Ast2all from "./pages/Products/PowerPressAutomation/TransferSystem/Ast2aii";
 import SpecialPurposeMachines from "./pages/Products/SpecialPurposeMachines/SpecialPurposeMachines";
 import AssemblySPMS from "./pages/Products/SpecialPurposeMachines/AssemblySPMS";
 import OperationalSPMS from "./pages/Products/SpecialPurposeMachines/OperationalSPMS";
 import VisionInspectionSystems from "./pages/Products/VisionInspectionSystems/VisionInspectionSystems";
+import RootProduct from "./pages/Products/RootProduct";
 import Base from "./pages/Base";
 import { ipDataToLocalStorage, ping } from "../fetchers";
 import axios from "axios";
@@ -123,6 +127,7 @@ const Router = () => {
           <Route path="power-press-automation" element={<Base />}>
             <Route index element={<PowerPressAutomation />} />
             <Route path="transfer-system" element={<TransferSystem />} />
+            <Route path="transfer-system/ast2aii" element={<Ast2all />} />
             <Route path="sheet-metal-dies" element={<SheetMetalDies />} />
             <Route path="press-feeders" element={<PressFeeders />} />
           </Route>
