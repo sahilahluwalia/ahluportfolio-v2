@@ -1,9 +1,11 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+
 import emailjs from "@emailjs/browser";
 import icon1 from "../../images/icon/icon1.png";
 import icon2 from "../../images/icon/icon2.png";
 import icon3 from "../../images/icon/icon3.png";
+import qrCode from "../../asserts/socialIcons/qr-code.png";
 import { ahluLogoWithName, socialMediaLinks } from "../../data/websiteData";
 import { companyDetails } from "../../data/websiteData";
 import SubscribeForm from "../SubscribeForm";
@@ -48,6 +50,28 @@ const usefulLinks = [
   //   link: "/download-brochures",
   // },
 ];
+
+const QrCodeComponent = ({ qrShow, setQrShow }) => {
+  if (qrShow)
+    return (
+      <div
+        style={{
+          width: "300px",
+          height: "300px",
+          position: "absolute",
+          bottom: "70px",
+          right: "40px",
+          cursor: "pointer",
+        }}
+        onClick={() => {
+          setQrShow(false);
+        }}
+      >
+        <img src={qrCode} alt="qrcode" />
+      </div>
+    );
+};
+
 const Footer = () => {
   const form = useRef();
   const [email, setEmail] = useState("");
@@ -56,6 +80,7 @@ const Footer = () => {
     success: false,
     error: false,
   });
+  const [qrShow, setQrShow] = useState(false);
 
   const onSuccess = () => {
     setAlert({ success: true, error: false });
@@ -316,7 +341,25 @@ const Footer = () => {
                         </li>
                       );
                   })}
+                  <li
+                    style={{
+                      paddingLeft: "1.5rem",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => {
+                      qrShow ? setQrShow(false) : setQrShow(true);
+                    }}
+                  >
+                    <img
+                      style={{
+                        width: "1.6rem",
+                      }}
+                      src={qrCode}
+                      alt=""
+                    />
+                  </li>
                 </ul>
+                <QrCodeComponent qrShow={qrShow} setQrShow={setQrShow} />
               </div>
             </div>
           </div>
