@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import DownloadCatalogue from "components/Products/DownloadCatalogue";
-import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
 import timingDiagram from "asserts/machine-pics/timingAST2AII.png";
 import { subProductList, transferSystemData } from "data/productsData";
 import ProductList from "components/Products/ProductList";
@@ -69,10 +68,10 @@ const tableContentInJSON = [
   },
 ];
 
-const item = subProductList.find((item) => item.code === "ast2aii");
+const item = subProductList.find((item) => item.code === "ast3aii");
+
 const { double_bar_system } = transferSystemData;
 const { standardFeatures, commonCharacteristics } = double_bar_system;
-
 function OverviewTab() {
   return (
     <>
@@ -120,7 +119,7 @@ function SpecificationTab() {
   return (
     <>
       <h4>Layout</h4>
-      <img src={asr2aii_layout} alt='' srcset='' />
+      <img src={item.layout} alt='' srcset='' />
       <h4>Specifications</h4>
       <div className='table-responsive'>
         <table className='table table-bordered table-striped'>
@@ -153,15 +152,12 @@ function SpecificationTab() {
           *The contents are subject to change by manufacturer without prior
           notice.
         </p>
-        <h4>Timing Diagram</h4>
-        <img src={timingDiagram} alt='timing diagram' />
       </div>
     </>
   );
 }
 
-const Ast2aii = () => {
-  console.log(window.location.origin);
+const Ast3aii = () => {
   return (
     <>
       <div className='bg-white '>
@@ -174,7 +170,23 @@ const Ast2aii = () => {
                     name={item?.name}
                     description={item?.description}
                     image={item?.image}
-                  />
+                  >
+                    <p>
+                      In this system variant, All Three Axis are Servo based
+                      which not only adds precision accuracy and repeatability
+                      but also its programmable feature adds feasibility to
+                      produce multiple variants on same transfer system with
+                      ease against changeover of Fingers and Recipe. The axis
+                      includes Pick Axis derived as Y Axis, Pitch Axis derived
+                      as X Axis & Lifting movement denoted as Z Axis. Based on
+                      Product variant and Load capacity required, customized
+                      system can be designed to suit the desired press to
+                      function with synchronization with this system.
+                      Specifically all drawn components which require lifting
+                      from its base passing line comes under applicational
+                      feasibility of 3 Axis Servo Transfer system.
+                    </p>
+                  </FirstRow>
 
                   <div className='row'>
                     <Tabs
@@ -215,4 +227,4 @@ const Ast2aii = () => {
   );
 };
 
-export default Ast2aii;
+export default Ast3aii;

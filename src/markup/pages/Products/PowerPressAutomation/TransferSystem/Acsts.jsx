@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import DownloadCatalogue from "components/Products/DownloadCatalogue";
-import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
+// import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
+import asr3aii_layout from "asserts/machine-pics/asr3aii-layout.png";
 import timingDiagram from "asserts/machine-pics/timingAST2AII.png";
 import { subProductList, transferSystemData } from "data/productsData";
 import ProductList from "components/Products/ProductList";
@@ -69,10 +70,9 @@ const tableContentInJSON = [
   },
 ];
 
-const item = subProductList.find((item) => item.code === "ast2aii");
-const { double_bar_system } = transferSystemData;
-const { standardFeatures, commonCharacteristics } = double_bar_system;
-
+const item = subProductList.find((item) => item.code === "acsts");
+const { acsts } = transferSystemData;
+const { standardFeatures, commonCharacteristics } = acsts;
 function OverviewTab() {
   return (
     <>
@@ -120,7 +120,7 @@ function SpecificationTab() {
   return (
     <>
       <h4>Layout</h4>
-      <img src={asr2aii_layout} alt='' srcset='' />
+      <img src={item.layout} alt='' srcset='' />
       <h4>Specifications</h4>
       <div className='table-responsive'>
         <table className='table table-bordered table-striped'>
@@ -154,14 +154,13 @@ function SpecificationTab() {
           notice.
         </p>
         <h4>Timing Diagram</h4>
-        <img src={timingDiagram} alt='timing diagram' />
+        {/* <img src={timingDiagram} alt='timing diagram' /> */}
       </div>
     </>
   );
 }
 
-const Ast2aii = () => {
-  console.log(window.location.origin);
+const Acsts = () => {
   return (
     <>
       <div className='bg-white '>
@@ -174,7 +173,9 @@ const Ast2aii = () => {
                     name={item?.name}
                     description={item?.description}
                     image={item?.image}
-                  />
+                  >
+                   
+                  </FirstRow>
 
                   <div className='row'>
                     <Tabs
@@ -215,4 +216,4 @@ const Ast2aii = () => {
   );
 };
 
-export default Ast2aii;
+export default Acsts;

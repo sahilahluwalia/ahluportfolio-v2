@@ -1,7 +1,7 @@
 import React from "react";
 
 const FirstRow = (props) => {
-  const { name, description, image } = props;
+  const { name, description, image, children } = props;
   return (
     <div className='row mb-5'>
       <div className='col-xl-5'>
@@ -11,6 +11,7 @@ const FirstRow = (props) => {
         <h2 className=' box-title m-tb0'>{name}</h2>
         <div className='dlab-separator bg-primary'></div>
         <p>{description}</p>
+        {children}
       </div>
     </div>
   );
