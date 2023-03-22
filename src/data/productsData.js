@@ -30,6 +30,9 @@ const acstsCollection = importAll(
 const asrfCollection = importAll(
   require.context("asserts/machine-pics/Design Image Data/Feeder")
 );
+const ampfCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/Flap")
+);
 // console.log(ast2aiiCollection);
 
 const catalogueList = cl;
@@ -170,6 +173,7 @@ const subProductList = [
     name: "Ahlu Mechanical Press Flap Series- AMPF ",
     catalogueLink: addCatalogueFromListByItsName("AMPF Series"),
     image: ampf,
+    imageCollection: ampfCollection,
     catalogueImage: addCatalogueImageFromListByItsName("AMPF Series"),
   },
 
@@ -493,8 +497,8 @@ const pressFeederProducts = [
     image: asrf,
   },
   {
-    name: "flap",
-    link: "flap",
+    name: "Press Flap",
+    link: "ampf",
     image: flap,
   },
 ];

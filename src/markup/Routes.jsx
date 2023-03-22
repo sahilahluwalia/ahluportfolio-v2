@@ -103,6 +103,7 @@ import Ast3aii from "./pages/Products/PowerPressAutomation/TransferSystem/Ast3ii
 import Acsts from "./pages/Products/PowerPressAutomation/TransferSystem/Acsts";
 import Ampts from "./pages/Products/PowerPressAutomation/TransferSystem/Ampts";
 import Asrf from "./pages/Products/PowerPressAutomation/PressFeeder/Asrf";
+import Ampf from "./pages/Products/PowerPressAutomation/PressFeeder/Ampf";
 const Router = () => {
   const location = useLocation();
 
@@ -137,6 +138,7 @@ const Router = () => {
             <Route path='sheet-metal-dies' element={<SheetMetalDies />} />
             <Route path='press-feeders' element={<PressFeeders />} />
             <Route path='press-feeders/asrf' element={<Asrf />} />
+            <Route path='press-feeders/ampf' element={<Ampf />} />
           </Route>
           <Route path='special-purpose-machines' element={<Base />}>
             <Route index element={<SpecialPurposeMachines />} />
