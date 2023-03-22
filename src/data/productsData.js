@@ -5,6 +5,7 @@ import ast3aii from "asserts/machine-pics/ast3aii.png";
 import ampts from "asserts/machine-pics/ampts.png";
 import asrf from "asserts/machine-pics/asrf.png";
 import acsts from "asserts/machine-pics/acsts.png";
+import ampf from "asserts/machine-pics/ampf.png";
 import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
 import asr3aii_layout from "asserts/machine-pics/asr3aii-layout.png";
 import acsts_layout from "asserts/machine-pics/acsts-layout.png";
@@ -84,7 +85,11 @@ const subProductList = [
     catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
   },
   {
+    code: "ampf",
     name: "Ahlu Mechanical Press Flap Series- AMPF ",
+    catalogueLink: addCatalogueFromListByItsName("AMPF Series"),
+    image: ampf,
+    catalogueImage: addCatalogueImageFromListByItsName("AMPF Series"),
   },
 
   {
@@ -92,6 +97,8 @@ const subProductList = [
     image: ast3aii,
     code: "ast3aii",
     layout: asr3aii_layout,
+    catalogueLink: addCatalogueFromListByItsName("AST3AII Series"),
+
     link: universalPath(
       "products/power-press-automation/transfer-system/ast3aii"
     ),
@@ -105,21 +112,25 @@ const subProductList = [
     code: "acsts",
     image: acsts,
     layout: acsts_layout,
+
     catalogueImage: addCatalogueImageFromListByItsName("ACSTS Series"),
   },
   {
     name: "Ahlu Multi Press Transfer System- AMPTS Series",
-    link: "",
     code: "ampts",
     image: ampts,
     layout: ampts_layout,
-    layout: "products/power-press-automation/transfer-system/ampts",
+    link: universalPath(
+      "products/power-press-automation/transfer-system/ampts"
+    ),
     catalogueImage: addCatalogueImageFromListByItsName("AMPTS Series"),
   },
   {
     name: "Ahlu Servo Roll Feeder type- ASRF Series",
     code: "asrf",
     image: asrf,
+    catalogueLink: addCatalogueFromListByItsName("ASRF Series"),
+    link: universalPath("products/power-press-automation/press-feeders/asrf"),
     catalogueImage: addCatalogueImageFromListByItsName("ASRF Series"),
   },
   {
@@ -145,6 +156,42 @@ const powerPressAutomationProductList = [
     link: "press-feeders",
     image:
       "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+  },
+];
+
+const transferSystemProducts = [
+  {
+    name: "AST2AII Series",
+    link: "ast2aii",
+    image: ast2aii,
+  },
+  {
+    name: "AST3AII Series",
+    link: "ast3aii",
+    image: ast3aii,
+  },
+  {
+    name: "ACSTS Series",
+    link: "acsts",
+    image: acsts,
+  },
+  {
+    name: "AMPTS Series",
+    link: "ampts",
+    image: ampts,
+  },
+];
+
+const pressFeederProducts = [
+  {
+    name: "Rolling Servo Feeders",
+    link: "asrf",
+    image: asrf,
+  },
+  {
+    name: "flap",
+    link: "flap",
+    image: "",
   },
 ];
 
@@ -242,4 +289,6 @@ export {
   subProductList,
   powerPressAutomationProductList,
   transferSystemData,
+  transferSystemProducts,
+  pressFeederProducts,
 };
