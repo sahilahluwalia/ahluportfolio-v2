@@ -10,65 +10,8 @@ import { RightSection } from "components/Products/RightSection";
 import LeftSection from "components/Products/LeftSection";
 import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
-const tableContentInJSON = [
-  {
-    Item: "X Axis / Transfer pitch",
-    Unit: "mm",
-    "AST2ALL-125L": "0-125",
-    "AST2ALL-250L": "0-250",
-    "AST2ALL-500L": "0-500",
-  },
-  {
-    Item: "Y Axis / Clamping Stroke",
-    Unit: "mm",
-    "AST2ALL-125L": "0-40",
-    "AST2ALL-250L": "0-65",
-    "AST2ALL-500L": "0-125",
-  },
-  {
-    Item: "Feed Bar Size",
-    Unit: "mm",
-    "AST2ALL-125L": "65",
-    "AST2ALL-250L": "80",
-    "AST2ALL-500L": "90",
-  },
-  {
-    Item: "Weight Capacity",
-    Unit: "kg",
-    "AST2ALL-125L": "2",
-    "AST2ALL-250L": "3",
-    "AST2ALL-500L": "5",
-  },
-  {
-    Item: "Feeding Accuracy",
-    Unit: "mm",
-    "AST2ALL-125L": "± 0.1",
-    "AST2ALL-250L": "± 0.1",
-    "AST2ALL-500L": "± 0.1",
-  },
-  {
-    Item: "Maximum Stroke Feed",
-    Unit: "spm",
-    "AST2ALL-125L": "40",
-    "AST2ALL-250L": "30",
-    "AST2ALL-500L": "20",
-  },
-  {
-    Item: "Main Dimensions",
-    Unit: "mm",
-    "AST2ALL-125L": "Please Contact",
-    "AST2ALL-250L": "",
-    "AST2ALL-500L": "",
-  },
-  {
-    Item: "Supported Bolster Width",
-    Unit: "mm",
-    "AST2ALL-125L": "Please Contact",
-    "AST2ALL-250L": "",
-    "AST2ALL-500L": "",
-  },
-];
-
+import Table from "components/Products/Table";
+import BaseTable from 'components/Products/BaseTable';
 const item = subProductList.find((item) => item.code === "ast2aii");
 const { double_bar_system } = transferSystemData;
 const { standardFeatures, commonCharacteristics } = double_bar_system;
@@ -119,43 +62,75 @@ function Featurestab() {
 function SpecificationTab() {
   return (
     <>
-      <h4>Layout</h4>
+      <h4>Layout Diagram</h4>
       <img src={asr2aii_layout} alt='' srcset='' />
       <h4>Specifications</h4>
-      <div className='table-responsive'>
-        <table className='table table-bordered table-striped'>
-          <thead>
-            <tr>
-              {/* <th>Sr. No.</th> */}
-              <th>Item</th>
-              <th>Unit</th>
-              <th>AST2SALL-125L</th>
-              <th>AST2SALL-250L</th>
-              <th>AST2SALL-500L</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tableContentInJSON.map((item, index) => {
-              return (
-                <tr key={index}>
-                  {/* <td>{index+1}</td> */}
-                  <td>{item.Item}</td>
-                  <td>{item.Unit}</td>
-                  <td>{item["AST2ALL-125L"]}</td>
-                  <td>{item["AST2ALL-250L"]}</td>
-                  <td>{item["AST2ALL-500L"]}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-        <p>
-          *The contents are subject to change by manufacturer without prior
-          notice.
-        </p>
-        <h4>Timing Diagram</h4>
-        <img src={timingDiagram} alt='timing diagram' />
-      </div>
+      <BaseTable>
+      <table 
+       className='table table-bordered table-striped'
+      cellSpacing={0} border={0}>
+        <colgroup width={85} span={5} />
+        <tbody><tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Item</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>Unit</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>AST2AII-125L</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>AST2AII-250L</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>AST2AII-500L</font></td>
+          </tr>
+          <tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>X Axis / Transfer pitch</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>mm</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>0-125</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>0-250</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>0-500</font></td>
+          </tr>
+          <tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Y Axis / Clamping Stroke</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>mm</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>0-40</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>0-65</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>0-125</font></td>
+          </tr>
+          <tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Feed Bar Size</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>mm</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={65} sdnum="16393;" valign="middle" align="center"><font size={3} face>65</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={80} sdnum="16393;" valign="middle" align="center"><font size={3} face>80</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={90} sdnum="16393;" valign="middle" align="center"><font size={3} face>90</font></td>
+          </tr>
+          <tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Weight Capacity</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>kg</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={2} sdnum="16393;" valign="middle" align="center"><font size={3} face>2</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={3} sdnum="16393;" valign="middle" align="center"><font size={3} face>3</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={5} sdnum="16393;" valign="middle" align="center"><font size={3} face>5</font></td>
+          </tr>
+          <tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Feeding Accuracy</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>mm</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>± 0.1</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>± 0.1</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>± 0.1</font></td>
+          </tr>
+          <tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Maximum Stroke Feed</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>spm</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={40} sdnum="16393;" valign="middle" align="center"><font size={3} face>40</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={30} sdnum="16393;" valign="middle" align="center"><font size={3} face>30</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={20} sdnum="16393;" valign="middle" align="center"><font size={3} face>20</font></td>
+          </tr>
+          <tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Main Dimensions</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>mm</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} colSpan={3} valign="middle" align="center"><font size={3} >Please Contact</font></td>
+          </tr>
+          <tr>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Supported Bolster Width</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>mm</font></td>
+            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} colSpan={3} valign="middle" align="center"><font size={3} >Please Contact</font></td>
+          </tr>
+        </tbody></table>
+        </BaseTable>
     </>
   );
 }

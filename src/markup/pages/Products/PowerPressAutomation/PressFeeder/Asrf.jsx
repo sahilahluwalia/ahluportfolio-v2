@@ -11,62 +11,71 @@ import { RightSection } from "components/Products/RightSection";
 import LeftSection from "components/Products/LeftSection";
 import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
+import Table from "components/Products/Table";
 const tableContentInJSON = [
   {
-    Item: "X Axis / Transfer pitch",
-    Unit: "mm",
-    "AST2ALL-125L": "0-125",
-    "AST2ALL-250L": "0-250",
-    "AST2ALL-500L": "0-500",
+    Model: "",
+    "Max width in mm": null,
+    "Thick ness Range in MM": "Mini",
+    FIELD4: "Max",
+    "Max thickness with max width": null,
+    "Max Velocity in MPM": null,
   },
   {
-    Item: "Y Axis / Clamping Stroke",
-    Unit: "mm",
-    "AST2ALL-125L": "0-40",
-    "AST2ALL-250L": "0-65",
-    "AST2ALL-500L": "0-125",
+    Model: "ASRF-200-HS",
+    "Max width in mm": 200,
+    "Thick ness Range in MM": "1",
+    FIELD4: "6",
+    "Max thickness with max width": 6,
+    "Max Velocity in MPM": 40,
   },
   {
-    Item: "Feed Bar Size",
-    Unit: "mm",
-    "AST2ALL-125L": "65",
-    "AST2ALL-250L": "80",
-    "AST2ALL-500L": "90",
+    Model: "ASRF-300-HS",
+    "Max width in mm": 300,
+    "Thick ness Range in MM": "",
+    FIELD4: "",
+    "Max thickness with max width": 6,
+    "Max Velocity in MPM": 40,
   },
   {
-    Item: "Weight Capacity",
-    Unit: "kg",
-    "AST2ALL-125L": "2",
-    "AST2ALL-250L": "3",
-    "AST2ALL-500L": "5",
+    Model: "ASRF-400-HS",
+    "Max width in mm": 400,
+    "Thick ness Range in MM": "",
+    FIELD4: "",
+    "Max thickness with max width": 5,
+    "Max Velocity in MPM": 40,
   },
   {
-    Item: "Feeding Accuracy",
-    Unit: "mm",
-    "AST2ALL-125L": "± 0.1",
-    "AST2ALL-250L": "± 0.1",
-    "AST2ALL-500L": "± 0.1",
+    Model: "ASRF-500-HS",
+    "Max width in mm": 500,
+    "Thick ness Range in MM": "",
+    FIELD4: "",
+    "Max thickness with max width": 4.8,
+    "Max Velocity in MPM": 40,
   },
   {
-    Item: "Maximum Stroke Feed",
-    Unit: "spm",
-    "AST2ALL-125L": "40",
-    "AST2ALL-250L": "30",
-    "AST2ALL-500L": "20",
+    Model: "ASRF-600-HS",
+    "Max width in mm": 600,
+    "Thick ness Range in MM": "",
+    FIELD4: "",
+    "Max thickness with max width": 4.5,
+    "Max Velocity in MPM": 40,
   },
   {
-    Item: "Main Dimensions",
-    Unit: "mm",
-    "AST2ALL-125L": "Please Contact",
-    "AST2ALL-250L": "",
-    "AST2ALL-500L": "",
+    Model: "ASRF-800-HS",
+    "Max width in mm": 800,
+    "Thick ness Range in MM": "",
+    FIELD4: "",
+    "Max thickness with max width": 3,
+    "Max Velocity in MPM": 40,
   },
   {
-    Item: "Supported Bolster Width",
-    Unit: "mm",
-    "AST2ALL-125L": "Please Contact",
-    "AST2ALL-250L": "",
-    "AST2ALL-500L": "",
+    Model: "ASRF-1000-HS",
+    "Max width in mm": 1000,
+    "Thick ness Range in MM": "",
+    FIELD4: "",
+    "Max thickness with max width": 2,
+    "Max Velocity in MPM": 40,
   },
 ];
 
@@ -122,40 +131,1183 @@ function SpecificationTab() {
       <h4>Layout</h4>
       <img src={item.layout} alt='' srcset='' />
       <h4>Specifications</h4>
-      <div className='table-responsive'>
-        <table className='table table-bordered table-striped'>
-          <thead>
-            <tr>
-              {/* <th>Sr. No.</th> */}
-              <th>Item</th>
-              <th>Unit</th>
-              <th>AST2SALL-125L</th>
-              <th>AST2SALL-250L</th>
-              <th>AST2SALL-500L</th>
-            </tr>
-          </thead>
+      <h6>Servo Roll Feeder Heavy series (HS)</h6>
+
+      <div className='table-responsive text-center'>
+        <table
+          className='table table-bordered table-striped'
+          cellSpacing={0}
+          border={0}
+        >
+          <colgroup width={85} span={6} />
           <tbody>
-            {tableContentInJSON.map((item, index) => {
-              return (
-                <tr key={index}>
-                  {/* <td>{index+1}</td> */}
-                  <td>{item.Item}</td>
-                  <td>{item.Unit}</td>
-                  <td>{item["AST2ALL-125L"]}</td>
-                  <td>{item["AST2ALL-250L"]}</td>
-                  <td>{item["AST2ALL-500L"]}</td>
-                </tr>
-              );
-            })}
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={2}
+                valign='middle'
+                height={37}
+                align='center'
+              >
+                <font color='#000000'>Model</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={2}
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>Max width in mm</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                colSpan={2}
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>Thickness Range in MM</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={2}
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>Max thickness with max width</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={2}
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>Max Velocity in MPM</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>Mini</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>Max</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={18}
+                align='center'
+              >
+                <font color='#000000'>ASRF-200-HS</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={200}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>200</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={7}
+                sdval={1}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>1</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={7}
+                sdval={6}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font
+                  style={{
+                    marginTop: "auto",
+                    marginBottom: "auto",
+                  }}
+                  color='#000000'
+                >
+                  6
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={6}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>6</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>40</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={18}
+                align='center'
+              >
+                <font color='#000000'>ASRF-300-HS</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={300}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>300</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={6}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>6</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>40</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={18}
+                align='center'
+              >
+                <font color='#000000'>ASRF-400-HS</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={400}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>400</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={5}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>5</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>40</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={18}
+                align='center'
+              >
+                <font color='#000000'>ASRF-500-HS</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={500}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>500</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval='4.8'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>4.8</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>40</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={18}
+                align='center'
+              >
+                <font color='#000000'>ASRF-600-HS</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={600}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>600</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval='4.5'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>4.5</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>40</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={18}
+                align='center'
+              >
+                <font color='#000000'>ASRF-800-HS</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={800}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>800</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={3}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>3</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>40</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={18}
+                align='center'
+              >
+                <font color='#000000'>ASRF-1000-HS</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={1000}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>1000</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={2}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>2</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font color='#000000'>40</font>
+              </td>
+            </tr>
           </tbody>
         </table>
-        <p>
-          *The contents are subject to change by manufacturer without prior
-          notice.
-        </p>
-        <h4>Timing Diagram</h4>
-        {/* <img src={timingDiagram} alt='timing diagram' /> */}
       </div>
+      <h6>Servo Roll Feeder Medium series (MS)</h6>
+      <div className='table-responsive text-center'>
+        <table
+          className='table table-bordered table-striped'
+          cellSpacing={0}
+          border={0}
+        >
+          <colgroup width={85} span={6} />
+          <tbody>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={2}
+                valign='middle'
+                height={46}
+                align='center'
+              >
+                <font size={4} face>
+                  Model
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={2}
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  Max width in mm
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                colSpan={2}
+                valign='middle'
+                align='center'
+              >
+                <font size={4}>Thickness Range in MM</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={2}
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  Max thickness with max width
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={2}
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  Max Velocity in MPM
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  Mini
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                <font size={4}>Max</font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={23}
+                align='center'
+              >
+                <font size={4} face>
+                  ASRF-200-MS
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={200}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  200
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={4}
+                sdval='0.3'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  0.3
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={4}
+                sdval='3.5'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  3.5
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval='3.5'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  3.5
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  40
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={23}
+                align='center'
+              >
+                <font size={4} face>
+                  ASRF-300-MS
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={300}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4}>300</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={3}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  3
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  40
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={23}
+                align='center'
+              >
+                <font size={4} face>
+                  ASRF-400-MS
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={400}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4}>400</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval='2.5'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  2.5
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  40
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={23}
+                align='center'
+              >
+                <font size={4} face>
+                  ASRF-500-MS
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={500}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4}>500</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={2}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  2
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  40
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={23}
+                align='center'
+              >
+                <font size={4} face>
+                  ASRF-600-MS
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={600}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  600
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={3}
+                sdval='0.3'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  0.3
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                rowSpan={3}
+                sdval='2.5'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  2.5
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval='2.5'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  2.5
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  40
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={23}
+                align='center'
+              >
+                <font size={4} face>
+                  ASRF-800-MS
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={800}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4}>800</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval='1.6'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  1.6
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  40
+                </font>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={23}
+                align='center'
+              >
+                <font size={4} face>
+                  ASRF-1000-MS
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={1000}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4}>1000</font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval='1.5'
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  1.5
+                </font>
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                <font size={4} face>
+                  40
+                </font>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        *The contents are subject to change by manufacturer without prior
+        notice.
+      </p>
     </>
   );
 }

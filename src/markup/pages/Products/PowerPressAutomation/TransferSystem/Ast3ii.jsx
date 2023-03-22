@@ -9,65 +9,8 @@ import { RightSection } from "components/Products/RightSection";
 import LeftSection from "components/Products/LeftSection";
 import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
-const tableContentInJSON = [
-  {
-    Item: "X Axis / Transfer pitch",
-    Unit: "mm",
-    "AST2ALL-125L": "0-125",
-    "AST2ALL-250L": "0-250",
-    "AST2ALL-500L": "0-500",
-  },
-  {
-    Item: "Y Axis / Clamping Stroke",
-    Unit: "mm",
-    "AST2ALL-125L": "0-40",
-    "AST2ALL-250L": "0-65",
-    "AST2ALL-500L": "0-125",
-  },
-  {
-    Item: "Feed Bar Size",
-    Unit: "mm",
-    "AST2ALL-125L": "65",
-    "AST2ALL-250L": "80",
-    "AST2ALL-500L": "90",
-  },
-  {
-    Item: "Weight Capacity",
-    Unit: "kg",
-    "AST2ALL-125L": "2",
-    "AST2ALL-250L": "3",
-    "AST2ALL-500L": "5",
-  },
-  {
-    Item: "Feeding Accuracy",
-    Unit: "mm",
-    "AST2ALL-125L": "± 0.1",
-    "AST2ALL-250L": "± 0.1",
-    "AST2ALL-500L": "± 0.1",
-  },
-  {
-    Item: "Maximum Stroke Feed",
-    Unit: "spm",
-    "AST2ALL-125L": "40",
-    "AST2ALL-250L": "30",
-    "AST2ALL-500L": "20",
-  },
-  {
-    Item: "Main Dimensions",
-    Unit: "mm",
-    "AST2ALL-125L": "Please Contact",
-    "AST2ALL-250L": "",
-    "AST2ALL-500L": "",
-  },
-  {
-    Item: "Supported Bolster Width",
-    Unit: "mm",
-    "AST2ALL-125L": "Please Contact",
-    "AST2ALL-250L": "",
-    "AST2ALL-500L": "",
-  },
-];
-
+import Table from "components/Products/Table";
+import BaseTable from "components/Products/BaseTable";
 const item = subProductList.find((item) => item.code === "ast3aii");
 
 const { double_bar_system } = transferSystemData;
@@ -99,8 +42,6 @@ function Featurestab() {
           {standardFeatures.map((item, index) => {
             return (
               <li
-                // add css for a span inside this li
-
                 style={{
                   textAlign: "left",
                 }}
@@ -118,41 +59,760 @@ function Featurestab() {
 function SpecificationTab() {
   return (
     <>
-      <h4>Layout</h4>
+      <h4>Layout Diagram</h4>
       <img src={item.layout} alt='' srcset='' />
       <h4>Specifications</h4>
-      <div className='table-responsive'>
-        <table className='table table-bordered table-striped'>
-          <thead>
-            <tr>
-              {/* <th>Sr. No.</th> */}
-              <th>Item</th>
-              <th>Unit</th>
-              <th>AST2SALL-125L</th>
-              <th>AST2SALL-250L</th>
-              <th>AST2SALL-500L</th>
-            </tr>
-          </thead>
+      <BaseTable>
+        <table
+          className='table table-bordered table-striped'
+          cellSpacing={0}
+          border={0}
+        >
+          <colgroup width={85} span={6} />
           <tbody>
-            {tableContentInJSON.map((item, index) => {
-              return (
-                <tr key={index}>
-                  {/* <td>{index+1}</td> */}
-                  <td>{item.Item}</td>
-                  <td>{item.Unit}</td>
-                  <td>{item["AST2ALL-125L"]}</td>
-                  <td>{item["AST2ALL-250L"]}</td>
-                  <td>{item["AST2ALL-500L"]}</td>
-                </tr>
-              );
-            })}
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                Sr. No.
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Item
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Unit
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                AST3AII-125L
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                AST3AII-250L
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                AST3AII-500L
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={1}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                1
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                X Axis / Transfer pitch
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                MM
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-125
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-250
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-500
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={2}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                2
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Y Axis / Clamping Stroke
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                MM
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-40
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-65
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-90
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={3}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                3
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Z Axis / Lift Amount
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                MM
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-30
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-50
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                0-80
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={4}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                4
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Feed Bar Size
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                MM
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={65}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                65
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={80}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                80
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={90}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                90
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={5}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                5
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Feeding Accuracy
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                MM
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                ± 0.1
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                ± 0.1
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                ± 0.1
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={6}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                6
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Weight Capacity
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                KG
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={2}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                2
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={3}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                3
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={5}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                5
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={7}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                7
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Maximum Stroke Feed
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                SPM
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={40}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                40
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={30}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                30
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={20}
+                sdnum='16393;'
+                valign='middle'
+                align='center'
+              >
+                20
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={8}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                8
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Main Dimensions
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                MM
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                colSpan={3}
+                valign='middle'
+                align='center'
+              >
+                Please Contact
+              </td>
+            </tr>
+            <tr>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                sdval={9}
+                sdnum='16393;'
+                valign='middle'
+                height={17}
+                align='center'
+              >
+                9
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                Supported Bolster Width
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                valign='middle'
+                align='center'
+              >
+                MM
+              </td>
+              <td
+                style={{
+                  borderTop: "1px solid #000000",
+                  borderBottom: "1px solid #000000",
+                  borderLeft: "1px solid #000000",
+                  borderRight: "1px solid #000000",
+                }}
+                colSpan={3}
+                valign='middle'
+                align='center'
+              >
+                Please Contact
+              </td>
+            </tr>
           </tbody>
         </table>
-        <p>
-          *The contents are subject to change by manufacturer without prior
-          notice.
-        </p>
-      </div>
+      </BaseTable>
     </>
   );
 }
