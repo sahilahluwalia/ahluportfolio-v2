@@ -1324,7 +1324,7 @@ const Asrf = () => {
                   <FirstRow
                     name={item?.name}
                     description={item?.description}
-                    image={item?.image}
+                    imageArray={item?.imageCollection}
                   ></FirstRow>
 
                   <div className='row'>

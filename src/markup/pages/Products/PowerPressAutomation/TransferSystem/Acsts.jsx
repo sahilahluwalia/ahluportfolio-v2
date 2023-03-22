@@ -604,9 +604,7 @@ function SpecificationTab() {
                 valign='middle'
                 align='center'
               >
-                <font size={3} >
-                  Please Contact
-                </font>
+                <font size={3}>Please Contact</font>
               </td>
             </tr>
             <tr>
@@ -650,9 +648,7 @@ function SpecificationTab() {
                 valign='middle'
                 align='center'
               >
-                <font size={3} >
-                  Please Contact
-                </font>
+                <font size={3}>Please Contact</font>
               </td>
             </tr>
           </tbody>
@@ -674,7 +670,7 @@ const Acsts = () => {
                   <FirstRow
                     name={item?.name}
                     description={item?.description}
-                    image={item?.image}
+                    imageArray={item?.imageCollection}
                   ></FirstRow>
 
                   <div className='row'>

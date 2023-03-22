@@ -34,12 +34,12 @@ import "../../css/style.css";
 import "../../css/skin/skin-1.css";
 import "../../css/templete.min.css";
 import ScrollToTop from "../element/scrollToTop";
+import bg from "asserts/bg.jpg";
 
-const bg = require("../../images/background/bg2.jpg");
+// const bg = require("../../images/background/bg2.jpg");
 const bg2 = require("../../images/background/bg4.jpg");
 const bg3 = require("../../images/background/map-bg.png");
 const bg4 = require("../../images/main-slider/slide8.jpg");
-
 class Homepage extends Component {
   render() {
     // new WAChatBox({
@@ -53,43 +53,149 @@ class Homepage extends Component {
     //   button_text: "Need Help?",
     // });
     return (
-      <div className="skin-1">
-        <Parallax bgImage={bg4} strength={200}>
-          <div className="hero-section pt-50 home-bnr1">
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-lg-6 col-md-12">
-                  <div className="hero-content">
-                    <h1 className="title">we are industry factory solution</h1>
-                    <div className="description">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. Lorem Ipsum has been the industry's
-                      standard dummy text ever since the.
+      <div className='skin-1'>
+        <Parallax bgImage={bg} strength={100}>
+          <div className='hero-section home-bnr1'>
+            <div className='container'>
+              <div className='row align-items-center'>
+                <div className='col-lg-12 col-md-12 '>
+                  <div className='hero-content'>
+                    <h1 className='title'>
+                      Transform Your Manufacturing with Ahlu Engineers' Custom
+                      Machines & Automation Solutions
+                    </h1>
+                    <div className='description'>
+                      "Automation is cost cutting by tightening the corners and
+                      not cutting them"
                     </div>
-                    <div className="buttons">
-                      <Link to={"#"}>Read More</Link>
-                      <Link to={"#"}>About Us</Link>
+                    <div className='buttons'>
+                      <Link to='products'>Products</Link>
+                      <Link to='about'>About Us</Link>
                     </div>
                   </div>
-                </div>
-                <div className="col-lg-6 col-md-12">
-                  <img
-                    src={require("../../images/main-slider/slide7.png")}
-                    alt=""
-                  />
                 </div>
               </div>
             </div>
           </div>
         </Parallax>
-        <div className="page-content bg-white">
-          <div className="content-block">
-            <div className="section-full bg-gray content-inner about-carousel-ser">
-              <div className="container">
-                <div className="section-head text-center">
-                  <h2 className="title">
+
+        <div className='section-full' id='choose-us'>
+          <div className='row m-lr0'>
+            <div
+              className='col-xl-6 col-lg-12 p-lr0 d-flex dis-tbl latest-project-info style1 bg-secondry wow fadeInLeft'
+              data-wow-duration='2s'
+              data-wow-delay='0.3s'
+            >
+              <div className='align-self-center text-white'>
+                <div className='section-head text-white'>
+                  <h2 className='title'>Why choose us</h2>
+                  <p>
+                    We’re continually working to change the way people think
+                    about and engage with our products.
+                  </p>
+                </div>
+                <ul className='list-check white list-2 rounded border'>
+                  <li>
+                    <h4 className='m-b10'>Vehicle Inspection</h4>
+                    <p>
+                      We understand you need a building that works for you and
+                      your organisation.
+                    </p>
+                  </li>
+                  <li>
+                    <h4 className='m-b10'>Transmission Checkup</h4>
+                    <p>
+                      We understand you need a building that works for you and
+                      your organisation.
+                    </p>
+                  </li>
+                  <li>
+                    <h4 className='m-b10'>Auto Repairing</h4>
+                    <p>
+                      We understand you need a building that works for you and
+                      your organisation.
+                    </p>
+                  </li>
+                  <li>
+                    <h4 className='m-b10'>High Performance</h4>
+                    <p>
+                      We understand you need a building that works for you and
+                      your organisation.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              className='col-xl-6 col-lg-12 p-lr0 wow fadeInRight'
+              data-wow-duration='2s'
+              data-wow-delay='0.3s'
+            >
+              <div className='row spno'>
+                <div className='col-lg-6 col-md-6 col-sm-6 bg-primary align-items-center d-flex'>
+                  <div className='dlab-services-box text-white'>
+                    <h2 className='service-year'>
+                      32<small>year</small>
+                    </h2>
+                    <h3 className='title m-b0'>
+                      We are Building the Future and Restoring
+                    </h3>
+                  </div>
+                </div>
+                <div className='col-lg-6 col-md-6 col-sm-6'>
+                  <img
+                    className='img-cover'
+                    src={require("../../images/our-work/car/pic3.jpg")}
+                    alt=''
+                  />
+                </div>
+                <div className='col-lg-6 col-md-6 col-sm-6'>
+                  <div className='video-bx radius-no h100'>
+                    <img
+                      src={require("../../images/our-work/car/pic4.jpg")}
+                      alt='Signature'
+                      className='img-cover'
+                    />
+                    <div className='video-play-icon'>
+                      <Link
+                        to='#'
+                        onClick={this.openModal}
+                        className='popup-youtube video bg-primary'
+                      >
+                        <i className='fa fa-play'></i>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-lg-6 col-md-6 col-sm-6 bg-secondry align-items-center d-flex'>
+                  <div className='dlab-services-box text-white'>
+                    <h3 className='title text-white m-b15'>
+                      Renting Tips & Articles
+                    </h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                    <Link
+                      to='/about#mission'
+                      className='site-button btnhover19 outline white outline-2'
+                    >
+                      WHY US
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='page-content bg-white'>
+          <div className='content-block'>
+            <div className='section-full bg-gray content-inner about-carousel-ser'>
+              <div className='container'>
+                <div className='section-head text-center'>
+                  <h2 className='title'>
                     Why Customer Love To <br />
-                    <span className="text-primary">Choose Us</span>
+                    <span className='text-primary'>Choose Us</span>
                   </h2>
                   <p>
                     There are many variations of passages of Lorem Ipsum
@@ -103,30 +209,30 @@ class Homepage extends Component {
             </div>
 
             <div
-              className="section-full bg-img-fix content-inner-2 overlay-black-dark contact-action style2"
+              className='section-full bg-img-fix content-inner-2 overlay-black-dark contact-action style2'
               style={{ backgroundImage: "url(" + bg + ")" }}
             >
-              <div className="container">
-                <div className="row relative">
+              <div className='container'>
+                <div className='row relative'>
                   <div
-                    className="col-md-12 col-lg-8 wow fadeInLeft"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.2s"
+                    className='col-md-12 col-lg-8 wow fadeInLeft'
+                    data-wow-duration='2s'
+                    data-wow-delay='0.2s'
                   >
-                    <div className="contact-no-area">
-                      <h2 className="title">
+                    <div className='contact-no-area'>
+                      <h2 className='title'>
                         A company involved in service, maintenance
                       </h2>
-                      <div className="contact-no">
-                        <div className="contact-left">
-                          <h3 className="no">
-                            <i className="sl-call-in"></i>123-456-7890
+                      <div className='contact-no'>
+                        <div className='contact-left'>
+                          <h3 className='no'>
+                            <i className='sl-call-in'></i>123-456-7890
                           </h3>
                         </div>
-                        <div className="contact-right">
+                        <div className='contact-right'>
                           <Link
-                            to="/contact-4"
-                            className="site-button appointment-btn btnhover13"
+                            to='/contact-4'
+                            className='site-button appointment-btn btnhover13'
                           >
                             Get Appointment
                           </Link>
@@ -135,40 +241,40 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <div
-                    className="col-md-12 col-lg-4 contact-img-bx wow fadeInRight relative"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.2s"
+                    className='col-md-12 col-lg-4 contact-img-bx wow fadeInRight relative'
+                    data-wow-duration='2s'
+                    data-wow-delay='0.2s'
                   >
-                    <img src={require("../../images/pic1.png")} alt="" />
+                    <img src={require("../../images/pic1.png")} alt='' />
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="section-full bg-gray content-inner">
-              <div className="container">
-                <div className="section-head text-center">
-                  <h2 className="title"> Our Services</h2>
+            <div className='section-full bg-gray content-inner'>
+              <div className='container'>
+                <div className='section-head text-center'>
+                  <h2 className='title'> Our Services</h2>
                   <p>
                     There are many variations of passages of Lorem Ipsum
                     typesetting industry has been the industry's standard dummy
                     text ever since the been when an unknown printer.
                   </p>
                 </div>
-                <div className="section-content row">
+                <div className='section-content row'>
                   <div
-                    className="col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.2s"
+                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
+                    data-wow-duration='2s'
+                    data-wow-delay='0.2s'
                   >
-                    <div className="icon-bx-wraper" data-name="01">
-                      <div className="icon-lg">
-                        <Link to="#" className="icon-cell">
-                          <i className="flaticon-robot-arm"></i>
+                    <div className='icon-bx-wraper' data-name='01'>
+                      <div className='icon-lg'>
+                        <Link to='#' className='icon-cell'>
+                          <i className='flaticon-robot-arm'></i>
                         </Link>
                       </div>
-                      <div className="icon-content">
-                        <h2 className="dlab-tilte">Mechanical Works</h2>
+                      <div className='icon-content'>
+                        <h2 className='dlab-tilte'>Mechanical Works</h2>
                         <p>
                           Lorem ipsum dolor sit amet, consectetuer adipiscing
                           elit, sed diam nonummy nibh euismod{" "}
@@ -177,18 +283,18 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <div
-                    className="col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.4s"
+                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
+                    data-wow-duration='2s'
+                    data-wow-delay='0.4s'
                   >
-                    <div className="icon-bx-wraper" data-name="02">
-                      <div className="icon-lg">
-                        <Link to="#" className="icon-cell">
-                          <i className="flaticon-factory-1"></i>
+                    <div className='icon-bx-wraper' data-name='02'>
+                      <div className='icon-lg'>
+                        <Link to='#' className='icon-cell'>
+                          <i className='flaticon-factory-1'></i>
                         </Link>
                       </div>
-                      <div className="icon-content">
-                        <h2 className="dlab-tilte">Power & Energy</h2>
+                      <div className='icon-content'>
+                        <h2 className='dlab-tilte'>Power & Energy</h2>
                         <p>
                           Lorem ipsum dolor sit amet, consectetuer adipiscing
                           elit, sed diam nonummy nibh euismod{" "}
@@ -197,18 +303,18 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <div
-                    className="col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.6s"
+                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
+                    data-wow-duration='2s'
+                    data-wow-delay='0.6s'
                   >
-                    <div className="icon-bx-wraper" data-name="03">
-                      <div className="icon-lg">
-                        <Link to="#" className="icon-cell">
-                          <i className="flaticon-fuel-station"></i>
+                    <div className='icon-bx-wraper' data-name='03'>
+                      <div className='icon-lg'>
+                        <Link to='#' className='icon-cell'>
+                          <i className='flaticon-fuel-station'></i>
                         </Link>
                       </div>
-                      <div className="icon-content">
-                        <h2 className="dlab-tilte">Petroleum Refinery</h2>
+                      <div className='icon-content'>
+                        <h2 className='dlab-tilte'>Petroleum Refinery</h2>
                         <p>
                           Lorem ipsum dolor sit amet, consectetuer adipiscing
                           elit, sed diam nonummy nibh euismod{" "}
@@ -217,18 +323,18 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <div
-                    className="col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.8s"
+                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
+                    data-wow-duration='2s'
+                    data-wow-delay='0.8s'
                   >
-                    <div className="icon-bx-wraper" data-name="04">
-                      <div className="icon-lg">
-                        <Link to="#" className="icon-cell">
-                          <i className="flaticon-fuel-truck"></i>
+                    <div className='icon-bx-wraper' data-name='04'>
+                      <div className='icon-lg'>
+                        <Link to='#' className='icon-cell'>
+                          <i className='flaticon-fuel-truck'></i>
                         </Link>
                       </div>
-                      <div className="icon-content">
-                        <h2 className="dlab-tilte">Oil & Gas Industry</h2>
+                      <div className='icon-content'>
+                        <h2 className='dlab-tilte'>Oil & Gas Industry</h2>
                         <p>
                           Lorem ipsum dolor sit amet, consectetuer adipiscing
                           elit, sed diam nonummy nibh euismod{" "}
@@ -237,18 +343,18 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <div
-                    className="col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.2s"
+                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
+                    data-wow-duration='2s'
+                    data-wow-delay='0.2s'
                   >
-                    <div className="icon-bx-wraper" data-name="05">
-                      <div className="icon-lg">
-                        <Link to="#" className="icon-cell">
-                          <i className="flaticon-conveyor-1"></i>
+                    <div className='icon-bx-wraper' data-name='05'>
+                      <div className='icon-lg'>
+                        <Link to='#' className='icon-cell'>
+                          <i className='flaticon-conveyor-1'></i>
                         </Link>
                       </div>
-                      <div className="icon-content">
-                        <h2 className="dlab-tilte">Automative Manufacturing</h2>
+                      <div className='icon-content'>
+                        <h2 className='dlab-tilte'>Automative Manufacturing</h2>
                         <p>
                           Lorem ipsum dolor sit amet, consectetuer adipiscing
                           elit, sed diam nonummy nibh euismod{" "}
@@ -257,18 +363,18 @@ class Homepage extends Component {
                     </div>
                   </div>
                   <div
-                    className="col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp"
-                    data-wow-duration="2s"
-                    data-wow-delay="0.4s"
+                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
+                    data-wow-duration='2s'
+                    data-wow-delay='0.4s'
                   >
-                    <div className="icon-bx-wraper" data-name="06">
-                      <div className="icon-lg">
-                        <Link to="#" className="icon-cell">
-                          <i className="flaticon-engineer-1"></i>
+                    <div className='icon-bx-wraper' data-name='06'>
+                      <div className='icon-lg'>
+                        <Link to='#' className='icon-cell'>
+                          <i className='flaticon-engineer-1'></i>
                         </Link>
                       </div>
-                      <div className="icon-content">
-                        <h2 className="dlab-tilte">Chemical Research</h2>
+                      <div className='icon-content'>
+                        <h2 className='dlab-tilte'>Chemical Research</h2>
                         <p>
                           Lorem ipsum dolor sit amet, consectetuer adipiscing
                           elit, sed diam nonummy nibh euismod{" "}
@@ -342,12 +448,12 @@ class Homepage extends Component {
             {/* </div>  */}
 
             <div
-              className="section-full dlab-we-find bg-img-fix p-t20 p-b20 bg-white wow fadeIn"
-              data-wow-duration="0.51s"
-              data-wow-delay="0.1s"
+              className='section-full dlab-we-find bg-img-fix p-t20 p-b20 bg-white wow fadeIn'
+              data-wow-duration='0.51s'
+              data-wow-delay='0.1s'
             >
-              <div className="container">
-                <div className="section-content">
+              <div className='container'>
+                <div className='section-content'>
                   <ImageSlider hideBorder />
                 </div>
               </div>
@@ -371,7 +477,7 @@ class Homepage extends Component {
         <Footer14 />
         <Footer15 />
         <FooterDemo /> */}
-        <ScrollToTop className="icon-up" />
+        <ScrollToTop className='icon-up' />
       </div>
     );
   }

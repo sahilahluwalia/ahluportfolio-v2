@@ -6,10 +6,32 @@ import ampts from "asserts/machine-pics/ampts.png";
 import asrf from "asserts/machine-pics/asrf.png";
 import acsts from "asserts/machine-pics/acsts.png";
 import ampf from "asserts/machine-pics/ampf.png";
+import flap from "asserts/machine-pics/flap.png";
+import otherAccessories from "asserts/machine-pics/otheraccessories.png";
 import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
 import asr3aii_layout from "asserts/machine-pics/asr3aii-layout.png";
 import acsts_layout from "asserts/machine-pics/acsts-layout.png";
 import ampts_layout from "asserts/machine-pics/ampts-layout.png";
+// import ast2aii1 from "asserts/machine-pics/Design Image Data/2axis db";
+
+function importAll(r) {
+  return r.keys().map(r);
+}
+const ast2aiiCollection = importAll(
+  require.context("../asserts/machine-pics/Design Image Data/2axisDB")
+);
+
+const ast3aiiCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/3 axis double bar")
+);
+const acstsCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/acsts")
+);
+const asrfCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/Feeder")
+);
+// console.log(ast2aiiCollection);
+
 const catalogueList = cl;
 const masterProductLink = [
   {
@@ -137,6 +159,7 @@ const subProductList = [
         "AST2AII-500L": "",
       },
     ],
+    imageCollection: ast2aiiCollection,
     catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
     image: ast2aii,
     layout: asr2aii_layout,
@@ -228,6 +251,7 @@ const subProductList = [
         "AST3AII-500L": "",
       },
     ],
+    imageCollection: ast3aiiCollection,
     layout: asr3aii_layout,
     catalogueLink: addCatalogueFromListByItsName("AST3AII Series"),
 
@@ -318,6 +342,7 @@ const subProductList = [
         "ACSTS-500L": "",
       },
     ],
+    imageCollection: acstsCollection,
     catalogueImage: addCatalogueImageFromListByItsName("ACSTS Series"),
   },
   {
@@ -408,6 +433,7 @@ const subProductList = [
     name: "Ahlu Servo Roll Feeder type- ASRF Series",
     code: "asrf",
     image: asrf,
+    imageCollection: asrfCollection,
     catalogueLink: addCatalogueFromListByItsName("ASRF Series"),
     link: universalPath("products/power-press-automation/press-feeders/asrf"),
     catalogueImage: addCatalogueImageFromListByItsName("ASRF Series"),
@@ -431,10 +457,9 @@ const powerPressAutomationProductList = [
       "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
   },
   {
-    name: "Press Feeders",
+    name: "Other Press Automation Accessories",
     link: "press-feeders",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    image: otherAccessories,
   },
 ];
 
@@ -470,7 +495,7 @@ const pressFeederProducts = [
   {
     name: "flap",
     link: "flap",
-    image: "",
+    image: flap,
   },
 ];
 

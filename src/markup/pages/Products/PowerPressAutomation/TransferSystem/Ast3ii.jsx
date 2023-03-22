@@ -829,7 +829,7 @@ const Ast3aii = () => {
                   <FirstRow
                     name={item?.name}
                     description={item?.description}
-                    image={item?.image}
+                    imageArray={item?.imageCollection}
                   >
                     <p>
                       In this system variant, All Three Axis are Servo based
