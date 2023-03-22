@@ -85,7 +85,6 @@ import Products from "./pages/Products/Products";
 import ProductBase from "./pages/Products/ProductBase";
 import Catalogues from "./pages/Catalogues";
 
-
 import PowerPressAutomation from "./pages/Products/PowerPressAutomation/PowerPressAutomation";
 import TransferSystem from "./pages/Products/PowerPressAutomation/TransferSystem";
 import SheetMetalDies from "./pages/Products/PowerPressAutomation/SheetMetalDies";
@@ -100,6 +99,11 @@ import Base from "./pages/Base";
 import { ipDataToLocalStorage, ping } from "../fetchers";
 import axios from "axios";
 import Layout from "../components/layout/Layout";
+import Ast3aii from "./pages/Products/PowerPressAutomation/TransferSystem/Ast3ii";
+import Acsts from "./pages/Products/PowerPressAutomation/TransferSystem/Acsts";
+import Ampts from "./pages/Products/PowerPressAutomation/TransferSystem/Ampts";
+import Asrf from "./pages/Products/PowerPressAutomation/PressFeeder/Asrf";
+import Ampf from "./pages/Products/PowerPressAutomation/PressFeeder/Ampf";
 const Router = () => {
   const location = useLocation();
 
@@ -115,39 +119,44 @@ const Router = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path='/' element={<Layout />}>
         <Route index element={<Homepage />} />
-        <Route path="quote" element={<Quote />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="gg" element={<Index />} />
-        <Route path="about" element={<About />} />
-        <Route path="/products" element={<ProductBase />}>
+        <Route path='quote' element={<Quote />} />
+        <Route path='contact' element={<Contact />} />
+        <Route path='gg' element={<Index />} />
+        <Route path='about' element={<About />} />
+        <Route path='/products' element={<ProductBase />}>
           <Route index element={<Products />} />
           {/* <Route path="transfer-system" element={<h2>sdvsdv</h2>} /> */}
-          <Route path="power-press-automation" element={<Base />}>
+          <Route path='power-press-automation' element={<Base />}>
             <Route index element={<PowerPressAutomation />} />
-            <Route path="transfer-system" element={<TransferSystem />} />
-            <Route path="transfer-system/ast2aii" element={<Ast2all />} />
-            <Route path="sheet-metal-dies" element={<SheetMetalDies />} />
-            <Route path="press-feeders" element={<PressFeeders />} />
+            <Route path='transfer-system' element={<TransferSystem />} />
+            <Route path='transfer-system/ast2aii' element={<Ast2all />} />
+            <Route path='transfer-system/ast3aii' element={<Ast3aii />} />
+            <Route path='transfer-system/acsts' element={<Acsts />} />
+            <Route path='transfer-system/ampts' element={<Ampts />} />
+            <Route path='sheet-metal-dies' element={<SheetMetalDies />} />
+            <Route path='press-feeders' element={<PressFeeders />} />
+            <Route path='press-feeders/asrf' element={<Asrf />} />
+            <Route path='press-feeders/ampf' element={<Ampf />} />
           </Route>
-          <Route path="special-purpose-machines" element={<Base />}>
+          <Route path='special-purpose-machines' element={<Base />}>
             <Route index element={<SpecialPurposeMachines />} />
-            <Route path="assembly-spms" element={<AssemblySPMS />} />
-            <Route path="operational-spms" element={<OperationalSPMS />} />
+            <Route path='assembly-spms' element={<AssemblySPMS />} />
+            <Route path='operational-spms' element={<OperationalSPMS />} />
           </Route>
 
-          <Route path="vision-inspection-system" element={<Base />}>
+          <Route path='vision-inspection-system' element={<Base />}>
             <Route index element={<VisionInspectionSystems />} />
           </Route>
         </Route>
-        <Route path="blog" element={<Products />}>
+        <Route path='blog' element={<Products />}>
           {/* <Route path="transfer-system" element={<Products />} />
           <Route path="special-purpose-machines" element={<Products />} />
           <Route path="vision-inspection-system" element={<Products />} /> */}
         </Route>
-        <Route path="enguiry" element={<Quote />} />
-        <Route path="catalogues" element={<Catalogues />} />
+        <Route path='enguiry' element={<Quote />} />
+        <Route path='catalogues' element={<Catalogues />} />
       </Route>
     </Routes>
   );

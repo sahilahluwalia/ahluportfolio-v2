@@ -49,7 +49,7 @@ const timeLineData = [
 const About = () => {
   return (
     <>
-      <div className="page-content bg-white">
+      <div className='page-content bg-white'>
         {/* <div
           className="dlab-bnr-inr overlay-black-middle text-center bg-pt"
           style={{ backgroundImage: "url(" + bnr3 + ")" }}
@@ -89,27 +89,27 @@ const About = () => {
           </div>
         </div> */}
 
-        <div className="content-block">
-          <div className="section-full content-inner bg-white">
-            <div className="container">
-              <div className="row align-items-center">
-                <div className="col-lg-6 col-md-12 m-b30">
-                  <div className="our-story">
+        <div className='content-block'>
+          <div className='section-full content-inner bg-white'>
+            <div className='container'>
+              <div className='row align-items-center'>
+                <div className='col-lg-6 col-md-12 m-b30'>
+                  <div className='our-story'>
                     <span>OUR STORY</span>
-                    <h2 className="title">
+                    <h2 className='title'>
                       Revolutionizing your mass production with our cutting-edge
                       SPM technology
                       {/* Driving Growth & Innovation in Manufacturing */}
                       {/* <br /> */}
                       {/* <span className="text-primary">since 2017</span> */}
                     </h2>
-                    <h4 className="title">
+                    <h4 className='title'>
                       We are the manufacturers of{" "}
-                      <span className="text-primary">
+                      <span className='text-primary'>
                         Special Purpose Machines (SPM)
                       </span>{" "}
                       and{" "}
-                      <span className="text-primary">
+                      <span className='text-primary'>
                         Power Press Automation solutions
                       </span>{" "}
                       for mass production. We deal with technologies of Servo
@@ -124,33 +124,33 @@ const About = () => {
                     </Link> */}
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-12 m-b30 our-story-thum">
+                <div className='col-lg-6 col-md-12 m-b30 our-story-thum'>
                   <img
                     src={require("../../images/about/pic6.jpg")}
-                    className="radius-sm"
-                    alt=""
+                    className='radius-sm'
+                    alt=''
                   />
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="container">
-            <div className="row align-items-center">
-              <div className="col-lg-6 col-md-12 m-b30 our-story-thum">
+          <div className='container'>
+            <div className='row align-items-center'>
+              <div className='col-lg-6 col-md-12 m-b30 our-story-thum'>
                 <img
                   src={require("../../images/about/pic6.jpg")}
-                  className="radius-sm"
-                  alt=""
+                  className='radius-sm'
+                  alt=''
                 />
               </div>
-              <div className="col-lg-6 col-md-12 m-b30">
-                <div className="our-story">
+              <div className='col-lg-6 col-md-12 m-b30'>
+                <div className='our-story'>
                   <span>OUR VISION</span>
-                  <h2 className="title">At Ahlu Engineers,</h2>
-                  <h4 className="title">
+                  <h2 className='title'>At Ahlu Engineers,</h2>
+                  <h4 className='title'>
                     Our vision is to be the leading provider of{" "}
-                    <span className="text-primary">
+                    <span className='text-primary'>
                       cutting-edge manufacturing automation solutions
                     </span>{" "}
                     that drive growth and success for our clients
@@ -192,34 +192,34 @@ const About = () => {
           </div>
 
           <div
-            className="section-full content-inner bg-white video-section"
+            className='section-full content-inner bg-white video-section'
             style={{ backgroundImage: "url(" + bg1 + ")" }}
           >
-            <div className="container">
-              <div className="section-content">
-                <div className="row d-flex">
-                  <div className="col-lg-6 col-md-12 m-b30 align-self-center video-infobx">
-                    <div className="content-bx1">
-                      <span className="titlespan">OUR MISSION</span>
+            <div id='mission' className='container '>
+              <div className='section-content'>
+                <div className='row d-flex'>
+                  <div className='col-lg-6 col-md-12 m-b30 align-self-center video-infobx'>
+                    <div className='content-bx1'>
+                      <span className='titlespan'>OUR MISSION</span>
 
-                      <p className="m-b30">
+                      <p className='m-b30'>
                         To equip shop floor teams with{" "}
-                        <span className="strong-text">
+                        <span className='strong-text'>
                           advanced automation technology{" "}
                         </span>
                         to compete globally. We design innovative solutions that{" "}
-                        <span className="strong-text"> boost efficiency</span>,{" "}
-                        <span className="strong-text">cut costs</span>, and
-                        <span className="strong-text"> improve safety.</span>
+                        <span className='strong-text'> boost efficiency</span>,{" "}
+                        <span className='strong-text'>cut costs</span>, and
+                        <span className='strong-text'> improve safety.</span>
                       </p>
-                      <h2 className="m-b15 title">
+                      <h2 className='m-b15 title'>
                         A company involved in
                         <br />
-                        <span className="text-primary">
+                        <span className='text-primary'>
                           customized manufacturing
                         </span>{" "}
                         and
-                        <span className="text-primary">
+                        <span className='text-primary'>
                           {" "}
                           industrial automation solutions
                         </span>{" "}
@@ -234,25 +234,25 @@ const About = () => {
                       <span className="font-14">Company Director</span> */}
                       <img
                         src={require("../../images/sign.png")}
-                        width="200"
-                        alt=""
+                        width='200'
+                        alt=''
                       />
-                      <h4 className="m-b0">Satyam Ahluwalia</h4>
-                      <span className="font-14">Project Manager</span>
+                      <h4 className='m-b0'>Satyam Ahluwalia</h4>
+                      <span className='font-14'>Project Manager</span>
                     </div>
                   </div>
-                  <div className="col-lg-6 col-md-12 m-b30">
-                    <div className="video-bx">
+                  <div className='col-lg-6 col-md-12 m-b30'>
+                    <div className='video-bx'>
                       <img
                         src={require("../../images/about/pic5.jpg")}
-                        alt="Signature"
+                        alt='Signature'
                       />
-                      <div className="video-play-icon">
+                      <div className='video-play-icon'>
                         <a
-                          href="https://www.youtube.com/watch?v=_FRZVScwggM"
-                          className="popup-youtube video bg-primary"
+                          href='https://www.youtube.com/watch?v=_FRZVScwggM'
+                          className='popup-youtube video bg-primary'
                         >
-                          <i className="fa fa-play"></i>
+                          <i className='fa fa-play'></i>
                         </a>
                       </div>
                     </div>
@@ -266,31 +266,31 @@ const About = () => {
             // style={{ backgroundImage: "url(" + bg1 + ")" }}
           > */}
           <div
-            class="container "
+            class='container '
             style={{
               marginTop: "50px",
               paddingBottom: "50px",
             }}
           >
-            <div className="section-head text-black text-center">
-              <h2 className="title">Past Timeline</h2>
+            <div className='section-head text-black text-center'>
+              <h2 className='title'>Past Timeline</h2>
               {/* <p>Innovating Manufacuring since 2017</p> */}
             </div>
-            <div class="main-timeline">
+            <div class='main-timeline'>
               {timeLineData.reverse().map((item, index) => {
                 return (
-                  <div className="timeline text-black">
-                    <div className="icon"></div>
-                    <div className="date-content">
-                      <div className="date-outer">
-                        <span className="date">
-                          <span className="month">{item.year}</span>
+                  <div className='timeline text-black'>
+                    <div className='icon'></div>
+                    <div className='date-content'>
+                      <div className='date-outer'>
+                        <span className='date'>
+                          <span className='month'>{item.year}</span>
                           {/* <span className="month">{item.yearNumber}</span> */}
-                          <span className="year">{item.yearNumber}</span>
+                          <span className='year'>{item.yearNumber}</span>
                         </span>
                       </div>
                     </div>
-                    <div className="timeline-content">
+                    <div className='timeline-content'>
                       {/* <h5 className="title">{item.title}</h5> */}
                       {parse(item.description)}
                       {/* <p className="description">{item.description}</p> */}

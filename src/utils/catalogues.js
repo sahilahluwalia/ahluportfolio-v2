@@ -61,6 +61,7 @@ const catalogueListMaker = (pdfNames, pdfLinks, images) => {
       link: pdfLinks[i],
       image: images[i],
     });
+    if (catalogueList.length === 6) break;
   }
   return catalogueList;
 };
@@ -70,7 +71,7 @@ const catalogueList = catalogueListMaker(pdfNames, pdfLinks, images);
 const catalogueListItems = catalogueList.map((catalogue) => {
   return (
     <li>
-      <a href={catalogue.link} rel="noreferrer" target="_blank">
+      <a href={catalogue.link} rel='noreferrer' target='_blank'>
         {catalogue.name}
       </a>
     </li>
@@ -80,9 +81,9 @@ const catalogueListItems = catalogueList.map((catalogue) => {
 const catalogueListItemsWithSubmenu = (
   <li>
     <Link to={"#"}>
-      Catalogues<i className="fa fa-chevron-down"></i>
+      Catalogues<i className='fa fa-chevron-down'></i>
     </Link>
-    <ul className="sub-menu">{catalogueListItems}</ul>
+    <ul className='sub-menu'>{catalogueListItems}</ul>
   </li>
 );
 

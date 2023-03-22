@@ -5,6 +5,36 @@ import ast3aii from "asserts/machine-pics/ast3aii.png";
 import ampts from "asserts/machine-pics/ampts.png";
 import asrf from "asserts/machine-pics/asrf.png";
 import acsts from "asserts/machine-pics/acsts.png";
+import ampf from "asserts/machine-pics/ampf.png";
+import flap from "asserts/machine-pics/flap.png";
+import otherAccessories from "asserts/machine-pics/otheraccessories.png";
+import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
+import asr3aii_layout from "asserts/machine-pics/asr3aii-layout.png";
+import acsts_layout from "asserts/machine-pics/acsts-layout.png";
+import ampts_layout from "asserts/machine-pics/ampts-layout.png";
+// import ast2aii1 from "asserts/machine-pics/Design Image Data/2axis db";
+
+function importAll(r) {
+  return r.keys().map(r);
+}
+const ast2aiiCollection = importAll(
+  require.context("../asserts/machine-pics/Design Image Data/2axisDB")
+);
+
+const ast3aiiCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/3 axis double bar")
+);
+const acstsCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/acsts")
+);
+const asrfCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/Feeder")
+);
+const ampfCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/Flap")
+);
+// console.log(ast2aiiCollection);
+
 const catalogueList = cl;
 const masterProductLink = [
   {
@@ -62,45 +92,354 @@ const addCatalogueImageFromListByItsName = (name) => {
   if (catalogue) return catalogue.image;
 };
 
+const universalPath = (str) => {
+  return window.location.origin + "/" + str;
+};
+
 const subProductList = [
   {
     code: "ast2aii",
     name: "Ahlu Servo Transfer 2 Axis Double Bar type- AST2SAII",
     description: "description of the item",
-    link: "/ast2ii",
+    link: universalPath(
+      "products/power-press-automation/transfer-system/ast2aii"
+    ),
+    tableContentInJSON: [
+      {
+        Item: "X Axis / Transfer pitch",
+        Unit: "mm",
+        "AST2AII-125L": "0-125",
+        "AST2AII-250L": "0-250",
+        "AST2AII-500L": "0-500",
+      },
+      {
+        Item: "Y Axis / Clamping Stroke",
+        Unit: "mm",
+        "AST2AII-125L": "0-40",
+        "AST2AII-250L": "0-65",
+        "AST2AII-500L": "0-125",
+      },
+      {
+        Item: "Feed Bar Size",
+        Unit: "mm",
+        "AST2AII-125L": "65",
+        "AST2AII-250L": "80",
+        "AST2AII-500L": "90",
+      },
+      {
+        Item: "Weight Capacity",
+        Unit: "kg",
+        "AST2AII-125L": "2",
+        "AST2AII-250L": "3",
+        "AST2AII-500L": "5",
+      },
+      {
+        Item: "Feeding Accuracy",
+        Unit: "mm",
+        "AST2AII-125L": "± 0.1",
+        "AST2AII-250L": "± 0.1",
+        "AST2AII-500L": "± 0.1",
+      },
+      {
+        Item: "Maximum Stroke Feed",
+        Unit: "spm",
+        "AST2AII-125L": "40",
+        "AST2AII-250L": "30",
+        "AST2AII-500L": "20",
+      },
+      {
+        Item: "Main Dimensions",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+      {
+        Item: "Supported Bolster Width",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+    ],
+    imageCollection: ast2aiiCollection,
     catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
     image: ast2aii,
+    layout: asr2aii_layout,
     catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
   },
   {
+    code: "ampf",
     name: "Ahlu Mechanical Press Flap Series- AMPF ",
+    catalogueLink: addCatalogueFromListByItsName("AMPF Series"),
+    image: ampf,
+    imageCollection: ampfCollection,
+    catalogueImage: addCatalogueImageFromListByItsName("AMPF Series"),
   },
 
   {
     name: "Ahlu Servo Transfer 3 Axis Double Bar type- AST3SAII",
     image: ast3aii,
     code: "ast3aii",
-    link: "",
+    tableContentInJSON: [
+      {
+        "Sr. No.": 1,
+        Item: "X Axis / Transfer pitch",
+        Unit: "MM",
+        "AST3AII-125L": "0-125",
+        "AST3AII-250L": "0-250",
+        "AST3AII-500L": "0-500",
+      },
+      {
+        "Sr. No.": 2,
+        Item: "Y Axis / Clamping Stroke",
+        Unit: "MM",
+        "AST3AII-125L": "0-40",
+        "AST3AII-250L": "0-65",
+        "AST3AII-500L": "0-90",
+      },
+      {
+        "Sr. No.": 3,
+        Item: "Z Axis / Lift Amount",
+        Unit: "MM",
+        "AST3AII-125L": "0-30",
+        "AST3AII-250L": "0-50",
+        "AST3AII-500L": "0-80",
+      },
+      {
+        "Sr. No.": 4,
+        Item: "Feed Bar Size",
+        Unit: "MM",
+        "AST3AII-125L": "65",
+        "AST3AII-250L": "80",
+        "AST3AII-500L": "90",
+      },
+      {
+        "Sr. No.": 5,
+        Item: "Feeding Accuracy",
+        Unit: "MM",
+        "AST3AII-125L": "± 0.1",
+        "AST3AII-250L": "± 0.1",
+        "AST3AII-500L": "± 0.1",
+      },
+      {
+        "Sr. No.": 6,
+        Item: "Weight Capacity",
+        Unit: "KG",
+        "AST3AII-125L": "2",
+        "AST3AII-250L": "3",
+        "AST3AII-500L": "5",
+      },
+      {
+        "Sr. No.": 7,
+        Item: "Maximum Stroke Feed",
+        Unit: "SPM",
+        "AST3AII-125L": "40",
+        "AST3AII-250L": "30",
+        "AST3AII-500L": "20",
+      },
+      {
+        "Sr. No.": 8,
+        Item: "Main Dimensions",
+        Unit: "MM",
+        "AST3AII-125L": "Please Contact",
+        "AST3AII-250L": "",
+        "AST3AII-500L": "",
+      },
+      {
+        "Sr. No.": 9,
+        Item: "Supported Bolster Width",
+        Unit: "MM",
+        "AST3AII-125L": "Please Contact",
+        "AST3AII-250L": "",
+        "AST3AII-500L": "",
+      },
+    ],
+    imageCollection: ast3aiiCollection,
+    layout: asr3aii_layout,
+    catalogueLink: addCatalogueFromListByItsName("AST3AII Series"),
+
+    link: universalPath(
+      "products/power-press-automation/transfer-system/ast3aii"
+    ),
     catalogueImage: addCatalogueImageFromListByItsName("AST3AII Series"),
   },
   {
     name: "Ahlu Cantilever Servo Transfer System- ACSTS Series",
-    link: "",
+    link: universalPath(
+      "products/power-press-automation/transfer-system/acsts"
+    ),
     code: "acsts",
     image: acsts,
+    layout: acsts_layout,
+    tableContentInJSON: [
+      {
+        "Sr. No.": 1,
+        Item: "X Axis / Transfer pitch",
+        Unit: "MM",
+        "ACSTS-150L": "0-150",
+        "ACSTS-300L": "0-300",
+        "ACSTS-500L": "0-500",
+      },
+      {
+        "Sr. No.": 2,
+        Item: "Z Axis / Lift Amount",
+        Unit: "MM",
+        "ACSTS-150L": "0-30",
+        "ACSTS-300L": "0-60",
+        "ACSTS-500L": "0-90",
+      },
+      {
+        "Sr. No.": 3,
+        Item: "Feed Bar Size",
+        Unit: "MM",
+        "ACSTS-150L": "65",
+        "ACSTS-300L": "80",
+        "ACSTS-500L": "90",
+      },
+      {
+        "Sr. No.": 4,
+        Item: "Weight Capacity",
+        Unit: "KG",
+        "ACSTS-150L": "2",
+        "ACSTS-300L": "3",
+        "ACSTS-500L": "5",
+      },
+      {
+        "Sr. No.": 5,
+        Item: "Feeding Accuracy",
+        Unit: "MM",
+        "ACSTS-150L": "± 0.1",
+        "ACSTS-300L": "± 0.1",
+        "ACSTS-500L": "± 0.1",
+      },
+      {
+        "Sr. No.": 6,
+        Item: "Maximum Stroke Feed",
+        Unit: "SPM",
+        "ACSTS-150L": "50",
+        "ACSTS-300L": "40",
+        "ACSTS-500L": "30",
+      },
+      {
+        "Sr. No.": 7,
+        Item: "Main Dimensions",
+        Unit: "MM",
+        "ACSTS-150L": "Please Contact",
+        "ACSTS-300L": "",
+        "ACSTS-500L": "",
+      },
+      {
+        "Sr. No.": 8,
+        Item: "Supported Bolster Width",
+        Unit: "MM",
+        "ACSTS-150L": "Please Contact",
+        "ACSTS-300L": "",
+        "ACSTS-500L": "",
+      },
+      {
+        "Sr. No.": 9,
+        Item: "Supported Bolster Width",
+        Unit: "MM",
+        "ACSTS-150L": "Please Contact",
+        "ACSTS-300L": "",
+        "ACSTS-500L": "",
+      },
+    ],
+    imageCollection: acstsCollection,
     catalogueImage: addCatalogueImageFromListByItsName("ACSTS Series"),
   },
   {
     name: "Ahlu Multi Press Transfer System- AMPTS Series",
-    link: "",
     code: "ampts",
     image: ampts,
+    tableContentInJSON: [
+      {
+        "Sr. No.": 1,
+        Item: "X Axis / Transfer pitch",
+        Unit: "MM",
+        "AMPTS-500L": "0-500",
+        "AMPTS-1000L": "0-1000",
+        "AMPTS-2000L": "0-2000",
+      },
+      {
+        "Sr. No.": 2,
+        Item: "Z Axis / Lift Amount",
+        Unit: "MM",
+        "AMPTS-500L": "0-40",
+        "AMPTS-1000L": "0-65",
+        "AMPTS-2000L": "0-90",
+      },
+      {
+        "Sr. No.": 3,
+        Item: "Feed Bar Size",
+        Unit: "MM",
+        "AMPTS-500L": "65",
+        "AMPTS-1000L": "80",
+        "AMPTS-2000L": "90",
+      },
+      {
+        "Sr. No.": 4,
+        Item: "Weight Capacity",
+        Unit: "KG",
+        "AMPTS-500L": "2",
+        "AMPTS-1000L": "3",
+        "AMPTS-2000L": "5",
+      },
+      {
+        "Sr. No.": 5,
+        Item: "Feeding Accuracy",
+        Unit: "MM",
+        "AMPTS-500L": "± 0.2",
+        "AMPTS-1000L": "± 0.2",
+        "AMPTS-2000L": "± 0.2",
+      },
+      {
+        "Sr. No.": 6,
+        Item: "Maximum Stroke Feed",
+        Unit: "SPM",
+        "AMPTS-500L": "30",
+        "AMPTS-1000L": "20",
+        "AMPTS-2000L": "15",
+      },
+      {
+        "Sr. No.": 7,
+        Item: "Main Dimensions",
+        Unit: "MM",
+        "AMPTS-500L": "Please Contact",
+        "AMPTS-1000L": "",
+        "AMPTS-2000L": "",
+      },
+      {
+        "Sr. No.": 8,
+        Item: "Suported Bolster Width",
+        Unit: "MM",
+        "AMPTS-500L": "Please Contact",
+        "AMPTS-1000L": "",
+        "AMPTS-2000L": "",
+      },
+      {
+        "Sr. No.": 9,
+        Item: "Supported Bolster Width",
+        Unit: "MM",
+        "AMPTS-500L": "Please Contact",
+        "AMPTS-1000L": "",
+        "AMPTS-2000L": "",
+      },
+    ],
+    layout: ampts_layout,
+    link: universalPath(
+      "products/power-press-automation/transfer-system/ampts"
+    ),
     catalogueImage: addCatalogueImageFromListByItsName("AMPTS Series"),
   },
   {
     name: "Ahlu Servo Roll Feeder type- ASRF Series",
     code: "asrf",
     image: asrf,
+    imageCollection: asrfCollection,
+    catalogueLink: addCatalogueFromListByItsName("ASRF Series"),
+    link: universalPath("products/power-press-automation/press-feeders/asrf"),
     catalogueImage: addCatalogueImageFromListByItsName("ASRF Series"),
   },
   {
@@ -122,15 +461,142 @@ const powerPressAutomationProductList = [
       "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
   },
   {
-    name: "Press Feeders",
+    name: "Other Press Automation Accessories",
     link: "press-feeders",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    image: otherAccessories,
   },
 ];
+
+const transferSystemProducts = [
+  {
+    name: "AST2AII Series",
+    link: "ast2aii",
+    image: ast2aii,
+  },
+  {
+    name: "AST3AII Series",
+    link: "ast3aii",
+    image: ast3aii,
+  },
+  {
+    name: "ACSTS Series",
+    link: "acsts",
+    image: acsts,
+  },
+  {
+    name: "AMPTS Series",
+    link: "ampts",
+    image: ampts,
+  },
+];
+
+const pressFeederProducts = [
+  {
+    name: "Rolling Servo Feeders",
+    link: "asrf",
+    image: asrf,
+  },
+  {
+    name: "Press Flap",
+    link: "ampf",
+    image: flap,
+  },
+];
+
+const transferSystemData = {
+  double_bar_system: {
+    standardFeatures: [
+      "<span>Precision Servo driven</span> design for continuous use.",
+      "Ethernet IP based Automation controller.",
+      "Hi-speed Ethercat based slave communication.",
+      "Easy Finger changeover.",
+      "Easy On-site Remote Support available.",
+      "IIOT enabled machine.",
+      "Remote Monitoring System for Real time data tracking.",
+      "Future Ready towards Industry 4.0.",
+      "User friendly system with Operator manual over display.",
+      "Battery less Absolute Encoder design for easy maintenance.",
+      "Electrically protected safety operated against Voltage levels.",
+      "Energy Monitoring system facilitates Asset management.",
+      "Completely programmable system. ",
+      "Large sized Operator display(HMI) for ease.",
+    ],
+    commonCharacteristics: [
+      "Each Servo Axis is operated with high accuracy with the help of Precision Servos.",
+      "To Protect Tooling and Machine, each system is by-default comes with mis-feed, die-stuckage & Jamming detection feedbacks are taken in each process cycle to provide required safety.",
+      "The Position Synchronization is performed with the help of Rotary Encoders which connects to the crankshaft of the press. All the transfer axes are driven by servo motor and run synchronously with the press.",
+      "Along with Encoders, Transfer System Controller stays in-continuous communication with press PLC along with the Additional Hard Sensors mounted on output shaft via Rotary cam box to reduce any accidental risk in case of Encoder failure.",
+      "Blank Feeders are generally used to feed Blanks via Magazine type feeders but Servo Sheet Feeders or Zig Zag Feeders can also be utilized by customizing to suit Transfer system & its respective press.",
+    ],
+  },
+
+  acsts: {
+    commonCharacteristics: [
+      `Each Servo Axis is operated with high accuracy with the help of
+Precision Servos.`,
+      `To Protect Tooling and Machine, each system is by-default comes with"
+mis-feed, die-stuckage & Jamming detection feedbacks are taken in
+each process cycle to provide required safety.`,
+      `The Position Synchronization is performed with the help of Rotary
+Encoders which connects to the crankshaft of the press. All the
+transfer axes are driven by servo motor and run synchronously with
+the press.`,
+      `Along with Encoders, Transfer System Controller stays in-continuous
+communication with press PLC along with the Additional Hard
+Sensors mounted on output shaft via Rotary cam box to reduce any
+accidental risk in case of Encoder failure.`,
+      `Blank Feeders are generally used to feed Blanks via Magazine type
+feeders but Servo Sheet Feeders or Zig Zag Feeders can also be
+utilized by customizing to suit Transfer system & its respective press.`,
+    ],
+    standardFeatures: [
+      `Precision Servo driven design for continuous use.`,
+      `Ethernet IP based Automation controller.`,
+      `Hi-speed Ethercat based slave communication.`,
+      `Easy Finger changeover.`,
+      `Easy On-site Remote Support available.`,
+      `IIOT enabled machine.`,
+      `Remote Monitoring System for Real time data tracking.`,
+      `Future Ready towards Industry 4.0.`,
+      `User friendly system with Operator manual over display.`,
+      `Battery less Absolute Encoder design for easy maintenance.`,
+      `Electrically protected safety operated against Voltage levels.`,
+      `Energy Monitoring system facilitates Asset management.`,
+      `Completely programmable system.`,
+      `Large sized Operator display (HMI) for ease.`,
+    ],
+  },
+  ampts: {
+    commonCharacteristics: [
+      `Each Servo Axis is operated with high accuracy with the help of Precision Servos.`,
+      `To Protect Tooling and Machine, each system is by-default comes with mis-feed, die-stuckage & Jamming detection feedbacks are taken in each process cycle to provide required safety.`,
+      `The Position Synchronization is performed with the help of Rotary Encoders which connects to the crankshaft of the press. All the transfer axes are driven by servo motor and run synchronously with the press.`,
+      `Along with Encoders, Transfer System Controller stays in-continuous communication with press PLC along with the Additional Hard Sensors mounted on output shaft via Rotary cam box to reduce any accidental risk in case of Encoder failure.`,
+    ],
+    standardFeatures: [
+      `Precision Servo driven design for continuous use.`,
+      `Ethernet IP based Automation controller.`,
+      `Hi-speed Ethercat based slave communication.`,
+      `Easy Finger changeover.`,
+      `Easy On-site Remote Support available.`,
+      `IIOT enabled machine.`,
+      `Remote Monitoring System for Real time data tracking.`,
+      `Future Ready towards Industry 4.0.`,
+      `User friendly system with Operator manual over display.`,
+      `Battery less Absolute Encoder design for easy maintenance.`,
+      `Electrically protected safety operated against Voltage levels.`,
+      `Energy Monitoring system facilitates Asset management.`,
+      `Completely programmable system.`,
+      `Large sized Operator display (HMI) for ease.`,
+    ],
+  },
+};
 export {
   masterProductLink,
   masterProductsListItemsWithSubmenu,
   subProductList,
   powerPressAutomationProductList,
+  transferSystemData,
+  transferSystemProducts,
+  pressFeederProducts,
 };

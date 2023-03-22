@@ -11,20 +11,9 @@ const ImageRows = (props) => {
               key={item.link}
               className={`col-xs-12 ${
                 noOfRows ? `col-lg-${noOfRows}` : `col-lg-6`
-              } col-md-6 col-sm-8 service-box style3`}
+              } col-md-6 col-sm-6 service-box style3`}
             >
-              <div
-                className='m-3 border border-2 '
-                style={{
-                  // add hover effect
-                  "&:hover": {
-                    transform: "scale(3.1)",
-                    transition: "all 0.3s ease-in-out",
-                    color: "red",
-                    backgroundColor: "yellow",
-                  },
-                }}
-              >
+              <div>
                 <Link
                   to={item.link}
                   // href={item.link}
@@ -35,7 +24,8 @@ const ImageRows = (props) => {
                     src={item.image}
                     alt=''
                     style={{
-                      height: "450px",
+                      height: "400px",
+                      width: "350px",
                       objectFit: "contain",
                     }}
                     className='card-img-top'
@@ -43,8 +33,13 @@ const ImageRows = (props) => {
                 </Link>
 
                 <h4 className='m-b10'>{item.name}</h4>
+
+                {/* <div className='mb-3'>View All →</div> */}
+
                 <Link to={item.link}>
-                  <div className='mb-3'>View All →</div>
+                  <button className='readMoreButton  m-r15 m-r15 mb-4'>
+                    Read more
+                  </button>
                 </Link>
               </div>
             </div>

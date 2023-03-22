@@ -8,7 +8,7 @@ const Products = (props) => {
   //   console.log(catalogueList);
   //   console.log();
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   const { pathname } = location;
   const pathArray = pathname.split("/");
   const basePath = pathArray[1];
