@@ -29,7 +29,6 @@ import { Parallax } from "react-parallax";
 import CounterSection from "../element/counterSection";
 import Team1 from "../element/team1";
 import ServicesSlider4 from "../element/servicesSlider4";
-import ChooseAhluEngineers from "components/About/ChooseAhluEngineers";
 import "../../css/plugins.css";
 import "../../css/style.css";
 import "../../css/skin/skin-1.css";
@@ -118,7 +117,7 @@ class Homepage extends Component {
     // });
     return (
       <div className='skin-1'>
-        <Parallax bgImage={bg} strength={100}>
+        <Parallax bgImage={bg} strength={20}>
           <div className='hero-section home-bnr1'>
             <div className='container'>
               <div className='row align-items-center'>
@@ -212,8 +211,8 @@ class Homepage extends Component {
                     />
                     <div className='video-play-icon'>
                       <Link
-                        to='#'
-                        onClick={this.openModal}
+                        to='https://www.youtube.com/channel/UCPhDoFi0nlojklbst-BT-LA'
+                        target='_blank'
                         className='popup-youtube video bg-primary'
                       >
                         <i className='fa fa-play'></i>
@@ -232,7 +231,7 @@ class Homepage extends Component {
                       Business
                     </p>
                     <Link
-                      to='/about#mission'
+                      to={{ pathname: "/about", hash: "#whyus" }}
                       className='site-button btnhover19 outline white outline-2'
                     >
                       WHY US
@@ -557,34 +556,6 @@ class Homepage extends Component {
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              className='section-full bg-white content-inner-2'
-              id='about-us'
-              // style={{ backgroundImage: "url(" + bg + ")" }}
-            >
-              <div className='container'>
-                <div className='section-head text-black text-center'>
-                  <h2 className='title'>Why to choose Ahlu Engineers</h2>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the.
-                  </p>
-                </div>
-                <ChooseAhluEngineers />
-                {/* <ServicesSlider4 />
-                <ServicesSlider4 /> */}
-                <div className='text-center'>
-                  <Link
-                    to='/services-1'
-                    className='site-button btnhover13 button-md'
-                  >
-                    See all Services
-                  </Link>
                 </div>
               </div>
             </div>

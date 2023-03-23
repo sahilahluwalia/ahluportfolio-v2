@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, Switch } from "react-router-dom";
 import Index from "./pages/index";
 import About1 from "./pages/about-1";
 import About2 from "./pages/about-2";
@@ -106,7 +106,24 @@ import Asrf from "./pages/Products/PowerPressAutomation/PressFeeder/Asrf";
 import Ampf from "./pages/Products/PowerPressAutomation/PressFeeder/Ampf";
 const Router = () => {
   const location = useLocation();
+  const { pathname, hash, key } = useLocation();
 
+  useEffect(() => {
+    // if not a hash link, scroll to top
+    if (hash === "") {
+      window.scrollTo(0, 0);
+    }
+    // else scroll to id
+    else {
+      setTimeout(() => {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]);
   useEffect(() => {
     // console.log("location changed");
     // console.log(location.pathname);

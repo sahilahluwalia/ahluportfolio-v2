@@ -1,9 +1,11 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import Testimonial1 from "../element/testimonial1";
 import parse from "html-react-parser";
+import ChooseAhluEngineers from "components/About/ChooseAhluEngineers";
+
 var bnr3 = require("./../../images/banner/bnr3.jpg");
 var bg1 = require("./../../images/background/bg-video.png");
 var bg2 = require("./../../images/background/bg1.jpg");
@@ -46,7 +48,7 @@ const timeLineData = [
   },
 ];
 
-const About = () => {
+const About = (props) => {
   return (
     <>
       <div className='page-content bg-white'>
@@ -192,10 +194,11 @@ const About = () => {
           </div>
 
           <div
+            id='mission'
             className='section-full content-inner bg-white video-section'
             style={{ backgroundImage: "url(" + bg1 + ")" }}
           >
-            <div id='mission' className='container '>
+            <div className='container '>
               <div className='section-content'>
                 <div className='row d-flex'>
                   <div className='col-lg-6 col-md-12 m-b30 align-self-center video-infobx'>
@@ -259,6 +262,26 @@ const About = () => {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div
+            id='whyus'
+            className='section-full bg-white content-inner-2'
+
+            // style={{ backgroundImage: "url(" + bg + ")" }}
+          >
+            <div className='container'>
+              <div className='section-head text-black text-center'>
+                <h2 className='title'>Why to choose Ahlu Engineers</h2>
+                <p>
+                  We offer a comprehensive range of innovative and high-quality
+                  engineering solutions to meet the unique needs of our clients,
+                  backed by our commitment to innovation, quality, and customer
+                  satisfaction.
+                </p>
+              </div>
+              <ChooseAhluEngineers />
             </div>
           </div>
           {/* <div
