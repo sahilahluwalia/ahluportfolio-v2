@@ -50,6 +50,8 @@ class ClientSlider1 extends Component {
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
+      arrows: false,
+
       responsive: [
         {
           breakpoint: 1200,
@@ -80,14 +82,14 @@ class ClientSlider1 extends Component {
         <Slider
           {...settings}
           //   className="client-logo-carousel btn-style-1 icon-2"
-          className="client-logo-carousel"
+          className='client-logo-carousel'
         >
           {images.map((item, id) => (
-            <div className="item">
+            <div className='item'>
               <div class={`ow-client-logo ${padding}`}>
                 <div class={`client-logo ${Border}`}>
-                  <Link to="#">
-                    <img src={item} alt="" />
+                  <Link to='#'>
+                    <img src={item} alt='' />
                   </Link>
                 </div>
               </div>

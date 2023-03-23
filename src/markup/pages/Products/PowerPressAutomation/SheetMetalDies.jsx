@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import ImageRows from "components/Products/ImageRows";
+import LeftSection from "components/Products/LeftSection";
+import FirstRow from "components/Products/FirstRow";
+import { RightSection } from "components/Products/RightSection";
+import ProductList from "components/Products/ProductList";
+import ImageSlider from "components/Products/ImageSlider";
+import { transferSystemProducts } from "data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 
 const productList = [
@@ -32,28 +38,24 @@ const SheetMetalDies = () => {
       <div className="bg-white ">
         <div className="midContent">
           {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
-          <div className="py-5 bg-white section-full">
-            <div className="container">
-              <div className="text-center section-head">
-                <h2 className=" box-title m-tb0">
-                  Sheet Metal Dies
-                  <span className="bg-primary"></span>
-                </h2>
-                <p>We have a wide range of Sheet Metal Dies.</p>
-                <div className="dlab-separator bg-primary"></div>
+          <div className='py-5 bg-white section-full'>
+            <div className='container'>
+              {/* <ImageSlider images={images} /> */}
+              <div className='row'>
+                <LeftSection mainScreen>
+                  <div className='text-center section-head'>
+                 
+                    <div className='row gx-5'>
+                      <ImageRows data={productList} noOfRows={4} />
+                    </div>
 
-                {/* create a reponsive 3 columns in desktop and 1 colum in mobile screen in bootstrap */}
-                <div className="container"></div>
+                 
+                  </div>
+                </LeftSection>
 
-                <div className="row gx-5">
-                  {productList.map((item) => {
-                    return (
-                      <>
-                        <h4 className="m-b10">{item.name}</h4>
-                      </>
-                    );
-                  })}
-                </div>
+                <RightSection mainScreen>
+                  <ProductList withoutImage />
+                </RightSection>
               </div>
             </div>
           </div>

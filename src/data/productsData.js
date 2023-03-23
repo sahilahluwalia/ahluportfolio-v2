@@ -33,7 +33,22 @@ const asrfCollection = importAll(
 const ampfCollection = importAll(
   require.context("asserts/machine-pics/Design Image Data/Flap")
 );
+const transferSystemCollection = importAll(
+  require.context("asserts/machine-pics/transferSystem")
+);
 // console.log(ast2aiiCollection);
+
+const allPicCollections = [
+  ...ampfCollection,
+  ...asrfCollection,
+  ...acstsCollection,
+  ...ast3aiiCollection,
+  ...ast2aiiCollection,
+];
+
+const getRandomItemFromArray = (arr) => {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
 
 const catalogueList = cl;
 const masterProductLink = [
@@ -451,14 +466,14 @@ const powerPressAutomationProductList = [
   {
     name: "Transfer System ",
     link: "transfer-system",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+    image: getRandomItemFromArray(transferSystemCollection),
+    // "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
   },
   {
     name: "Sheet Metal Dies",
     link: "sheet-metal-dies",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    image: getRandomItemFromArray(transferSystemCollection),
+    // "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
   },
   {
     name: "Other Press Automation Accessories",
@@ -599,4 +614,5 @@ export {
   transferSystemData,
   transferSystemProducts,
   pressFeederProducts,
+  allPicCollections,
 };
