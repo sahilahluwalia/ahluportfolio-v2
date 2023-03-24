@@ -1,24 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Header from "../../components/layout/Header";
-import Footer from "../../components/layout/Footer";
-import Footer1 from "../layout/footer";
-import Footer2 from "../layout/footer2";
-import Footer3 from "../layout/footer3";
-import Footer4 from "../layout/footer4";
-import Footer5 from "../layout/footer5";
-import Footer6 from "../layout/footer6";
-import Footer7 from "../layout/footer7";
-import Footer8 from "../layout/footer8";
-import Footer9 from "../layout/footer9";
-import Footer10 from "../layout/footer10";
-import Footer11 from "../layout/footer11";
-import Footer12 from "../layout/footer12";
-import Footer13 from "../layout/footer13";
-import Footer14 from "../layout/footer14";
-import Footer15 from "../layout/footer15";
-import FooterDemo from "../layout/footerdemo";
-import ClientSlider1 from "../element/clientSlider1";
+
 import LogoSlider from "../../components/Homepage/LogoSlider";
 import BlogSlider1 from "../element/blogSlider1";
 import { blogContent3, servicesContent4 } from "../element/SliderContent";
@@ -37,7 +19,9 @@ import ScrollToTop from "../element/scrollToTop";
 import bg from "asserts/bg.jpg";
 import { Accordion } from "react-bootstrap";
 import { companyDetails } from "data/websiteData";
-import ProductSlider from 'components/Homepage/ProductSlider';
+import ProductSlider from "components/Homepage/ProductSlider";
+import Testmonial from "components/Homepage/Testmonial";
+
 const faqContent = [
   {
     question: "1. Innovation need",
@@ -82,7 +66,6 @@ const bg3 = require("../../images/background/map-bg.png");
 const bg4 = require("../../images/main-slider/slide8.jpg");
 
 const whyToAutomate = [
-  
   {
     name: "Data Collection and Analysis",
     description:
@@ -239,6 +222,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+      <div className='pt-3'></div>
       <div className='page-content bg-white'>
         <div className='content-block'>
           <div
@@ -279,7 +263,7 @@ const Homepage = () => {
                   data-wow-duration='2s'
                   data-wow-delay='0.2s'
                 >
-                  {/* <img src={require("../../images/pic1.png")} alt='' /> */}
+                  <img src={require("../../images/pic1.png")} alt='' />
                 </div>
               </div>
             </div>
@@ -401,6 +385,20 @@ const Homepage = () => {
                       </div>
                     </div>
                   </div> */}
+              </div>
+            </div>
+          </div>
+          <div className='section-full bg-gray content-inner-2'>
+            <div className='container'>
+              <div className='row'>
+                <div className='col-lg-12'>
+                  <div className='sort-title clearfix text-center'>
+                    <h4>Our Testmonials</h4>
+                  </div>
+                </div>
+              </div>
+              <div className='section-content'>
+                <Testmonial />
               </div>
             </div>
           </div>
