@@ -289,7 +289,7 @@ const About = (props) => {
             // style={{ backgroundImage: "url(" + bg1 + ")" }}
           > */}
           <div
-            class='container '
+            className='container '
             style={{
               marginTop: "50px",
               paddingBottom: "50px",
@@ -299,7 +299,7 @@ const About = (props) => {
               <h2 className='title'>Past Timeline</h2>
               {/* <p>Innovating Manufacuring since 2017</p> */}
             </div>
-            <div class='main-timeline'>
+            <div className='main-timeline'>
               {timeLineData.reverse().map((item, index) => {
                 return (
                   <div className='timeline text-black'>

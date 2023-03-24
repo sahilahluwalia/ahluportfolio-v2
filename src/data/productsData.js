@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { catalogueList as cl } from "../utils/catalogues";
 import ast2aii from "asserts/machine-pics/ast2aii.png";
 import ast3aii from "asserts/machine-pics/ast3aii.png";
+import ast3aii_frontside from 'asserts/machine-pics/Double Var Front View.png'
 import ampts from "asserts/machine-pics/ampts.png";
 import asrf from "asserts/machine-pics/asrf.png";
 import acsts from "asserts/machine-pics/acsts.png";
@@ -491,7 +492,7 @@ const transferSystemProducts = [
   {
     name: "AST3AII Series",
     link: "ast3aii",
-    image: ast3aii,
+    image: ast3aii_frontside,
   },
   {
     name: "ACSTS Series",

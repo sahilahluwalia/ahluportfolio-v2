@@ -19,7 +19,7 @@ import Footer14 from "../layout/footer14";
 import Footer15 from "../layout/footer15";
 import FooterDemo from "../layout/footerdemo";
 import ClientSlider1 from "../element/clientSlider1";
-import ImageSlider from "../../components/ImageSlider/ImageSlider";
+import LogoSlider from "../../components/Homepage/LogoSlider";
 import BlogSlider1 from "../element/blogSlider1";
 import { blogContent3, servicesContent4 } from "../element/SliderContent";
 import ServicesSlider1 from "../element/servicesSlider1";
@@ -36,7 +36,8 @@ import "../../css/templete.min.css";
 import ScrollToTop from "../element/scrollToTop";
 import bg from "asserts/bg.jpg";
 import { Accordion } from "react-bootstrap";
-
+import { companyDetails } from "data/websiteData";
+import ProductSlider from 'components/Homepage/ProductSlider';
 const faqContent = [
   {
     question: "1. Innovation need",
@@ -81,15 +82,16 @@ const bg3 = require("../../images/background/map-bg.png");
 const bg4 = require("../../images/main-slider/slide8.jpg");
 
 const whyToAutomate = [
+  
   {
-    name: "Increased efficiency",
-    description:
-      "We improves manufacturing efficiency by reducing cycle times, minimizing downtime, and increasing throughput.",
-  },
-  {
-    name: "Data collection and analysis",
+    name: "Data Collection and Analysis",
     description:
       "We provides real-time data on production, enabling data-driven decisions to optimize processes.",
+  },
+  {
+    name: "Increased Efficiency",
+    description:
+      "We improves manufacturing efficiency by reducing cycle times, minimizing downtime, and increasing throughput.",
   },
   {
     name: "Scalability",
@@ -97,378 +99,221 @@ const whyToAutomate = [
       "Automated systems can scale production to meet changing demands, adapting to market and customer changes",
   },
   {
-    name: "Competitive advantage",
+    name: "Competitive Advantage",
     description:
       "We gives companies a competitive edge by improving efficiency, reducing costs.",
   },
 ];
 
-class Homepage extends Component {
-  render() {
-    // new WAChatBox({
-    //   link: "https://wa.me/919999999999",
-    //   user: {
-    //     name: "Alice",
-    //     avatar: "https://randomuser.me/api/portraits/women/66.jpg",
-    //     status: "Typically replies within an hour",
-    //   },
-    //   text: `Hey There 👋<br><br>I'm here to help, so let me know what's up and I'll be happy to find a solution 🤓`,
-    //   button_text: "Need Help?",
-    // });
-    return (
-      <div className='skin-1'>
-        <Parallax bgImage={bg} strength={20}>
-          <div className='hero-section home-bnr1'>
-            <div className='container'>
-              <div className='row align-items-center'>
-                <div className='col-lg-12 col-md-12 '>
-                  <div className='hero-content'>
-                    <h1 className='title'>
-                      Transform Your Manufacturing with Ahlu Engineers' Custom
-                      Machines & Automation Solutions
-                    </h1>
-                    <div className='description'>
-                      "Automation is cost cutting by tightening the corners and
-                      not cutting them"
-                    </div>
-                    <div className='buttons'>
-                      <Link to='products'>Products</Link>
-                      <Link to='about'>About Us</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Parallax>
+const Homepage = () => {
+  return (
+    <div className='skin-1'>
+      <Parallax bgImage={bg} strength={20}>
+        <div
+          style={{
+            padding: "5rem 0rem",
+          }}
+          className='hero-section home-bnr1'
+        >
+          <div className='container'>
+            <div className='row align-items-center'>
+              <div className='col-lg-12 col-md-12 '>
+                <div className='hero-content'>
+                  <h1 className='title'>
+                    Transform Your Manufacturing with Ahlu Engineers' Custom
+                    Machines & Automation Solutions
+                  </h1>
 
-        <div className='section-full' id='choose-us'>
-          <div className='row m-lr0'>
-            <div
-              // style={{
-              //   padding: "30px 30px 0px 50px",
-              // }}
-              className='col-xl-6 col-lg-12 p-lr0 d-flex dis-tbl latest-project-info style1 bg-secondry wow fadeInLeft'
-              data-wow-duration='2s'
-              data-wow-delay='0.3s'
-            >
-              <div className='align-self-center text-white'>
-                <div className='section-head text-white'>
-                  <h2 className='title'>Why choose us</h2>
-                  <p>
-                    Choose us to experience unparalleled expertise, innovative
-                    solutions, and exceptional service in the world of
-                    manufacturing automation.
-                  </p>
-                </div>
-                <ul className='list-check white list-2 rounded border'>
-                  {whyToAutomate.map((item, index) => {
-                    return (
-                      <li key={index}>
-                        <h4 className='m-b10'>{item.name}</h4>
-                        <p
-                          style={{
-                            margin: "0px",
-                          }}
-                        >
-                          {item.description}
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
-            <div
-              className='col-xl-6 col-lg-12 p-lr0 wow fadeInRight'
-              data-wow-duration='2s'
-              data-wow-delay='0.3s'
-            >
-              <div className='row spno'>
-                <div className='col-lg-6 col-md-6 col-sm-6 bg-primary align-items-center d-flex'>
-                  <div className='dlab-services-box text-white'>
-                    <h2 className='service-year'>
-                      7<small>years</small>
-                    </h2>
-                    <h3 className='title m-b0'>
-                      We are Building the Future of Manufacturing
-                    </h3>
+                  <div className='description'>
+                    "Automation is cost cutting by tightening the corners and
+                    not cutting them"
                   </div>
-                </div>
-                <div className='col-lg-6 col-md-6 col-sm-6'>
-                  <img
-                    className='img-cover'
-                    src={require("../../images/our-work/car/pic3.jpg")}
-                    alt=''
-                  />
-                </div>
-                <div className='col-lg-6 col-md-6 col-sm-6'>
-                  <div className='video-bx radius-no h100'>
-                    <img
-                      src={require("../../images/our-work/car/pic4.jpg")}
-                      alt='Signature'
-                      className='img-cover'
-                    />
-                    <div className='video-play-icon'>
-                      <Link
-                        to='https://www.youtube.com/channel/UCPhDoFi0nlojklbst-BT-LA'
-                        target='_blank'
-                        className='popup-youtube video bg-primary'
-                      >
-                        <i className='fa fa-play'></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className='col-lg-6 col-md-6 col-sm-6 bg-secondry align-items-center d-flex'>
-                  <div className='dlab-services-box text-white'>
-                    <h3 className='title text-white m-b15'>
-                      {/* suggest title for this section */}
-                      Think Smart, Think Ahlu
-                    </h3>
-                    <p>
-                      Driving Growth and Innovation for Your Manufacturing
-                      Business
-                    </p>
-                    <Link
-                      to={{ pathname: "/about", hash: "#whyus" }}
-                      className='site-button btnhover19 outline white outline-2'
-                    >
-                      WHY US
-                    </Link>
+                  <div className='buttons'>
+                    <Link to='products'>Products</Link>
+                    <Link to='about'>About Us</Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className='page-content bg-white'>
-          <div className='content-block'>
-            <div className='section-full bg-gray content-inner about-carousel-ser'>
-              <div className='container'>
-                <div className='section-head text-center'>
-                  <h2 className='title'>
-                    Why Customer Love To <br />
-                    <span className='text-primary'>Choose Us</span>
+      </Parallax>
+      <ProductSlider />
+      <div className='section-full' id='choose-us'>
+        <div className='row m-lr0'>
+          <div
+            // style={{
+            //   padding: "30px 30px 0px 50px",
+            // }}
+            className='col-xl-6 col-lg-12 p-lr0 d-flex dis-tbl latest-project-info style1 bg-secondry wow fadeInLeft'
+            data-wow-duration='2s'
+            data-wow-delay='0.3s'
+          >
+            <div className='align-self-center text-white'>
+              <div className='section-head text-white'>
+                <h2 className='title'>Why choose us</h2>
+                <p>
+                  Choose us to experience unparalleled expertise, innovative
+                  solutions, and exceptional service in the world of
+                  manufacturing automation.
+                </p>
+              </div>
+              <ul className='list-check white list-2 rounded border'>
+                {whyToAutomate.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <h4 className='m-b10'>{item.name}</h4>
+                      <p
+                        style={{
+                          margin: "0px",
+                        }}
+                      >
+                        {item.description}
+                      </p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          </div>
+          <div
+            className='col-xl-6 col-lg-12 p-lr0 wow fadeInRight'
+            data-wow-duration='2s'
+            data-wow-delay='0.3s'
+          >
+            <div className='row spno'>
+              <div className='col-lg-6 col-md-6 col-sm-6 bg-primary align-items-center d-flex'>
+                <div className='dlab-services-box text-white'>
+                  <h2 className='service-year'>
+                    7<small>years</small>
                   </h2>
+                  <h3 className='title m-b0'>
+                    We are Building the Future of Manufacturing
+                  </h3>
+                </div>
+              </div>
+              <div className='col-lg-6 col-md-6 col-sm-6'>
+                <img
+                  className='img-cover'
+                  src={require("../../images/our-work/car/pic3.jpg")}
+                  alt=''
+                />
+              </div>
+              <div className='col-lg-6 col-md-6 col-sm-6'>
+                <div className='video-bx radius-no h100'>
+                  <img
+                    src={require("../../images/our-work/car/pic4.jpg")}
+                    alt='Signature'
+                    className='img-cover'
+                  />
+                  <div className='video-play-icon'>
+                    <Link
+                      to='https://www.youtube.com/channel/UCPhDoFi0nlojklbst-BT-LA'
+                      target='_blank'
+                      className='popup-youtube video bg-primary'
+                    >
+                      <i className='fa fa-play'></i>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              <div className='col-lg-6 col-md-6 pt-2 col-sm-6 bg-secondry align-items-center d-flex'>
+                <div className='dlab-services-box text-white'>
+                  <h3 className='title text-white m-b15'>
+                    {/* suggest title for this section */}
+                    Think Smart, Think Ahlu
+                  </h3>
                   <p>
-                    There are many variations of passages of Lorem Ipsum
-                    typesetting industry has been the industry's standard dummy
-                    text ever since the been when an unknown printer.
+                    Driving Growth and Innovation for Your Manufacturing
+                    Business
                   </p>
-                </div>
-
-                {/* <ServicesSlider1 slidesToShow={3} data={servicesContent4} /> */}
-              </div>
-            </div>
-
-            <div
-              className='section-full bg-img-fix content-inner-2 overlay-black-dark contact-action style2'
-              style={{ backgroundImage: "url(" + bg + ")" }}
-            >
-              <div className='container'>
-                <div className='row relative'>
-                  <div
-                    className='col-md-12 col-lg-8 wow fadeInLeft'
-                    data-wow-duration='2s'
-                    data-wow-delay='0.2s'
+                  <Link
+                    to={{ pathname: "/about", hash: "#whyus" }}
+                    className='site-button btnhover19 outline white outline-2'
                   >
-                    <div className='contact-no-area'>
-                      <h2 className='title'>
-                        A company involved in service, maintenance
-                      </h2>
-                      <div className='contact-no'>
-                        <div className='contact-left'>
-                          <h3 className='no'>
-                            <i className='sl-call-in'></i>123-456-7890
-                          </h3>
-                        </div>
-                        <div className='contact-right'>
-                          <Link
-                            to='/contact-4'
-                            className='site-button appointment-btn btnhover13'
-                          >
-                            Get Appointment
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className='col-md-12 col-lg-4 contact-img-bx wow fadeInRight relative'
-                    data-wow-duration='2s'
-                    data-wow-delay='0.2s'
-                  >
-                    <img src={require("../../images/pic1.png")} alt='' />
-                  </div>
+                    WHY US
+                  </Link>
                 </div>
               </div>
             </div>
-
-            <div className='section-full bg-gray content-inner'>
-              <div className='container'>
-                <div className='section-head text-center'>
-                  <h2 className='title'> Our Services</h2>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    typesetting industry has been the industry's standard dummy
-                    text ever since the been when an unknown printer.
-                  </p>
-                </div>
-                <div className='section-content row'>
-                  <div
-                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
-                    data-wow-duration='2s'
-                    data-wow-delay='0.2s'
-                  >
-                    <div className='icon-bx-wraper' data-name='01'>
-                      <div className='icon-lg'>
-                        <Link to='#' className='icon-cell'>
-                          <i className='flaticon-robot-arm'></i>
-                        </Link>
+          </div>
+        </div>
+      </div>
+      <div className='page-content bg-white'>
+        <div className='content-block'>
+          <div
+            className='section-full bg-img-fix content-inner-2 overlay-black-dark contact-action style2'
+            style={{ backgroundImage: "url(" + bg + ")" }}
+          >
+            <div className='container'>
+              <div className='row relative'>
+                <div
+                  className='col-md-12 col-lg-8 wow fadeInLeft'
+                  data-wow-duration='2s'
+                  data-wow-delay='0.2s'
+                >
+                  <div className='contact-no-area'>
+                    <h2 className='title'>
+                      A company involved in SPM and Press Automation Solutions
+                    </h2>
+                    <div className='contact-no'>
+                      <div className='contact-left'>
+                        <h3 className='no'>
+                          <i className='sl-call-in'></i>
+                          {companyDetails.phone.trim()}
+                        </h3>
                       </div>
-                      <div className='icon-content'>
-                        <h2 className='dlab-tilte'>Mechanical Works</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
-                    data-wow-duration='2s'
-                    data-wow-delay='0.4s'
-                  >
-                    <div className='icon-bx-wraper' data-name='02'>
-                      <div className='icon-lg'>
-                        <Link to='#' className='icon-cell'>
-                          <i className='flaticon-factory-1'></i>
-                        </Link>
-                      </div>
-                      <div className='icon-content'>
-                        <h2 className='dlab-tilte'>Power & Energy</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
-                    data-wow-duration='2s'
-                    data-wow-delay='0.6s'
-                  >
-                    <div className='icon-bx-wraper' data-name='03'>
-                      <div className='icon-lg'>
-                        <Link to='#' className='icon-cell'>
-                          <i className='flaticon-fuel-station'></i>
-                        </Link>
-                      </div>
-                      <div className='icon-content'>
-                        <h2 className='dlab-tilte'>Petroleum Refinery</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
-                    data-wow-duration='2s'
-                    data-wow-delay='0.8s'
-                  >
-                    <div className='icon-bx-wraper' data-name='04'>
-                      <div className='icon-lg'>
-                        <Link to='#' className='icon-cell'>
-                          <i className='flaticon-fuel-truck'></i>
-                        </Link>
-                      </div>
-                      <div className='icon-content'>
-                        <h2 className='dlab-tilte'>Oil & Gas Industry</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
-                    data-wow-duration='2s'
-                    data-wow-delay='0.2s'
-                  >
-                    <div className='icon-bx-wraper' data-name='05'>
-                      <div className='icon-lg'>
-                        <Link to='#' className='icon-cell'>
-                          <i className='flaticon-conveyor-1'></i>
-                        </Link>
-                      </div>
-                      <div className='icon-content'>
-                        <h2 className='dlab-tilte'>Automative Manufacturing</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className='col-md-6 col-lg-4 col-sm-12 service-box style3 wow fadeInUp'
-                    data-wow-duration='2s'
-                    data-wow-delay='0.4s'
-                  >
-                    <div className='icon-bx-wraper' data-name='06'>
-                      <div className='icon-lg'>
-                        <Link to='#' className='icon-cell'>
-                          <i className='flaticon-engineer-1'></i>
-                        </Link>
-                      </div>
-                      <div className='icon-content'>
-                        <h2 className='dlab-tilte'>Chemical Research</h2>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetuer adipiscing
-                          elit, sed diam nonummy nibh euismod{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className='content-block'>
-              <div className='section-full overlay-white-middle content-inner'>
-                <div className='container'>
-                  <div className='section-head text-black text-center'>
-                    <h3 className='title'>Values We Hold</h3>
-                    <p>
-                      Our connected stream of businesses are an extension of our
-                      family, and as such, we hold ourselves to the highest
-                      ethical standards and common values across all endeavors.
-                    </p>
-                  </div>
-                  <div className='row'>
-                    <div className='col-lg-6 col-md-12 m-b30'>
-                      <div className='faq-video'>
+                      <div className='contact-right'>
                         <Link
-                          className='play-btn popup-youtube'
-                          to='/https://www.youtube.com/watch?v=_FRZVScwggM'
+                          to='/quote'
+                          className='site-button appointment-btn btnhover13'
                         >
-                          <i className='flaticon-play-button text-white'></i>
+                          Get Free Quote
                         </Link>
-                        <img
-                          src={require("../../images/about/pic5.jpg")}
-                          alt=''
-                          className='img-cover radius-sm'
-                        />
                       </div>
                     </div>
-                    <div className='col-lg-6 col-md-12 m-b30'>
-                      {/* <Accordion className="accordian dlab-accordion faq-1 box-sort-in m-b30 faq" defaultActiveKey='-1'>
+                  </div>
+                </div>
+                <div
+                  className='col-md-12 col-lg-4 contact-img-bx wow fadeInRight relative'
+                  data-wow-duration='2s'
+                  data-wow-delay='0.2s'
+                >
+                  {/* <img src={require("../../images/pic1.png")} alt='' /> */}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className='content-block'>
+            <div className='section-full overlay-white-middle content-inner'>
+              <div className='container'>
+                <div className='section-head text-black text-center'>
+                  <h3 className='title'>Values We Hold</h3>
+                  <p>
+                    Our connected stream of businesses are an extension of our
+                    family, and as such, we hold ourselves to the highest
+                    ethical standards and common values across all endeavors.
+                  </p>
+                </div>
+                <div className='row'>
+                  <div className='col-lg-6 col-md-12 m-b30'>
+                    <div className='faq-video'>
+                      <Link
+                        className='play-btn popup-youtube'
+                        to='/https://www.youtube.com/watch?v=_FRZVScwggM'
+                      >
+                        <i className='flaticon-play-button text-white'></i>
+                      </Link>
+                      <img
+                        src={require("../../images/about/pic5.jpg")}
+                        alt=''
+                        className='img-cover radius-sm'
+                      />
+                    </div>
+                  </div>
+                  <div className='col-lg-6 col-md-12 m-b30'>
+                    {/* <Accordion className="accordian dlab-accordion faq-1 box-sort-in m-b30 faq" defaultActiveKey='-1'>
                                             {
                                                 faqContent.map((faq, i) =>(
 													<div className="panel">
@@ -489,24 +334,24 @@ class Homepage extends Component {
                                                 ))
                                             }
                                         </Accordion>*/}
-                      <Accordion className='dlab-accordion faq-1 box-sort-in m-b30 faq'>
-                        {faqContent.map((faq, i) => (
-                          <div className='panel'>
-                            <Accordion.Item eventKey={`${i}`}>
-                              <Accordion.Header as='h6'>
-                                {faq.question}
-                              </Accordion.Header>
-                              <Accordion.Body eventKey={`${i}`}>
-                                <div>{faq.answer}</div>
-                              </Accordion.Body>
-                            </Accordion.Item>
-                          </div>
-                        ))}
-                      </Accordion>
-                    </div>
+                    <Accordion className='dlab-accordion faq-1 box-sort-in m-b30 faq'>
+                      {faqContent.map((faq, i) => (
+                        <div className='panel'>
+                          <Accordion.Item eventKey={`${i}`}>
+                            <Accordion.Header as='h6'>
+                              {faq.question}
+                            </Accordion.Header>
+                            <Accordion.Body eventKey={`${i}`}>
+                              <div>{faq.answer}</div>
+                            </Accordion.Body>
+                          </Accordion.Item>
+                        </div>
+                      ))}
+                    </Accordion>
                   </div>
+                </div>
 
-                  <div className='row'>
+                {/* <div className='row'>
                     <div className='col-lg-4 col-md-6 m-b30'>
                       <div className='icon-bx-wraper bx-style-1 bg-white p-a30 left'>
                         <div className='icon-md text-primary m-b20'>
@@ -555,14 +400,14 @@ class Homepage extends Component {
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </div> */}
               </div>
             </div>
+          </div>
 
-            {/* <CounterSection backgroundImage={bg2} /> */}
+          {/* <CounterSection backgroundImage={bg2} /> */}
 
-            {/* <div className="section-full bg-gray content-inner">
+          {/* <div className="section-full bg-gray content-inner">
               <div className="container">
                 <div className="section-head text-center ">
                   <h2 className="title"> Meet The Team</h2>
@@ -576,7 +421,7 @@ class Homepage extends Component {
               </div>
             </div> */}
 
-            {/* <div
+          {/* <div
               className="section-full overlay-black-middle bg-secondry content-inner-2 wow fadeIn"
               data-wow-duration="2s"
               data-wow-delay="0.2s"
@@ -597,7 +442,7 @@ class Homepage extends Component {
               </div>
             </div> */}
 
-            {/* <div
+          {/* <div
               className="section-full content-inner bg-gray wow fadeIn"
               data-wow-duration="2s"
               data-wow-delay="0.4s"
@@ -618,24 +463,24 @@ class Homepage extends Component {
                   imgEffect="rotate"
                   noDes
                 /> */}
-            {/* </div> */}
-            {/* </div>  */}
+          {/* </div> */}
+          {/* </div>  */}
 
-            <div
-              className='section-full dlab-we-find bg-img-fix p-t20 p-b20 bg-white wow fadeIn'
-              data-wow-duration='0.51s'
-              data-wow-delay='0.1s'
-            >
-              <div className='container'>
-                <div className='section-content'>
-                  <ImageSlider hideBorder />
-                </div>
+          <div
+            className='section-full dlab-we-find bg-img-fix p-t20 p-b20 bg-white wow fadeIn'
+            data-wow-duration='0.51s'
+            data-wow-delay='0.1s'
+          >
+            <div className='container'>
+              <div className='section-content'>
+                <LogoSlider hideBorder />
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* <Footer1 />
+      {/* <Footer1 />
         <Footer2 />
         <Footer3 />
         <Footer4 />
@@ -651,9 +496,8 @@ class Homepage extends Component {
         <Footer14 />
         <Footer15 />
         <FooterDemo /> */}
-        <ScrollToTop className='icon-up' />
-      </div>
-    );
-  }
-}
+      <ScrollToTop className='icon-up' />
+    </div>
+  );
+};
 export default Homepage;

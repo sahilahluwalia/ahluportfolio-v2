@@ -37,11 +37,16 @@ const shuffle = (array) => {
 const totalImageCombined = PanelImagesPNG.concat(PanelImagesJPG)
   .concat(TradingImagesPNG)
   .concat(TradingImagesJPG);
-// const images = totalImageCombined.sort(() => Math.random() - 0.5);
-const images = shuffle(totalImageCombined);
-console.log(images.length);
 
-class ClientSlider1 extends Component {
+const removeDuplicates = (array) => {
+  return [...new Set(array)];
+};
+// const images = totalImageCombined.sort(() => Math.random() - 0.5);
+const images = removeDuplicates(shuffle(totalImageCombined));
+console.log(images.length);
+// console.log(images);
+
+class LogoSlider extends Component {
   render() {
     const settings = {
       dots: false,
@@ -85,9 +90,9 @@ class ClientSlider1 extends Component {
           className='client-logo-carousel'
         >
           {images.map((item, id) => (
-            <div className='item'>
-              <div class={`ow-client-logo ${padding}`}>
-                <div class={`client-logo ${Border}`}>
+            <div className='item' key={id}>
+              <div className={`ow-client-logo ${padding}`}>
+                <div className={`client-logo ${Border}`}>
                   <Link to='#'>
                     <img src={item} alt='' />
                   </Link>
@@ -100,4 +105,4 @@ class ClientSlider1 extends Component {
     );
   }
 }
-export default ClientSlider1;
+export default LogoSlider;

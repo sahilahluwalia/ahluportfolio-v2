@@ -7,35 +7,35 @@ import "slick-carousel/slick/slick-theme.css";
 
 const content = [
   {
-    // image: require("../../../images/portfolio/mining/image_1.jpg"),
+    image: require("images/portfolio/mining/image_1.jpg"),
     icon: "flaticon-robot-arm",
     title: "Inhouse Designing team",
     description:
       " Our experienced team of designers and engineers can design and develop custom solutions to meet our clients' unique needs.",
   },
   {
-    // image: require("../../images/portfolio/mining/image_4.jpg"),
+    image: require("images/portfolio/mining/image_4.jpg"),
     icon: "flaticon-fuel-truck",
     title: " Experienced professionals",
     description:
       "Our extensive portfolio of successful projects across different industries and sectors demonstrates our deep expertise and commitment to quality.",
   },
   {
-    // image: require("../../images/portfolio/mining/image_4.jpg"),
+    image: require("images/portfolio/mining/image_4.jpg"),
     icon: "flaticon-fuel-truck",
     title: "Inhouse Electrical & Programming department",
     description:
       "Our in-house electrical and programming team ensures that we can quickly and efficiently make any necessary updates or changes to our systems, without relying on external contractors.",
   },
   {
-    // image: require("../../images/portfolio/mining/image_3.jpg"),
+    image: require("images/portfolio/mining/image_3.jpg"),
     icon: "flaticon-fuel-station",
     title: "Strong Vendor Network",
     description:
       "It is a long established fact that a reader will be distracted by the readable content of a page.",
   },
   {
-    // image: require("../../images/portfolio/mining/image_2.jpg"),
+    image: require("images/portfolio/mining/image_2.jpg"),
     icon: "flaticon-factory-1",
     title: "Inhouse IIOT team",
     description:
@@ -43,7 +43,7 @@ const content = [
   },
 
   {
-    // image: require("../../images/portfolio/mining/image_4.jpg"),
+    image: require("images/portfolio/mining/image_4.jpg"),
     icon: "flaticon-fuel-truck",
     title: "Inhouse Electrical & Programming department",
     description:
@@ -51,7 +51,7 @@ const content = [
   },
 
   {
-    // image: require("../../images/portfolio/mining/image_3.jpg"),
+    image: require("images/portfolio/mining/image_3.jpg"),
     icon: "flaticon-fuel-station",
     title: "Support team functions",
     description:
@@ -95,17 +95,24 @@ const ProductSlider = ({}) => {
   };
   return (
     <>
-      <Slider {...settings} className='img-carousel service-box-4-area  m-b30'>
+      <Slider
+        style={{
+          padding: "1rem",
+        }}
+        {...settings}
+        className='img-carousel service-box-4-area  '
+      >
         {data.map((item, id) => (
           <div
             className='item wow fadeInUp'
             data-wow-duration='2s'
             data-wow-delay='0.2s'
+            key={id}
           >
             <div className='service-box-4 text-center'>
               <div className='service-images m-b15'>
                 <img src={item?.image} alt='' />
-                <i class={item.icon}></i>
+                <i className={item.icon}></i>
               </div>
               <div className='service-content'>
                 <h6 className='title'>
