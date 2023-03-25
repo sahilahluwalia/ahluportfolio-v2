@@ -112,7 +112,7 @@ const Homepage = () => {
                     not cutting them"
                   </div>
                   <div className='buttons'>
-                    <Link to='products'>Products</Link>
+                    <Link to='products#products'>Products</Link>
                     <Link to='about'>About Us</Link>
                   </div>
                 </div>
@@ -249,7 +249,7 @@ const Homepage = () => {
                       </div>
                       <div className='contact-right'>
                         <Link
-                          to='/quote'
+                          to='/quote#quote'
                           className='site-button appointment-btn btnhover13'
                         >
                           Get Free Quote

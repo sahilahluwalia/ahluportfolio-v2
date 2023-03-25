@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { catalogueList as cl } from "../utils/catalogues";
 import ast2aii from "asserts/machine-pics/ast2aii.png";
+import ast2ai from "asserts/machine-pics/ast2ai.png";
+import ast2ai_layout from "asserts/machine-pics/ast2ai-layout.png";
 import ast3aii from "asserts/machine-pics/ast3aii.png";
-import ast3aii_frontside from 'asserts/machine-pics/Double Var Front View.png'
+import ast3aii_frontside from "asserts/machine-pics/Double Var Front View.png";
 import ampts from "asserts/machine-pics/ampts.png";
 import asrf from "asserts/machine-pics/asrf.png";
 import acsts from "asserts/machine-pics/acsts.png";
@@ -183,6 +185,77 @@ const subProductList = [
     image: ast2aii,
     layout: asr2aii_layout,
     catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
+  },
+  {
+    code: "ast2ai",
+    name: "Ahlu Servo Transfer 2 Axis Single Bar type- AST2SAI",
+    description: "description of the item",
+    link: universalPath(
+      "products/power-press-automation/transfer-system/ast2ai"
+    ),
+    tableContentInJSON: [
+      {
+        Item: "X Axis / Transfer pitch",
+        Unit: "mm",
+        "AST2AII-125L": "0-125",
+        "AST2AII-250L": "0-250",
+        "AST2AII-500L": "0-500",
+      },
+      {
+        Item: "Y Axis / Clamping Stroke",
+        Unit: "mm",
+        "AST2AII-125L": "0-40",
+        "AST2AII-250L": "0-65",
+        "AST2AII-500L": "0-125",
+      },
+      {
+        Item: "Feed Bar Size",
+        Unit: "mm",
+        "AST2AII-125L": "65",
+        "AST2AII-250L": "80",
+        "AST2AII-500L": "90",
+      },
+      {
+        Item: "Weight Capacity",
+        Unit: "kg",
+        "AST2AII-125L": "2",
+        "AST2AII-250L": "3",
+        "AST2AII-500L": "5",
+      },
+      {
+        Item: "Feeding Accuracy",
+        Unit: "mm",
+        "AST2AII-125L": "± 0.1",
+        "AST2AII-250L": "± 0.1",
+        "AST2AII-500L": "± 0.1",
+      },
+      {
+        Item: "Maximum Stroke Feed",
+        Unit: "spm",
+        "AST2AII-125L": "40",
+        "AST2AII-250L": "30",
+        "AST2AII-500L": "20",
+      },
+      {
+        Item: "Main Dimensions",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+      {
+        Item: "Supported Bolster Width",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+    ],
+    imageCollection: ast2aiiCollection,
+    catalogueLink: addCatalogueFromListByItsName("AST2AI Series"),
+    image: ast2ai,
+    layout: ast2ai_layout,
+    catalogueImage: addCatalogueImageFromListByItsName("AST2AI Series"),
   },
   {
     code: "ampf",
@@ -488,6 +561,11 @@ const transferSystemProducts = [
     name: "AST2AII Series",
     link: "ast2aii",
     image: ast2aii,
+  },
+  {
+    name: "AST2AI Series",
+    link: "ast2ai",
+    image: ast2ai,
   },
   {
     name: "AST3AII Series",
