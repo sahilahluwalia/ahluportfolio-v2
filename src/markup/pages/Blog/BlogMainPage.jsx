@@ -1,419 +1,119 @@
-import React, { Component } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
+import { LatestBlogs } from "data/BlogData";
 import Sidebar from "markup/element/sidebar";
+import dayjs from "dayjs";
+import "./pagination.css";
 
+import ReactPaginate from "react-paginate";
 const bg = require("images/banner/bnr1.jpg");
+const Post = ({ currentItems }) => {
+  return (
+    <>
+      {currentItems?.map((item) => {
+        return (
+          <>
+            <div className='blog-post blog-md clearfix'>
+              <div className='dlab-post-media dlab-img-effect zoom-slow'>
+                <Link to={"./blog-single"}>
+                  <img src={item.image} alt='' />
+                </Link>
+              </div>
+              <div className='dlab-post-info'>
+                <div className='dlab-post-meta'>
+                  <ul>
+                    <li className='post-date'>
+                      <strong>{dayjs(item.date).format("DD MMM")}</strong>
+                    </li>
+                    <li className='post-author'>
+                      By <Link to={"#"}>{item.uploadedBy}</Link>
+                    </li>
+                  </ul>
+                </div>
+                <div className='dlab-post-title'>
+                  <h4 className='post-title'>
+                    <Link to={"./blog-single"}>{item.title}</Link>
+                  </h4>
+                </div>
+                <div className='dlab-post-text'>
+                  <p>{item.shortDescription}</p>
+                </div>
+                <div className='dlab-post-readmore'>
+                  <Link
+                    to={"./blog-single"}
+                    title='READ MORE'
+                    rel='bookmark'
+                    className='site-button'
+                  >
+                    READ MORE
+                    <i className='ti-arrow-right'></i>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </>
+        );
+      })}
+    </>
+  );
+};
 
 const BlogMainPage = () => {
+  const items = LatestBlogs;
+  const [itemOffset, setItemOffset] = useState(0);
+  const itemsPerPage = 6;
+  // Simulate fetching items from another resources.
+  // (This could be items from props; or items loaded in a local state
+  // from an API endpoint with useEffect and useState)
+  const endOffset = itemOffset + itemsPerPage;
+  console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+  const currentItems = items.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(items.length / itemsPerPage);
+
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % items.length;
+    console.log(
+      `User requested page number ${event.selected}, which is offset ${newOffset}`
+    );
+    setItemOffset(newOffset);
+  };
   return (
     <>
       <div className='page-content bg-white'>
         <div className='row'>
           <div>
-            <div className='blog-post blog-md clearfix'>
-              <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
-                  <img src={require("images/blog/grid/pic1.jpg")} alt='' />
-                </Link>
-              </div>
-              <div className='dlab-post-info'>
-                <div className='dlab-post-meta'>
-                  <ul>
-                    <li className='post-date'>
-                      {" "}
-                      <strong>17 Aug</strong> <span> 2016</span>{" "}
-                    </li>
-                    <li className='post-author'>
-                      {" "}
-                      By <Link to={"#"}>Oliver</Link>{" "}
-                    </li>
-                  </ul>
-                </div>
-                <div className='dlab-post-title'>
-                  <h4 className='post-title'>
-                    <Link to={"./blog-single"}>
-                      Why Are Children So Obsessed
-                    </Link>
-                  </h4>
-                </div>
-                <div className='dlab-post-text'>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div className='dlab-post-readmore'>
-                  <Link
-                    to={"./blog-single"}
-                    title='READ MORE'
-                    rel='bookmark'
-                    className='site-button'
-                  >
-                    READ MORE
-                    <i className='ti-arrow-right'></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='blog-post blog-md clearfix'>
-              <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
-                  <img src={require("images/blog/grid/pic2.jpg")} alt='' />
-                </Link>
-              </div>
-              <div className='dlab-post-info'>
-                <div className='dlab-post-meta'>
-                  <ul>
-                    <li className='post-date'>
-                      {" "}
-                      <strong>16 Aug</strong> <span> 2016</span>{" "}
-                    </li>
-                    <li className='post-author'>
-                      {" "}
-                      By <Link to={"#"}>Harry</Link>{" "}
-                    </li>
-                  </ul>
-                </div>
-                <div className='dlab-post-title'>
-                  <h4 className='post-title'>
-                    <Link to={"./blog-single"}>
-                      How To Get People To Like Industry
-                    </Link>
-                  </h4>
-                </div>
-                <div className='dlab-post-text'>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div className='dlab-post-readmore'>
-                  <Link
-                    to={"./blog-single"}
-                    title='READ MORE'
-                    rel='bookmark'
-                    className='site-button'
-                  >
-                    READ MORE
-                    <i className='ti-arrow-right'></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='blog-post blog-md clearfix'>
-              <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
-                  <img src={require("images/blog/grid/pic3.jpg")} alt='' />
-                </Link>
-              </div>
-              <div className='dlab-post-info'>
-                <div className='dlab-post-meta'>
-                  <ul>
-                    <li className='post-date'>
-                      {" "}
-                      <strong>15 Aug</strong> <span> 2016</span>{" "}
-                    </li>
-                    <li className='post-author'>
-                      {" "}
-                      By <Link to={"#"}>Aaron</Link>{" "}
-                    </li>
-                  </ul>
-                </div>
-                <div className='dlab-post-title'>
-                  <h4 className='post-title'>
-                    <Link to={"./blog-single"}>
-                      The Story Of Industry Has Just
-                    </Link>
-                  </h4>
-                </div>
-                <div className='dlab-post-text'>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div className='dlab-post-readmore'>
-                  <Link
-                    to={"./blog-single"}
-                    title='READ MORE'
-                    rel='bookmark'
-                    className='site-button'
-                  >
-                    READ MORE
-                    <i className='ti-arrow-right'></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='blog-post blog-md clearfix'>
-              <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
-                  <img src={require("images/blog/grid/pic1.jpg")} alt='' />
-                </Link>
-              </div>
-              <div className='dlab-post-info'>
-                <div className='dlab-post-meta'>
-                  <ul>
-                    <li className='post-date'>
-                      {" "}
-                      <strong>14 Aug</strong> <span> 2016</span>{" "}
-                    </li>
-                    <li className='post-author'>
-                      {" "}
-                      By <Link to={"#"}>Jamie</Link>{" "}
-                    </li>
-                  </ul>
-                </div>
-                <div className='dlab-post-title '>
-                  <h4 className='post-title'>
-                    <Link to={"./blog-single"}>
-                      Seven Outrageous Ideas Industry
-                    </Link>
-                  </h4>
-                </div>
-                <div className='dlab-post-text'>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div className='dlab-post-readmore'>
-                  <Link
-                    to={"./blog-single"}
-                    title='READ MORE'
-                    rel='bookmark'
-                    className='site-button'
-                  >
-                    READ MORE
-                    <i className='ti-arrow-right'></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='blog-post blog-md clearfix'>
-              <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
-                  <img src={require("images/blog/grid/pic2.jpg")} alt='' />
-                </Link>
-              </div>
-              <div className='dlab-post-info'>
-                <div className='dlab-post-meta '>
-                  <ul>
-                    <li className='post-date'>
-                      {" "}
-                      <strong>13 Aug</strong> <span> 2016</span>{" "}
-                    </li>
-                    <li className='post-author'>
-                      {" "}
-                      By <Link to={"#"}>Winnie </Link>{" "}
-                    </li>
-                  </ul>
-                </div>
-                <div className='dlab-post-title'>
-                  <h4 className='post-title'>
-                    <Link to={"./blog-single"}>How Industry Can Increase</Link>
-                  </h4>
-                </div>
-                <div className='dlab-post-text'>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div className='dlab-post-readmore'>
-                  <Link
-                    to={"./blog-single"}
-                    title='READ MORE'
-                    rel='bookmark'
-                    className='site-button'
-                  >
-                    READ MORE
-                    <i className='ti-arrow-right'></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='blog-post blog-md clearfix'>
-              <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
-                  <img src={require("images/blog/grid/pic3.jpg")} alt='' />
-                </Link>
-              </div>
-              <div className='dlab-post-info'>
-                <div className='dlab-post-meta'>
-                  <ul>
-                    <li className='post-date'>
-                      {" "}
-                      <strong>12 Aug</strong> <span> 2016</span>{" "}
-                    </li>
-                    <li className='post-author'>
-                      By <Link to={"#"}>Anna</Link>{" "}
-                    </li>
-                  </ul>
-                </div>
-                <div className='dlab-post-title '>
-                  <h4 className='post-title'>
-                    <Link to={"./blog-single"}>
-                      Here's What People Are Saying
-                    </Link>
-                  </h4>
-                </div>
-                <div className='dlab-post-text'>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div className='dlab-post-readmore'>
-                  <Link
-                    to={"./blog-single"}
-                    title='READ MORE'
-                    rel='bookmark'
-                    className='site-button'
-                  >
-                    READ MORE
-                    <i className='ti-arrow-right'></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='blog-post blog-md clearfix'>
-              <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
-                  <img src={require("images/blog/grid/pic4.jpg")} alt='' />
-                </Link>
-              </div>
-              <div className='dlab-post-info'>
-                <div className='dlab-post-meta'>
-                  <ul>
-                    <li className='post-date'>
-                      {" "}
-                      <strong>11 Aug</strong> <span> 2016</span>{" "}
-                    </li>
-                    <li className='post-author'>
-                      {" "}
-                      By <Link to={"#"}>Thomas</Link>{" "}
-                    </li>
-                  </ul>
-                </div>
-                <div className='dlab-post-title'>
-                  <h4 className='post-title'>
-                    <Link to={"./blog-single"}>
-                      The Shocking Revelation of Industry
-                    </Link>
-                  </h4>
-                </div>
-                <div className='dlab-post-text'>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div className='dlab-post-readmore'>
-                  <Link
-                    to={"./blog-single"}
-                    title='READ MORE'
-                    rel='bookmark'
-                    className='site-button'
-                  >
-                    READ MORE
-                    <i className='ti-arrow-right'></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='blog-post blog-md clearfix'>
-              <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
-                  <img src={require("images/blog/grid/pic1.jpg")} alt='' />
-                </Link>
-              </div>
-              <div className='dlab-post-info'>
-                <div className='dlab-post-meta'>
-                  <ul>
-                    <li className='post-date'>
-                      {" "}
-                      <strong>10 Aug</strong> <span> 2016</span>{" "}
-                    </li>
-                    <li className='post-author'>
-                      {" "}
-                      By <Link to={"#"}>Lucinda</Link>{" "}
-                    </li>
-                  </ul>
-                </div>
-                <div className='dlab-post-title'>
-                  <h4 className='post-title'>
-                    <Link to={"./blog-single"}>
-                      Why You Should Not Go To Industry
-                    </Link>
-                  </h4>
-                </div>
-                <div className='dlab-post-text'>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
-                </div>
-                <div className='dlab-post-readmore'>
-                  <Link
-                    to={"./blog-single"}
-                    title='READ MORE'
-                    rel='bookmark'
-                    className='site-button'
-                  >
-                    READ MORE
-                    <i className='ti-arrow-right'></i>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className='pagination-bx clearfix text-center'>
-              <ul className='pagination'>
-                <li className='previous'>
-                  <Link to={"#"}>
-                    <i className='ti-arrow-left'></i> Prev
-                  </Link>
-                </li>
-                <li className='active'>
-                  <Link to={"#"}>1</Link>
-                </li>
-                <li>
-                  <Link to={"#"}>2</Link>
-                </li>
-                <li>
-                  <Link to={"#"}>3</Link>
-                </li>
-                <li className='next'>
-                  <Link to={"#"}>
+            <Post currentItems={currentItems} />
+
+            <div
+
+            // className='pagination-bx clearfix text-center'
+            >
+              <ReactPaginate
+                activeClassName={"item active "}
+                breakClassName={"item break-me "}
+                breakLabel={"..."}
+                containerClassName={"pagination"}
+                disabledClassName={"disabled-page"}
+                marginPagesDisplayed={2}
+                nextClassName={"item next"}
+                pageCount={pageCount}
+                pageClassName={"item pagination-page "}
+                pageRangeDisplayed={3}
+                previousClassName={"item previous"}
+                nextLabel={
+                  <div>
                     Next <i className='ti-arrow-right'></i>
-                  </Link>
-                </li>
-              </ul>
+                  </div>
+                }
+                onPageChange={handlePageClick}
+                previousLabel={
+                  <div>
+                    <i className='ti-arrow-left'></i> Prev
+                  </div>
+                }
+                renderOnZeroPageCount={null}
+              />
             </div>
           </div>
         </div>

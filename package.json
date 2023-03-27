@@ -24,6 +24,7 @@
     "react-image-gallery": "^1.2.11",
     "react-image-magnify": "^2.7.4",
     "react-modal-video": "^2.0.0",
+    "react-paginate": "^8.1.4",
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.8.1",
     "react-scripts": "^5.0.1",
