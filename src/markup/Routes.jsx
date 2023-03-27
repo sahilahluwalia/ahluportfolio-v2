@@ -105,6 +105,8 @@ import Acsts from "./pages/Products/PowerPressAutomation/TransferSystem/Acsts";
 import Ampts from "./pages/Products/PowerPressAutomation/TransferSystem/Ampts";
 import Asrf from "./pages/Products/PowerPressAutomation/PressFeeder/Asrf";
 import Ampf from "./pages/Products/PowerPressAutomation/PressFeeder/Ampf";
+import BlogMainPage from "./pages/Blog/BlogMainPage";
+import BlogLeftBase from "./pages/Blog/BlogLeftBase";
 const Router = () => {
   const location = useLocation();
   const { pathname, hash, key } = useLocation();
@@ -138,12 +140,16 @@ const Router = () => {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
+        <Route path='blog' element={<BlogLeftBase />}>
+          <Route index element={<BlogMainPage />} />
+          <Route path=':name' element={<h1>ds</h1>} />
+        </Route>
         <Route index element={<Homepage />} />
         <Route path='quote' element={<Quote />} />
         <Route path='contact' element={<Contact />} />
         <Route path='gg' element={<Index />} />
         <Route path='about' element={<About />} />
-        <Route path='/products' element={<ProductBase />}>
+        <Route path='products' element={<ProductBase />}>
           <Route index element={<Products />} />
           {/* <Route path="transfer-system" element={<h2>sdvsdv</h2>} /> */}
           <Route path='power-press-automation' element={<Base />}>
