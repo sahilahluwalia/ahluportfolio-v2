@@ -4,7 +4,7 @@ import { LatestBlogs } from "data/BlogData";
 import Sidebar from "markup/element/sidebar";
 import dayjs from "dayjs";
 import "./pagination.css";
-
+import { useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 const bg = require("images/banner/bnr1.jpg");
 const Post = ({ currentItems }) => {
@@ -15,7 +15,7 @@ const Post = ({ currentItems }) => {
           <>
             <div className='blog-post blog-md clearfix'>
               <div className='dlab-post-media dlab-img-effect zoom-slow'>
-                <Link to={"./blog-single"}>
+                <Link to={item.link}>
                   <img src={item.image} alt='' />
                 </Link>
               </div>
@@ -25,14 +25,12 @@ const Post = ({ currentItems }) => {
                     <li className='post-date'>
                       <strong>{dayjs(item.date).format("DD MMM")}</strong>
                     </li>
-                    <li className='post-author'>
-                      By <Link to={"#"}>{item.uploadedBy}</Link>
-                    </li>
+                    <li className='post-author'>By {item.uploadedBy}</li>
                   </ul>
                 </div>
                 <div className='dlab-post-title'>
                   <h4 className='post-title'>
-                    <Link to={"./blog-single"}>{item.title}</Link>
+                    <Link to={item.link}>{item.title}</Link>
                   </h4>
                 </div>
                 <div className='dlab-post-text'>
@@ -40,7 +38,7 @@ const Post = ({ currentItems }) => {
                 </div>
                 <div className='dlab-post-readmore'>
                   <Link
-                    to={"./blog-single"}
+                    to={item.link}
                     title='READ MORE'
                     rel='bookmark'
                     className='site-button'
@@ -59,6 +57,11 @@ const Post = ({ currentItems }) => {
 };
 
 const BlogMainPage = () => {
+  // get tags from url
+  const { tag } = useParams();
+  // get all blogs
+  console.log(tag);
+
   const items = LatestBlogs;
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 6;

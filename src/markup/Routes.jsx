@@ -107,6 +107,7 @@ import Asrf from "./pages/Products/PowerPressAutomation/PressFeeder/Asrf";
 import Ampf from "./pages/Products/PowerPressAutomation/PressFeeder/Ampf";
 import BlogMainPage from "./pages/Blog/BlogMainPage";
 import BlogLeftBase from "./pages/Blog/BlogLeftBase";
+import PowerPressBlog from "./pages/Blog/Posts/PowerPressBlog";
 const Router = () => {
   const location = useLocation();
   const { pathname, hash, key } = useLocation();
@@ -142,6 +143,10 @@ const Router = () => {
       <Route path='/' element={<Layout />}>
         <Route path='blog' element={<BlogLeftBase />}>
           <Route index element={<BlogMainPage />} />
+          <Route
+            path='power-press-and-its-automation'
+            element={<PowerPressBlog />}
+          />
           <Route path=':name' element={<h1>ds</h1>} />
         </Route>
         <Route index element={<Homepage />} />
@@ -174,11 +179,6 @@ const Router = () => {
           <Route path='vision-inspection-system' element={<Base />}>
             <Route index element={<VisionInspectionSystems />} />
           </Route>
-        </Route>
-        <Route path='blog' element={<Products />}>
-          {/* <Route path="transfer-system" element={<Products />} />
-          <Route path="special-purpose-machines" element={<Products />} />
-          <Route path="vision-inspection-system" element={<Products />} /> */}
         </Route>
         <Route path='enguiry' element={<Quote />} />
         <Route path='catalogues' element={<Catalogues />} />
