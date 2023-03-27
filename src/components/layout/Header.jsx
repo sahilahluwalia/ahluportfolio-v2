@@ -91,45 +91,45 @@ class Header extends Component {
   render() {
     return (
       <>
-        <header className="site-header mo-left header header-curve ext-header ">
+        <header className='site-header mo-left header header-curve ext-header '>
           <div
-            className="middle-bar"
+            className='middle-bar'
             style={{
               maxWidth: "1535px",
               margin: "auto",
             }}
           >
-            <div className="container-fluid">
-              <div className="middle-area">
-                <div className="logo-header">
-                  <Link to="/">
-                    <img src={ahluLogoWithName} alt="ahlu logo" />
+            <div className='container-fluid'>
+              <div className='middle-area'>
+                <div className='logo-header'>
+                  <Link to='/'>
+                    <img src={ahluLogoWithName} alt='ahlu logo' />
                   </Link>
                 </div>
-                <div className="service-list">
+                <div className='service-list'>
                   <ul>
                     <a href={headerDetails.phoneNumberTo}>
                       <li>
-                        <i className="la la-phone"></i>
-                        <h4 className="title">{headerDetails.phoneNumber}</h4>
+                        <i className='la la-phone'></i>
+                        <h4 className='title'>{headerDetails.phoneNumber}</h4>
                         <span>Connect us via</span>
                       </li>
                     </a>
                     <li>
-                      <i className="la la-clock-o"></i>
-                      <h4 className="title">
+                      <i className='la la-clock-o'></i>
+                      <h4 className='title'>
                         {headerDetails.officeHoursTitle}
                       </h4>
                       <span>{headerDetails.officeHours}</span>
                     </li>
                     <a
                       href={companyDetails.googleMapLink}
-                      rel="noreferrer"
-                      target="_blank"
+                      rel='noreferrer'
+                      target='_blank'
                     >
                       <li>
-                        <i className="la la-map"></i>
-                        <h4 className="title">{headerDetails.addressTitle}</h4>
+                        <i className='la la-map'></i>
+                        <h4 className='title'>{headerDetails.addressTitle}</h4>
                         <span>{headerDetails.address}</span>
                       </li>
                     </a>
@@ -141,7 +141,7 @@ class Header extends Component {
 
           <Sticky innerZ={999} enabled={true}>
             <div
-              className="sticky-header main-bar-wraper navbar-expand-lg"
+              className='sticky-header main-bar-wraper navbar-expand-lg'
               style={
                 {
                   // maxWidth: "1535px",
@@ -149,63 +149,63 @@ class Header extends Component {
                 }
               }
             >
-              <div className="main-bar clearfix ">
-                <div className="container-fluid clearfix ">
-                  <div className="logo-header mostion">
-                    <Link to="/">
-                      <img src={ahluLogoWithName} alt="ahlu ahluLogoWithName" />
+              <div className='main-bar clearfix '>
+                <div className='container-fluid clearfix '>
+                  <div className='logo-header mostion'>
+                    <Link to='/'>
+                      <img src={ahluLogoWithName} alt='ahlu ahluLogoWithName' />
                     </Link>
                   </div>
 
                   <button
-                    className="navbar-toggler collapsed navicon justify-content-end"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
+                    className='navbar-toggler collapsed navicon justify-content-end'
+                    type='button'
+                    data-toggle='collapse'
+                    data-target='#navbarNavDropdown'
+                    aria-controls='navbarNavDropdown'
+                    aria-expanded='false'
+                    aria-label='Toggle navigation'
                   >
                     <span></span>
                     <span></span>
                     <span></span>
                   </button>
 
-                  <Link to="/quote">
+                  <Link to='/quote#quote'>
                     {" "}
                     {/* <div className="bigger-hover">helo</div> */}
-                    <div className="extra-nav border-0">
-                      <h5 className="text-nowrap fw-bold fs-3 bigger-hover">
+                    <div className='extra-nav border-0'>
+                      <h5 className='text-nowrap fw-bold fs-3 bigger-hover'>
                         GET FREE QUOTE
                       </h5>
                     </div>
                   </Link>
 
-                  <div className="dlab-quik-search ">
-                    <form action="#">
+                  <div className='dlab-quik-search '>
+                    <form action='#'>
                       <input
-                        name="search"
-                        value=""
-                        type="text"
-                        className="form-control"
-                        placeholder="Type to search"
+                        name='search'
+                        value=''
+                        type='text'
+                        className='form-control'
+                        placeholder='Type to search'
                       />
-                      <span id="quik-search-remove">
-                        <i className="ti-close"></i>
+                      <span id='quik-search-remove'>
+                        <i className='ti-close'></i>
                       </span>
                     </form>
                   </div>
 
                   <div
-                    className="header-nav navbar-collapse collapse justify-content-start"
-                    id="navbarNavDropdown"
+                    className='header-nav navbar-collapse collapse justify-content-start'
+                    id='navbarNavDropdown'
                   >
-                    <div className="logo-header d-md-block d-lg-none">
-                      <Link to="/">
-                        <img src={ahluLogoWithName} alt="" />
+                    <div className='logo-header d-md-block d-lg-none'>
+                      <Link to='/'>
+                        <img src={ahluLogoWithName} alt='' />
                       </Link>
                     </div>
-                    <ul className="nav navbar-nav">
+                    <ul className='nav navbar-nav'>
                       {navbarlinks.map((link, index) => {
                         if (link.name === "Catalogues") {
                           return catalogueListItemsWithSubmenu;
@@ -228,7 +228,7 @@ class Header extends Component {
                       })}
                     </ul>
 
-                    <div className="dlab-social-icon">
+                    <div className='dlab-social-icon'>
                       <ul>
                         {socialMediaLinks.map((item, index) => {
                           if (item.image)
@@ -236,8 +236,8 @@ class Header extends Component {
                               <li key={index}>
                                 <a
                                   className={item.icon}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
+                                  target='_blank'
+                                  rel='noopener noreferrer'
                                   href={item.link}
                                 >
                                   <img
@@ -245,7 +245,7 @@ class Header extends Component {
                                       width: "1.5rem",
                                     }}
                                     src={item.image}
-                                    alt=""
+                                    alt=''
                                   />
                                 </a>
                               </li>
@@ -255,8 +255,8 @@ class Header extends Component {
                               <li key={index}>
                                 <a
                                   className={item.icon}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
+                                  target='_blank'
+                                  rel='noopener noreferrer'
                                   href={item.link}
                                 >
                                   .

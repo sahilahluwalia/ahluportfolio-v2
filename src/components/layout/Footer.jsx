@@ -11,6 +11,7 @@ import { companyDetails } from "../../data/websiteData";
 import SubscribeForm from "../SubscribeForm";
 import { subscribeToNewsletter } from "../../fetchers";
 import axios from "axios";
+import tripod from "asserts/Catalogue PDF Files/Trifold_Minimum_Clarity.pdf";
 const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 const privateKey = process.env.REACT_APP_PRIVATE_KEY;
 
@@ -27,7 +28,7 @@ const usefulLinks = [
   },
   {
     title: "Products",
-    link: "/products",
+    link: "/products#products",
   },
   {
     title: "Enquiry",
@@ -35,7 +36,7 @@ const usefulLinks = [
   },
   {
     title: "Contact Us",
-    link: "/contact",
+    link: "/contact#contact",
   },
   {
     title: "Career",
@@ -43,7 +44,12 @@ const usefulLinks = [
   },
   {
     title: "Download Catalogues",
-    link: "/catalogues",
+    link: "/catalogues#catalogues",
+  },
+  {
+    title: "Tripod",
+    link: tripod,
+    href: true,
   },
   // {
   //   title: "Download Brochures",
@@ -67,7 +73,7 @@ const QrCodeComponent = ({ qrShow, setQrShow }) => {
           setQrShow(false);
         }}
       >
-        <img src={qrCode} alt="qrcode" />
+        <img src={qrCode} alt='qrcode' />
       </div>
     );
 };
@@ -117,22 +123,22 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="site-footer style1">
-        <div className="dlab-newsletter">
-          <div className="container">
+      <footer className='site-footer style1'>
+        <div className='dlab-newsletter'>
+          <div className='container'>
             <div
-              className="ft-contact wow fadeIn"
-              data-wow-duration="2s"
-              data-wow-delay="0.6s"
+              className='ft-contact wow fadeIn'
+              data-wow-duration='2s'
+              data-wow-delay='0.6s'
             >
-              <div className="ft-contact-bx">
+              <div className='ft-contact-bx'>
                 <a
                   href={companyDetails.googleMapLink}
-                  rel="noreferrer"
-                  target="_blank"
+                  rel='noreferrer'
+                  target='_blank'
                 >
-                  <img src={icon1} alt="" />
-                  <h4 className="title">Company Address</h4>
+                  <img src={icon1} alt='' />
+                  <h4 className='title'>Company Address</h4>
                   <p
                     style={{
                       fontSize: "0.8rem",
@@ -143,10 +149,10 @@ const Footer = () => {
                 </a>
               </div>
 
-              <div className="ft-contact-bx">
-                <a className="footer-col" href={companyDetails.phoneTo}>
-                  <img src={icon2} alt="" />
-                  <h4 className="title">Phone</h4>
+              <div className='ft-contact-bx'>
+                <a className='footer-col' href={companyDetails.phoneTo}>
+                  <img src={icon2} alt='' />
+                  <h4 className='title'>Phone</h4>
                   <p>{companyDetails.phone}</p>
                 </a>
               </div>
@@ -155,10 +161,10 @@ const Footer = () => {
                 style={{
                   wordWrap: "break-word",
                 }}
-                className="ft-contact-bx"
+                className='ft-contact-bx'
               >
-                <img src={icon3} alt="" />
-                <h4 className="title">Connect us via</h4>
+                <img src={icon3} alt='' />
+                <h4 className='title'>Connect us via</h4>
                 <a href={`mailto:${companyDetails.email}`}>
                   <p>{companyDetails.email}</p>
                 </a>
@@ -170,12 +176,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="footer-top">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-4 col-sm-6">
-                <div className="widget widget_about">
-                  <h4 className="footer-title">About AhluEngineers</h4>
+        <div className='footer-top'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-md-4 col-sm-6'>
+                <div className='widget widget_about'>
+                  <h4 className='footer-title'>About AhluEngineers</h4>
                   <p>
                     Serving in 3+ countries in Industrial automation solutions
                     for customized developement.
@@ -183,33 +189,50 @@ const Footer = () => {
                   <Link to={"/about"}>Read More</Link>
                 </div>
               </div>
-              <div className="col-md-4 col-sm-6">
-                <div className="widget">
-                  <h4 className="footer-title">Other related Links</h4>
+              <div className='col-md-4 col-sm-6'>
+                <div className='widget'>
+                  <h4 className='footer-title'>Other related Links</h4>
                   <ul
-                    className="list-2"
+                    className='list-2'
                     style={{
                       marginBottom: "1rem",
                     }}
                   >
-                    {usefulLinks.map((item, index) => (
-                      <li key={index}>
-                        <Link
-                          to={item.link}
-                          style={{
-                            textDecoration: "none",
-                          }}
-                        >
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
+                    {usefulLinks.map((item, index) => {
+                      if (item.href) {
+                        return (
+                          <li key={index}>
+                            <Link
+                              to={item.link}
+                              target='_blank'
+                              style={{
+                                textDecoration: "none",
+                              }}
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        );
+                      } else
+                        return (
+                          <li key={index}>
+                            <Link
+                              to={item.link}
+                              style={{
+                                textDecoration: "none",
+                              }}
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        );
+                    })}
                   </ul>
                 </div>
               </div>
-              <div className="col-md-4 col-sm-12 flex-grow-1">
-                <div className="widget widget_subscribe">
-                  <h4 className="footer-title">Subscribe to our Newsletter</h4>
+              <div className='col-md-4 col-sm-12 flex-grow-1'>
+                <div className='widget widget_subscribe'>
+                  <h4 className='footer-title'>Subscribe to our Newsletter</h4>
 
                   {alert.success ? (
                     <>
@@ -223,7 +246,7 @@ const Footer = () => {
                           }}
                         >
                           Welcome aboard{" "}
-                          <span role="img" aria-label="Ship">
+                          <span role='img' aria-label='Ship'>
                             🚢
                           </span>
                           <br />
@@ -238,27 +261,27 @@ const Footer = () => {
                         to get our latest products.
                       </p>
                       <form
-                        className="dzSubscribe"
+                        className='dzSubscribe'
                         ref={form}
                         onSubmit={handleSubmit}
                       >
-                        <div className="dzSubscribeMsg"></div>
-                        <div className="form-group">
-                          <div className="input-group">
+                        <div className='dzSubscribeMsg'></div>
+                        <div className='form-group'>
+                          <div className='input-group'>
                             <input
-                              name="dzEmail"
+                              name='dzEmail'
                               onChange={(e) => setEmail(e.target.value)}
-                              required="required"
-                              type="email"
-                              className="form-control"
-                              placeholder="Your Email Address"
+                              required='required'
+                              type='email'
+                              className='form-control'
+                              placeholder='Your Email Address'
                             />
-                            <div className="input-group-addon">
+                            <div className='input-group-addon'>
                               <button
-                                name="submit"
-                                value="Submit"
-                                type="submit"
-                                className="site-button fa fa-paper-plane-o"
+                                name='submit'
+                                value='Submit'
+                                type='submit'
+                                className='site-button fa fa-paper-plane-o'
                               ></button>
                             </div>
                           </div>
@@ -291,30 +314,30 @@ const Footer = () => {
               </div>
               <script
                 async
-                data-uid="569a3851ca"
-                src="https://home-industries.ck.page/569a3851ca/index.js"
+                data-uid='569a3851ca'
+                src='https://home-industries.ck.page/569a3851ca/index.js'
               ></script>
             </div>
           </div>
         </div>
-        <div className="footer-bottom footer-line">
-          <div className="container">
-            <div className="footer-bottom-in">
-              <div className="footer-bottom-logo">
+        <div className='footer-bottom footer-line'>
+          <div className='container'>
+            <div className='footer-bottom-in'>
+              <div className='footer-bottom-logo'>
                 <Link to={"/"}>
-                  <img src={ahluLogoWithName} alt="ahlulogo" />
+                  <img src={ahluLogoWithName} alt='ahlulogo' />
                 </Link>
               </div>
-              <div className="footer-bottom-social">
-                <ul className="dlab-social-icon dez-border">
+              <div className='footer-bottom-social'>
+                <ul className='dlab-social-icon dez-border'>
                   {socialMediaLinks.map((item, index) => {
                     if (item.image)
                       return (
                         <li key={index}>
                           <a
                             className={item.icon}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target='_blank'
+                            rel='noopener noreferrer'
                             href={item.link}
                           >
                             <img
@@ -322,7 +345,7 @@ const Footer = () => {
                                 width: "1.5rem",
                               }}
                               src={item.image}
-                              alt=""
+                              alt=''
                             />
                           </a>
                         </li>
@@ -332,8 +355,8 @@ const Footer = () => {
                         <li key={index}>
                           <a
                             className={item.icon}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            target='_blank'
+                            rel='noopener noreferrer'
                             href={item.link}
                           >
                             .
@@ -355,7 +378,7 @@ const Footer = () => {
                         width: "1.6rem",
                       }}
                       src={qrCode}
-                      alt=""
+                      alt=''
                     />
                   </li>
                 </ul>

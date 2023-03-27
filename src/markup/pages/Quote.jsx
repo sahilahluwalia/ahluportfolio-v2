@@ -78,47 +78,48 @@ const Quote = () => {
   };
   return (
     <>
-      <div className="page-content bg-white">
+      <div className='page-content bg-white'>
         <div
-          className="section-full content-inner contact-page-9 overlay-black-dark"
+          id='quote'
+          className='section-full content-inner contact-page-9 overlay-black-dark'
           style={{ background: "url(" + bg + ") 30% 100%" }}
         >
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-4 col-md-12 text-white">
-                <div className="row">
-                  <div className="col-lg-12 col-md-12 m-b30">
-                    <div className="icon-bx-wraper bx-style-1 p-a20 radius-sm">
-                      <div className="icon-content">
-                        <h5 className="dlab-tilte">
-                          <span className="icon-sm text-primary">
-                            <i className="ti-location-pin"></i>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-4 col-md-12 text-white'>
+                <div className='row'>
+                  <div className='col-lg-12 col-md-12 m-b30'>
+                    <div className='icon-bx-wraper bx-style-1 p-a20 radius-sm'>
+                      <div className='icon-content'>
+                        <h5 className='dlab-tilte'>
+                          <span className='icon-sm text-primary'>
+                            <i className='ti-location-pin'></i>
                           </span>
                           Factory Address
                         </h5>
                         <p>{companyDetails.address}</p>
-                        <h6 className="m-b15 font-weight-400">
-                          <i className="ti-alarm-clock"></i> Office Hours
+                        <h6 className='m-b15 font-weight-400'>
+                          <i className='ti-alarm-clock'></i> Office Hours
                         </h6>
-                        <p className="m-b0">{headerDetails.officeHoursTitle}</p>
+                        <p className='m-b0'>{headerDetails.officeHoursTitle}</p>
                         <p>{headerDetails.officeHours}</p>
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-12 col-md-6 m-b30">
-                    <div className="icon-bx-wraper bx-style-1 p-a20 radius-sm">
-                      <div className="icon-content">
-                        <h5 className="dlab-tilte">
-                          <span className="icon-sm text-primary">
-                            <i className="ti-email"></i>
+                  <div className='col-lg-12 col-md-6 m-b30'>
+                    <div className='icon-bx-wraper bx-style-1 p-a20 radius-sm'>
+                      <div className='icon-content'>
+                        <h5 className='dlab-tilte'>
+                          <span className='icon-sm text-primary'>
+                            <i className='ti-email'></i>
                           </span>
                           E-mail
                         </h5>
                         <a href={`mailto:${companyDetails.email}`}>
-                          <p className="m-b0">{companyDetails.email}</p>
+                          <p className='m-b0'>{companyDetails.email}</p>
                         </a>
                         <a href={companyDetails.secondaryEmailTo}>
-                          <p className="m-b0">
+                          <p className='m-b0'>
                             {companyDetails.secondaryEmail}
                           </p>
                         </a>
@@ -127,17 +128,17 @@ const Quote = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="col-lg-12 col-md-6 m-b30">
-                    <div className="icon-bx-wraper bx-style-1 p-a20 radius-sm">
-                      <div className="icon-content">
-                        <h5 className="dlab-tilte">
-                          <span className="icon-sm text-primary">
-                            <i className="ti-mobile"></i>
+                  <div className='col-lg-12 col-md-6 m-b30'>
+                    <div className='icon-bx-wraper bx-style-1 p-a20 radius-sm'>
+                      <div className='icon-content'>
+                        <h5 className='dlab-tilte'>
+                          <span className='icon-sm text-primary'>
+                            <i className='ti-mobile'></i>
                           </span>
                           Phone Numbers
                         </h5>
                         <a href={companyDetails.phoneTo}>
-                          <p className="m-b0">{companyDetails.phone}</p>
+                          <p className='m-b0'>{companyDetails.phone}</p>
                         </a>
                         {/* <p className="m-b0">+91-12345-67890</p> */}
                       </div>
@@ -145,86 +146,86 @@ const Quote = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-8 col-md-12 m-b30">
+              <div className='col-lg-8 col-md-12 m-b30'>
                 <form
-                  className="inquiry-form wow box-shadow bg-white fadeInUp"
-                  data-wow-delay="0.2s"
+                  className='inquiry-form wow box-shadow bg-white fadeInUp'
+                  data-wow-delay='0.2s'
                   onSubmit={handleSubmit}
                 >
-                  <h3 className="title-box font-weight-300 m-t0 m-b10">
+                  <h3 className='title-box font-weight-300 m-t0 m-b10'>
                     Let's Automate your Application into Reality{" "}
-                    <span className="bg-primary"></span>
+                    <span className='bg-primary'></span>
                   </h3>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
                     standard dummy text ever since the
                   </p>
-                  <div className="row">
-                    <div className="col-lg-6 col-md-6">
-                      <div className="form-group">
-                        <div className="input-group">
-                          <span className="input-group-addon">
-                            <i className="ti-user text-primary"></i>
+                  <div className='row'>
+                    <div className='col-lg-6 col-md-6'>
+                      <div className='form-group'>
+                        <div className='input-group'>
+                          <span className='input-group-addon'>
+                            <i className='ti-user text-primary'></i>
                           </span>
                           <input
-                            name="name"
+                            name='name'
                             value={state.name}
                             onChange={handleChange}
-                            type="text"
+                            type='text'
                             required
-                            className="form-control"
-                            placeholder="First Name"
+                            className='form-control'
+                            placeholder='First Name'
                           />
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-6 col-md-6">
-                      <div className="form-group">
-                        <div className="input-group">
-                          <span className="input-group-addon">
-                            <i className="ti-mobile text-primary"></i>
+                    <div className='col-lg-6 col-md-6'>
+                      <div className='form-group'>
+                        <div className='input-group'>
+                          <span className='input-group-addon'>
+                            <i className='ti-mobile text-primary'></i>
                           </span>
                           <input
-                            name="phone"
+                            name='phone'
                             value={state.phone}
                             onChange={handleChange}
-                            type="text"
+                            type='text'
                             required
-                            className="form-control"
-                            placeholder="Phone"
+                            className='form-control'
+                            placeholder='Phone'
                           />
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-12 col-md-12">
-                      <div className="form-group">
-                        <div className="input-group">
-                          <span className="input-group-addon">
-                            <i className="ti-email text-primary"></i>
+                    <div className='col-lg-12 col-md-12'>
+                      <div className='form-group'>
+                        <div className='input-group'>
+                          <span className='input-group-addon'>
+                            <i className='ti-email text-primary'></i>
                           </span>
                           <input
-                            name="email"
+                            name='email'
                             value={state.email}
                             onChange={handleChange}
-                            type="email"
-                            className="form-control"
+                            type='email'
+                            className='form-control'
                             required
-                            placeholder="Your Email Id"
+                            placeholder='Your Email Id'
                           />
                         </div>
                       </div>
                     </div>
                     {/* <div className="col-lg-6 col-md-6"> */}
-                    <div className="col-lg-12 col-md-12">
-                      <div className="form-group">
-                        <div className="input-group">
-                          <span className="input-group-addon">
-                            <i className="ti-check-box text-primary"></i>
+                    <div className='col-lg-12 col-md-12'>
+                      <div className='form-group'>
+                        <div className='input-group'>
+                          <span className='input-group-addon'>
+                            <i className='ti-check-box text-primary'></i>
                           </span>
                           <select
-                            className="input-select form-control"
-                            name="industry"
+                            className='input-select form-control'
+                            name='industry'
                             onChange={handleChange}
                           >
                             <option>Select Industry</option>
@@ -259,43 +260,43 @@ const Quote = () => {
                         </div>
                       </div>
                     </div> */}
-                    <div className="col-lg-12 col-md-12">
-                      <div className="form-group">
-                        <div className="input-group">
-                          <span className="input-group-addon">
-                            <i className="ti-agenda text-primary"></i>
+                    <div className='col-lg-12 col-md-12'>
+                      <div className='form-group'>
+                        <div className='input-group'>
+                          <span className='input-group-addon'>
+                            <i className='ti-agenda text-primary'></i>
                           </span>
                           <textarea
                             value={state.message}
                             onChange={handleChange}
-                            name="message"
-                            rows="6"
-                            className="form-control"
+                            name='message'
+                            rows='6'
+                            className='form-control'
                             required
-                            placeholder="Tell us about your project or idea"
+                            placeholder='Tell us about your project or idea'
                           ></textarea>
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-12 col-md-12">
+                    <div className='col-lg-12 col-md-12'>
                       <button
-                        name="submit"
-                        type="submit"
-                        value="Submit"
-                        className="site-button button-md"
+                        name='submit'
+                        type='submit'
+                        value='Submit'
+                        className='site-button button-md'
                       >
                         {" "}
                         <span>Get A Free Quote!</span>{" "}
                       </button>
 
-                      <div className="section-content box-sort-in ">
+                      <div className='section-content box-sort-in '>
                         {(alert.success && (
-                          <div className="alert alert-success mt-3 mx-auto">
+                          <div className='alert alert-success mt-3 mx-auto'>
                             Your message has been sent successfully.
                           </div>
                         )) ||
                           (alert.error && (
-                            <div className="alert alert-danger mt-3 mx-auto">
+                            <div className='alert alert-danger mt-3 mx-auto'>
                               There was an error sending your message. Please
                               try again.
                             </div>

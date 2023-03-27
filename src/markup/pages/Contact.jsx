@@ -52,18 +52,18 @@ const Contact = () => {
 
   return (
     <>
-      <div className="page-content bg-white">
+      <div className='page-content bg-white'>
         <div
-          className="dlab-bnr-inr overlay-black-middle bg-pt"
+          className='dlab-bnr-inr overlay-black-middle bg-pt'
           style={{ backgroundImage: "url(" + bg + ")" }}
         >
-          <div className="container">
-            <div className="dlab-bnr-inr-entry">
-              <h1 className="text-white">Contact</h1>
-              <div className="breadcrumb-row">
-                <ul className="list-inline">
+          <div className='container'>
+            <div className='dlab-bnr-inr-entry'>
+              <h1 className='text-white'>Contact</h1>
+              <div className='breadcrumb-row'>
+                <ul className='list-inline'>
                   <li>
-                    <Link to="/">Home</Link>
+                    <Link to='/'>Home</Link>
                   </li>
                   <li>Contact</li>
                 </ul>
@@ -72,26 +72,29 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="section-full content-inner bg-white contact-style-1">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-4 col-md-6 d-flex m-b30">
-                <div className="p-a30 border contact-area border-1 align-self-stretch radius-sm">
-                  <h3 className="m-b5">Quick Contact</h3>
+        <div
+          id='contact'
+          className='section-full content-inner bg-white contact-style-1'
+        >
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-4 col-md-6 d-flex m-b30'>
+                <div className='p-a30 border contact-area border-1 align-self-stretch radius-sm'>
+                  <h3 className='m-b5'>Quick Contact</h3>
                   <p>
                     If you have any Enquires, simply use the following contact
                     details.
                   </p>
-                  <ul className="no-margin">
-                    <li className="icon-bx-wraper left m-b30">
-                      <div className="icon-bx-xs border-1">
+                  <ul className='no-margin'>
+                    <li className='icon-bx-wraper left m-b30'>
+                      <div className='icon-bx-xs border-1'>
                         {" "}
-                        <Link to="/#" className="icon-cell">
-                          <i className="ti-location-pin"></i>
+                        <Link to='/#' className='icon-cell'>
+                          <i className='ti-location-pin'></i>
                         </Link>{" "}
                       </div>
-                      <div className="icon-content">
-                        <h6 className="text-uppercase m-tb0 dlab-tilte">
+                      <div className='icon-content'>
+                        <h6 className='text-uppercase m-tb0 dlab-tilte'>
                           Factory Address:
                         </h6>
 
@@ -108,15 +111,15 @@ const Contact = () => {
                         <p>{companyDetails.address}</p>
                       </div>
                     </li>
-                    <li className="icon-bx-wraper left  m-b30">
-                      <div className="icon-bx-xs border-1">
+                    <li className='icon-bx-wraper left  m-b30'>
+                      <div className='icon-bx-xs border-1'>
                         {" "}
-                        <Link to="/#" className="icon-cell">
-                          <i className="ti-email"></i>
+                        <Link to='/#' className='icon-cell'>
+                          <i className='ti-email'></i>
                         </Link>{" "}
                       </div>
-                      <div className="icon-content">
-                        <h6 className="text-uppercase m-tb0 dlab-tilte">
+                      <div className='icon-content'>
+                        <h6 className='text-uppercase m-tb0 dlab-tilte'>
                           Email:
                         </h6>
                         <a href={`mailto:${companyDetails.email}`}>
@@ -127,15 +130,15 @@ const Contact = () => {
                         </a>
                       </div>
                     </li>
-                    <li className="icon-bx-wraper left">
-                      <div className="icon-bx-xs border-1">
+                    <li className='icon-bx-wraper left'>
+                      <div className='icon-bx-xs border-1'>
                         {" "}
-                        <Link to="/#" className="icon-cell">
-                          <i className="ti-mobile"></i>
+                        <Link to='/#' className='icon-cell'>
+                          <i className='ti-mobile'></i>
                         </Link>{" "}
                       </div>
-                      <div className="icon-content">
-                        <h6 className="text-uppercase m-tb0 dlab-tilte">
+                      <div className='icon-content'>
+                        <h6 className='text-uppercase m-tb0 dlab-tilte'>
                           PHONE
                         </h6>
                         <a href={companyDetails.phoneTo}>
@@ -144,15 +147,15 @@ const Contact = () => {
                       </div>
                     </li>
                   </ul>
-                  <div className="m-t20">
-                    <ul className="dlab-social-icon border dlab-social-icon-lg">
+                  <div className='m-t20'>
+                    <ul className='dlab-social-icon border dlab-social-icon-lg'>
                       {socialMediaLinks.map(({ icon, link, name, image }) => {
                         if (image)
                           return (
                             <li key={name}>
                               <a
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 href={link}
                               >
                                 <img
@@ -171,8 +174,8 @@ const Contact = () => {
                               <a
                                 href={link}
                                 // open in new tab
-                                target="_blank"
-                                rel="noopener noreferrer"
+                                target='_blank'
+                                rel='noopener noreferrer'
                                 className={`${icon} bg-primary`}
                               ></a>
                             </li>
@@ -183,15 +186,15 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="col-lg-4 col-md-6  mb-4 m-b30 mb-md-0">
-                <div className="p-a30 bg-gray clearfix radius-sm">
-                  <h3 className="m-b10">Send Message</h3>
-                  <div className="dzFormMsg"></div>
+              <div className='col-lg-4 col-md-6  mb-4 m-b30 mb-md-0'>
+                <div className='p-a30 bg-gray clearfix radius-sm'>
+                  <h3 className='m-b10'>Send Message</h3>
+                  <div className='dzFormMsg'></div>
                   <form onSubmit={handleFormSubmit}>
-                    <div className="row">
-                      <div className="col-lg-12">
-                        <div className="form-group">
-                          <div className="input-group">
+                    <div className='row'>
+                      <div className='col-lg-12'>
+                        <div className='form-group'>
+                          <div className='input-group'>
                             <input
                               onChange={(e) => {
                                 setInputValues({
@@ -199,18 +202,18 @@ const Contact = () => {
                                   name: e.target.value,
                                 });
                               }}
-                              name="name"
-                              type="text"
+                              name='name'
+                              type='text'
                               required
-                              className="form-control"
-                              placeholder="Your Name"
+                              className='form-control'
+                              placeholder='Your Name'
                             />
                           </div>
                         </div>
                       </div>
-                      <div className="col-lg-12">
-                        <div className="form-group">
-                          <div className="input-group">
+                      <div className='col-lg-12'>
+                        <div className='form-group'>
+                          <div className='input-group'>
                             <input
                               onChange={(e) => {
                                 setInputValues({
@@ -218,18 +221,18 @@ const Contact = () => {
                                   email: e.target.value,
                                 });
                               }}
-                              name="email"
-                              type="email"
-                              className="form-control"
+                              name='email'
+                              type='email'
+                              className='form-control'
                               required
-                              placeholder="Your Email Id"
+                              placeholder='Your Email Id'
                             />
                           </div>
                         </div>
                       </div>
-                      <div className="col-lg-12">
-                        <div className="form-group">
-                          <div className="input-group">
+                      <div className='col-lg-12'>
+                        <div className='form-group'>
+                          <div className='input-group'>
                             <input
                               onChange={(e) => {
                                 setInputValues({
@@ -237,18 +240,18 @@ const Contact = () => {
                                   subject: e.target.value,
                                 });
                               }}
-                              name="subject"
-                              type="text"
-                              className="form-control"
+                              name='subject'
+                              type='text'
+                              className='form-control'
                               required
-                              placeholder="Subject"
+                              placeholder='Subject'
                             />
                           </div>
                         </div>
                       </div>
-                      <div className="col-lg-12">
-                        <div className="form-group">
-                          <div className="input-group">
+                      <div className='col-lg-12'>
+                        <div className='form-group'>
+                          <div className='input-group'>
                             <textarea
                               onChange={(e) => {
                                 setInputValues({
@@ -256,37 +259,37 @@ const Contact = () => {
                                   message: e.target.value,
                                 });
                               }}
-                              name="message"
-                              rows="11"
-                              className="form-control"
+                              name='message'
+                              rows='11'
+                              className='form-control'
                               required
-                              placeholder="Your Message..."
+                              placeholder='Your Message...'
                             ></textarea>
                           </div>
                         </div>
                       </div>
-                      <div className="col-lg-12">
+                      <div className='col-lg-12'>
                         <button
-                          name="submit"
-                          type="submit"
-                          value="Submit"
-                          className="site-button"
+                          name='submit'
+                          type='submit'
+                          value='Submit'
+                          className='site-button'
                         >
                           Submit
                         </button>
                       </div>
                     </div>
                   </form>
-                  <div className="section-content box-sort-in ">
+                  <div className='section-content box-sort-in '>
                     {
                       // show success message if form is submitted
                       (alert.success && (
-                        <div className="alert alert-success mt-3 mx-auto">
+                        <div className='alert alert-success mt-3 mx-auto'>
                           Your message has been sent successfully.
                         </div>
                       )) ||
                         (alert.error && (
-                          <div className="alert alert-danger mt-3 mx-auto">
+                          <div className='alert alert-danger mt-3 mx-auto'>
                             There was an error sending your message. Please try
                             again.
                           </div>
@@ -296,11 +299,11 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="col-lg-4 d-flex m-b30">
+              <div className='col-lg-4 d-flex m-b30'>
                 <iframe
-                  title="map2"
+                  title='map2'
                   src={companyDetails.map}
-                  className="align-self-stretch radius-sm"
+                  className='align-self-stretch radius-sm'
                   style={{ border: "0", width: "100%", minHeight: "100%" }}
                   allowfullscreen
                 ></iframe>

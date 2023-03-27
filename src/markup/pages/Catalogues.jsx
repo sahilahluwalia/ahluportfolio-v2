@@ -32,7 +32,7 @@ const Catalogues = () => {
           </div>
 
           {/* make a section where you can download the catalogues on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
-          <div className='section-full content-inner bg-white'>
+          <div id='catalogues' className='section-full content-inner bg-white'>
             <div className='container'>
               <div className='section-head text-center'>
                 <h2 className='box-title m-tb0'>

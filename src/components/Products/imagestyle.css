@@ -1,15 +1,15 @@
 
-.image-container {
+.image-container_collection {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
-.left {
+.left_collection {
   display: flex;
   height: 50vh;
 }
-.left_1 {
+.left_1_collection {
   display: flex;
   flex-direction: column;
   gap: 10px;

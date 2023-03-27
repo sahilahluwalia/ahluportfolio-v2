@@ -22,9 +22,9 @@ const ImageSlider = ({ images }) => {
     }
   };
   return (
-    <div className='image-container'>
-      <div className='left'>
-        <div className='left_1'>
+    <div className='image-container_collection'>
+      <div className='left_collection'>
+        <div className='left_1_collection'>
           {images.map((image, i) => (
             <div
               className={i == 0 ? "img_wrap active_selection" : "img_wrap"}

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, Switch } from "react-router-dom";
 import Index from "./pages/index";
 import About1 from "./pages/about-1";
 import About2 from "./pages/about-2";
@@ -89,7 +89,8 @@ import PowerPressAutomation from "./pages/Products/PowerPressAutomation/PowerPre
 import TransferSystem from "./pages/Products/PowerPressAutomation/TransferSystem";
 import SheetMetalDies from "./pages/Products/PowerPressAutomation/SheetMetalDies";
 import PressFeeders from "./pages/Products/PowerPressAutomation/PressFeeders";
-import Ast2all from "./pages/Products/PowerPressAutomation/TransferSystem/Ast2aii";
+import Ast2aii from "./pages/Products/PowerPressAutomation/TransferSystem/Ast2aii";
+import Ast2ai from "./pages/Products/PowerPressAutomation/TransferSystem/Ast2ai";
 import SpecialPurposeMachines from "./pages/Products/SpecialPurposeMachines/SpecialPurposeMachines";
 import AssemblySPMS from "./pages/Products/SpecialPurposeMachines/AssemblySPMS";
 import OperationalSPMS from "./pages/Products/SpecialPurposeMachines/OperationalSPMS";
@@ -104,9 +105,28 @@ import Acsts from "./pages/Products/PowerPressAutomation/TransferSystem/Acsts";
 import Ampts from "./pages/Products/PowerPressAutomation/TransferSystem/Ampts";
 import Asrf from "./pages/Products/PowerPressAutomation/PressFeeder/Asrf";
 import Ampf from "./pages/Products/PowerPressAutomation/PressFeeder/Ampf";
+import BlogMainPage from "./pages/Blog/BlogMainPage";
+import BlogLeftBase from "./pages/Blog/BlogLeftBase";
 const Router = () => {
   const location = useLocation();
+  const { pathname, hash, key } = useLocation();
 
+  useEffect(() => {
+    // if not a hash link, scroll to top
+    if (hash === "") {
+      window.scrollTo(0, 0);
+    }
+    // else scroll to id
+    else {
+      setTimeout(() => {
+        const id = hash.replace("#", "");
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView();
+        }
+      }, 0);
+    }
+  }, [pathname, hash, key]);
   useEffect(() => {
     // console.log("location changed");
     // console.log(location.pathname);
@@ -120,18 +140,23 @@ const Router = () => {
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
+        <Route path='blog' element={<BlogLeftBase />}>
+          <Route index element={<BlogMainPage />} />
+          <Route path=':name' element={<h1>ds</h1>} />
+        </Route>
         <Route index element={<Homepage />} />
         <Route path='quote' element={<Quote />} />
         <Route path='contact' element={<Contact />} />
         <Route path='gg' element={<Index />} />
         <Route path='about' element={<About />} />
-        <Route path='/products' element={<ProductBase />}>
+        <Route path='products' element={<ProductBase />}>
           <Route index element={<Products />} />
           {/* <Route path="transfer-system" element={<h2>sdvsdv</h2>} /> */}
           <Route path='power-press-automation' element={<Base />}>
             <Route index element={<PowerPressAutomation />} />
             <Route path='transfer-system' element={<TransferSystem />} />
-            <Route path='transfer-system/ast2aii' element={<Ast2all />} />
+            <Route path='transfer-system/ast2aii' element={<Ast2aii />} />
+            <Route path='transfer-system/ast2ai' element={<Ast2ai />} />
             <Route path='transfer-system/ast3aii' element={<Ast3aii />} />
             <Route path='transfer-system/acsts' element={<Acsts />} />
             <Route path='transfer-system/ampts' element={<Ampts />} />
@@ -157,6 +182,7 @@ const Router = () => {
         </Route>
         <Route path='enguiry' element={<Quote />} />
         <Route path='catalogues' element={<Catalogues />} />
+        <Route path='*' component={<Error404 />} />
       </Route>
     </Routes>
   );
