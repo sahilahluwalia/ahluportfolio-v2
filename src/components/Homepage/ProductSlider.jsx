@@ -95,6 +95,8 @@ const ProductSlider = ({}) => {
   };
   return (
     <>
+
+      <div>Products we Offer</div>
       <Slider
         style={{
           padding: "1rem",

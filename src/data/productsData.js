@@ -69,14 +69,14 @@ const masterProductLink = [
     image:
       "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
   },
-  {
-    name: "Vision Inspection System",
-    link: "vision-inspection-system",
-    fullLink: "/products/vision-inspection-system",
+  // {
+  //   name: "Vision Inspection System",
+  //   link: "vision-inspection-system",
+  //   fullLink: "/products/vision-inspection-system",
 
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
-  },
+  //   image:
+  //     "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
+  // },
 ];
 const masterProductListItems = masterProductLink.map((item) => {
   return (
@@ -591,7 +591,8 @@ const pressFeederProducts = [
     image: asrf,
   },
   {
-    name: "Press Flap",
+    name: "Mechanical Press Flap",
+    series: "ampfs",
     link: "ampf",
     image: flap,
   },

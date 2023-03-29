@@ -10,6 +10,17 @@ import { companyDetails } from "../../data/websiteData";
 const API_URL = process.env.REACT_APP_API_URL;
 
 const getLatestBlogs = LatestBlogs.slice(0, 3);
+const getAllTagsFromBlogs = () => {
+  let tags = [];
+  LatestBlogs.forEach((blog) => {
+    blog.tags.forEach((tag) => {
+      tags.push(tag);
+    });
+  });
+  return tags;
+};
+const getUniqueTags = [...new Set(getAllTagsFromBlogs())];
+
 const Sidebar = () => {
   const form = useRef();
 
@@ -303,24 +314,21 @@ const Sidebar = () => {
         <div className='widget widget_tag_cloud radius'>
           <h5 className='widget-title style-1'>Tags</h5>
           <div className='tagcloud'>
-            <Link to={"#"}>Design</Link>
-            <Link to={"#"}>User interface</Link>
-            <Link to={"#"}>SEO</Link>
-            <Link to={"#"}>WordPress</Link>
-            <Link to={"#"}>Development</Link>
-            <Link to={"#"}>Joomla</Link>
-            <Link to={"#"}>Design</Link>
-            <Link to={"#"}>User interface</Link>
-            <Link to={"#"}>SEO</Link>
-            <Link to={"#"}>WordPress</Link>
-            <Link to={"#"}>Development</Link>
-            <Link to={"#"}>Joomla</Link>
-            <Link to={"#"}>Design</Link>
-            <Link to={"#"}>User interface</Link>
-            <Link to={"#"}>SEO</Link>
-            <Link to={"#"}>WordPress</Link>
-            <Link to={"#"}>Development</Link>
-            <Link to={"#"}>Joomla</Link>
+            {getUniqueTags.map((item, index) => {
+              return (
+                <Link
+                  style={{
+                    //capitilize first letter
+                    textTransform: "capitalize",
+                  }}
+                  key={index}
+                  to={"/blog"}
+                  params={{ tag: item }}
+                >
+                  {item}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </aside>
