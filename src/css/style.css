@@ -16330,6 +16330,8 @@ ol.commentlist li .star-rating {
   background-color: #ff8022;
   /* transition: cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
+
+
 /* timeline */
 
 .main-timeline {
@@ -16600,4 +16602,15 @@ ol.commentlist li .star-rating {
   .main-timeline .title {
     margin-bottom: 10px;
   }
+}
+
+
+.slick-slide {
+  height: auto; 
+}
+.slick-track {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
 }

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./logoSlider.css";
+import Carousel from "nuka-carousel/lib/carousel";
 // import image from "../../asserts/Panel Orders/"
 function importAll(r) {
   return r.keys().map(r);
@@ -56,7 +58,7 @@ class LogoSlider extends Component {
       slidesToScroll: 1,
       autoplay: true,
       arrows: false,
-
+      // adaptiveHeight:true,
       responsive: [
         {
           breakpoint: 1200,
@@ -84,9 +86,34 @@ class LogoSlider extends Component {
 
     return (
       <>
-        <Slider
+        <Carousel
+          withoutControls
+          autoplay
+          adaptiveHeight={true}
+          wrapAround={true}
+          slidesToShow={4}
+          // center align the image in the carousel
+          // cellAlign='center'
+        >
+          {images.map((item) => (
+            <>
+              <img
+                style={{
+                  padding: "0px 5px 0px 5px",
+                  height: "100px",
+                  width: "200px",
+                  objectFit: "contain",
+                }}
+                src={item}
+                alt=''
+              />
+            </>
+          ))}
+        </Carousel>
+
+        {/* <Slider
           {...settings}
-          //   className="client-logo-carousel btn-style-1 icon-2"
+          // className="client-logo-carousel btn-style-1 icon-2"
           className='client-logo-carousel'
         >
           {images.map((item, id) => (
@@ -100,7 +127,7 @@ class LogoSlider extends Component {
               </div>
             </div>
           ))}
-        </Slider>
+        </Slider> */}
       </>
     );
   }

@@ -11,6 +11,7 @@ import { companyDetails } from "../../data/websiteData";
 import SubscribeForm from "../SubscribeForm";
 import { subscribeToNewsletter } from "../../fetchers";
 import axios from "axios";
+import LogoSlider from "components/Homepage/LogoSlider";
 import tripod from "asserts/Catalogue PDF Files/Trifold_Minimum_Clarity.pdf";
 const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 const privateKey = process.env.REACT_APP_PRIVATE_KEY;
@@ -123,6 +124,8 @@ const Footer = () => {
 
   return (
     <>
+      {" "}
+     
       <footer className='site-footer style1'>
         <div className='dlab-newsletter'>
           <div className='container'>

@@ -388,6 +388,7 @@ const Homepage = () => {
               </div>
             </div>
           </div>
+
           <div className='section-full bg-gray content-inner-2'>
             <div className='container'>
               <div className='row'>
@@ -403,67 +404,6 @@ const Homepage = () => {
             </div>
           </div>
 
-          {/* <CounterSection backgroundImage={bg2} /> */}
-
-          {/* <div className="section-full bg-gray content-inner">
-              <div className="container">
-                <div className="section-head text-center ">
-                  <h2 className="title"> Meet The Team</h2>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    typesetting industry has been the industry's standard dummy
-                    text ever since the been when an unknown printer.
-                  </p>
-                </div>
-                <Team1 />
-              </div>
-            </div> */}
-
-          {/* <div
-              className="section-full overlay-black-middle bg-secondry content-inner-2 wow fadeIn"
-              data-wow-duration="2s"
-              data-wow-delay="0.2s"
-              style={{ backgroundImage: "url(" + bg3 + ")" }}
-            >
-              <div className="container">
-                <div className="section-head text-white text-center">
-                  <h2 className="title">What People Are Saying</h2>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    typesetting industry has been the industry's standard dummy
-                    text ever since the been when an unknown printer.
-                  </p>
-                </div>
-                <div className="section-content">
-                  <Testimonial12 />
-                </div>
-              </div>
-            </div> */}
-
-          {/* <div
-              className="section-full content-inner bg-gray wow fadeIn"
-              data-wow-duration="2s"
-              data-wow-delay="0.4s"
-            >
-              <div className="container">
-                <div className="section-head text-center">
-                  <h2 className="title">Latest blog post</h2>
-                  <p>
-                    There are many variations of passages of Lorem Ipsum
-                    typesetting industry has been the industry's standard dummy
-                    text ever since the been when an unknown printer.
-                  </p>
-                </div>
-
-                {/* <BlogSlider1
-                  data={blogContent3}
-                  blogPostCls="post-style-1"
-                  imgEffect="rotate"
-                  noDes
-                /> */}
-          {/* </div> */}
-          {/* </div>  */}
-
           <div
             className='section-full dlab-we-find bg-img-fix p-t20 p-b20 bg-white wow fadeIn'
             data-wow-duration='0.51s'
@@ -478,22 +418,6 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* <Footer1 />
-        <Footer2 />
-        <Footer3 />
-        <Footer4 />
-        <Footer5 />
-        <Footer6 />
-        <Footer7 />
-        <Footer8 />
-        <Footer9 />
-        <Footer10 />
-        <Footer11 />
-        <Footer12 />
-        <Footer13 />
-        <Footer14 />
-        <Footer15 />
-        <FooterDemo /> */}
       <ScrollToTop className='icon-up' />
     </div>
   );
