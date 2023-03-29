@@ -5,29 +5,8 @@ import FirstRow from "components/Products/FirstRow";
 import { RightSection } from "components/Products/RightSection";
 import ProductList from "components/Products/ProductList";
 import ImageRows from "components/Products/ImageRows";
-
+import { specialPurposeProductList as productList } from "data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
-
-const productList = [
-  {
-    name: "Operational SPMs",
-    link: "operational-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
-  },
-  {
-    name: "Assembly SPMs",
-    link: "assembly-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
-  },
-  {
-    name: "Vision Inspection SPMs",
-    link: "assembly-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
-  },
-];
 
 const SpecialPurposeMachines = () => {
   //   console.log(catalogueList);

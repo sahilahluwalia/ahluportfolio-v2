@@ -39,6 +39,9 @@ const ampfCollection = importAll(
 const transferSystemCollection = importAll(
   require.context("asserts/machine-pics/transferSystem")
 );
+const a2iCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/2aii")
+);
 // console.log(ast2aiiCollection);
 
 const allPicCollections = [
@@ -251,7 +254,7 @@ const subProductList = [
         "AST2AII-500L": "",
       },
     ],
-    imageCollection: ast2aiiCollection,
+    imageCollection: a2iCollection,
     catalogueLink: addCatalogueFromListByItsName("AST2AI Series"),
     image: ast2ai,
     layout: ast2ai_layout,
@@ -536,6 +539,27 @@ const subProductList = [
   },
 ];
 
+const specialPurposeProductList = [
+  {
+    name: "Operational SPMs",
+    link: "operational-spms",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+  },
+  {
+    name: "Assembly SPMs",
+    link: "assembly-spms",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+  },
+  {
+    name: "Vision Inspection SPMs",
+    link: "assembly-spms",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+  },
+];
+
 const powerPressAutomationProductList = [
   {
     name: "Transfer System ",
@@ -695,4 +719,5 @@ export {
   transferSystemProducts,
   pressFeederProducts,
   allPicCollections,
+  specialPurposeProductList,
 };

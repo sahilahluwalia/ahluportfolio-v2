@@ -156,9 +156,10 @@ const Quote = () => {
                     Let's Automate your Application into Reality{" "}
                     <span className='bg-primary'></span>
                   </h3>
-                  <p>
+                  <p>Discover the Power of Innovative Manufacturing Solutions Tailored to Your Unique Needs</p>
+                  {/* <p>
                     Provide us the oppocuity to understand/ study your application requirements, so that we can come up with custimzed solution to fit effecietyly  cHATGPT
-                  </p>
+                  </p> */}
                   <div className='row'>
                     <div className='col-lg-6 col-md-6'>
                       <div className='form-group'>
