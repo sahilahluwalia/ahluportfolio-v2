@@ -10,13 +10,19 @@ import ImageRows from "components/Products/ImageRows";
 
 const productList = [
   {
-    name: "Operational SPMS",
+    name: "Operational SPMs",
     link: "operational-spms",
     image:
       "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
   },
   {
-    name: "Assembly SPMS",
+    name: "Assembly SPMs",
+    link: "assembly-spms",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+  },
+  {
+    name: "Vision Inspection SPMs",
     link: "assembly-spms",
     image:
       "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
@@ -34,9 +40,7 @@ const SpecialPurposeMachines = () => {
           <div className='py-5 bg-white section-full'>
             <div className='container'>
               <div className='text-center section-head'>
-                <h2 className=' box-title m-tb0'>
-                  Special Purpose Machines
-                </h2>
+                <h2 className=' box-title m-tb0'>Special Purpose Machines</h2>
                 <p>We have a wide range of Special Purpose Machines .</p>
                 <div className='dlab-separator bg-primary'></div>
               </div>

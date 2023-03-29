@@ -591,7 +591,8 @@ const pressFeederProducts = [
     image: asrf,
   },
   {
-    name: "Press Flap",
+    name: "Mechanical Press Flap",
+    series: "ampfs",
     link: "ampf",
     image: flap,
   },

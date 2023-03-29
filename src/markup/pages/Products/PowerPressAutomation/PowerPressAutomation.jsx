@@ -12,10 +12,15 @@ const PowerPressAutomation = () => {
             <div className='container'>
               <div className='text-center section-head'>
                 <h2 className=' box-title m-tb0'>
-                  PowerPressAutomation
+                  Power press Automation Solution
                   <span className='bg-primary'></span>
                 </h2>
-                <p>We have a wide range of PowerPressAutomation.</p>
+                <p>
+                  We offer wide range of Power press Automation Solutions
+                  ranging from Standard/Customized Feeding Systems, Customized
+                  Tools and Dies with Operational Tapping/Assembly embedded in
+                  same System.
+                </p>
                 <div className='dlab-separator bg-primary'></div>
 
                 {/* create a reponsive 3 columns in desktop and 1 colum in mobile screen in bootstrap */}

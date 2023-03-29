@@ -96,7 +96,7 @@ const safetyMeasure = [
   "When the machine is not in use, the power of the machine should be switched off",
 ];
 
-const PowerPressAutomation = () => {
+const PowerPressAutomationBlog = () => {
   return (
     <>
       <div className='row'>
@@ -224,4 +224,4 @@ const PowerPressAutomation = () => {
   );
 };
 
-export default PowerPressAutomation;
+export default PowerPressAutomationBlog;

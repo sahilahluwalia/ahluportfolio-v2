@@ -84,7 +84,7 @@ import About from "./pages/About";
 import Products from "./pages/Products/Products";
 import ProductBase from "./pages/Products/ProductBase";
 import Catalogues from "./pages/Catalogues";
-
+import PowerPressAutomation from "./pages/Products/PowerPressAutomation/PowerPressAutomation";
 import TransferSystem from "./pages/Products/PowerPressAutomation/TransferSystem";
 import SheetMetalDies from "./pages/Products/PowerPressAutomation/SheetMetalDies";
 import PressFeeders from "./pages/Products/PowerPressAutomation/PressFeeders";
@@ -107,7 +107,7 @@ import Ampf from "./pages/Products/PowerPressAutomation/PressFeeder/Ampf";
 import BlogMainPage from "./pages/Blog/BlogMainPage";
 import BlogLeftBase from "./pages/Blog/BlogLeftBase";
 import PowerPressBlog from "./pages/Blog/Posts/PowerPressBlog";
-import PowerPressAutomation from "./pages/Blog/Posts/PowerPressAutomation";
+import PowerPressAutomationBlog from "./pages/Blog/Posts/PowerPressAutomationBlog";
 const Router = () => {
   const location = useLocation();
   const { pathname, hash, key } = useLocation();
@@ -149,7 +149,7 @@ const Router = () => {
           />
           <Route
             path='power-press-automation-and-its-introduction'
-            element={<PowerPressAutomation />}
+            element={<PowerPressAutomationBlog />}
           />
           <Route path=':name' element={<h1>ds</h1>} />
         </Route>

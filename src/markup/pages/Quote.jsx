@@ -157,9 +157,7 @@ const Quote = () => {
                     <span className='bg-primary'></span>
                   </h3>
                   <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the
+                    Provide us the oppocuity to understand/ study your application requirements, so that we can come up with custimzed solution to fit effecietyly  cHATGPT
                   </p>
                   <div className='row'>
                     <div className='col-lg-6 col-md-6'>
