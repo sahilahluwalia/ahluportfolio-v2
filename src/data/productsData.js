@@ -81,13 +81,20 @@ const masterProductLink = [
   //     "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
   // },
 ];
-const masterProductListItems = masterProductLink.map((item) => {
+
+const productIDMaker = (str, index) => {
+  if (index == 0) {
+    return str + "#powerpress";
+  } else return str + "#specialpurpose";
+};
+
+const masterProductListItems = masterProductLink.map((item, index) => {
   return (
     <li>
       {/* <a href={item.fullLink} rel="noreferrer" target="_blank">
         {item.name}
       </a>{" "} */}
-      <Link to={item.fullLink}>{item.name}</Link>
+      <Link to={productIDMaker(item.fullLink, index)}>{item.name}</Link>
     </li>
   );
 });
@@ -611,11 +618,13 @@ const transferSystemProducts = [
 const pressFeederProducts = [
   {
     name: "Rolling Servo Feeders",
+    subheading: "ASRF Series",
     link: "asrf",
     image: asrf,
   },
   {
     name: "Mechanical Press Flap",
+    subheading: "AMPF Series",
     series: "ampfs",
     link: "ampf",
     image: flap,

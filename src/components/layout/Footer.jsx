@@ -41,17 +41,25 @@ const usefulLinks = [
   },
   {
     title: "Career",
-    link: "/career",
+    // link: "/career",
   },
   {
-    title: "Download Catalogues",
-    link: "/catalogues#catalogues",
+    title: "Blog",
+    link: "https://blog.ahluengineers.com",
+    href: true,
   },
+
   {
     title: "Tripod",
     link: tripod,
     href: true,
   },
+  
+  {
+    title: "Download Catalogues",
+    link: "/catalogues#catalogues",
+  },
+
   // {
   //   title: "Download Brochures",
   //   link: "/download-brochures",
@@ -125,7 +133,6 @@ const Footer = () => {
   return (
     <>
       {" "}
-     
       <footer className='site-footer style1'>
         <div className='dlab-newsletter'>
           <div className='container'>

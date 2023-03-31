@@ -22,7 +22,7 @@ const Products = (props) => {
   };
   return (
     <>
-      <div
+      {/* <div
         className="dlab-bnr-inr overlay-black-middle bg-pt "
         style={{ backgroundImage: "url(" + bg + ")" }}
       >
@@ -60,7 +60,7 @@ const Products = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
 
