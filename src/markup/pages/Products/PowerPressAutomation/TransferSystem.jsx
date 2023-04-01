@@ -10,6 +10,8 @@ import { RightSection } from "components/Products/RightSection";
 import ProductList from "components/Products/ProductList";
 import ImageSlider from "components/Products/ImageSlider";
 import { transferSystemProducts } from "data/productsData";
+import Testmonial from "components/Homepage/Testmonial";
+
 const images = [ast3aii, ast2aii, acsts, ampts];
 
 const TransferSystem = () => {
@@ -23,14 +25,12 @@ const TransferSystem = () => {
               {/* <ImageSlider images={images} /> */}
               <div className='row'>
                 <LeftSection mainScreen>
-                  <h1 className=' text-black m-tb0'>
-                    TRANSFER SYSTEMS
-                  </h1>
+                  <h1 className=' text-black m-tb0'>TRANSFER SYSTEMS</h1>
                   <div className='dlab-separator bg-primary'></div>
 
                   <div className='text-center section-head'>
                     {/* <p>We have a wide range of Transfer System.</p>
- */}
+                     */}
 
                     {/* create a reponsive 3 columns in desktop and 1 colum in mobile screen in bootstrap */}
 
@@ -63,6 +63,26 @@ const TransferSystem = () => {
                 <RightSection mainScreen>
                   <ProductList withoutImage />
                 </RightSection>
+              </div>
+
+              <div
+                style={{
+                  paddingBottom: "40px",
+                }}
+                className='section-full bg-gray content-inner mb-10'
+              >
+                <div className='container'>
+                  <div className='row'>
+                    <div className='col-lg-12'>
+                      <div className='sort-title clearfix text-center '>
+                        <h4>What peolpe are saying style 10</h4>
+                      </div>
+                      <div className='section-content'>
+                        <Testmonial />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

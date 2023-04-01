@@ -21,7 +21,9 @@ import { Accordion } from "react-bootstrap";
 import { companyDetails } from "data/websiteData";
 import ProductSlider from "components/Homepage/ProductSlider";
 import Testmonial from "components/Homepage/Testmonial";
-
+import Testimonial9 from "../element/testimonial9";
+import Testmonial4 from "../element/testmonial4";
+import Testimonial6 from "../element/testimonial6";
 const faqContent = [
   {
     question: "1. Innovation need",
@@ -112,9 +114,19 @@ const Homepage = () => {
                     not cutting them"
                   </div>
 
-                  <div >
-                    <Link className='site-button outline outline-2 white m-r15 radius-xl' to='products#products'>Products</Link>
-                    <Link className='site-button outline outline-2 white m-r15 radius-xl' to='about'>About Us</Link>
+                  <div>
+                    <Link
+                      className='site-button outline outline-2 white m-r15 radius-xl'
+                      to='products#products'
+                    >
+                      Products
+                    </Link>
+                    <Link
+                      className='site-button outline outline-2 white m-r15 radius-xl'
+                      to='about'
+                    >
+                      About Us
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -390,17 +402,17 @@ const Homepage = () => {
             </div>
           </div>
 
-          <div className='section-full bg-gray content-inner-2'>
+          <div className='section-full bg-gray content-inner'>
             <div className='container'>
               <div className='row'>
                 <div className='col-lg-12'>
                   <div className='sort-title clearfix text-center'>
-                    <h4>Our Testmonials</h4>
+                    <h4>Our Testimonials</h4>
+                  </div>
+                  <div className='section-content'>
+                    <Testmonial />
                   </div>
                 </div>
-              </div>
-              <div className='section-content'>
-                <Testmonial />
               </div>
             </div>
           </div>
