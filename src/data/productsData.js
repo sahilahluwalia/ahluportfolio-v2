@@ -39,6 +39,9 @@ const ampfCollection = importAll(
 const transferSystemCollection = importAll(
   require.context("asserts/machine-pics/transferSystem")
 );
+const a2iCollection = importAll(
+  require.context("asserts/machine-pics/Design Image Data/2aii")
+);
 // console.log(ast2aiiCollection);
 
 const allPicCollections = [
@@ -78,13 +81,20 @@ const masterProductLink = [
   //     "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
   // },
 ];
-const masterProductListItems = masterProductLink.map((item) => {
+
+const productIDMaker = (str, index) => {
+  if (index == 0) {
+    return str + "#powerpress";
+  } else return str + "#specialpurpose";
+};
+
+const masterProductListItems = masterProductLink.map((item, index) => {
   return (
     <li>
       {/* <a href={item.fullLink} rel="noreferrer" target="_blank">
         {item.name}
       </a>{" "} */}
-      <Link to={item.fullLink}>{item.name}</Link>
+      <Link to={productIDMaker(item.fullLink, index)}>{item.name}</Link>
     </li>
   );
 });
@@ -251,7 +261,7 @@ const subProductList = [
         "AST2AII-500L": "",
       },
     ],
-    imageCollection: ast2aiiCollection,
+    imageCollection: a2iCollection,
     catalogueLink: addCatalogueFromListByItsName("AST2AI Series"),
     image: ast2ai,
     layout: ast2ai_layout,
@@ -536,6 +546,27 @@ const subProductList = [
   },
 ];
 
+const specialPurposeProductList = [
+  {
+    name: "Operational SPMs",
+    link: "operational-spms",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+  },
+  {
+    name: "Assembly SPMs",
+    link: "assembly-spms",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+  },
+  {
+    name: "Vision Inspection SPMs",
+    link: "assembly-spms",
+    image:
+      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+  },
+];
+
 const powerPressAutomationProductList = [
   {
     name: "Transfer System ",
@@ -587,11 +618,13 @@ const transferSystemProducts = [
 const pressFeederProducts = [
   {
     name: "Rolling Servo Feeders",
+    subheading: "ASRF Series",
     link: "asrf",
     image: asrf,
   },
   {
     name: "Mechanical Press Flap",
+    subheading: "AMPF Series",
     series: "ampfs",
     link: "ampf",
     image: flap,
@@ -695,4 +728,5 @@ export {
   transferSystemProducts,
   pressFeederProducts,
   allPicCollections,
+  specialPurposeProductList,
 };

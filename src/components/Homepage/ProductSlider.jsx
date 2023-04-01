@@ -4,60 +4,81 @@ import Slider from "react-slick";
 //import responsive from './slider-resonsive'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import {
+  specialPurposeProductList,
+  powerPressAutomationProductList,
+} from "data/productsData";
 
-const content = [
-  {
-    image: require("images/portfolio/mining/image_1.jpg"),
-    icon: "flaticon-robot-arm",
-    title: "Inhouse Designing team",
-    description:
-      " Our experienced team of designers and engineers can design and develop custom solutions to meet our clients' unique needs.",
-  },
-  {
-    image: require("images/portfolio/mining/image_4.jpg"),
-    icon: "flaticon-fuel-truck",
-    title: " Experienced professionals",
-    description:
-      "Our extensive portfolio of successful projects across different industries and sectors demonstrates our deep expertise and commitment to quality.",
-  },
-  {
-    image: require("images/portfolio/mining/image_4.jpg"),
-    icon: "flaticon-fuel-truck",
-    title: "Inhouse Electrical & Programming department",
-    description:
-      "Our in-house electrical and programming team ensures that we can quickly and efficiently make any necessary updates or changes to our systems, without relying on external contractors.",
-  },
-  {
-    image: require("images/portfolio/mining/image_3.jpg"),
-    icon: "flaticon-fuel-station",
-    title: "Strong Vendor Network",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page.",
-  },
-  {
-    image: require("images/portfolio/mining/image_2.jpg"),
-    icon: "flaticon-factory-1",
-    title: "Inhouse IIOT team",
-    description:
-      " Our in-house Industrial Internet of Things (IIOT) team can help our clients integrate and leverage emerging technologies to achieve even greater efficiency and productivity.",
-  },
+// add products/power-press-automation/ to every item.link
+const forHomePowerPress = powerPressAutomationProductList.map((item) => {
+  return {
+    ...item,
+    link: `/products/power-press-automation/${item.link}`,
+  };
+});
+const forHomeSpecialPurpose = specialPurposeProductList.map((item) => {
+  return {
+    ...item,
+    link: `/products/special-purpose-machines/${item.link}`,
+  };
+});
 
-  {
-    image: require("images/portfolio/mining/image_4.jpg"),
-    icon: "flaticon-fuel-truck",
-    title: "Inhouse Electrical & Programming department",
-    description:
-      "It is a long established fact that a reader will be distracted by the readable content of a page.",
-  },
+console.log(forHomePowerPress);
 
-  {
-    image: require("images/portfolio/mining/image_3.jpg"),
-    icon: "flaticon-fuel-station",
-    title: "Support team functions",
-    description:
-      "Our dedicated support team is available 24/7 to ensure that our clients' systems operate smoothly and efficiently at all times.",
-  },
-];
+const content = [...forHomePowerPress, ...forHomeSpecialPurpose];
+// const content = [
+//   {
+//     image: require("images/portfolio/mining/image_1.jpg"),
+//     icon: "flaticon-robot-arm",
+//     title: "Inhouse Designing team",
+//     description:
+//       " Our experienced team of designers and engineers can design and develop custom solutions to meet our clients' unique needs.",
+//   },
+//   {
+//     image: require("images/portfolio/mining/image_4.jpg"),
+//     icon: "flaticon-fuel-truck",
+//     title: " Experienced professionals",
+//     description:
+//       "Our extensive portfolio of successful projects across different industries and sectors demonstrates our deep expertise and commitment to quality.",
+//   },
+//   {
+//     image: require("images/portfolio/mining/image_4.jpg"),
+//     icon: "flaticon-fuel-truck",
+//     title: "Inhouse Electrical & Programming department",
+//     description:
+//       "Our in-house electrical and programming team ensures that we can quickly and efficiently make any necessary updates or changes to our systems, without relying on external contractors.",
+//   },
+//   {
+//     image: require("images/portfolio/mining/image_3.jpg"),
+//     icon: "flaticon-fuel-station",
+//     title: "Strong Vendor Network",
+//     description:
+//       "It is a long established fact that a reader will be distracted by the readable content of a page.",
+//   },
+//   {
+//     image: require("images/portfolio/mining/image_2.jpg"),
+//     icon: "flaticon-factory-1",
+//     title: "Inhouse IIOT team",
+//     description:
+//       " Our in-house Industrial Internet of Things (IIOT) team can help our clients integrate and leverage emerging technologies to achieve even greater efficiency and productivity.",
+//   },
+
+//   {
+//     image: require("images/portfolio/mining/image_4.jpg"),
+//     icon: "flaticon-fuel-truck",
+//     title: "Inhouse Electrical & Programming department",
+//     description:
+//       "It is a long established fact that a reader will be distracted by the readable content of a page.",
+//   },
+
+//   {
+//     image: require("images/portfolio/mining/image_3.jpg"),
+//     icon: "flaticon-fuel-station",
+//     title: "Support team functions",
+//     description:
+//       "Our dedicated support team is available 24/7 to ensure that our clients' systems operate smoothly and efficiently at all times.",
+//   },
+// ];
 
 const ProductSlider = ({}) => {
   const data = content;
@@ -93,13 +114,16 @@ const ProductSlider = ({}) => {
       },
     ],
   };
+  console.log(content);
   return (
     <>
+      <div className=' text-center'>
+        <h2 className='mytitle'>Products We Offer</h2>
+      </div>
 
-      <div>Products we Offer</div>
       <Slider
         style={{
-          padding: "1rem",
+          paddingBottom: "1rem",
         }}
         {...settings}
         className='img-carousel service-box-4-area  '
@@ -112,16 +136,33 @@ const ProductSlider = ({}) => {
             key={id}
           >
             <div className='service-box-4 text-center'>
-              <div className='service-images m-b15'>
-                <img src={item?.image} alt='' />
-                <i className={item.icon}></i>
-              </div>
-              <div className='service-content'>
-                <h6 className='title'>
-                  <Link to='/services-details'>{item.title}</Link>
-                </h6>
-                <p>{item.description}</p>
-              </div>
+              <Link to={item.link}>
+                <div className='service-images m-b15'>
+                  <img
+                    style={{
+                      height: "200px",
+                      objectFit: "contain",
+                    }}
+                    src={item?.image}
+                    alt=''
+                  />
+                  {/* <i className={item.icon}></i> */}
+                </div>
+                <div className='service-content'>
+                  <h6
+                    style={{
+                      fontWeight: 800,
+                      fontSize: "20px",
+                    }}
+                    // className='title'
+                  >
+                    {item.name}
+                  </h6>
+
+                  {/* sdfgsg */}
+                  {/* <p>{item.description}</p> */}
+                </div>
+              </Link>
             </div>
           </div>
         ))}

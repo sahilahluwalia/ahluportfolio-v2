@@ -4309,8 +4309,8 @@ ol.commentlist li .meta span {
 .service-box-4 .service-images img {
 	width: 220px;
 	box-shadow: rgba(0, 0, 0, .1) 0 0 30px 0;
-	border-radius: 500px;
-	border-width: 10px;
+	/* border-radius: 500px; */
+	/* border-width: 10px; */
 	border-style: solid;
 	border-color: #fff;
 	border-image: initial;

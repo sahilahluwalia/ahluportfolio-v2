@@ -5,29 +5,8 @@ import FirstRow from "components/Products/FirstRow";
 import { RightSection } from "components/Products/RightSection";
 import ProductList from "components/Products/ProductList";
 import ImageRows from "components/Products/ImageRows";
-
+import { specialPurposeProductList as productList } from "data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
-
-const productList = [
-  {
-    name: "Operational SPMs",
-    link: "operational-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
-  },
-  {
-    name: "Assembly SPMs",
-    link: "assembly-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
-  },
-  {
-    name: "Vision Inspection SPMs",
-    link: "assembly-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
-  },
-];
 
 const SpecialPurposeMachines = () => {
   //   console.log(catalogueList);
@@ -37,7 +16,7 @@ const SpecialPurposeMachines = () => {
       <div className='bg-white '>
         <div className='midContent'>
           {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
-          <div className='py-5 bg-white section-full'>
+          <div className='py-2 bg-white section-full'>
             <div className='container'>
               <div className='text-center section-head'>
                 <h2 className=' box-title m-tb0'>Special Purpose Machines</h2>

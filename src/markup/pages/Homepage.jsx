@@ -111,9 +111,10 @@ const Homepage = () => {
                     "Automation is cost cutting by tightening the corners and
                     not cutting them"
                   </div>
-                  <div className='buttons'>
-                    <Link to='products#products'>Products</Link>
-                    <Link to='about'>About Us</Link>
+
+                  <div >
+                    <Link className='site-button outline outline-2 white m-r15 radius-xl' to='products#products'>Products</Link>
+                    <Link className='site-button outline outline-2 white m-r15 radius-xl' to='about'>About Us</Link>
                   </div>
                 </div>
               </div>

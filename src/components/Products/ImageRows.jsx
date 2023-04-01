@@ -33,7 +33,7 @@ const ImageRows = (props) => {
                 </Link>
 
                 <h4 className='m-b10'>{item.name}</h4>
-
+                {item.subheading ? <h5>{item.subheading}</h5> : <></>}
                 {/* <div className='mb-3'>View All →</div> */}
 
                 <Link to={item.link}>

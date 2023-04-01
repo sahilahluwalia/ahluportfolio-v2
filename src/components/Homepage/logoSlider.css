@@ -1,9 +1,10 @@
-.slick-slide {
-  height: auto !important;
+.text-center {
+  margin: "0 auto";
+  padding-top: 20px;
 }
-.slick-track {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
+.mytitle {
+  margin-bottom: 0px;
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 600;
 }

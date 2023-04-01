@@ -9,18 +9,25 @@ const DownloadCatalogue = (props) => {
         <div className='download-file'>
           {/* <h4 className='title'>Download Catalog</h4> */}
           {/* <Link to={link} target='_blank'> */}
-            <img
-              style={{
-                marginBottom: "10px",
-              }}
-              src={image}
-              alt='catalog'
-            />
+          <img
+            style={{
+              marginBottom: "10px",
+            }}
+            src={image}
+            alt='catalog'
+          />
           {/* </Link> */}
           <ul>
             <li>
               <Link to={link} target='_blank'>
-                <div className='text'>Download Catlogue </div>
+                <div
+                  style={{
+                    fontSize: "13px",
+                  }}
+                  className='text'
+                >
+                  Download Catlogue
+                </div>
                 <i className='fa fa-download'></i>
               </Link>
             </li>
