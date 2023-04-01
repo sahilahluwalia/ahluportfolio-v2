@@ -21,6 +21,11 @@ const PressFeeders = () => {
               {/* <ImageSlider images={images} /> */}
               <div className='row'>
                 <LeftSection mainScreen>
+                  <h1 className=' text-black m-tb0'>
+                    OTHER PRESS AUTOMATION ACCESSORIES
+                  </h1>
+                  <div className='dlab-separator bg-primary'></div>
+
                   <div className='text-center section-head'>
                     <div className='row gx-5'>
                       <ImageRows data={pressFeederProducts} noOfRows={4} />

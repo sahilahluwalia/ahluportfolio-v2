@@ -15,6 +15,9 @@ import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
 import asr3aii_layout from "asserts/machine-pics/asr3aii-layout.png";
 import acsts_layout from "asserts/machine-pics/acsts-layout.png";
 import ampts_layout from "asserts/machine-pics/ampts-layout.png";
+import visionSPMImage from "asserts/Vision SPM.jpg";
+import assemblySPMImage from "asserts/Assembly SPM.jpg";
+import operationalSPMImage from "asserts/Operational SPM.jpg";
 // import ast2aii1 from "asserts/machine-pics/Design Image Data/2axis db";
 
 function importAll(r) {
@@ -552,20 +555,20 @@ const specialPurposeProductList = [
   {
     name: "Operational SPMs",
     link: "operational-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+    image: operationalSPMImage,
+    cover: true,
   },
   {
     name: "Assembly SPMs",
     link: "assembly-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    image: assemblySPMImage,
+    cover: true,
   },
   {
     name: "Vision Inspection SPMs",
     link: "assembly-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    image: visionSPMImage,
+    cover: true,
   },
 ];
 

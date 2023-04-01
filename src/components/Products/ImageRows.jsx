@@ -26,7 +26,7 @@ const ImageRows = (props) => {
                     style={{
                       height: "400px",
                       width: "350px",
-                      objectFit: "contain",
+                      objectFit: item.cover ? "cover" : "contain",
                     }}
                     className='card-img-top'
                   />
@@ -37,9 +37,7 @@ const ImageRows = (props) => {
                 {/* <div className='mb-3'>View All →</div> */}
 
                 <Link to={item.link}>
-                  <button className='readMoreButton  mb-4'>
-                    Read more
-                  </button>
+                  <button className='readMoreButton  mb-4'>Read more</button>
                 </Link>
               </div>
             </div>
