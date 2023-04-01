@@ -709,9 +709,25 @@ const Ast2aii = () => {
                 <LeftSection>
                   <FirstRow
                     name={item?.name}
-                    description={item?.description}
+                    // description={item?.description}
                     imageArray={item?.imageCollection}
-                  />
+                  >
+                    <div className='product-description'>
+                      Mount this system on a general-purpose press machine to
+                      achieve
+                      <span>
+                        {" "}
+                        high-speed transfers in 2 Axis for high-speed transfer
+                      </span>{" "}
+                      processing. <br />
+                      The high-speed programmable transfer system drives a
+                      transfer unit via a set of servo motors with the help of a
+                      double bar mechanism.
+                      <br />
+                      Three variants of AST2AII series are available so that you
+                      can select a transfer pitch appropriate for your purpose.
+                    </div>
+                  </FirstRow>
 
                   <div className='row'>
                     <Tabs

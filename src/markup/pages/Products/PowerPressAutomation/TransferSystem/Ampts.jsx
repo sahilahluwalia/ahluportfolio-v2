@@ -603,9 +603,7 @@ function SpecificationTab() {
                 valign='middle'
                 align='center'
               >
-                <font size={3}>
-                  Please Contact
-                </font>
+                <font size={3}>Please Contact</font>
               </td>
             </tr>
             <tr>
@@ -649,9 +647,7 @@ function SpecificationTab() {
                 valign='middle'
                 align='center'
               >
-                <font size={3}>
-                  Please Contact
-                </font>
+                <font size={3}>Please Contact</font>
               </td>
             </tr>
           </tbody>
@@ -672,9 +668,27 @@ const Ampts = () => {
                 <LeftSection>
                   <FirstRow
                     name={item?.name}
-                    description={item?.description}
+                    // description={item?.description}
                     image={item?.image}
-                  ></FirstRow>
+                  >
+                    <div className='product-description'>
+                      Customized system{" "}
+                      <span>
+                        designed to achieve transfers between individual presses
+                        in 2 Axis with additional Gripper axis involved.
+                      </span>{" "}
+                      <br />
+                      This Servo programmable transfer system drives a transfer
+                      unit with the help of a Single bar mechanism. <br />
+                      <br />
+                      Three variants of the AMPTS series are available so that
+                      you can select a transfer pitch appropriate for your
+                      purpose.
+                      <br /> This system is designed to function in batches of 3
+                      Presses i.e, Multiple of 3 Presses will decide the number
+                      of Individual systems required to do the job.
+                    </div>
+                  </FirstRow>
 
                   <div className='row'>
                     <Tabs

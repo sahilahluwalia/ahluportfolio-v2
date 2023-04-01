@@ -828,24 +828,23 @@ const Ast3aii = () => {
                 <LeftSection>
                   <FirstRow
                     name={item?.name}
-                    description={item?.description}
+                    // description={item?.description}
                     imageArray={item?.imageCollection}
                   >
-                    <p>
-                      In this system variant, All Three Axis are Servo based
-                      which not only adds precision accuracy and repeatability
-                      but also its programmable feature adds feasibility to
-                      produce multiple variants on same transfer system with
-                      ease against changeover of Fingers and Recipe. The axis
-                      includes Pick Axis derived as Y Axis, Pitch Axis derived
-                      as X Axis & Lifting movement denoted as Z Axis. Based on
-                      Product variant and Load capacity required, customized
-                      system can be designed to suit the desired press to
-                      function with synchronization with this system.
-                      Specifically all drawn components which require lifting
-                      from its base passing line comes under applicational
-                      feasibility of 3 Axis Servo Transfer system.
-                    </p>
+                    <div className='product-description'>
+                      <span>
+                        {" "}
+                        Customized system designed only to achieve Speedy
+                        transfers in 3 Servo Axis for Z Axis draw/ Guided
+                        insertion based components.
+                      </span>{" "}
+                      <br /> This Servo programmable transfer system drives a
+                      transfer unit with the help of a Double bar mechanism.
+                      <br />
+                      <br />
+                      Three variants of AST3AII series are available so that you
+                      can select a transfer pitch appropriate for your purpose.
+                    </div>
                   </FirstRow>
 
                   <div className='row'>

@@ -16331,6 +16331,13 @@ ol.commentlist li .star-rating {
   /* transition: cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
 
+/* .bold-text{
+font-weight: 700;
+} */
+
+.product-description > span {
+  font-weight: 700;
+}
 
 /* timeline */
 

@@ -23,13 +23,14 @@ const TransferSystem = () => {
               {/* <ImageSlider images={images} /> */}
               <div className='row'>
                 <LeftSection mainScreen>
+                  <h1 className=' text-black m-tb0'>
+                    TRANSFER SYSTEMS
+                  </h1>
+                  <div className='dlab-separator bg-primary'></div>
+
                   <div className='text-center section-head'>
-                    {/* <h2 className=' box-title m-tb0'>
-                      Transfer System
-                      <span className='bg-primary'></span>
-                    </h2>
-                    <p>We have a wide range of Transfer System.</p>
-                    <div className='dlab-separator bg-primary'></div> */}
+                    {/* <p>We have a wide range of Transfer System.</p>
+ */}
 
                     {/* create a reponsive 3 columns in desktop and 1 colum in mobile screen in bootstrap */}
 

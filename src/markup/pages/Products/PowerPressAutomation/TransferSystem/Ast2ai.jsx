@@ -12,6 +12,7 @@ import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
 import Table from "components/Products/Table";
 import BaseTable from "components/Products/BaseTable";
+import { First } from "react-bootstrap/esm/PageItem";
 const item = subProductList.find((item) => item.code === "ast2ai");
 const { double_bar_system } = transferSystemData;
 const { standardFeatures, commonCharacteristics } = double_bar_system;
@@ -697,8 +698,8 @@ function SpecificationTab() {
   );
 }
 
-const Ast2aii = () => {
-  console.log(window.location.origin);
+const Ast2ai = () => {
+  // console.log(window.location.origin);
   return (
     <>
       <div className='bg-white '>
@@ -709,9 +710,27 @@ const Ast2aii = () => {
                 <LeftSection>
                   <FirstRow
                     name={item?.name}
-                    description={item?.description}
+                    // description={item?.description}
                     imageArray={item?.imageCollection}
-                  />
+                  >
+                    <div className='product-description'>
+                      Mount this system on a general-purpose press machine to
+                      achieve Speedy transfers in 2 Axis for transfer
+                      processing.
+                      <br />
+                      This Servo programmable transfer system drives
+                      <span>
+                        {" "}
+                        a transfer unit with the help of a single bar mechanism
+                        in 2 axis and an additional gripper axis.
+                      </span>{" "}
+                      <br />
+                      <br />
+                      Three variants of the AST2AI series are available so that
+                      you can select a transfer pitch appropriate for your
+                      purpose.
+                    </div>
+                  </FirstRow>
 
                   <div className='row'>
                     <Tabs
@@ -752,4 +771,4 @@ const Ast2aii = () => {
   );
 };
 
-export default Ast2aii;
+export default Ast2ai;

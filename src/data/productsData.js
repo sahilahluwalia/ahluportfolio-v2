@@ -447,6 +447,7 @@ const subProductList = [
     ],
     imageCollection: acstsCollection,
     catalogueImage: addCatalogueImageFromListByItsName("ACSTS Series"),
+    catalogueLink: addCatalogueFromListByItsName("ACSTS Series"),
   },
   {
     name: "Ahlu Multi Press Transfer System- AMPTS Series",
@@ -531,6 +532,7 @@ const subProductList = [
       "products/power-press-automation/transfer-system/ampts"
     ),
     catalogueImage: addCatalogueImageFromListByItsName("AMPTS Series"),
+    catalogueLink: addCatalogueFromListByItsName("AMPTS Series"),
   },
   {
     name: "Ahlu Servo Roll Feeder type- ASRF Series",

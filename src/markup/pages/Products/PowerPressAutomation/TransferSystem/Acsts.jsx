@@ -669,9 +669,26 @@ const Acsts = () => {
                 <LeftSection>
                   <FirstRow
                     name={item?.name}
-                    description={item?.description}
+                    // description={item?.description}
                     imageArray={item?.imageCollection}
-                  ></FirstRow>
+                  >
+                    <div className='product-description'>
+                      Mount this system on a general-purpose press machine to
+                      achieve automated transfers in 2 Axis with minimal
+                      changes. Best suited for C frame type presses.
+                      <br /> This{" "}
+                      <span>programmable transfer system drives </span>a
+                      transfer unit via a set of servo motors{" "}
+                      <span>
+                        with the help of a Cantilever arrangement single bar
+                        mechanism.
+                      </span>{" "}
+                      <br />
+                      <br /> Three variants of ACSTS series are available so
+                      that you can select a transfer pitch appropriate for your
+                      purpose.
+                    </div>
+                  </FirstRow>
 
                   <div className='row'>
                     <Tabs

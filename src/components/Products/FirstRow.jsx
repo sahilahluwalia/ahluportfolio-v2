@@ -11,7 +11,7 @@ const FirstRow = (props) => {
       <div className='col-xl-7'>
         <h2 className=' box-title m-tb0'>{name}</h2>
         <div className='dlab-separator bg-primary'></div>
-        <p>{description}</p>
+        {/* <p>{description}</p> */}
         {children}
       </div>
     </div>

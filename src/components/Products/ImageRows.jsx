@@ -37,7 +37,7 @@ const ImageRows = (props) => {
                 {/* <div className='mb-3'>View All →</div> */}
 
                 <Link to={item.link}>
-                  <button className='readMoreButton  m-r15 m-r15 mb-4'>
+                  <button className='readMoreButton  mb-4'>
                     Read more
                   </button>
                 </Link>

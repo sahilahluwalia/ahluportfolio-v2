@@ -5,7 +5,12 @@ import Footer from "../../components/layout/Footer";
 import Testimonial1 from "../element/testimonial1";
 import parse from "html-react-parser";
 import ChooseAhluEngineers from "components/About/ChooseAhluEngineers";
-
+import {
+  storyImage,
+  visionImage,
+  missionImage,
+  bannerImage,
+} from "data/imagesData";
 var bnr3 = require("./../../images/banner/bnr3.jpg");
 var bg1 = require("./../../images/background/bg-video.png");
 var bg2 = require("./../../images/background/bg1.jpg");
@@ -128,7 +133,11 @@ const About = (props) => {
                 </div>
                 <div className='col-lg-6 col-md-12 m-b30 our-story-thum'>
                   <img
-                    src={require("../../images/about/pic6.jpg")}
+                    src={storyImage}
+                    style={{
+                      height: "800px",
+                      objectFit: "cover",
+                    }}
                     className='radius-sm'
                     alt=''
                   />
@@ -141,7 +150,11 @@ const About = (props) => {
             <div className='row align-items-center'>
               <div className='col-lg-6 col-md-12 m-b30 our-story-thum'>
                 <img
-                  src={require("../../images/about/pic6.jpg")}
+                  style={{
+                    height: "700px",
+                    objectFit: "cover",
+                  }}
+                  src={visionImage}
                   className='radius-sm'
                   alt=''
                 />
@@ -196,7 +209,8 @@ const About = (props) => {
           <div
             id='mission'
             className='section-full content-inner bg-white video-section'
-            style={{ backgroundImage: "url(" + bg1 + ")" }}
+
+            // style={{ backgroundImage: "url(" + bg1 + ")" }}
           >
             <div className='container '>
               <div className='section-content'>
@@ -246,18 +260,15 @@ const About = (props) => {
                   </div>
                   <div className='col-lg-6 col-md-12 m-b30'>
                     <div className='video-bx'>
-                      <img
-                        src={require("../../images/about/pic5.jpg")}
-                        alt='Signature'
-                      />
-                      <div className='video-play-icon'>
+                      <img src={missionImage} alt='Signature' />
+                      {/* <div className='video-play-icon'>
                         <a
                           href='https://www.youtube.com/watch?v=_FRZVScwggM'
                           className='popup-youtube video bg-primary'
                         >
                           <i className='fa fa-play'></i>
                         </a>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
