@@ -6,29 +6,10 @@ import FirstRow from "components/Products/FirstRow";
 import { RightSection } from "components/Products/RightSection";
 import ProductList from "components/Products/ProductList";
 import ImageSlider from "components/Products/ImageSlider";
-import { transferSystemProducts } from "data/productsData";
+import { sheetMetalProductList } from "data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 
-const productList = [
-  {
-    name: "Progressive Dies",
-    link: "progressive-dies",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
-  },
-  {
-    name: "Transfer Dies",
-    link: "transfer-dies",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
-  },
-  {
-    name: "Compound Dies",
-    link: "compound-dies",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
-  },
-];
+const productList = [];
 
 const SheetMetalDies = () => {
   //   console.log(catalogueList);
@@ -47,7 +28,7 @@ const SheetMetalDies = () => {
                   <div className='dlab-separator bg-primary'></div>
                   <div className='text-center section-head'>
                     <div className='row gx-5'>
-                      <ImageRows data={productList} noOfRows={4} />
+                      <ImageRows data={sheetMetalProductList} noOfRows={4} />
                     </div>
                   </div>
                 </LeftSection>

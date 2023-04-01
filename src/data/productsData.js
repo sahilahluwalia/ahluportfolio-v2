@@ -18,6 +18,9 @@ import ampts_layout from "asserts/machine-pics/ampts-layout.png";
 import visionSPMImage from "asserts/Vision SPM.jpg";
 import assemblySPMImage from "asserts/Assembly SPM.jpg";
 import operationalSPMImage from "asserts/Operational SPM.jpg";
+import progesssiveDieImage from "asserts/machine-pics/SheetMetal/Progressive.jpg";
+import compoundDieImage from "asserts/machine-pics/SheetMetal/Compound Die.jpg";
+import transferImage from "asserts/machine-pics/SheetMetal/Transfer 1.jpg";
 // import ast2aii1 from "asserts/machine-pics/Design Image Data/2axis db";
 
 function importAll(r) {
@@ -551,6 +554,28 @@ const subProductList = [
   },
 ];
 
+const sheetMetalProductList = [
+  {
+    name: "Transfer Dies",
+    link: "transfer-dies",
+    // cover: true,
+    image: transferImage,
+  },
+  {
+    name: "Progressive Dies",
+    link: "progressive-dies",
+    // cover: true,
+    image: progesssiveDieImage,
+  },
+
+  {
+    name: "Compound Dies",
+    link: "compound-dies",
+    // cover: true,
+    image: compoundDieImage,
+  },
+];
+
 const specialPurposeProductList = [
   {
     name: "Operational SPMs",
@@ -736,4 +761,5 @@ export {
   pressFeederProducts,
   allPicCollections,
   specialPurposeProductList,
+  sheetMetalProductList,
 };
