@@ -16339,6 +16339,27 @@ font-weight: 700;
   font-weight: 700;
 }
 
+.text-capitalize:hover {
+  font-weight: 800;
+  font-size: 20px;
+  /* transition: all 0.2s ease-out; */
+}
+
+/* .box-images {
+  
+  overflow: hidden;
+}
+
+.box-image img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+/* .box-image:hover img {
+  transform: scale(1.5);
+} */ 
+
+
 /* timeline */
 
 .main-timeline {
@@ -16611,9 +16632,8 @@ font-weight: 700;
   }
 }
 
-
 .slick-slide {
-  height: auto; 
+  height: auto;
 }
 .slick-track {
   display: flex;

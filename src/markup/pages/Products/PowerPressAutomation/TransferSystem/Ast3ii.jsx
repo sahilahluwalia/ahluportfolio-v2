@@ -59,8 +59,13 @@ function Featurestab() {
 function SpecificationTab() {
   return (
     <>
-      <h4>Layout Diagram</h4>
+      <h4>Topview layout</h4>
       <img src={item.layout} alt='' srcset='' />
+      <p>
+        *Shown only for easy reference purposes and may vary based on the actual
+        component.
+      </p>
+
       <h4>Specifications</h4>
       <BaseTable>
         <table
@@ -813,6 +818,10 @@ function SpecificationTab() {
           </tbody>
         </table>
       </BaseTable>
+      <p>
+        *The contents are subject to change by the manufacturer without prior
+        notice.
+      </p>
     </>
   );
 }

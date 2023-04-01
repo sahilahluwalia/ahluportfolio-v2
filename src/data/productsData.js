@@ -638,6 +638,7 @@ const pressFeederProducts = [
 
 const transferSystemData = {
   double_bar_system: {
+    type: "Double Bar System",
     standardFeatures: [
       "<span>Precision Servo driven</span> design for continuous use.",
       "Ethernet IP based Automation controller.",
@@ -664,6 +665,7 @@ const transferSystemData = {
   },
 
   acsts: {
+    type: "Single Bar System",
     commonCharacteristics: [
       `Each Servo Axis is operated with high accuracy with the help of
 Precision Servos.`,

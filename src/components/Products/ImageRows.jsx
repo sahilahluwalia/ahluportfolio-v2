@@ -9,7 +9,7 @@ const ImageRows = (props) => {
           <>
             <div
               key={item.link}
-              className={`col-xs-12 ${
+              className={`col-xs-12 box-images ${
                 noOfRows ? `col-lg-${noOfRows}` : `col-lg-6`
               } col-md-6 col-sm-6 service-box style3`}
             >
