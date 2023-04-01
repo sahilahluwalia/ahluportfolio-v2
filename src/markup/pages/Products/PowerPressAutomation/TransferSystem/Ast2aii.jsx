@@ -37,8 +37,9 @@ function OverviewTab() {
 function Featurestab() {
   return (
     <>
+      <h4>Standard Features</h4>
+
       <div className='px-3'>
-        <h4>Standard Features of Two Bar System</h4>
         <ol type='1'>
           {standardFeatures.map((item, index) => {
             return (

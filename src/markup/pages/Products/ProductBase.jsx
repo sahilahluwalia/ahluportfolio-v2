@@ -20,6 +20,7 @@ const Products = (props) => {
   const removeSpace = (str) => {
     return str.replace(/-/g, " ");
   };
+
   return (
     <>
       <div
@@ -50,7 +51,12 @@ const Products = (props) => {
                   </li>
                 )}
                 {subSubSubPath && (
-                  <li className='text-capitalize'>
+                  <li
+                    style={{
+                      textTransform: "uppercase",
+                    }}
+                    className='text-uppercase'
+                  >
                     <Link to={`${subPath}/${subSubPath}/${subSubSubPath}`}>
                       {removeSpace(subSubSubPath)}
                     </Link>

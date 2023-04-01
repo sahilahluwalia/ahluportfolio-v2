@@ -24,6 +24,7 @@ import Testmonial from "components/Homepage/Testmonial";
 import Testimonial9 from "../element/testimonial9";
 import Testmonial4 from "../element/testmonial4";
 import Testimonial6 from "../element/testimonial6";
+import { youtubeLinkImage, sevenyearsImage } from "data/imagesData";
 const faqContent = [
   {
     question: "1. Innovation need",
@@ -189,16 +190,12 @@ const Homepage = () => {
                 </div>
               </div>
               <div className='col-lg-6 col-md-6 col-sm-6'>
-                <img
-                  className='img-cover'
-                  src={require("../../images/our-work/car/pic3.jpg")}
-                  alt=''
-                />
+                <img className='img-cover' src={sevenyearsImage} alt='' />
               </div>
               <div className='col-lg-6 col-md-6 col-sm-6'>
                 <div className='video-bx radius-no h100'>
                   <img
-                    src={require("../../images/our-work/car/pic4.jpg")}
+                    src={youtubeLinkImage}
                     alt='Signature'
                     className='img-cover'
                   />

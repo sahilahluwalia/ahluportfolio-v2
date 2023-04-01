@@ -36,8 +36,9 @@ function OverviewTab() {
 function Featurestab() {
   return (
     <>
+      <h4>Standard Features </h4>
+
       <div className='px-3'>
-        <h4>Standard Features of Two Bar System</h4>
         <ol type='1'>
           {standardFeatures.map((item, index) => {
             return (
@@ -829,9 +830,14 @@ function SpecificationTab() {
 const Ast3aii = () => {
   return (
     <>
-      <div className='bg-white '>
+      <div
+        style={{
+          background: "#f1f9ff",
+        }}
+        className=''
+      >
         <div className='midContent'>
-          <div className='py-5 bg-white section-full'>
+          <div className='py-5 section-full'>
             <div className='container'>
               <div className='row'>
                 <LeftSection>

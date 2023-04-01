@@ -114,11 +114,11 @@ const ProductSlider = ({}) => {
       },
     ],
   };
-  console.log(content);
+  // console.log(content);
   return (
     <>
       <div className=' text-center '>
-        <h2 className='mytitle'>Products We Offer</h2>
+        <h2 className='mytitle'>Products We cater</h2>
       </div>
 
       <Slider

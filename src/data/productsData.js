@@ -45,6 +45,9 @@ const ampfCollection = importAll(
 const transferSystemCollection = importAll(
   require.context("asserts/machine-pics/transferSystem")
 );
+const sheetMetalCollection = importAll(
+  require.context("asserts/machine-pics/SheetMetal")
+);
 const a2iCollection = importAll(
   require.context("asserts/machine-pics/Design Image Data/2aii")
 );
@@ -549,9 +552,6 @@ const subProductList = [
     link: universalPath("products/power-press-automation/press-feeders/asrf"),
     catalogueImage: addCatalogueImageFromListByItsName("ASRF Series"),
   },
-  {
-    name: "AST3AII / AST2AII Series Ahlu Servo Transfer Double Bar type",
-  },
 ];
 
 const sheetMetalProductList = [
@@ -607,7 +607,7 @@ const powerPressAutomationProductList = [
   {
     name: "Sheet Metal Dies",
     link: "sheet-metal-dies",
-    image: getRandomItemFromArray(transferSystemCollection),
+    image: getRandomItemFromArray(sheetMetalCollection),
     // "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
   },
   {
@@ -619,27 +619,27 @@ const powerPressAutomationProductList = [
 
 const transferSystemProducts = [
   {
-    name: "AST2AII Series",
+    name: "<span className='highlight-serial'> AST2AII  </span>Series",
     link: "ast2aii",
     image: ast2aii,
   },
   {
-    name: "AST2AI Series",
+    name: "<span className='highlight-serial'> AST2AI </span> Series",
     link: "ast2ai",
     image: ast2ai,
   },
   {
-    name: "AST3AII Series",
+    name: "<span className='highlight-serial'> AST3AII</span> Series",
     link: "ast3aii",
     image: ast3aii_frontside,
   },
   {
-    name: "ACSTS Series",
+    name: "<span className='highlight-serial'>ACSTS</span> Series",
     link: "acsts",
     image: acsts,
   },
   {
-    name: "AMPTS Series",
+    name: "<span className='highlight-serial'>AMPTS</span> Series",
     link: "ampts",
     image: ampts,
   },
@@ -648,13 +648,13 @@ const transferSystemProducts = [
 const pressFeederProducts = [
   {
     name: "Rolling Servo Feeders",
-    subheading: "ASRF Series",
+    subheading: "<span className='highlight-serial'>ASRF</span> Series",
     link: "asrf",
     image: asrf,
   },
   {
     name: "Mechanical Press Flap",
-    subheading: "AMPF Series",
+    subheading: "<span className='highlight-serial'>AMPF</span> Series",
     series: "ampfs",
     link: "ampf",
     image: flap,

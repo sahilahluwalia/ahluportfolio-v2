@@ -17,10 +17,10 @@ const images = [ast3aii, ast2aii, acsts, ampts];
 const TransferSystem = () => {
   return (
     <>
-      <div className='bg-white '>
+      <div className='blue-bg'>
         <div className='midContent'>
           {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
-          <div className='py-5 bg-white section-full'>
+          <div className='py-5 section-full'>
             <div className='container'>
               {/* <ImageSlider images={images} /> */}
               <div className='row'>
@@ -63,26 +63,6 @@ const TransferSystem = () => {
                 <RightSection mainScreen>
                   <ProductList withoutImage />
                 </RightSection>
-              </div>
-
-              <div
-                style={{
-                  paddingBottom: "40px",
-                }}
-                className='section-full bg-gray content-inner mb-10'
-              >
-                <div className='container'>
-                  <div className='row'>
-                    <div className='col-lg-12'>
-                      <div className='sort-title clearfix text-center '>
-                        <h4>What peolpe are saying style 10</h4>
-                      </div>
-                      <div className='section-content'>
-                        <Testmonial />
-                      </div>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

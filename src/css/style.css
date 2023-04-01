@@ -16339,6 +16339,7 @@ font-weight: 700;
   font-weight: 700;
 }
 
+.text-uppercase:hover,
 .text-capitalize:hover {
   font-weight: 800;
   font-size: 20px;
@@ -16357,8 +16358,49 @@ font-weight: 700;
 /* [3] Finally, transforming the image when container gets hovered */
 /* .box-image:hover img {
   transform: scale(1.5);
-} */ 
+} */
 
+.highlight-serial {
+  color:var(--color-primary);
+}
+.realistic-marker-highlight{
+  position:relative;
+  color: #ffffff;
+  font-family: Libre Franklin;
+  font-size: 32px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+.realistic-marker-highlight:before{
+  content:"";
+  background-color:#ef8c22;
+  width:100%;
+  height:1.3em;
+  position:absolute;
+  z-index:-1;
+  filter:url(#marker-shape);
+  left:-0.25em;
+  top:-0.05em;
+  padding:0 0.30em;
+}
+
+
+
+/* Zoom In #1 */
+.master .product-image figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.master .product-image figure:hover img {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.blue-bg {
+  background-color: #f1f9ff;
+}
 
 /* timeline */
 

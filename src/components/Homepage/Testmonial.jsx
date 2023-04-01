@@ -12,6 +12,7 @@ const Testimonial1_content = [
     description: `Our System is working satisfactorily and running fine. We are now very confident on our die and our Transfer system.
     We are totally satisfied with their technical commitments and have faith on their financial commitments. We not only trust his commitments but also have faith on their efforts for its fulfilment.
     We will definitely take services from them in future.`,
+    location:'Sandhar Components Behrampur, Gurgaon.'
   },
 ];
 
@@ -58,6 +59,7 @@ class Testmonial6 extends Component {
                     {item.designation}
                   </span>
                   <strong className='testimonial-name'>{item.author}</strong>
+                  <strong className='testimonial-position '>{item.location}</strong>
                 </div>
               </div>
             </div>
