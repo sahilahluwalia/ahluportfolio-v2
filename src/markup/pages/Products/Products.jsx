@@ -12,13 +12,15 @@ const Products = () => {
   return (
     <>
       {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
-      <div id='products' className='section-full content-inner bg-white'>
+      <div id='products' className='section-full blue-bg '>
         <div className='container'>
           <div className='text-center section-head'>
-            <h2 className=' box-title m-tb0'>
-              Products
-            </h2>
-            <p>We have a wide range of products and services.</p>
+            <h2 className=' box-title m-tb0'>Products we cater</h2>
+            <p>
+              We have a wide range of products and services in Special Purpose
+              Machine manufacturing, Assembly Automation & Power press
+              Automation solutions
+            </p>
             <div className='dlab-separator bg-primary'></div>
 
             {/* create a reponsive 3 columns in desktop and 1 colum in mobile screen in bootstrap */}

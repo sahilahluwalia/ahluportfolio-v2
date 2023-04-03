@@ -69,6 +69,8 @@ const catalogueList = cl;
 const masterProductLink = [
   {
     name: "Power Press Automation",
+    nameHTML:
+      "<span className='highlight-serial'>Power Press</span> Automation",
     link: "power-press-automation",
     fullLink: "/products/power-press-automation",
     image:
@@ -76,6 +78,8 @@ const masterProductLink = [
   },
   {
     name: "Special Purpose Machines",
+    nameHTML:
+      "<span className='highlight-serial'>Special Purpose</span> Machines",
     link: "special-purpose-machines",
     fullLink: "/products/special-purpose-machines",
     image:
@@ -278,10 +282,11 @@ const subProductList = [
   },
   {
     code: "ampf",
-    name: "Ahlu Mechanical Press Flap Series- AMPF ",
+    name: "Ahlu Mechanical Press Flap Series- AMPF",
     catalogueLink: addCatalogueFromListByItsName("AMPF Series"),
     image: ampf,
     imageCollection: ampfCollection,
+    link: universalPath("products/power-press-automation/press-feeders/ampf"),
     catalogueImage: addCatalogueImageFromListByItsName("AMPF Series"),
   },
 
@@ -556,21 +561,21 @@ const subProductList = [
 
 const sheetMetalProductList = [
   {
-    name: "Transfer Dies",
-    link: "transfer-dies",
+    name: "<span className='highlight-serial'>  Transfer Dies",
+    // link: "transfer-dies",
     // cover: true,
     image: transferImage,
   },
   {
-    name: "Progressive Dies",
-    link: "progressive-dies",
+    name: "<span className='highlight-serial'>  Progressive Dies",
+    // link: "progressive-dies",
     // cover: true,
     image: progesssiveDieImage,
   },
 
   {
-    name: "Compound Dies",
-    link: "compound-dies",
+    name: "<span className='highlight-serial'> Compound Dies",
+    // link: "compound-dies",
     // cover: true,
     image: compoundDieImage,
   },
@@ -578,19 +583,19 @@ const sheetMetalProductList = [
 
 const specialPurposeProductList = [
   {
-    name: "Operational SPMs",
+    name: "<span className='highlight-serial'>Operational</span> SPMs",
     link: "operational-spms",
     image: operationalSPMImage,
     cover: true,
   },
   {
-    name: "Assembly SPMs",
+    name: "<span className='highlight-serial'>Assembly</span> SPMs",
     link: "assembly-spms",
     image: assemblySPMImage,
     cover: true,
   },
   {
-    name: "Vision Inspection SPMs",
+    name: "<span className='highlight-serial'>Vision Inspection</span> SPMs",
     link: "assembly-spms",
     image: visionSPMImage,
     cover: true,
@@ -599,19 +604,19 @@ const specialPurposeProductList = [
 
 const powerPressAutomationProductList = [
   {
-    name: "Transfer System ",
+    name: "<span className='highlight-serial'>Transfer</span> System ",
     link: "transfer-system",
     image: getRandomItemFromArray(transferSystemCollection),
     // "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
   },
   {
-    name: "Sheet Metal Dies",
+    name: "<span className='highlight-serial'>Sheet Metal </span> Dies",
     link: "sheet-metal-dies",
     image: getRandomItemFromArray(sheetMetalCollection),
     // "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
   },
   {
-    name: "Other Press Automation Accessories",
+    name: "<span className='highlight-serial'>Other Press Automation</span> Accessories",
     link: "press-feeders",
     image: otherAccessories,
   },

@@ -51,7 +51,9 @@ const ImageRows = (props) => {
                   </div>
                 </Link>
 
-                <h4 className='m-b10 '>{parse(item.name)}</h4>
+                <h4 className='m-b10 '>
+                  {item.nameHTML ? parse(item.nameHTML) : parse(item.name)}
+                </h4>
                 {item.subheading ? <h5>{parse(item.subheading)}</h5> : <></>}
                 {/* <div className='mb-3'>View All →</div> */}
                 <div

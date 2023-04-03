@@ -44,13 +44,13 @@ const usefulLinks = [
     // link: "/career",
   },
   {
-    title: "Blog",
+    title: "Literature",
     link: "https://blog.ahluengineers.com",
     href: true,
   },
 
   {
-    title: "Tripod",
+    title: "Tripfold",
     link: tripod,
     href: true,
   },

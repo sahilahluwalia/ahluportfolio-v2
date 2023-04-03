@@ -279,7 +279,7 @@ const About = (props) => {
           <div
             id='whyus'
             className='section-full bg-white content-inner-2'
-
+           
             // style={{ backgroundImage: "url(" + bg + ")" }}
           >
             <div className='container'>
