@@ -711,9 +711,9 @@ const Ast2aii = () => {
   console.log(window.location.origin);
   return (
     <>
-      <div className='bg-white '>
+      <div className='blue-bg'>
         <div className='midContent'>
-          <div className='py-5 bg-white section-full'>
+          <div className='py-5  section-full'>
             <div className='container'>
               <div className='row'>
                 <LeftSection>
