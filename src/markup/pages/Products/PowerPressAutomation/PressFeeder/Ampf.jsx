@@ -13,6 +13,7 @@ import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
 import Table from "components/Products/Table";
 import BaseTable from "components/Products/BaseTable";
+import ProductItemBase from "components/Products/ProductItemBase";
 
 const item = subProductList.find((item) => item.code === "ampf");
 const { ampf } = transferSystemData;
@@ -488,65 +489,57 @@ function ST() {
 const Ampf = () => {
   return (
     <>
-      <div className='blue-bg '>
-        <div className='midContent'>
-          <div className='py-5  section-full'>
-            <div className='container'>
-              <div className='row'>
-                <LeftSection>
-                  <FirstRow
-                    name={item?.name}
-                    description={item?.description}
-                    imageArray={item?.imageCollection}
-                  >
-                    <div className='product-description'>
-                      AMPF series facilitate to eliminate the strain of scrap /
-                      pierced part removal from the die in each operation by
-                      synchronizing with power presses.
-                      <br />
-                      This not only reduces the Operator fatigue strain of
-                      unloading separately but also can help in automizing the
-                      operation if the loading of components is performed via
-                      separate feeders. Thus increasing efficiency and running
-                      the Power press at its peak efficient cycle/speed.
-                    </div>
-                  </FirstRow>
+      <ProductItemBase>
+        <LeftSection>
+          <FirstRow
+            name={item?.name}
+            description={item?.description}
+            imageArray={item?.imageCollection}
+          >
+            <div className='product-description'>
+              AMPF series facilitate to eliminate the strain of scrap / pierced
+              part removal from the die in each operation by synchronizing with
+              power presses.
+              <br />
+              This not only reduces the Operator fatigue strain of unloading
+              separately but also can help in automizing the operation if the
+              loading of components is performed via separate feeders. Thus
+              increasing efficiency and running the Power press at its peak
+              efficient cycle/speed.
+            </div>
+          </FirstRow>
 
-                  <div className='row'>
-                    <Tabs
-                      defaultActiveKey='overview'
-                      id='noanim-tab-example'
-                      className='mb-3  col-md-12 '
-                    >
-                      <Tab eventKey='overview' title='Overview'>
-                        <OverviewTab />
-                      </Tab>
-                      {/* <Tab eventKey='feature' title='Features'>
+          <div className='row'>
+            <Tabs
+              defaultActiveKey='overview'
+              id='noanim-tab-example'
+              className='mb-3  col-md-12 '
+            >
+              <Tab eventKey='overview' title='Overview'>
+                <OverviewTab />
+              </Tab>
+              {/* <Tab eventKey='feature' title='Features'>
                         <Featurestab />
                       </Tab> */}
 
-                      <Tab eventKey='specification' title='Specification'>
-                        <ST />
-                      </Tab>
-                    </Tabs>
-                  </div>
-                </LeftSection>
-                <RightSection>
-                  <div className='widget'>
-                    <DownloadCatalogue
-                      image={item?.catalogueImage}
-                      link={item?.catalogueLink}
-                    />
-                  </div>
-                  <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
-                    <ProductList />
-                  </div>
-                </RightSection>
-              </div>
-            </div>
+              <Tab eventKey='specification' title='Specification'>
+                <ST />
+              </Tab>
+            </Tabs>
           </div>
-        </div>
-      </div>
+        </LeftSection>
+        <RightSection>
+          <div className='widget'>
+            <DownloadCatalogue
+              image={item?.catalogueImage}
+              link={item?.catalogueLink}
+            />
+          </div>
+          <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
+            <ProductList />
+          </div>
+        </RightSection>
+      </ProductItemBase>
     </>
   );
 };

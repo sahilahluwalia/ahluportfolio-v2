@@ -12,6 +12,8 @@ import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
 import Table from "components/Products/Table";
 import BaseTable from "components/Products/BaseTable";
+import ProductItemBase from "components/Products/ProductItemBase";
+
 const item = subProductList.find((item) => item.code === "ast2aii");
 const { double_bar_system } = transferSystemData;
 const { standardFeatures, commonCharacteristics } = double_bar_system;
@@ -711,69 +713,59 @@ const Ast2aii = () => {
   console.log(window.location.origin);
   return (
     <>
-      <div className='blue-bg'>
-        <div className='midContent'>
-          <div className='py-5  section-full'>
-            <div className='container'>
-              <div className='row'>
-                <LeftSection>
-                  <FirstRow
-                    name={item?.name}
-                    // description={item?.description}
-                    imageArray={item?.imageCollection}
-                  >
-                    <div className='product-description'>
-                      Mount this system on a general-purpose press machine to
-                      achieve
-                      <span>
-                        {" "}
-                        high-speed transfers in 2 Axis for high-speed transfer
-                      </span>{" "}
-                      processing. <br />
-                      The high-speed programmable transfer system drives a
-                      transfer unit via a set of servo motors with the help of a
-                      double bar mechanism.
-                      <br />
-                      Three variants of AST2AII series are available so that you
-                      can select a transfer pitch appropriate for your purpose.
-                    </div>
-                  </FirstRow>
-
-                  <div className='row'>
-                    <Tabs
-                      defaultActiveKey='overview'
-                      id='noanim-tab-example'
-                      className='mb-3  col-md-12 '
-                    >
-                      <Tab eventKey='overview' title='Overview'>
-                        <OverviewTab />
-                      </Tab>
-                      <Tab eventKey='feature' title='Features'>
-                        <Featurestab />
-                      </Tab>
-
-                      <Tab eventKey='specification' title='Specification'>
-                        <SpecificationTab />
-                      </Tab>
-                    </Tabs>
-                  </div>
-                </LeftSection>
-                <RightSection>
-                  <div className='widget'>
-                    <DownloadCatalogue
-                      image={item?.catalogueImage}
-                      link={item?.catalogueLink}
-                    />
-                  </div>
-                  <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
-                    <ProductList />
-                  </div>
-                </RightSection>
-              </div>
+      <ProductItemBase>
+        <LeftSection>
+          <FirstRow
+            name={item?.name}
+            // description={item?.description}
+            imageArray={item?.imageCollection}
+          >
+            <div className='product-description'>
+              Mount this system on a general-purpose press machine to achieve
+              <span>
+                {" "}
+                high-speed transfers in 2 Axis for high-speed transfer
+              </span>{" "}
+              processing. <br />
+              The high-speed programmable transfer system drives a transfer unit
+              via a set of servo motors with the help of a double bar mechanism.
+              <br />
+              Three variants of AST2AII series are available so that you can
+              select a transfer pitch appropriate for your purpose.
             </div>
+          </FirstRow>
+
+          <div className='row'>
+            <Tabs
+              defaultActiveKey='overview'
+              id='noanim-tab-example'
+              className='mb-3  col-md-12 '
+            >
+              <Tab eventKey='overview' title='Overview'>
+                <OverviewTab />
+              </Tab>
+              <Tab eventKey='feature' title='Features'>
+                <Featurestab />
+              </Tab>
+
+              <Tab eventKey='specification' title='Specification'>
+                <SpecificationTab />
+              </Tab>
+            </Tabs>
           </div>
-        </div>
-      </div>
+        </LeftSection>
+        <RightSection>
+          <div className='widget'>
+            <DownloadCatalogue
+              image={item?.catalogueImage}
+              link={item?.catalogueLink}
+            />
+          </div>
+          <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
+            <ProductList />
+          </div>
+        </RightSection>
+      </ProductItemBase>
     </>
   );
 };

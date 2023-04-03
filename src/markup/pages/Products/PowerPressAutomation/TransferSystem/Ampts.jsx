@@ -14,6 +14,8 @@ import OverviewTab from "components/Products/Tabs/OverviewTab";
 import FeaturesTab from "components/Products/Tabs/FeaturesTab";
 import BaseTable from "components/Products/BaseTable";
 import SpecificationTab from "components/Products/Tabs/SpecificationTab";
+import ProductItemBase from "components/Products/ProductItemBase";
+
 const item = subProductList.find((item) => item.code === "ampts");
 
 const { double_bar_system } = transferSystemData;
@@ -659,71 +661,62 @@ function ST() {
 const Ampts = () => {
   return (
     <>
-      <div className='blue-bg'>
-        <div className='midContent'>
-          <div className='py-5 section-full'>
-            <div className='container'>
-              <div className='row'>
-                <LeftSection>
-                  <FirstRow
-                    name={item?.name}
-                    // description={item?.description}
-                    image={item?.image}
-                  >
-                    <div className='product-description'>
-                      Customized system{" "}
-                      <span>
-                        designed to achieve transfers between individual presses
-                        in 2 Axis with additional Gripper axis involved.
-                      </span>{" "}
-                      <br />
-                      This Servo programmable transfer system drives a transfer
-                      unit with the help of a Single bar mechanism. <br />
-                      <br />
-                      Three variants of the AMPTS series are available so that
-                      you can select a transfer pitch appropriate for your
-                      purpose.
-                      <br /> This system is designed to function in batches of 3
-                      Presses i.e, Multiple of 3 Presses will decide the number
-                      of Individual systems required to do the job.
-                    </div>
-                  </FirstRow>
-
-                  <div className='row'>
-                    <Tabs
-                      defaultActiveKey='overview'
-                      id='noanim-tab-example'
-                      className='mb-3  col-md-12 '
-                    >
-                      <Tab eventKey='overview' title='Overview'>
-                        <OverviewTab type={type} data={commonCharacteristics} />
-                      </Tab>
-                      <Tab eventKey='feature' title='Features'>
-                        <FeaturesTab type={type} data={standardFeatures} />
-                      </Tab>
-
-                      <Tab eventKey='specification' title='Specification'>
-                        <ST />
-                      </Tab>
-                    </Tabs>
-                  </div>
-                </LeftSection>
-                <RightSection>
-                  <div className='widget'>
-                    <DownloadCatalogue
-                      image={item?.catalogueImage}
-                      link={item?.catalogueLink}
-                    />
-                  </div>
-                  <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
-                    <ProductList />
-                  </div>
-                </RightSection>
-              </div>
+      <ProductItemBase>
+        <LeftSection>
+          <FirstRow
+            name={item?.name}
+            // description={item?.description}
+            image={item?.image}
+          >
+            <div className='product-description'>
+              Customized system{" "}
+              <span>
+                designed to achieve transfers between individual presses in 2
+                Axis with additional Gripper axis involved.
+              </span>{" "}
+              <br />
+              This Servo programmable transfer system drives a transfer unit
+              with the help of a Single bar mechanism. <br />
+              <br />
+              Three variants of the AMPTS series are available so that you can
+              select a transfer pitch appropriate for your purpose.
+              <br /> This system is designed to function in batches of 3 Presses
+              i.e, Multiple of 3 Presses will decide the number of Individual
+              systems required to do the job.
             </div>
+          </FirstRow>
+
+          <div className='row'>
+            <Tabs
+              defaultActiveKey='overview'
+              id='noanim-tab-example'
+              className='mb-3  col-md-12 '
+            >
+              <Tab eventKey='overview' title='Overview'>
+                <OverviewTab type={type} data={commonCharacteristics} />
+              </Tab>
+              <Tab eventKey='feature' title='Features'>
+                <FeaturesTab type={type} data={standardFeatures} />
+              </Tab>
+
+              <Tab eventKey='specification' title='Specification'>
+                <ST />
+              </Tab>
+            </Tabs>
           </div>
-        </div>
-      </div>
+        </LeftSection>
+        <RightSection>
+          <div className='widget'>
+            <DownloadCatalogue
+              image={item?.catalogueImage}
+              link={item?.catalogueLink}
+            />
+          </div>
+          <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
+            <ProductList />
+          </div>
+        </RightSection>
+      </ProductItemBase>
     </>
   );
 };

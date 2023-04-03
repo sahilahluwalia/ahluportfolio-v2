@@ -16,6 +16,7 @@ import OverviewTab from "components/Products/Tabs/OverviewTab";
 import FeaturesTab from "components/Products/Tabs/FeaturesTab";
 import BaseTable from "components/Products/BaseTable";
 import SpecificationTab from "components/Products/Tabs/SpecificationTab";
+import ProductItemBase from 'components/Products/ProductItemBase';
 const item = subProductList.find((item) => item.code === "acsts");
 const { acsts } = transferSystemData;
 const { standardFeatures, commonCharacteristics, type } = acsts;
@@ -661,70 +662,59 @@ function ST() {
 const Acsts = () => {
   return (
     <>
-      <div className='blue-bg'>
-        <div className='midContent'>
-          <div className='py-5  section-full'>
-            <div className='container'>
-              <div className='row'>
-                <LeftSection>
-                  <FirstRow
-                    name={item?.name}
-                    // description={item?.description}
-                    imageArray={item?.imageCollection}
-                  >
-                    <div className='product-description'>
-                      Mount this system on a general-purpose press machine to
-                      achieve automated transfers in 2 Axis with minimal
-                      changes. Best suited for C frame type presses.
-                      <br /> This{" "}
-                      <span>programmable transfer system drives </span>a
-                      transfer unit via a set of servo motors{" "}
-                      <span>
-                        with the help of a Cantilever arrangement single bar
-                        mechanism.
-                      </span>{" "}
-                      <br />
-                      <br /> Three variants of ACSTS series are available so
-                      that you can select a transfer pitch appropriate for your
-                      purpose.
-                    </div>
-                  </FirstRow>
-
-                  <div className='row'>
-                    <Tabs
-                      defaultActiveKey='overview'
-                      id='noanim-tab-example'
-                      className='mb-3  col-md-12 '
-                    >
-                      <Tab eventKey='overview' title='Overview'>
-                        <OverviewTab type={type} data={commonCharacteristics} />
-                      </Tab>
-                      <Tab eventKey='feature' title='Features'>
-                        <FeaturesTab type={type} data={standardFeatures} />
-                      </Tab>
-
-                      <Tab eventKey='specification' title='Specification'>
-                        <ST />
-                      </Tab>
-                    </Tabs>
-                  </div>
-                </LeftSection>
-                <RightSection>
-                  <div className='widget'>
-                    <DownloadCatalogue
-                      image={item?.catalogueImage}
-                      link={item?.catalogueLink}
-                    />
-                  </div>
-                  <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
-                    <ProductList />
-                  </div>
-                </RightSection>
-              </div>
+      <ProductItemBase>
+        <LeftSection>
+          <FirstRow
+            name={item?.name}
+            // description={item?.description}
+            imageArray={item?.imageCollection}
+          >
+            <div className='product-description'>
+              Mount this system on a general-purpose press machine to achieve
+              automated transfers in 2 Axis with minimal changes. Best suited
+              for C frame type presses.
+              <br /> This <span>programmable transfer system drives </span>a
+              transfer unit via a set of servo motors{" "}
+              <span>
+                with the help of a Cantilever arrangement single bar mechanism.
+              </span>{" "}
+              <br />
+              <br /> Three variants of ACSTS series are available so that you
+              can select a transfer pitch appropriate for your purpose.
             </div>
+          </FirstRow>
+
+          <div className='row'>
+            <Tabs
+              defaultActiveKey='overview'
+              id='noanim-tab-example'
+              className='mb-3  col-md-12 '
+            >
+              <Tab eventKey='overview' title='Overview'>
+                <OverviewTab type={type} data={commonCharacteristics} />
+              </Tab>
+              <Tab eventKey='feature' title='Features'>
+                <FeaturesTab type={type} data={standardFeatures} />
+              </Tab>
+
+              <Tab eventKey='specification' title='Specification'>
+                <ST />
+              </Tab>
+            </Tabs>
           </div>
-        </div>
-      </div>
+        </LeftSection>
+        <RightSection>
+          <div className='widget'>
+            <DownloadCatalogue
+              image={item?.catalogueImage}
+              link={item?.catalogueLink}
+            />
+          </div>
+          <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
+            <ProductList />
+          </div>
+        </RightSection>
+      </ProductItemBase>
     </>
   );
 };

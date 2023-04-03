@@ -12,6 +12,7 @@ import LeftSection from "components/Products/LeftSection";
 import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
 import Table from "components/Products/Table";
+import ProductItemBase from "components/Products/ProductItemBase";
 const tableContentInJSON = [
   {
     Model: "",
@@ -1316,53 +1317,45 @@ function SpecificationTab() {
 const Asrf = () => {
   return (
     <>
-      <div className='blue-bg '>
-        <div className='midContent'>
-          <div className='py-5  section-full'>
-            <div className='container'>
-              <div className='row'>
-                <LeftSection>
-                  <FirstRow
-                    name={item?.name}
-                    description={item?.description}
-                    imageArray={item?.imageCollection}
-                  ></FirstRow>
+      <ProductItemBase>
+        <LeftSection>
+          <FirstRow
+            name={item?.name}
+            description={item?.description}
+            imageArray={item?.imageCollection}
+          ></FirstRow>
 
-                  <div className='row'>
-                    <Tabs
-                      defaultActiveKey='overview'
-                      id='noanim-tab-example'
-                      className='mb-3  col-md-12 '
-                    >
-                      <Tab eventKey='overview' title='Overview'>
-                        <OverviewTab />
-                      </Tab>
-                      {/* <Tab eventKey='feature' title='Features'>
+          <div className='row'>
+            <Tabs
+              defaultActiveKey='overview'
+              id='noanim-tab-example'
+              className='mb-3  col-md-12 '
+            >
+              <Tab eventKey='overview' title='Overview'>
+                <OverviewTab />
+              </Tab>
+              {/* <Tab eventKey='feature' title='Features'>
                         <Featurestab />
                       </Tab> */}
 
-                      <Tab eventKey='specification' title='Specification'>
-                        <SpecificationTab />
-                      </Tab>
-                    </Tabs>
-                  </div>
-                </LeftSection>
-                <RightSection>
-                  <div className='widget'>
-                    <DownloadCatalogue
-                      image={item?.catalogueImage}
-                      link={item?.catalogueLink}
-                    />
-                  </div>
-                  <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
-                    <ProductList />
-                  </div>
-                </RightSection>
-              </div>
-            </div>
+              <Tab eventKey='specification' title='Specification'>
+                <SpecificationTab />
+              </Tab>
+            </Tabs>
           </div>
-        </div>
-      </div>
+        </LeftSection>
+        <RightSection>
+          <div className='widget'>
+            <DownloadCatalogue
+              image={item?.catalogueImage}
+              link={item?.catalogueLink}
+            />
+          </div>
+          <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
+            <ProductList />
+          </div>
+        </RightSection>
+      </ProductItemBase>
     </>
   );
 };
