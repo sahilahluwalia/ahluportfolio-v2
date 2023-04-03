@@ -8,6 +8,7 @@ import {
   specialPurposeProductList,
   powerPressAutomationProductList,
 } from "data/productsData";
+import parse from "html-react-parser";
 
 // add products/power-press-automation/ to every item.link
 const forHomePowerPress = powerPressAutomationProductList.map((item) => {
@@ -156,7 +157,7 @@ const ProductSlider = ({}) => {
                     }}
                     // className='title'
                   >
-                    {item.name}
+                    {parse(item.name)}
                   </h6>
 
                   {/* sdfgsg */}

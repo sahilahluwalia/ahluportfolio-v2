@@ -22,7 +22,7 @@ import progesssiveDieImage from "asserts/machine-pics/SheetMetal/Progressive.jpg
 import compoundDieImage from "asserts/machine-pics/SheetMetal/Compound Die.jpg";
 import transferImage from "asserts/machine-pics/SheetMetal/Transfer 1.jpg";
 // import ast2aii1 from "asserts/machine-pics/Design Image Data/2axis db";
-
+import ampf_top from "asserts/machine-pics/topFlap.png";
 function importAll(r) {
   return r.keys().map(r);
 }
@@ -288,6 +288,8 @@ const subProductList = [
     imageCollection: ampfCollection,
     link: universalPath("products/power-press-automation/press-feeders/ampf"),
     catalogueImage: addCatalogueImageFromListByItsName("AMPF Series"),
+    isoView: flap,
+    topView: ampf_top,
   },
 
   {
@@ -561,22 +563,28 @@ const subProductList = [
 
 const sheetMetalProductList = [
   {
-    name: "<span className='highlight-serial'>  Transfer Dies",
+    name: "<span className='highlight-serial'>  Transfer </span> Dies",
     // link: "transfer-dies",
     // cover: true,
+    hideButton: true,
+
     image: transferImage,
   },
   {
-    name: "<span className='highlight-serial'>  Progressive Dies",
+    name: "<span className='highlight-serial'>  Progressive</span> Dies",
     // link: "progressive-dies",
     // cover: true,
+    hideButton: true,
+
     image: progesssiveDieImage,
   },
 
   {
-    name: "<span className='highlight-serial'> Compound Dies",
+    name: "<span className='highlight-serial'> Compound </span> Dies",
     // link: "compound-dies",
     // cover: true,
+    hideButton: true,
+
     image: compoundDieImage,
   },
 ];
@@ -584,19 +592,19 @@ const sheetMetalProductList = [
 const specialPurposeProductList = [
   {
     name: "<span className='highlight-serial'>Operational</span> SPMs",
-    link: "operational-spms",
+    // link: "operational-spms",
     image: operationalSPMImage,
     cover: true,
   },
   {
     name: "<span className='highlight-serial'>Assembly</span> SPMs",
-    link: "assembly-spms",
+    // link: "assembly-spms",
     image: assemblySPMImage,
     cover: true,
   },
   {
     name: "<span className='highlight-serial'>Vision Inspection</span> SPMs",
-    link: "assembly-spms",
+    // link: "assembly-spms",
     image: visionSPMImage,
     cover: true,
   },
@@ -606,6 +614,7 @@ const powerPressAutomationProductList = [
   {
     name: "<span className='highlight-serial'>Transfer</span> System ",
     link: "transfer-system",
+
     image: getRandomItemFromArray(transferSystemCollection),
     // "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
   },
@@ -753,6 +762,40 @@ utilized by customizing to suit Transfer system & its respective press.`,
       `Energy Monitoring system facilitates Asset management.`,
       `Completely programmable system.`,
       `Large sized Operator display (HMI) for ease.`,
+    ],
+  },
+  ampf: {
+    commonCharacteristics: [
+      `This Mechanical Flap design is synchronised with Press Ram
+      movement proving To-Fro motion for Scrap / Component extraction.`,
+      `As Mechanical interlinking is done with respect to Flap functionality,
+      change in speed of Power Press gets auto reflected into Flap
+      movement.`,
+      `This design is easily suited with change in inclination angle based on
+      requirement as per design standard`,
+      `Eliminates the need of Scrap / Component manual (human involved)
+      removal in each stroke saving operation time cycle and provides
+      capability for the operator to run the operation uninterrupted in a
+      continuous manner.`,
+    ],
+  },
+  asrf: {
+    introduction: [
+      `Out of available two variants in same series ASRF, MS series
+      is used for lower thickness range sheet feeding which lies
+      between 0.3 – 3.5 mm.`,
+      `MS Series is the economical variant developed to automate
+      the sheet feeding operation where Sheet coils can not be
+      directly used and sheared Sheets are the only option.`,
+      `HS Series is the Heavy duty variant for thicker sheet feeding
+      till 6mm Thickness.`,
+      `Also, Servo Roll Feeder comes with Two Stationed system
+      based on application to synchronize with each other to form
+      a unified arrangement such that sheet remains in contact
+      with any one station always throughout operation cycle.`,
+      `Press synchronization along with Feeder is must to make
+      sure operation stays smooth and uninterrupted for efficient
+      results.`,
     ],
   },
 };

@@ -80,15 +80,15 @@ const tableContentInJSON = [
 ];
 
 const item = subProductList.find((item) => item.code === "asrf");
-const { acsts } = transferSystemData;
-const { standardFeatures, commonCharacteristics } = acsts;
+const { asrf } = transferSystemData;
+const { introduction } = asrf;
 function OverviewTab() {
   return (
     <>
-      <h4>Common Characteristics of Two Bar System</h4>
+      <h4>Introduction</h4>
       <div className='px-3'>
         <ol type='1'>
-          {commonCharacteristics.map((item, index) => {
+          {introduction.map((item, index) => {
             return (
               <li style={{ textAlign: "left" }} key={index}>
                 {item}
@@ -100,37 +100,37 @@ function OverviewTab() {
     </>
   );
 }
-function Featurestab() {
-  return (
-    <>
-      <h4>Standard Features</h4>
+// function Featurestab() {
+//   return (
+//     <>
+//       <h4>Standard Features</h4>
 
-      <div className='px-3'>
-        <ol type='1'>
-          {standardFeatures.map((item, index) => {
-            return (
-              <li
-                // add css for a span inside this li
+//       <div className='px-3'>
+//         <ol type='1'>
+//           {standardFeatures?.map((item, index) => {
+//             return (
+//               <li
+//                 // add css for a span inside this li
 
-                style={{
-                  textAlign: "left",
-                }}
-                key={index}
-              >
-                {parse(item)}
-              </li>
-            );
-          })}
-        </ol>
-      </div>
-    </>
-  );
-}
+//                 style={{
+//                   textAlign: "left",
+//                 }}
+//                 key={index}
+//               >
+//                 {parse(item)}
+//               </li>
+//             );
+//           })}
+//         </ol>
+//       </div>
+//     </>
+//   );
+// }
 function SpecificationTab() {
   return (
     <>
-      <h4>Layout</h4>
-      <img src={item.layout} alt='' srcset='' />
+      {/* <h4>Topview layout</h4>
+      <img src={item.layout} alt='' srcset='' /> */}
       <h4>Specifications</h4>
       <h6>Servo Roll Feeder Heavy series (HS)</h6>
 
@@ -1337,9 +1337,9 @@ const Asrf = () => {
                       <Tab eventKey='overview' title='Overview'>
                         <OverviewTab />
                       </Tab>
-                      <Tab eventKey='feature' title='Features'>
+                      {/* <Tab eventKey='feature' title='Features'>
                         <Featurestab />
-                      </Tab>
+                      </Tab> */}
 
                       <Tab eventKey='specification' title='Specification'>
                         <SpecificationTab />

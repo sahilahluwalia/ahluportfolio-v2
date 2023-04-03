@@ -9,7 +9,7 @@ import ImageSlider from "components/Products/ImageSlider";
 import { sheetMetalProductList } from "data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 
-const productList = [];
+
 
 const SheetMetalDies = () => {
   //   console.log(catalogueList);

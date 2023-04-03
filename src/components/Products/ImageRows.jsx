@@ -61,9 +61,18 @@ const ImageRows = (props) => {
                     marginTop: "auto",
                   }}
                 >
-                  <Link to={item.link}>
+                  {item.hideButton ? (
+                    <></>
+                  ) : (
+                    <Link to={item.link}>
+                      <button className='readMoreButton  mb-4'>
+                        Read more
+                      </button>
+                    </Link>
+                  )}
+                  {/* <Link to={item.link}>
                     <button className='readMoreButton  mb-4'>Read more</button>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
