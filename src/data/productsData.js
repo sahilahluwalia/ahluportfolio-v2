@@ -594,18 +594,24 @@ const specialPurposeProductList = [
     name: "<span className='highlight-serial'>Operational</span> SPMs",
     // link: "operational-spms",
     image: operationalSPMImage,
+    hideButton: true,
+
     cover: true,
   },
   {
     name: "<span className='highlight-serial'>Assembly</span> SPMs",
     // link: "assembly-spms",
     image: assemblySPMImage,
+    hideButton: true,
+
     cover: true,
   },
   {
     name: "<span className='highlight-serial'>Vision Inspection</span> SPMs",
     // link: "assembly-spms",
     image: visionSPMImage,
+    hideButton: true,
+
     cover: true,
   },
 ];

@@ -11,6 +11,7 @@ import {
   missionImage,
   bannerImage,
 } from "data/imagesData";
+import { Helmet } from "react-helmet";
 var bnr3 = require("./../../images/banner/bnr3.jpg");
 var bg1 = require("./../../images/background/bg-video.png");
 var bg2 = require("./../../images/background/bg1.jpg");
@@ -56,6 +57,14 @@ const timeLineData = [
 const About = (props) => {
   return (
     <>
+      <Helmet>
+        {/* <meta
+          name='description'
+          content='Our vision is to be the leading provider of cutting-edge manufacturing automation solutions that drive growth and success for our clients'
+        /> */}
+        {/* <title>My Title</title> */}
+        {/* <meta name='description' content='Nested component' /> */}
+      </Helmet>
       <div className='page-content bg-white'>
         {/* <div
           className="dlab-bnr-inr overlay-black-middle text-center bg-pt"
@@ -279,7 +288,7 @@ const About = (props) => {
           <div
             id='whyus'
             className='section-full bg-white content-inner-2'
-           
+
             // style={{ backgroundImage: "url(" + bg + ")" }}
           >
             <div className='container'>

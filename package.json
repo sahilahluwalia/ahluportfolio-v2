@@ -22,6 +22,7 @@
     "react-bootstrap": "^2.7.2",
     "react-countup": "^6.4.1",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-image-gallery": "^1.2.11",
     "react-image-magnify": "^2.7.4",
     "react-modal-video": "^2.0.0",
@@ -43,7 +44,8 @@
     "start": "react-scripts start ",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": "react-app"
