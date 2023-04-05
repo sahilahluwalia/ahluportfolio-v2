@@ -20,7 +20,11 @@ const SpecialPurposeMachines = () => {
             <div className='container'>
               <div className='text-center section-head'>
                 <h2 className=' box-title m-tb0'>Special Purpose Machines</h2>
-                <p>We have a wide range of Special Purpose Machines .</p>
+                <p>
+                  We customize Special Purpose Machines based on applicational
+                  requirements in the Sheet Metal industry & Electrical Assembly
+                  field.
+                </p>
                 <div className='dlab-separator bg-primary'></div>
               </div>
               {/* <ImageSlider images={images} /> */}

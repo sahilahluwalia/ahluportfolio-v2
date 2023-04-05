@@ -50,7 +50,7 @@ const usefulLinks = [
   },
 
   {
-    title: "Tripfold",
+    title: "Trifold",
     link: tripod,
     href: true,
   },

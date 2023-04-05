@@ -97,7 +97,7 @@ const Homepage = () => {
       <Parallax bgImage={bg} strength={20}>
         <div
           style={{
-            padding: "5rem 0rem",
+            padding: "8rem 0rem",
           }}
           className='hero-section home-bnr1'
         >
@@ -182,7 +182,7 @@ const Homepage = () => {
               <div className='col-lg-6 col-md-6 col-sm-6 bg-primary align-items-center d-flex'>
                 <div className='dlab-services-box text-white'>
                   <h2 className='service-year'>
-                    7<small>years</small>
+                    7<small>+ years as pvt ltd</small>
                   </h2>
                   <h3 className='title m-b0'>
                     We are Building the Future of Manufacturing

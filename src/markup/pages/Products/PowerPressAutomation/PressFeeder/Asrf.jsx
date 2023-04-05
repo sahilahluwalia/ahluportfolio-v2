@@ -1323,7 +1323,18 @@ const Asrf = () => {
             name={item?.name}
             description={item?.description}
             imageArray={item?.imageCollection}
-          ></FirstRow>
+          >
+            <div className='product-description'>
+              ASRF is dedicatedly developed to facilitate easy feeding of sheet
+              length feeding where coil feeding is not possible.
+              <br />
+              Generally, Thicker sheets lie in this criteria but smaller
+              thickness options provide better suitability of the product. The
+              best part is "It is synchronized with Power Press. Automatically
+              each stroke is accountable with only sheet feeding/insertion via
+              (existing) Manpower.
+            </div>
+          </FirstRow>
 
           <div className='row'>
             <Tabs
