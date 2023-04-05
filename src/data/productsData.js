@@ -592,7 +592,7 @@ const sheetMetalProductList = [
 const specialPurposeProductList = [
   {
     name: "<span className='highlight-serial'>Operational</span> SPMs",
-    // link: "operational-spms",
+    link: "",
     image: operationalSPMImage,
     hideButton: true,
 
@@ -600,7 +600,7 @@ const specialPurposeProductList = [
   },
   {
     name: "<span className='highlight-serial'>Assembly</span> SPMs",
-    // link: "assembly-spms",
+    link: "",
     image: assemblySPMImage,
     hideButton: true,
 
@@ -608,7 +608,7 @@ const specialPurposeProductList = [
   },
   {
     name: "<span className='highlight-serial'>Vision Inspection</span> SPMs",
-    // link: "assembly-spms",
+    link: "",
     image: visionSPMImage,
     hideButton: true,
 

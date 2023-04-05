@@ -25,6 +25,7 @@ import Testimonial9 from "../element/testimonial9";
 import Testmonial4 from "../element/testmonial4";
 import Testimonial6 from "../element/testimonial6";
 import { youtubeLinkImage, sevenyearsImage } from "data/imagesData";
+import NewProductSlider from "components/Homepage/NewProductSlider";
 const faqContent = [
   {
     question: "1. Innovation need",
@@ -104,7 +105,6 @@ const Homepage = () => {
           <div className='container'>
             <div className='row align-items-center'>
               <div className='col-lg-12 col-md-12 '>
-                
                 <div className='hero-content'>
                   <h1 className='title'>
                     Transform Your Manufacturing with Ahlu Engineers' Custom
@@ -136,7 +136,20 @@ const Homepage = () => {
           </div>
         </div>
       </Parallax>
-      <ProductSlider />
+      {/* <ProductSlider /> */}
+
+      <div className='section-full bg-gray content-inner about-carousel-ser'>
+        <div className='container'>
+          <div className='section-head text-center'>
+            <h2 className='title'>
+              Products We cater
+              <br />
+            </h2>
+          </div>
+
+          <NewProductSlider slidesToShow={3} />
+        </div>
+      </div>
       <div className='section-full' id='choose-us'>
         <div className='row m-lr0'>
           <div
