@@ -37,7 +37,7 @@ function fisherYates(array) {
   return array;
 }
 
-console.log(forHomePowerPress);
+// console.log(forHomePowerPress);
 
 const content = fisherYates([...forHomePowerPress, ...forHomeSpecialPurpose]);
 class ServicesSlider1 extends Component {

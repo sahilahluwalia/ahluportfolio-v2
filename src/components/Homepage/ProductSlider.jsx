@@ -24,7 +24,7 @@ const forHomeSpecialPurpose = specialPurposeProductList.map((item) => {
   };
 });
 
-console.log(forHomePowerPress);
+// console.log(forHomePowerPress);
 
 const content = [...forHomePowerPress, ...forHomeSpecialPurpose];
 // const content = [

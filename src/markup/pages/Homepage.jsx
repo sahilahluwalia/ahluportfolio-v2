@@ -2,15 +2,15 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import LogoSlider from "../../components/Homepage/LogoSlider";
-import BlogSlider1 from "../element/blogSlider1";
-import { blogContent3, servicesContent4 } from "../element/SliderContent";
-import ServicesSlider1 from "../element/servicesSlider1";
-import Testimonial12 from "../element/testimonial12";
+// import BlogSlider1 from "../element/blogSlider1";
+// import { blogContent3, servicesContent4 } from "../element/SliderContent";
+// import ServicesSlider1 from "../element/servicesSlider1";
+// import Testimonial12 from "../element/testimonial12";
 //import HomeSlider from '../element/homeslider1'
 import { Parallax } from "react-parallax";
-import CounterSection from "../element/counterSection";
-import Team1 from "../element/team1";
-import ServicesSlider4 from "../element/servicesSlider4";
+// import CounterSection from "../element/counterSection";
+// import Team1 from "../element/team1";
+// import ServicesSlider4 from "../element/servicesSlider4";
 import "../../css/plugins.css";
 import "../../css/style.css";
 import "../../css/skin/skin-1.css";
@@ -19,11 +19,11 @@ import ScrollToTop from "../element/scrollToTop";
 import bg from "asserts/bg.jpg";
 import { Accordion } from "react-bootstrap";
 import { companyDetails } from "data/websiteData";
-import ProductSlider from "components/Homepage/ProductSlider";
+// import ProductSlider from "components/Homepage/ProductSlider";
 import Testmonial from "components/Homepage/Testmonial";
-import Testimonial9 from "../element/testimonial9";
-import Testmonial4 from "../element/testmonial4";
-import Testimonial6 from "../element/testimonial6";
+// import Testimonial9 from "../element/testimonial9";
+// import Testmonial4 from "../element/testmonial4";
+// import Testimonial6 from "../element/testimonial6";
 import { youtubeLinkImage, sevenyearsImage } from "data/imagesData";
 import NewProductSlider from "components/Homepage/NewProductSlider";
 const faqContent = [
@@ -63,11 +63,6 @@ const faqContent = [
       "We work collaboratively with our clients, partners, and employees to achieve shared goals and build a strong, supportive community.",
   },
 ];
-
-// const bg = require("../../images/background/bg2.jpg");
-const bg2 = require("../../images/background/bg4.jpg");
-const bg3 = require("../../images/background/map-bg.png");
-const bg4 = require("../../images/main-slider/slide8.jpg");
 
 const whyToAutomate = [
   {
@@ -309,7 +304,8 @@ const Homepage = () => {
                     <div className='faq-video'>
                       <Link
                         className='play-btn popup-youtube'
-                        to='/https://www.youtube.com/watch?v=_FRZVScwggM'
+                        target='_blank'
+                        to='https://www.youtube.com/channel/UCPhDoFi0nlojklbst-BT-LA'
                       >
                         <i className='flaticon-play-button text-white'></i>
                       </Link>

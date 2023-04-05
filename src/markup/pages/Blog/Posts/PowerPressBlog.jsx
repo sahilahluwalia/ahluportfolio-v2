@@ -7,7 +7,7 @@ import bluepress from "asserts/Blog/bluepress.png";
 import greenpress from "asserts/Blog/greenpress.png";
 const bg = require("images/banner/bnr1.jpg");
 const item = blogLists.find((item) => item.code == 1);
-console.log(item);
+// console.log(item);
 
 const safetyMeasure = [
   "If you own a power press machine at your workshop it is necessary that people handling that have the proper knowledge and skills about the working of the machine.",
