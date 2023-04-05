@@ -104,6 +104,7 @@ const Homepage = () => {
           <div className='container'>
             <div className='row align-items-center'>
               <div className='col-lg-12 col-md-12 '>
+                
                 <div className='hero-content'>
                   <h1 className='title'>
                     Transform Your Manufacturing with Ahlu Engineers' Custom

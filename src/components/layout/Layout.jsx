@@ -27,15 +27,10 @@ function Layout() {
         headerTitle='Ahlu Engineers'
         headerCaption='Online'
         bodyBgColor='#e5ddd5'
-        chatPersonName='Ahlu Engineers'
+        chatPersonName='Ahlu Engineers Support'
         chatMessage={
           <>
-            <div
-              style={{
-                margin: "1rem 0rem 0rem 0rem",
-              }}
-            >
-              {" "}
+            <div>
               Hi there 👋
               <br /> How can I help you?
             </div>
