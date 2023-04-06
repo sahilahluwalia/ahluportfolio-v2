@@ -9,8 +9,9 @@ import {
   ipDataToLocalStorage,
 } from "../../fetchers";
 import { companyDetails, headerDetails } from "../../data/websiteData";
+import { specialPurposeMachineImage as bg } from "data/imagesData";
 
-const bg = require("../../images/background/bg5.jpg");
+// const bg = require("../../images/background/bg5.jpg");
 
 const Quote = () => {
   const reducer = (state, action) => {
@@ -76,6 +77,9 @@ const Quote = () => {
       alertToggle("error");
     }
   };
+
+
+  
   return (
     <>
       <div className='page-content bg-white'>

@@ -23,8 +23,10 @@ const ProductList = ({ withoutImage }) => {
         <>
           <div
             style={{
-              backgroundColor: "#f5f5f5",
+              backgroundColor: "white",
               padding: "20px",
+              border: "1px solid #ff5e14",
+
               // borderRadius: "0.5rem",
             }}
           >
@@ -85,10 +87,12 @@ const ProductList = ({ withoutImage }) => {
       ) : (
         <>
           <div
+            // className='background-primaryColor'
             style={{
-              backgroundColor: "#f5f5f5",
+              backgroundColor: "white",
               padding: "20px",
               borderRadius: "0.5rem",
+              border: "1px solid #ff5e14",
             }}
           >
             <h6>Our Products</h6>
@@ -96,6 +100,7 @@ const ProductList = ({ withoutImage }) => {
               {randomizedSubProductList.map((item) => (
                 <Link to={item.link}>
                   <div className='d-flex mb-3 gap-2' key={item.id}>
+                    <div></div>
                     <img
                       src={
                         item.image
@@ -105,7 +110,8 @@ const ProductList = ({ withoutImage }) => {
                       alt=''
                       style={{
                         height: "80px",
-                        width: "70px",
+                        width: "100%",
+                        maxWidth: "70px",
                         objectFit: "contain",
                         backgroundColor: "white",
                       }}
@@ -114,6 +120,8 @@ const ProductList = ({ withoutImage }) => {
                     <div
                       style={{
                         fontSize: "0.8rem",
+                        // color: "white",
+                        fontWeight: "500",
                       }}
                     >
                       {item.name}
