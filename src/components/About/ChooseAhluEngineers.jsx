@@ -5,38 +5,46 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import pic from "images/portfolio/mining/image_1.jpg";
-
+import iotPic from "asserts/About Us website related/1.jpg";
+import secondPic from "asserts/About Us website related/2.png";
+import thirdPic from "asserts/About Us website related/3.png";
+import fourthPic from "asserts/About Us website related/4.png";
+import fifthPic from "asserts/About Us website related/5.png";
+import sixthPic from "asserts/About Us website related/6.png";
+import seventhPic from "asserts/About Us website related/7.png";
+import eighthPic from "asserts/About Us website related/8.png";
+import ninthPic from "asserts/About Us website related/9.png";
 const contentMaster = [
   {
-    image: require("images/portfolio/mining/image_1.jpg"),
+    image: secondPic,
     icon: "flaticon-robot-arm",
     title: "Custom Mechanical and Electrical Solutions",
     description:
       " Our in-house team of experienced designers and engineers specialize in creating customized solutions that meet the unique needs of our clients.",
   },
   {
-    image: require("images/portfolio/mining/image_4.jpg"),
+    image: fifthPic,
     icon: "flaticon-fuel-truck",
     title: "Extensive Portfolio of Successful Projects",
     description:
       " With a diverse portfolio of successful projects across various industries and sectors, our experienced professionals demonstrate deep expertise and a commitment to delivering high-quality results.",
   },
   {
-    image: require("images/portfolio/mining/image_4.jpg"),
+    image: ninthPic,
     icon: "flaticon-fuel-truck",
     title: " Efficient Electrical and Programming Department",
     description:
       " Our in-house electrical and programming team allows for immediate updates and changes to our systems without relying on external contractors, ensuring efficient and seamless operations.",
   },
   {
-    image: require("images/portfolio/mining/image_3.jpg"),
+    image: eighthPic,
     icon: "flaticon-fuel-station",
     title: "Strong Vendor Network for High-Quality Materials",
     description:
       "Our extensive network of trusted vendors and suppliers allows us to source high-quality materials and components at competitive prices, ensuring accuracy in building and fabrication.",
   },
   {
-    image: require("images/portfolio/mining/image_2.jpg"),
+    image: iotPic,
     icon: "flaticon-factory-1",
     title: "In-House IIOT Team for Future Scope Integration",
     description:
@@ -44,7 +52,7 @@ const contentMaster = [
   },
 
   {
-    image: require("images/portfolio/mining/image_4.jpg"),
+    image: thirdPic,
     icon: "flaticon-fuel-truck",
     title: "Dedicated 24/7 Support Team",
     description:
@@ -52,14 +60,14 @@ const contentMaster = [
   },
 
   {
-    image: require("images/portfolio/mining/image_4.jpg"),
+    image: seventhPic,
     icon: "flaticon-fuel-truck",
     title: "Commitment to Quality and Innovation",
     description:
       "Our values of innovation, responsibility, attention to detail, and dignity guide everything we do, ensuring we always deliver the highest quality solutions and services to our clients.",
   },
   {
-    image: require("images/portfolio/mining/image_4.jpg"),
+    image: sixthPic,
     icon: "flaticon-fuel-truck",
     title: "Cutting-Edge Technologies for Greater ROI",
     description:
@@ -67,7 +75,7 @@ const contentMaster = [
   },
 
   {
-    image: require("images/portfolio/mining/image_3.jpg"),
+    image: fourthPic,
     icon: "flaticon-fuel-station",
     title: "Support team functions",
     description:
@@ -136,8 +144,16 @@ const ChooseAhluEngineers = ({}) => {
           >
             <div className='service-box-4 text-center'>
               <div className='service-images m-b15'>
-                <img src={item?.image} alt='' />
-                <i class={item.icon}></i>
+                <img
+                  style={{
+                    height: "200px",
+                    width: "200px",
+                    objectFit: "contain",
+                  }}
+                  src={item?.image}
+                  alt=''
+                />
+                {/* <i class={item.icon}></i> */}
               </div>
               <div className='service-content'>
                 <h6 className='title'>

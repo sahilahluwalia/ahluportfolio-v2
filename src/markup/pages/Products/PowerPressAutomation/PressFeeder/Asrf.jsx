@@ -12,6 +12,7 @@ import LeftSection from "components/Products/LeftSection";
 import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
 import Table from "components/Products/Table";
+import ProductItemBase from "components/Products/ProductItemBase";
 const tableContentInJSON = [
   {
     Model: "",
@@ -80,15 +81,15 @@ const tableContentInJSON = [
 ];
 
 const item = subProductList.find((item) => item.code === "asrf");
-const { acsts } = transferSystemData;
-const { standardFeatures, commonCharacteristics } = acsts;
+const { asrf } = transferSystemData;
+const { introduction } = asrf;
 function OverviewTab() {
   return (
     <>
-      <h4>Common Characteristics of Two Bar System</h4>
+      <h4>Introduction</h4>
       <div className='px-3'>
         <ol type='1'>
-          {commonCharacteristics.map((item, index) => {
+          {introduction.map((item, index) => {
             return (
               <li style={{ textAlign: "left" }} key={index}>
                 {item}
@@ -100,36 +101,37 @@ function OverviewTab() {
     </>
   );
 }
-function Featurestab() {
-  return (
-    <>
-      <div className='px-3'>
-        <h4>Standard Features of Two Bar System</h4>
-        <ol type='1'>
-          {standardFeatures.map((item, index) => {
-            return (
-              <li
-                // add css for a span inside this li
+// function Featurestab() {
+//   return (
+//     <>
+//       <h4>Standard Features</h4>
 
-                style={{
-                  textAlign: "left",
-                }}
-                key={index}
-              >
-                {parse(item)}
-              </li>
-            );
-          })}
-        </ol>
-      </div>
-    </>
-  );
-}
+//       <div className='px-3'>
+//         <ol type='1'>
+//           {standardFeatures?.map((item, index) => {
+//             return (
+//               <li
+//                 // add css for a span inside this li
+
+//                 style={{
+//                   textAlign: "left",
+//                 }}
+//                 key={index}
+//               >
+//                 {parse(item)}
+//               </li>
+//             );
+//           })}
+//         </ol>
+//       </div>
+//     </>
+//   );
+// }
 function SpecificationTab() {
   return (
     <>
-      <h4>Layout</h4>
-      <img src={item.layout} alt='' srcset='' />
+      {/* <h4>Topview layout</h4>
+      <img src={item.layout} alt='' srcset='' /> */}
       <h4>Specifications</h4>
       <h6>Servo Roll Feeder Heavy series (HS)</h6>
 
@@ -1315,53 +1317,56 @@ function SpecificationTab() {
 const Asrf = () => {
   return (
     <>
-      <div className='bg-white '>
-        <div className='midContent'>
-          <div className='py-5 bg-white section-full'>
-            <div className='container'>
-              <div className='row'>
-                <LeftSection>
-                  <FirstRow
-                    name={item?.name}
-                    description={item?.description}
-                    imageArray={item?.imageCollection}
-                  ></FirstRow>
-
-                  <div className='row'>
-                    <Tabs
-                      defaultActiveKey='overview'
-                      id='noanim-tab-example'
-                      className='mb-3  col-md-12 '
-                    >
-                      <Tab eventKey='overview' title='Overview'>
-                        <OverviewTab />
-                      </Tab>
-                      <Tab eventKey='feature' title='Features'>
-                        <Featurestab />
-                      </Tab>
-
-                      <Tab eventKey='specification' title='Specification'>
-                        <SpecificationTab />
-                      </Tab>
-                    </Tabs>
-                  </div>
-                </LeftSection>
-                <RightSection>
-                  <div className='widget'>
-                    <DownloadCatalogue
-                      image={item?.catalogueImage}
-                      link={item?.catalogueLink}
-                    />
-                  </div>
-                  <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
-                    <ProductList />
-                  </div>
-                </RightSection>
-              </div>
+      <ProductItemBase>
+        <LeftSection>
+          <FirstRow
+            name={item?.name}
+            description={item?.description}
+            imageArray={item?.imageCollection}
+          >
+            <div className='product-description'>
+              ASRF is dedicatedly developed to facilitate easy feeding of sheet
+              length feeding where coil feeding is not possible.
+              <br />
+              Generally, Thicker sheets lie in this criteria but smaller
+              thickness options provide better suitability of the product. The
+              best part is "It is synchronized with Power Press. Automatically
+              each stroke is accountable with only sheet feeding/insertion via
+              (existing) Manpower.
             </div>
+          </FirstRow>
+
+          <div className='row'>
+            <Tabs
+              defaultActiveKey='overview'
+              id='noanim-tab-example'
+              className='mb-3  col-md-12 '
+            >
+              <Tab eventKey='overview' title='Overview'>
+                <OverviewTab />
+              </Tab>
+              {/* <Tab eventKey='feature' title='Features'>
+                        <Featurestab />
+                      </Tab> */}
+
+              <Tab eventKey='specification' title='Specification'>
+                <SpecificationTab />
+              </Tab>
+            </Tabs>
           </div>
-        </div>
-      </div>
+        </LeftSection>
+        <RightSection>
+          <div className='widget'>
+            <DownloadCatalogue
+              image={item?.catalogueImage}
+              link={item?.catalogueLink}
+            />
+          </div>
+          <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
+            <ProductList />
+          </div>
+        </RightSection>
+      </ProductItemBase>
     </>
   );
 };

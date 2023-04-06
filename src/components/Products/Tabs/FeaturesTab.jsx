@@ -1,11 +1,12 @@
 import React from "react";
 import parse from "html-react-parser";
 
-const FeaturesTab = ({ data }) => {
+const FeaturesTab = ({ data, type }) => {
   return (
     <>
+      <h4>Standard Features </h4>
+
       <div className='px-3'>
-        <h4>Standard Features of Two Bar System</h4>
         <ol type='1'>
           {data.map((item, index) => {
             return (

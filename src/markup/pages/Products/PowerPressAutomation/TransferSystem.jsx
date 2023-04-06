@@ -10,26 +10,27 @@ import { RightSection } from "components/Products/RightSection";
 import ProductList from "components/Products/ProductList";
 import ImageSlider from "components/Products/ImageSlider";
 import { transferSystemProducts } from "data/productsData";
+import Testmonial from "components/Homepage/Testmonial";
+
 const images = [ast3aii, ast2aii, acsts, ampts];
 
 const TransferSystem = () => {
   return (
     <>
-      <div className='bg-white '>
+      <div className='blue-bg'>
         <div className='midContent'>
           {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
-          <div className='py-5 bg-white section-full'>
+          <div className='py-5 section-full'>
             <div className='container'>
               {/* <ImageSlider images={images} /> */}
               <div className='row'>
                 <LeftSection mainScreen>
+                  <h1 className=' text-black m-tb0'>TRANSFER SYSTEMS</h1>
+                  <div className='dlab-separator bg-primary'></div>
+
                   <div className='text-center section-head'>
-                    {/* <h2 className=' box-title m-tb0'>
-                      Transfer System
-                      <span className='bg-primary'></span>
-                    </h2>
-                    <p>We have a wide range of Transfer System.</p>
-                    <div className='dlab-separator bg-primary'></div> */}
+                    {/* <p>We have a wide range of Transfer System.</p>
+                     */}
 
                     {/* create a reponsive 3 columns in desktop and 1 colum in mobile screen in bootstrap */}
 

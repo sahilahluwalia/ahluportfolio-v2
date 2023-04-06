@@ -8,6 +8,7 @@ import {
   specialPurposeProductList,
   powerPressAutomationProductList,
 } from "data/productsData";
+import parse from "html-react-parser";
 
 // add products/power-press-automation/ to every item.link
 const forHomePowerPress = powerPressAutomationProductList.map((item) => {
@@ -23,7 +24,7 @@ const forHomeSpecialPurpose = specialPurposeProductList.map((item) => {
   };
 });
 
-console.log(forHomePowerPress);
+// console.log(forHomePowerPress);
 
 const content = [...forHomePowerPress, ...forHomeSpecialPurpose];
 // const content = [
@@ -83,7 +84,7 @@ const content = [...forHomePowerPress, ...forHomeSpecialPurpose];
 const ProductSlider = ({}) => {
   const data = content;
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     arrows: true,
@@ -114,16 +115,16 @@ const ProductSlider = ({}) => {
       },
     ],
   };
-  console.log(content);
+  // console.log(content);
   return (
     <>
-      <div className=' text-center'>
-        <h2 className='mytitle'>Products We Offer</h2>
+      <div className='section-head text-black text-center'>
+        <h2 className='title'>Products We cater</h2>
       </div>
 
       <Slider
         style={{
-          paddingBottom: "1rem",
+          paddingBottom: "1.5rem",
         }}
         {...settings}
         className='img-carousel service-box-4-area  '
@@ -135,13 +136,21 @@ const ProductSlider = ({}) => {
             data-wow-delay='0.2s'
             key={id}
           >
-            <div className='service-box-4 text-center'>
+            <div
+              style={{
+                textAlign: "center",
+              }}
+              className='service-box-4 '
+            >
               <Link to={item.link}>
                 <div className='service-images m-b15'>
                   <img
                     style={{
-                      height: "200px",
-                      objectFit: "contain",
+                      // height: "250px",
+                      // width: "250px",
+                      height: "400px",
+                      width: "350px",
+                      objectFit: item.cover ? "cover" : "contain",
                     }}
                     src={item?.image}
                     alt=''
@@ -156,7 +165,7 @@ const ProductSlider = ({}) => {
                     }}
                     // className='title'
                   >
-                    {item.name}
+                    {parse(item.name)}
                   </h6>
 
                   {/* sdfgsg */}

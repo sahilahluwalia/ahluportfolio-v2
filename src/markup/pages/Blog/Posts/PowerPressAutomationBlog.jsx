@@ -11,7 +11,7 @@ import automation_one from "asserts/Blog/automation.png";
 import automation_two from "asserts/Blog/automation_2.png";
 const bg = require("images/banner/bnr1.jpg");
 const item = blogLists.find((item) => item.code == 2);
-console.log(item);
+// console.log(item);
 
 const commonMethod = [
   {

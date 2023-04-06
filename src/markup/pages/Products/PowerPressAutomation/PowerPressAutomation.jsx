@@ -5,21 +5,18 @@ import { powerPressAutomationProductList as productList } from "data/productsDat
 const PowerPressAutomation = () => {
   return (
     <>
-      <div className='bg-white  '>
+      <div className='blue-bg  '>
         <div className='midContent'>
           {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
-        <div className='py-2 bg-white section-full'>
+          <div className='py-2 section-full'>
             <div className='container'>
               <div className='text-center section-head'>
                 <h2 className=' box-title m-tb0'>
-                  Power press Automation Solutions
+                  POWER PRESS Automation Solutions
                   <span className='bg-primary'></span>
                 </h2>
                 <p>
-                  We offer wide range of Power press Automation Solutions
-                  ranging from Standard/Customized Feeding Systems, Customized
-                  Tools and Dies with Operational Tapping/Assembly embedded in
-                  same System.
+                We offer complete Power press automation solutions including Transfer Systems, Tools & Dies and other solutions to cover all your manufacturing needs to compete in Global market.
                 </p>
                 <div className='dlab-separator bg-primary'></div>
 

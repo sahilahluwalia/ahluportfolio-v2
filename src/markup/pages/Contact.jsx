@@ -4,7 +4,7 @@ import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import { contactForm } from "../../fetchers";
 import { companyDetails, socialMediaLinks } from "../../data/websiteData";
-const bg = require("../../images/banner/bnr1.jpg");
+import { specialPurposeMachineImage as bg } from "data/imagesData";
 
 const Contact = () => {
   const [inputValues, setInputValues] = useState({
@@ -55,7 +55,10 @@ const Contact = () => {
       <div className='page-content bg-white'>
         <div
           className='dlab-bnr-inr overlay-black-middle bg-pt'
-          style={{ backgroundImage: "url(" + bg + ")" }}
+          style={{
+            backgroundImage: "url(" + bg + ")",
+            backgroundPosition: "center",
+          }}
         >
           <div className='container'>
             <div className='dlab-bnr-inr-entry'>

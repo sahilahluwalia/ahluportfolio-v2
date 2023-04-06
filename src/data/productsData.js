@@ -15,8 +15,14 @@ import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
 import asr3aii_layout from "asserts/machine-pics/asr3aii-layout.png";
 import acsts_layout from "asserts/machine-pics/acsts-layout.png";
 import ampts_layout from "asserts/machine-pics/ampts-layout.png";
+import visionSPMImage from "asserts/Vision SPM.jpg";
+import assemblySPMImage from "asserts/Assembly SPM.jpg";
+import operationalSPMImage from "asserts/Operational SPM.jpg";
+import progesssiveDieImage from "asserts/machine-pics/SheetMetal/Progressive.jpg";
+import compoundDieImage from "asserts/machine-pics/SheetMetal/Compound Die.jpg";
+import transferImage from "asserts/machine-pics/SheetMetal/Transfer 1.jpg";
 // import ast2aii1 from "asserts/machine-pics/Design Image Data/2axis db";
-
+import ampf_top from "asserts/machine-pics/topFlap.png";
 function importAll(r) {
   return r.keys().map(r);
 }
@@ -39,6 +45,9 @@ const ampfCollection = importAll(
 const transferSystemCollection = importAll(
   require.context("asserts/machine-pics/transferSystem")
 );
+const sheetMetalCollection = importAll(
+  require.context("asserts/machine-pics/SheetMetal")
+);
 const a2iCollection = importAll(
   require.context("asserts/machine-pics/Design Image Data/2aii")
 );
@@ -60,6 +69,8 @@ const catalogueList = cl;
 const masterProductLink = [
   {
     name: "Power Press Automation",
+    nameHTML:
+      "<span className='highlight-serial'>Power Press</span> Automation",
     link: "power-press-automation",
     fullLink: "/products/power-press-automation",
     image:
@@ -67,6 +78,8 @@ const masterProductLink = [
   },
   {
     name: "Special Purpose Machines",
+    nameHTML:
+      "<span className='highlight-serial'>Special Purpose</span> Machines",
     link: "special-purpose-machines",
     fullLink: "/products/special-purpose-machines",
     image:
@@ -269,11 +282,14 @@ const subProductList = [
   },
   {
     code: "ampf",
-    name: "Ahlu Mechanical Press Flap Series- AMPF ",
+    name: "Ahlu Mechanical Press Flap Series- AMPF",
     catalogueLink: addCatalogueFromListByItsName("AMPF Series"),
     image: ampf,
     imageCollection: ampfCollection,
+    link: universalPath("products/power-press-automation/press-feeders/ampf"),
     catalogueImage: addCatalogueImageFromListByItsName("AMPF Series"),
+    isoView: flap,
+    topView: ampf_top,
   },
 
   {
@@ -447,6 +463,7 @@ const subProductList = [
     ],
     imageCollection: acstsCollection,
     catalogueImage: addCatalogueImageFromListByItsName("ACSTS Series"),
+    catalogueLink: addCatalogueFromListByItsName("ACSTS Series"),
   },
   {
     name: "Ahlu Multi Press Transfer System- AMPTS Series",
@@ -531,6 +548,7 @@ const subProductList = [
       "products/power-press-automation/transfer-system/ampts"
     ),
     catalogueImage: addCatalogueImageFromListByItsName("AMPTS Series"),
+    catalogueLink: addCatalogueFromListByItsName("AMPTS Series"),
   },
   {
     name: "Ahlu Servo Roll Feeder type- ASRF Series",
@@ -541,47 +559,79 @@ const subProductList = [
     link: universalPath("products/power-press-automation/press-feeders/asrf"),
     catalogueImage: addCatalogueImageFromListByItsName("ASRF Series"),
   },
+];
+
+const sheetMetalProductList = [
   {
-    name: "AST3AII / AST2AII Series Ahlu Servo Transfer Double Bar type",
+    name: "<span className='highlight-serial'>  Transfer </span> Dies",
+    // link: "transfer-dies",
+    // cover: true,
+    hideButton: true,
+
+    image: transferImage,
+  },
+  {
+    name: "<span className='highlight-serial'>  Progressive</span> Dies",
+    // link: "progressive-dies",
+    // cover: true,
+    hideButton: true,
+
+    image: progesssiveDieImage,
+  },
+
+  {
+    name: "<span className='highlight-serial'> Compound </span> Dies",
+    // link: "compound-dies",
+    // cover: true,
+    hideButton: true,
+
+    image: compoundDieImage,
   },
 ];
 
 const specialPurposeProductList = [
   {
-    name: "Operational SPMs",
-    link: "operational-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+    name: "<span className='highlight-serial'>Operational</span> SPMs",
+    link: "",
+    image: operationalSPMImage,
+    hideButton: true,
+
+    cover: true,
   },
   {
-    name: "Assembly SPMs",
-    link: "assembly-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    name: "<span className='highlight-serial'>Assembly</span> SPMs",
+    link: "",
+    image: assemblySPMImage,
+    hideButton: true,
+
+    cover: true,
   },
   {
-    name: "Vision Inspection SPMs",
-    link: "assembly-spms",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    name: "<span className='highlight-serial'>Vision Inspection</span> SPMs",
+    link: "",
+    image: visionSPMImage,
+    hideButton: true,
+
+    cover: true,
   },
 ];
 
 const powerPressAutomationProductList = [
   {
-    name: "Transfer System ",
+    name: "<span className='highlight-serial'>Transfer</span> System ",
     link: "transfer-system",
+
     image: getRandomItemFromArray(transferSystemCollection),
     // "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
   },
   {
-    name: "Sheet Metal Dies",
+    name: "<span className='highlight-serial'>Sheet Metal </span> Dies",
     link: "sheet-metal-dies",
-    image: getRandomItemFromArray(transferSystemCollection),
+    image: getRandomItemFromArray(sheetMetalCollection),
     // "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
   },
   {
-    name: "Other Press Automation Accessories",
+    name: "<span className='highlight-serial'>Other Press Automation</span> Accessories",
     link: "press-feeders",
     image: otherAccessories,
   },
@@ -589,27 +639,27 @@ const powerPressAutomationProductList = [
 
 const transferSystemProducts = [
   {
-    name: "AST2AII Series",
+    name: "<span className='highlight-serial'> AST2AII  </span>Series",
     link: "ast2aii",
     image: ast2aii,
   },
   {
-    name: "AST2AI Series",
+    name: "<span className='highlight-serial'> AST2AI </span> Series",
     link: "ast2ai",
     image: ast2ai,
   },
   {
-    name: "AST3AII Series",
+    name: "<span className='highlight-serial'> AST3AII</span> Series",
     link: "ast3aii",
     image: ast3aii_frontside,
   },
   {
-    name: "ACSTS Series",
+    name: "<span className='highlight-serial'>ACSTS</span> Series",
     link: "acsts",
     image: acsts,
   },
   {
-    name: "AMPTS Series",
+    name: "<span className='highlight-serial'>AMPTS</span> Series",
     link: "ampts",
     image: ampts,
   },
@@ -618,13 +668,13 @@ const transferSystemProducts = [
 const pressFeederProducts = [
   {
     name: "Rolling Servo Feeders",
-    subheading: "ASRF Series",
+    subheading: "<span className='highlight-serial'>ASRF</span> Series",
     link: "asrf",
     image: asrf,
   },
   {
     name: "Mechanical Press Flap",
-    subheading: "AMPF Series",
+    subheading: "<span className='highlight-serial'>AMPF</span> Series",
     series: "ampfs",
     link: "ampf",
     image: flap,
@@ -633,6 +683,7 @@ const pressFeederProducts = [
 
 const transferSystemData = {
   double_bar_system: {
+    type: "Double Bar System",
     standardFeatures: [
       "<span>Precision Servo driven</span> design for continuous use.",
       "Ethernet IP based Automation controller.",
@@ -659,6 +710,7 @@ const transferSystemData = {
   },
 
   acsts: {
+    type: "Single Bar System",
     commonCharacteristics: [
       `Each Servo Axis is operated with high accuracy with the help of
 Precision Servos.`,
@@ -718,6 +770,40 @@ utilized by customizing to suit Transfer system & its respective press.`,
       `Large sized Operator display (HMI) for ease.`,
     ],
   },
+  ampf: {
+    commonCharacteristics: [
+      `This Mechanical Flap design is synchronised with Press Ram
+      movement proving To-Fro motion for Scrap / Component extraction.`,
+      `As Mechanical interlinking is done with respect to Flap functionality,
+      change in speed of Power Press gets auto reflected into Flap
+      movement.`,
+      `This design is easily suited with change in inclination angle based on
+      requirement as per design standard`,
+      `Eliminates the need of Scrap / Component manual (human involved)
+      removal in each stroke saving operation time cycle and provides
+      capability for the operator to run the operation uninterrupted in a
+      continuous manner.`,
+    ],
+  },
+  asrf: {
+    introduction: [
+      `Out of available two variants in same series ASRF, MS series
+      is used for lower thickness range sheet feeding which lies
+      between 0.3 – 3.5 mm.`,
+      `MS Series is the economical variant developed to automate
+      the sheet feeding operation where Sheet coils can not be
+      directly used and sheared Sheets are the only option.`,
+      `HS Series is the Heavy duty variant for thicker sheet feeding
+      till 6mm Thickness.`,
+      `Also, Servo Roll Feeder comes with Two Stationed system
+      based on application to synchronize with each other to form
+      a unified arrangement such that sheet remains in contact
+      with any one station always throughout operation cycle.`,
+      `Press synchronization along with Feeder is must to make
+      sure operation stays smooth and uninterrupted for efficient
+      results.`,
+    ],
+  },
 };
 export {
   masterProductLink,
@@ -729,4 +815,5 @@ export {
   pressFeederProducts,
   allPicCollections,
   specialPurposeProductList,
+  sheetMetalProductList,
 };

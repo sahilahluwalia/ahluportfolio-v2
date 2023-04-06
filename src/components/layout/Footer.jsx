@@ -44,17 +44,17 @@ const usefulLinks = [
     // link: "/career",
   },
   {
-    title: "Blog",
+    title: "Literature",
     link: "https://blog.ahluengineers.com",
     href: true,
   },
 
   {
-    title: "Tripod",
+    title: "Trifold",
     link: tripod,
     href: true,
   },
-  
+
   {
     title: "Download Catalogues",
     link: "/catalogues#catalogues",
@@ -193,8 +193,8 @@ const Footer = () => {
                 <div className='widget widget_about'>
                   <h4 className='footer-title'>About AhluEngineers</h4>
                   <p>
-                    Serving in 3+ countries in Industrial automation solutions
-                    for customized developement.
+                    Serving in 3+ countries in Industrial Automation Solutions
+                    for customized development.
                   </p>
                   <Link to={"/about"}>Read More</Link>
                 </div>

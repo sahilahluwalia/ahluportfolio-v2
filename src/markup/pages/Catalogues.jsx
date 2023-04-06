@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { contactForm } from "../../fetchers";
 import { catalogueList } from "../../utils/catalogues";
+import { specialPurposeMachineImage as bg } from "data/imagesData";
 
-import { companyDetails, socialMediaLinks } from "../../data/websiteData";
-const bg = require("../../images/banner/bnr1.jpg");
 const Catalogues = () => {
   console.log(catalogueList);
+
+  const editedCatalogueList = catalogueList.map((item) => {
+    return {
+      ...item,
+      serialName: item.name.split(" ")[1],
+      serialTag: item.name.split(" ")[2],
+    };
+  });
+  console.log(editedCatalogueList);
   //   console.log();
   return (
     <>
@@ -14,7 +21,10 @@ const Catalogues = () => {
         <div className='midContent'>
           <div
             className='dlab-bnr-inr overlay-black-middle bg-pt '
-            style={{ backgroundImage: "url(" + bg + ")" }}
+            style={{
+              backgroundImage: "url(" + bg + ")",
+              backgroundPosition: "center",
+            }}
           >
             <div className='container '>
               <div className='dlab-bnr-inr-entry'>
@@ -45,11 +55,17 @@ const Catalogues = () => {
                 </p>
                 <div className='dlab-separator bg-primary'></div>
                 <div className='row'>
-                  {catalogueList.map((catalogue) => {
+                  {editedCatalogueList.map((catalogue) => {
                     return (
                       <>
                         <div className='col-xl-3  align-items-stretch col-md-4 col-sm-6 g-3 service-box style3'>
-                          <h4 className='m-b10'>{catalogue.name}</h4>
+                          <h4 className='m-b10'>
+                            <span className='highlight-serial'>
+                              {catalogue.serialName}
+                            </span>{" "}
+                            {catalogue.serialTag}
+                          </h4>
+
                           <a
                             href={catalogue.link}
                             target='_blank'
