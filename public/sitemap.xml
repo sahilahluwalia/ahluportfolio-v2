@@ -1,0 +1,95 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <url>
+
+      <loc>http://www.ahluengineers.com/</loc>
+
+      <lastmod>2023-04-07</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+   <url>
+
+      <loc>http://www.ahluengineers.com/about</loc>
+
+      <lastmod>2023-04-07</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+    <url>
+
+      <loc>http://www.ahluengineers.com/quote</loc>
+
+      <lastmod>2023-04-07</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+    <url>
+
+      <loc>http://www.ahluengineers.com/contact</loc>
+
+      <lastmod>2023-04-07</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+    <url>
+
+      <loc>http://www.ahluengineers.com/products</loc>
+
+      <lastmod>2023-04-07</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+     <url>
+
+      <loc>http://www.ahluengineers.com/products/power-press-automation</loc>
+
+      <lastmod>2023-04-07</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+     <url>
+
+      <loc>http://www.ahluengineers.com/products/special-purpose-machines</loc>
+
+      <lastmod>2023-04-07</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+   <url>
+
+      <loc>http://www.ahluengineers.com/catalogues</loc>
+
+      <lastmod>2023-04-07</lastmod>
+
+      <changefreq>monthly</changefreq>
+
+      <priority>0.8</priority>
+
+   </url>
+
+</urlset> 
