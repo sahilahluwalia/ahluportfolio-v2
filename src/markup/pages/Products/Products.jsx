@@ -9,6 +9,7 @@ import { masterProductLink as productList } from "../../../data/productsData";
 const Products = () => {
   //   console.log(catalogueList);
   //   console.log();
+  console.log(productList);
   return (
     <>
       {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}

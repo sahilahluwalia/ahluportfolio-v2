@@ -73,8 +73,11 @@ const masterProductLink = [
       "<span className='highlight-serial'>Power Press</span> Automation",
     link: "power-press-automation",
     fullLink: "/products/power-press-automation",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/Power_Press_bNX250.jpg",
+    image: getRandomItemFromArray(
+      transferSystemCollection,
+      otherAccessories,
+      sheetMetalCollection
+    ),
   },
   {
     name: "Special Purpose Machines",
@@ -82,8 +85,11 @@ const masterProductLink = [
       "<span className='highlight-serial'>Special Purpose</span> Machines",
     link: "special-purpose-machines",
     fullLink: "/products/special-purpose-machines",
-    image:
-      "https://www.bansalpresses.com/wp-content/uploads/2022/11/3-in-1-decoiler-straightener-feeder.jpg",
+    image: getRandomItemFromArray([
+      operationalSPMImage,
+      visionSPMImage,
+      assemblySPMImage,
+    ]),
   },
   // {
   //   name: "Vision Inspection System",

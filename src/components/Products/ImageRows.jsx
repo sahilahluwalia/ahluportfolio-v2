@@ -5,7 +5,7 @@ const ImageRows = (props) => {
   const { data, noOfRows } = props;
   return (
     <>
-      {data.map((item) => {
+      {data?.map((item) => {
         return (
           <>
             <div
@@ -30,7 +30,7 @@ const ImageRows = (props) => {
                 }}
               >
                 <Link
-                  to={item.link}
+                  to={item?.link}
                   // href={item.link}
                   // target='_blank'
                   // rel='noopener noreferrer'
@@ -38,12 +38,12 @@ const ImageRows = (props) => {
                   <div className='product-image'>
                     <figure>
                       <img
-                        src={item.image}
+                        src={item?.image}
                         alt=''
                         style={{
                           height: "400px",
                           width: "350px",
-                          objectFit: item.cover ? "cover" : "contain",
+                          objectFit: item?.cover ? "cover" : "contain",
                         }}
                         className='card-img-top'
                       />
@@ -52,9 +52,9 @@ const ImageRows = (props) => {
                 </Link>
 
                 <h4 className='m-b10 '>
-                  {item.nameHTML ? parse(item.nameHTML) : parse(item.name)}
+                  {item?.nameHTML ? parse(item?.nameHTML) : parse(item?.name)}
                 </h4>
-                {item.subheading ? <h5>{parse(item.subheading)}</h5> : <></>}
+                {item?.subheading ? <h5>{parse(item?.subheading)}</h5> : <></>}
                 {/* <div className='mb-3'>View All →</div> */}
                 <div
                   style={{
@@ -64,7 +64,7 @@ const ImageRows = (props) => {
                   {item.hideButton ? (
                     <></>
                   ) : (
-                    <Link to={item.link}>
+                    <Link to={item?.link}>
                       <button className='readMoreButton  mb-4'>
                         Read more
                       </button>
