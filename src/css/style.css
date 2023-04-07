@@ -16402,6 +16402,11 @@ font-weight: 700;
   background-color: #f1f9ff;
 }
 
+.background-primaryColor {
+  background-color: var(--color-primary);
+
+}
+
 /* timeline */
 
 .main-timeline {
