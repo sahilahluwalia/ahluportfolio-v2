@@ -1,8 +1,5 @@
-import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
-import Header from "../../components/layout/Header";
-import Footer from "../../components/layout/Footer";
-import Testimonial1 from "../element/testimonial1";
+import React from "react";
+
 import parse from "html-react-parser";
 import ChooseAhluEngineers from "components/About/ChooseAhluEngineers";
 import {
@@ -10,11 +7,12 @@ import {
   visionImage,
   missionImage,
   bannerImage,
+  ahluSign
 } from "data/imagesData";
 import { Helmet } from "react-helmet";
-var bnr3 = require("./../../images/banner/bnr3.jpg");
-var bg1 = require("./../../images/background/bg-video.png");
-var bg2 = require("./../../images/background/bg1.jpg");
+// var bnr3 = require("./../../images/banner/bnr3.jpg");
+// var bg1 = require("./../../images/background/bg-video.png");
+// var bg2 = require("./../../images/background/bg1.jpg");
 
 const timeLineData = [
   {
@@ -259,9 +257,9 @@ const About = (props) => {
                       <h4 className="m-b0">Tejendra Singh Ahluwalia</h4>
                       <span className="font-14">Company Director</span> */}
                       <img
-                        src={require("../../images/sign.png")}
+                        src={ahluSign}
                         width='200'
-                        alt=''
+                        alt='ahlu signature'
                       />
                       <h4 className='m-b0'>Satyam Ahluwalia</h4>
                       <span className='font-14'>Project Manager</span>

@@ -6,6 +6,7 @@ import sandharImage from "asserts/SANDHAR.png";
 import youtubeLinkImage from "asserts/machine-pics/Youtube/ytlink.png";
 import specialPurposeMachineImage from "asserts/machine-pics/Youtube/specialPurposeMachine.png";
 import sevenyearsImage from "asserts/machine-pics/Youtube/sevenYears.png";
+import ahluSign from 'asserts/ahluSignSmall.png'
 export {
   storyImage,
   visionImage,
@@ -15,4 +16,5 @@ export {
   youtubeLinkImage,
   sevenyearsImage,
   specialPurposeMachineImage,
+  ahluSign
 };
