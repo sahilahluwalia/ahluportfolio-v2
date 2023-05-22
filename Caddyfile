@@ -1,5 +1,5 @@
 ahluengineers.com www.ahluengineers.com {
 	encode zstd gzip
-	root \* /root/website/ahluPortfolio/build
+	root * /root/website/ahluPortfolio/build
 	file_server browse
 }
