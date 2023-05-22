@@ -120,9 +120,9 @@ const masterProductListItems = masterProductLink.map((item, index) => {
 const masterProductsListItemsWithSubmenu = (
   <li>
     <Link to={"#"}>
-      Products<i className='fa fa-chevron-down'></i>
+      Products<i className="fa fa-chevron-down"></i>
     </Link>
-    <ul className='sub-menu'>{masterProductListItems}</ul>
+    <ul className="sub-menu">{masterProductListItems}</ul>
   </li>
 );
 const addCatalogueFromListByItsName = (name) => {
@@ -146,7 +146,7 @@ const universalPath = (str) => {
 const subProductList = [
   {
     code: "ast2aii",
-    name: "Ahlu Servo Transfer 2 Axis Double Bar type- AST2SAII",
+    name: "Ahlu Servo Transfer 2 Axis Double Bar type- AST2AII",
     description: "description of the item",
     link: universalPath(
       "products/power-press-automation/transfer-system/ast2aii"
@@ -217,7 +217,7 @@ const subProductList = [
   },
   {
     code: "ast2ai",
-    name: "Ahlu Servo Transfer 2 Axis Single Bar type- AST2SAI",
+    name: "Ahlu Servo Transfer 2 Axis Single Bar type- AST2AI",
     description: "description of the item",
     link: universalPath(
       "products/power-press-automation/transfer-system/ast2ai"
@@ -299,7 +299,7 @@ const subProductList = [
   },
 
   {
-    name: "Ahlu Servo Transfer 3 Axis Double Bar type- AST3SAII",
+    name: "Ahlu Servo Transfer 3 Axis Double Bar type- AST3AII",
     image: ast3aii,
     code: "ast3aii",
     tableContentInJSON: [
