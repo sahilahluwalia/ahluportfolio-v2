@@ -4,8 +4,6 @@ import { catalogueList } from "../../utils/catalogues";
 import { specialPurposeMachineImage as bg } from "data/imagesData";
 
 const Catalogues = () => {
-  console.log(catalogueList);
-
   const editedCatalogueList = catalogueList.map((item) => {
     return {
       ...item,
@@ -13,8 +11,6 @@ const Catalogues = () => {
       serialTag: item.name.split(" ")[2],
     };
   });
-  console.log(editedCatalogueList);
-  //   console.log();
   return (
     <>
       <div className=" bg-white ">
