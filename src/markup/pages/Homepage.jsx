@@ -137,7 +137,7 @@ const Homepage = () => {
         <div className='container'>
           <div className='section-head text-center'>
             <h2 className='title'>
-              Products We cater
+              Products We Cater
               <br />
             </h2>
           </div>

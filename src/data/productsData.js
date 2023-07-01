@@ -51,6 +51,8 @@ const sheetMetalCollection = importAll(
 const a2iCollection = importAll(
   require.context("asserts/machine-pics/Design Image Data/2aii")
 );
+const  electricalPanelCollection =importAll(  require.context( "asserts/machine-pics/electrical-panels"))
+
 // console.log(ast2aiiCollection);
 
 const allPicCollections = [
@@ -91,14 +93,13 @@ const masterProductLink = [
       assemblySPMImage,
     ]),
   },
-  // {
-  //   name: "Vision Inspection System",
-  //   link: "vision-inspection-system",
-  //   fullLink: "/products/vision-inspection-system",
-
-  //   image:
-  //     "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
-  // },
+  {
+    name: "Electrical Panels",
+    nameHTML:   "<span className='highlight-serial'>Electrical</span> Panels",
+    link: "electrical-panels",
+    fullLink: "/products/electrical-panels",
+    image: getRandomItemFromArray(electricalPanelCollection),
+  },
 ];
 
 const productIDMaker = (str, index) => {
@@ -573,7 +574,6 @@ const sheetMetalProductList = [
     // link: "transfer-dies",
     // cover: true,
     hideButton: true,
-
     image: transferImage,
   },
   {
@@ -581,7 +581,6 @@ const sheetMetalProductList = [
     // link: "progressive-dies",
     // cover: true,
     hideButton: true,
-
     image: progesssiveDieImage,
   },
 
@@ -590,7 +589,6 @@ const sheetMetalProductList = [
     // link: "compound-dies",
     // cover: true,
     hideButton: true,
-
     image: compoundDieImage,
   },
 ];
@@ -601,7 +599,6 @@ const specialPurposeProductList = [
     link: "",
     image: operationalSPMImage,
     hideButton: true,
-
     cover: true,
   },
   {
@@ -609,7 +606,6 @@ const specialPurposeProductList = [
     link: "",
     image: assemblySPMImage,
     hideButton: true,
-
     cover: true,
   },
   {
@@ -617,11 +613,30 @@ const specialPurposeProductList = [
     link: "",
     image: visionSPMImage,
     hideButton: true,
-
     cover: true,
   },
 ];
-
+const electricalPanelProductList=[{
+  name: "<span className='highlight-serial'>PPC</span> Panel ",
+  link: "apfc-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+},{
+  name: "<span className='highlight-serial'>MCC </span> Panel ",
+  link: "mcc-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+},{
+  name: "<span className='highlight-serial'>APFC  </span> Panel ",
+  link: "apfc-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+},{
+  name: "<span className='highlight-serial'>DOL  </span> Panel ",
+  link: "dol-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+},{
+  name: "<span className='highlight-serial'>HVAC   </span> Panel ",
+  link: "hvac-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+}]
 const powerPressAutomationProductList = [
   {
     name: "<span className='highlight-serial'>Transfer</span> System ",
@@ -822,4 +837,5 @@ export {
   allPicCollections,
   specialPurposeProductList,
   sheetMetalProductList,
+  electricalPanelProductList
 };

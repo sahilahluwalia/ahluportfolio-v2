@@ -1,0 +1,46 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import LeftSection from "components/Products/LeftSection";
+import FirstRow from "components/Products/FirstRow";
+import { RightSection } from "components/Products/RightSection";
+import ProductList from "components/Products/ProductList";
+import ImageRows from "components/Products/ImageRows";
+import { electricalPanelProductList as productList } from "data/productsData";
+// import { companyDetails, socialMediaLinks } from "../../data/websiteData";
+
+const ElectricalPanels = () => {
+    //   console.log(catalogueList);
+    //   console.log();
+    return (
+        <>
+            <div className='blue-bg '>
+                <div className='midContent'>
+                    {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
+                    <div className='py-2 section-full'>
+                        <div className='container'>
+                            <div className='text-center section-head'>
+                                <h2 className=' box-title m-tb0'>Electrical Panels</h2>
+                                <p>
+                                    We customize Electrical Panels based on applicational
+                                    requirements in the Sheet Metal industry & Electrical Assembly
+                                    field.
+                                </p>
+                                <div className='dlab-separator bg-primary'></div>
+                            </div>
+                            {/* <ImageSlider images={images} /> */}
+                            <div className='row'>
+                                <div className='text-center section-head'>
+                                    <div className='row gx-5'>
+                                        <ImageRows data={productList} noOfRows={4} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default ElectricalPanels;
