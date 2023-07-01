@@ -616,8 +616,9 @@ const specialPurposeProductList = [
     cover: true,
   },
 ];
-const electricalPanelProductList=[{
-  name: "<span className='highlight-serial'>PPC</span> Panel ",
+const electricalPanelProductList=[
+    {
+  name: "<span className='highlight-serial'>PCC</span> Panel ",
   link: "apfc-panel",
   image: getRandomItemFromArray(electricalPanelCollection),
 },{
@@ -701,6 +702,168 @@ const pressFeederProducts = [
     image: flap,
   },
 ];
+
+const electricalPanelsProducts = {
+  apfc: {
+    name: "APFC Panel",
+    features: [],
+    standardFeatures: [	"Compact design",
+	"Trouble free functionality",
+	"Durability",
+	"Negligible maintenance"
+],
+    commonCharacteristics: [],
+  },
+  pcc: {
+    name: "PCC Panel",
+    features: []
+
+  }
+}
+const subElectricalPanelsList=[
+  {
+    code: "pcc",
+    name: "PCC Panel",
+    description: "description of the item",
+    link: universalPath(
+        "products/power-press-automation/transfer-system/ast2aii"
+    ),
+    tableContentInJSON: [
+      {
+        Item: "X Axis / Transfer pitch",
+        Unit: "mm",
+        "AST2AII-125L": "0-125",
+        "AST2AII-250L": "0-250",
+        "AST2AII-500L": "0-500",
+      },
+      {
+        Item: "Y Axis / Clamping Stroke",
+        Unit: "mm",
+        "AST2AII-125L": "0-40",
+        "AST2AII-250L": "0-65",
+        "AST2AII-500L": "0-125",
+      },
+      {
+        Item: "Feed Bar Size",
+        Unit: "mm",
+        "AST2AII-125L": "65",
+        "AST2AII-250L": "80",
+        "AST2AII-500L": "90",
+      },
+      {
+        Item: "Weight Capacity",
+        Unit: "kg",
+        "AST2AII-125L": "2",
+        "AST2AII-250L": "3",
+        "AST2AII-500L": "5",
+      },
+      {
+        Item: "Feeding Accuracy",
+        Unit: "mm",
+        "AST2AII-125L": "± 0.1",
+        "AST2AII-250L": "± 0.1",
+        "AST2AII-500L": "± 0.1",
+      },
+      {
+        Item: "Maximum Stroke Feed",
+        Unit: "spm",
+        "AST2AII-125L": "40",
+        "AST2AII-250L": "30",
+        "AST2AII-500L": "20",
+      },
+      {
+        Item: "Main Dimensions",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+      {
+        Item: "Supported Bolster Width",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+    ],
+    imageCollection: ast2aiiCollection,
+    catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
+    image: ast2aii,
+    layout: asr2aii_layout,
+    catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
+  },
+  {
+    code: "apfc",
+    name: "APFC Panel",
+    description: "description of the item",
+    link: universalPath(
+        "products/power-press-automation/transfer-system/ast2aii"
+    ),
+    tableContentInJSON: [
+      {
+        Item: "X Axis / Transfer pitch",
+        Unit: "mm",
+        "AST2AII-125L": "0-125",
+        "AST2AII-250L": "0-250",
+        "AST2AII-500L": "0-500",
+      },
+      {
+        Item: "Y Axis / Clamping Stroke",
+        Unit: "mm",
+        "AST2AII-125L": "0-40",
+        "AST2AII-250L": "0-65",
+        "AST2AII-500L": "0-125",
+      },
+      {
+        Item: "Feed Bar Size",
+        Unit: "mm",
+        "AST2AII-125L": "65",
+        "AST2AII-250L": "80",
+        "AST2AII-500L": "90",
+      },
+      {
+        Item: "Weight Capacity",
+        Unit: "kg",
+        "AST2AII-125L": "2",
+        "AST2AII-250L": "3",
+        "AST2AII-500L": "5",
+      },
+      {
+        Item: "Feeding Accuracy",
+        Unit: "mm",
+        "AST2AII-125L": "± 0.1",
+        "AST2AII-250L": "± 0.1",
+        "AST2AII-500L": "± 0.1",
+      },
+      {
+        Item: "Maximum Stroke Feed",
+        Unit: "spm",
+        "AST2AII-125L": "40",
+        "AST2AII-250L": "30",
+        "AST2AII-500L": "20",
+      },
+      {
+        Item: "Main Dimensions",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+      {
+        Item: "Supported Bolster Width",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+    ],
+    imageCollection: ast2aiiCollection,
+    catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
+    image: ast2aii,
+    layout: asr2aii_layout,
+    catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
+  },
+]
 
 const transferSystemData = {
   double_bar_system: {
@@ -837,5 +1000,7 @@ export {
   allPicCollections,
   specialPurposeProductList,
   sheetMetalProductList,
-  electricalPanelProductList
+  electricalPanelProductList,
+  subElectricalPanelsList,
+  electricalPanelsProducts
 };

@@ -116,7 +116,7 @@ import ApfcPanel from "./pages/Products/ElectricalPanels/ApfcPanel";
 import DolPanel from "./pages/Products/ElectricalPanels/DolPanel";
 import HvacPanel from "./pages/Products/ElectricalPanels/HvacPanel";
 import MccPanel from "./pages/Products/ElectricalPanels/MccPanel";
-import PpcPanel from "./pages/Products/ElectricalPanels/PpcPanel";
+import PccPanel from "./pages/Products/ElectricalPanels/PccPanel";
 const Router = () => {
   const location = useLocation();
   const { pathname, hash, key } = useLocation();
@@ -198,7 +198,7 @@ const Router = () => {
             <Route path='dol-panel' element={<DolPanel />} />
             <Route path='hvac-panel' element={<HvacPanel />} />
             <Route path='mcc-panel' element={<MccPanel />} />
-            <Route path='ppc-panel' element={<PpcPanel />} />
+            <Route path='pcc-panel' element={<PccPanel />} />
           </Route>
         </Route>
         <Route path='enguiry' element={<Quote />} />

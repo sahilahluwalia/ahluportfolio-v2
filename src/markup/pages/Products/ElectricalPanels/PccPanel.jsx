@@ -1,9 +1,9 @@
 import React from 'react';
 
-function PpcPanel(props) {
+function PccPanel(props) {
     return (
         <div></div>
     );
 }
 
-export default PpcPanel;
+export default PccPanel;
