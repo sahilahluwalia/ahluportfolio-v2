@@ -436,7 +436,7 @@ function SpecificationTab() {
                 valign='middle'
                 align='center'
               >
-                65
+                60
               </td>
               <td
                 style={{

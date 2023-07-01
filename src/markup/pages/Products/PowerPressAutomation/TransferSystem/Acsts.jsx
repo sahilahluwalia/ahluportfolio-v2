@@ -296,7 +296,7 @@ function ST() {
                   align='center'
                 >
                   <font size={3} face>
-                    65
+                    60
                   </font>
                 </td>
                 <td
