@@ -65,416 +65,56 @@ function Featurestab() {
 function ST() {
     return (
         <>
-            <h4>Topview layout</h4>
-            <img src={item.topView} alt='' srcset='' />
-            <h4>Isometric layout</h4>
-            <img src={item.isoView} alt='' srcset='' />
-            <p>
-                *Shown only for easy reference purposes and may vary based on the actual
-                component.
-            </p>
             <h4>Specifications</h4>
-
-            <div className='table-responsive text-center'>
+            <div className='table-responsive text-center pt-0'>
                 <BaseTable>
                     <table
                         className='table table-bordered table-striped'
                         cellSpacing={0}
-                        border={0}
-                    >
-                        <colgroup width={85} span={5} />
-                        <tbody>
-                        <tr>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                height={20}
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    Parameters
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    Unit
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    AMPF-100
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    AMPF-150
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    AMPF-200
-                                </font>
-                            </td>
+                        border={0}>
+                        <colgroup width={85} span={6} />
+                        <tbody><tr>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" height={20} align="center"><font size={3} face>Sr. No.</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>MODEL NO.</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>Unit</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>BLANK SIZE</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>FEED DISTANCE</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>THICKNESS</font></td>
                         </tr>
                         <tr>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                height={20}
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    Press Stroke.
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    mm
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={100}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    100
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={150}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    150
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={200}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    200
-                                </font>
-                            </td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={1} sdnum="16393;" valign="middle" height={20} align="center"><font size={3} face>1</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>ABF-02-05-160</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>MM</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>∅21-50</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={160} sdnum="16393;" valign="middle" align="center"><font size={3} face>160</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>0.9 to 3</font></td>
                         </tr>
                         <tr>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                height={20}
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    Press Speed Max.
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    mm
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={100}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    100
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={75}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    75
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={50}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    50
-                                </font>
-                            </td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={2} sdnum="16393;" valign="middle" height={20} align="center"><font size={3} face>2</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>ABF-05-10-160</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>MM</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>∅51-100</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={320} sdnum="16393;" valign="middle" align="center"><font size={3} face>320</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>1 to 4</font></td>
                         </tr>
                         <tr>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                height={20}
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    Flap Stroke Max.
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    mm
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={150}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    150
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={300}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    300
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={500}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    500
-                                </font>
-                            </td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={3} sdnum="16393;" valign="middle" height={20} align="center"><font size={3} face>3</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>ABF-10-15-200</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>MM</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>∅101-150</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={400} sdnum="16393;" valign="middle" align="center"><font size={3} face>400</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>1 to 5</font></td>
                         </tr>
                         <tr>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                height={20}
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    Flap Width.
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    mm
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={100}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    100
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={150}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    150
-                                </font>
-                            </td>
-                            <td
-                                style={{
-                                    borderTop: "1px solid #000000",
-                                    borderBottom: "1px solid #000000",
-                                    borderLeft: "1px solid #000000",
-                                    borderRight: "1px solid #000000",
-                                }}
-                                sdval={200}
-                                sdnum='16393;'
-                                valign='middle'
-                                align='center'
-                            >
-                                <font size={3} face>
-                                    200
-                                </font>
-                            </td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={4} sdnum="16393;" valign="middle" height={20} align="center"><font size={3} face>4</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>ABF-15-19-250</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>MM</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>∅151-190</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} sdval={500} sdnum="16393;" valign="middle" align="center"><font size={3} face>500</font></td>
+                            <td style={{borderTop: '1px solid #000000', borderBottom: '1px solid #000000', borderLeft: '1px solid #000000', borderRight: '1px solid #000000'}} valign="middle" align="center"><font size={3} face>2 to 6</font></td>
                         </tr>
-                        </tbody>
-                    </table>
+                        </tbody></table>
+
                 </BaseTable>
             </div>
 
@@ -497,15 +137,12 @@ const Abf = () => {
                         imageArray={item?.imageCollection}
                     >
                         <div className='product-description'>
-                            AMPF series facilitate to eliminate the strain of scrap / pierced
-                            part removal from the die in each operation by synchronizing with
-                            power presses.
-                            <br />
-                            This not only reduces the Operator fatigue strain of unloading
-                            separately but also can help in automizing the operation if the
-                            loading of components is performed via separate feeders. Thus
-                            increasing efficiency and running the Power press at its peak
-                            efficient cycle/speed.
+                            1. Ahlu Blank Feeder series is powered by the use of a suitable sized Pneumatic cylinder for its To and Fro operation cycles. <br/>
+                            2. Its sturdy and heavy design not only provides strength while its M.O.C being Tool steel also gives low wear and tear resistance which eventually provides higher life expectancy.<br/>
+                            3. Our design utilizes Linear Bearings with Linear Guide rails for proper alignment of its linear movement. Its Low clearance & accurate design provides smoother working cycles.<br/>
+                            4. It’s double decker design reduces the operation cycle time and increases the overall time productivity ratio.<br/>
+                            5. Magazine based design inculcates no Operator’s direct involvement in press operations and its easily accessible irrespective of operation state. Hence, provides Operator safety & reduces Human interference requirement.<br/>
+                            6. Press Synchronization increases Press utilization factor along with Human Safety & better productivity rate.
                         </div>
                     </FirstRow>
 
