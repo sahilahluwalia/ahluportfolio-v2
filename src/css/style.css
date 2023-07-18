@@ -16400,6 +16400,11 @@ font-weight: 700;
 
 .blue-bg {
   background-color: #f1f9ff;
+  /*background: rgb(255,255,255);*/
+  /*background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(241,249,255,1) 22%);*/
+  /*background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(241,249,255,1) 22%);*/
+  /*background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(241,249,255,1) 22%);*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#f1f9ff",GradientType=1);*/
 }
 
 .background-primaryColor {
