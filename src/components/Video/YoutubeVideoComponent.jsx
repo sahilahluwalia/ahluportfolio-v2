@@ -1,16 +1,17 @@
 import React from 'react';
+import ReactPlayer from 'react-player/lazy'
 import youtubeStyle from './youtubeStyle.css'
 function YoutubeVideoComponent({ embedId }) {
     return (
-        <div className="video-responsive my-5">
-            <iframe
-                width="853"
-                height="480"
-                src={`https://www.youtube.com/embed/${embedId}`}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="Embedded youtube"
+        <div className="player-wrapper my-5">
+            <ReactPlayer
+                className='react-player'
+                width='100%'
+                playing
+                controls
+                muted
+                height='100%'
+                url={`https://www.youtube.com/watch?v=${embedId}`}
             />
         </div>
     );
