@@ -146,6 +146,7 @@ const universalPath = (str) => {
 const subProductList = [
   {
     code: "ast2aii",
+    embedId: "ymIeMa8neWE",
     name: "Ahlu Servo Transfer 2 Axis Double Bar type- AST2AII",
     description: "description of the item",
     link: universalPath(
@@ -475,6 +476,7 @@ const subProductList = [
     name: "Ahlu Multi Press Transfer System- AMPTS Series",
     code: "ampts",
     image: ampts,
+    embedId:'QPgI53pfguc',
     tableContentInJSON: [
       {
         "Sr. No.": 1,

@@ -15,6 +15,7 @@ import FeaturesTab from "components/Products/Tabs/FeaturesTab";
 import BaseTable from "components/Products/BaseTable";
 import SpecificationTab from "components/Products/Tabs/SpecificationTab";
 import ProductItemBase from "components/Products/ProductItemBase";
+import YoutubeVideoComponent from "../../../../../components/Video/YoutubeVideoComponent";
 
 const item = subProductList.find((item) => item.code === "ampts");
 
@@ -704,6 +705,9 @@ const Ampts = () => {
               </Tab>
             </Tabs>
           </div>
+           <YoutubeVideoComponent
+           embedId={item?.embedId}
+           />
         </LeftSection>
         <RightSection>
           <div className='widget'>

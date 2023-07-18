@@ -13,6 +13,7 @@ import parse from "html-react-parser";
 import Table from "components/Products/Table";
 import BaseTable from "components/Products/BaseTable";
 import ProductItemBase from "components/Products/ProductItemBase";
+import YoutubeVideoComponent from "../../../../../components/Video/YoutubeVideoComponent";
 
 const item = subProductList.find((item) => item.code === "ast2aii");
 const { double_bar_system } = transferSystemData;
@@ -753,6 +754,9 @@ const Ast2aii = () => {
               </Tab>
             </Tabs>
           </div>
+            <YoutubeVideoComponent
+                embedId={item?.embedId}
+            />
         </LeftSection>
         <RightSection>
           <div className='widget'>
