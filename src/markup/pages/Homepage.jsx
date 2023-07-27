@@ -24,9 +24,12 @@ import Testmonial from "components/Homepage/Testmonial";
 // import Testimonial9 from "../element/testimonial9";
 // import Testmonial4 from "../element/testmonial4";
 // import Testimonial6 from "../element/testimonial6";
+import ReactPlayer from 'react-player/lazy'
 import { youtubeLinkImage, sevenyearsImage } from "data/imagesData";
 import NewProductSlider from "components/Homepage/NewProductSlider";
 import AnimatedText from "../../components/AnimatedText";
+import RawVideoComponent from "../../components/Video/RawVideoComponent";
+
 const faqContent = [
   {
     question: "1. Innovation need",
@@ -136,6 +139,11 @@ const Homepage = () => {
         <div>
           <AnimatedText />
         </div>
+      <div>
+        <RawVideoComponent />
+      </div>
+
+
       <div className='section-full bg-gray content-inner about-carousel-ser'>
         <div className='container'>
           <div className='section-head text-center'>
