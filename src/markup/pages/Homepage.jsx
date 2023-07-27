@@ -26,6 +26,7 @@ import Testmonial from "components/Homepage/Testmonial";
 // import Testimonial6 from "../element/testimonial6";
 import { youtubeLinkImage, sevenyearsImage } from "data/imagesData";
 import NewProductSlider from "components/Homepage/NewProductSlider";
+import AnimatedText from "../../components/AnimatedText";
 const faqContent = [
   {
     question: "1. Innovation need",
@@ -132,7 +133,9 @@ const Homepage = () => {
         </div>
       </Parallax>
       {/* <ProductSlider /> */}
-
+        <div>
+          <AnimatedText />
+        </div>
       <div className='section-full bg-gray content-inner about-carousel-ser'>
         <div className='container'>
           <div className='section-head text-center'>
