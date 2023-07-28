@@ -94,51 +94,51 @@ const whyToAutomate = [
 const Homepage = () => {
   return (
     <div className='skin-1'>
-      <Parallax bgImage={bg} strength={20}>
-        <div
-          style={{
-            padding: "8rem 0rem",
-          }}
-          className='hero-section home-bnr1'
-        >
-          <div className='container'>
-            <div className='row align-items-center'>
-              <div className='col-lg-12 col-md-12 '>
-                <div className='hero-content'>
-                  <h1 className='title'>
-                    Transform Your Manufacturing with Ahlu Engineers' Custom
-                    Machines & Automation Solutions
-                  </h1>
+      {/*<Parallax bgImage={bg} strength={20}>*/}
+      {/*  <div*/}
+      {/*    style={{*/}
+      {/*      padding: "8rem 0rem",*/}
+      {/*    }}*/}
+      {/*    className='hero-section home-bnr1'*/}
+      {/*  >*/}
+      {/*    <div className='container'>*/}
+      {/*      <div className='row align-items-center'>*/}
+      {/*        <div className='col-lg-12 col-md-12 '>*/}
+      {/*          <div className='hero-content'>*/}
+      {/*            <h1 className='title'>*/}
+      {/*              Transform Your Manufacturing with Ahlu Engineers' Custom*/}
+      {/*              Machines & Automation Solutions*/}
+      {/*            </h1>*/}
 
-                  <div className='description'>
-                    "Automation is cost cutting by tightening the corners and
-                    not cutting them"
-                  </div>
+      {/*            <div className='description'>*/}
+      {/*              "Automation is cost cutting by tightening the corners and*/}
+      {/*              not cutting them"*/}
+      {/*            </div>*/}
 
-                  <div>
-                    <Link
-                      className='site-button outline outline-2 white m-r15 radius-xl'
-                      to='products#products'
-                    >
-                      Products
-                    </Link>
-                    <Link
-                      className='site-button outline outline-2 white m-r15 radius-xl'
-                      to='about'
-                    >
-                      About Us
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Parallax>
+      {/*            <div>*/}
+      {/*              <Link*/}
+      {/*                className='site-button outline outline-2 white m-r15 radius-xl'*/}
+      {/*                to='products#products'*/}
+      {/*              >*/}
+      {/*                Products*/}
+      {/*              </Link>*/}
+      {/*              <Link*/}
+      {/*                className='site-button outline outline-2 white m-r15 radius-xl'*/}
+      {/*                to='about'*/}
+      {/*              >*/}
+      {/*                About Us*/}
+      {/*              </Link>*/}
+      {/*            </div>*/}
+      {/*          </div>*/}
+      {/*        </div>*/}
+      {/*      </div>*/}
+      {/*    </div>*/}
+      {/*  </div>*/}
+      {/*</Parallax>*/}
       {/* <ProductSlider /> */}
-        <div>
-          <AnimatedText />
-        </div>
+      {/*  <div>*/}
+      {/*    <AnimatedText />*/}
+      {/*  </div>*/}
       <div>
         <RawVideoComponent />
       </div>
@@ -202,8 +202,9 @@ const Homepage = () => {
               <div className='col-lg-6 col-md-6 col-sm-6 bg-primary align-items-center d-flex'>
                 <div className='dlab-services-box text-white'>
                   <h2 className='service-year'>
-                    7<small>+ years as pvt ltd</small>
+                    7+
                   </h2>
+                  <h4> years as Private Limited</h4>
                   <h3 className='title m-b0'>
                     We are Building the Future of Manufacturing
                   </h3>

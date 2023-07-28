@@ -325,7 +325,7 @@ const About = (props) => {
                     <div className='date-content'>
                       <div className='date-outer'>
                         <span className='date'>
-                          <span className='month'>{item.year}</span>
+                          {/*<span className='month'> </span>*/}
                           {/* <span className="month">{item.yearNumber}</span> */}
                           <span className='year'>{item.yearNumber}</span>
                         </span>
