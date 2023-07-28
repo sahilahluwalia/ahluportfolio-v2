@@ -795,6 +795,13 @@ const subElectricalPanelsList=[
     image: ast2aii,
     layout: asr2aii_layout,
     catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
+  },{
+  code:'dol',
+    name:'Direct-On-Line Starter Panel'
+  },
+  {
+    code:'hvac',
+    name:'HVAC Panel'
   },
   {
     code:'mcc',
