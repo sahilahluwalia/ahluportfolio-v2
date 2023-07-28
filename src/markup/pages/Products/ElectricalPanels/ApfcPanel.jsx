@@ -84,11 +84,28 @@ function ApfcPanel(props) {
                         className='mb-3  col-md-12 '
                     >
                         <Tab eventKey='overview' title='Overview'>
-                            <DescriptionTab  data={description} />
+                            {/*<DescriptionTab  data={description} />*/}
+
+                            Construction/Specification:
+                            	Draw-out / Fixed Type
+                            	Box Type for panels less than 50 KVAR
+                            	Fully compartmentalized type construction for panels within 50KVAR to 1000KVAR.
+                            	It consists of Capacitor, Contactor, Mains Bus Bars, Mains MCCB, MCB, and Relay, of suitable rating
+                            Features:
+                            	Dimensional accuracy
+                            	Long life
+                            	High tensile strength
+                            	Minimum maintenance
+                            Power Factor Concept:
+                            Inductive loads are the result of maximum motors, which enhances the rate of power loss.
+                            Watt = Voltage x Current x Power Factor
+                            Power Factor = cos ø , where ø is the angle between current wave and voltage wave. The least value of phase angle (current wave) will result in least power losses.
+                            For the improvement of power factor, parallel construction of capacitors is preferred with the mains supply which results in leading power factor. Consequently, the effect of lagging power factor is neutralized due to inductive loads.
+
                         </Tab>
-                        <Tab eventKey='feature' title='Features'>
-                            <FeaturesTab  data={standardFeatures} />
-                        </Tab>
+                        {/*<Tab eventKey='feature' title='Features'>*/}
+                        {/*    <FeaturesTab  data={standardFeatures} />*/}
+                        {/*</Tab>*/}
 
                         <Tab eventKey='specification' title='Product details'>
                             <ST />
