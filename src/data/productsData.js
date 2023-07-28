@@ -706,13 +706,17 @@ const pressFeederProducts = [
 const electricalPanelsProducts = {
   apfc: {
     name: "APFC Panel",
-    features: [],
+    features: [ 	'Dimensional accuracy',
+ 'Long life',
+ 	'High tensile strength',
+ 	'Minimum maintenance'
+],
     standardFeatures: [	"Compact design",
 	"Trouble free functionality",
 	"Durability",
 	"Negligible maintenance"
 ],
-    commonCharacteristics: [],
+    description: ["The heart of any electrical system in varied industries is its Power Control Centre. It assures the users utmost safety, long term reliability, less maintenance cost and testing time. The company manufactures and supplies PCC panels, widely used for various industrial applications. The panels are developed with the use of quality-tested raw materials and applauded for their extremely sturdy construction. Diverse designs/ specifications are provided in PCC such as Top/ Middle/ Horizontal/ Bottom bus chambers, Panel with copper/aluminium bus bars, Top/ Bottom/ Front/ Rear cable termination and Panels with ABB, L&T, Siemens, and Schneider make Switchgear. Our PCC Panels also come with ABB, Siemens, etc. protection Relays.\n"],
   },
   pcc: {
     name: "PCC Panel",
@@ -791,6 +795,10 @@ const subElectricalPanelsList=[
     image: ast2aii,
     layout: asr2aii_layout,
     catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
+  },
+  {
+    code:'mcc',
+    name: 'Motor Control Canter (MCC) Panel'
   },
   {
     code: "apfc",
