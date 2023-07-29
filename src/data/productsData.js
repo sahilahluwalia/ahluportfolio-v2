@@ -1061,6 +1061,6 @@ export {
   sheetMetalProductList,
   electricalPanelProductList,
   subElectricalPanelsList,
-  electricalPanelsProducts
+  electricalPanelsProducts,
   powerpressAutomation,
 };
