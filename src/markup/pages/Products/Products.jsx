@@ -16,7 +16,11 @@ const Products = () => {
       <div id='products' className='section-full blue-bg '>
         <div className='container'>
           <div className='text-center section-head'>
-            <h2 className=' box-title m-tb0'>Products we cater</h2>
+            <h2
+                style={{
+                  fontWeight:600
+                }}
+                className=' box-title m-tb0 mt-3 '>Products We Cater</h2>
             <p>
               We have a wide range of products and services in Special Purpose
               Machine manufacturing, Assembly Automation & Power press

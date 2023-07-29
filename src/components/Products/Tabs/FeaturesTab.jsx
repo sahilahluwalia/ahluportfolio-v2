@@ -5,7 +5,6 @@ const FeaturesTab = ({ data, type }) => {
   return (
     <>
       <h4>Standard Features </h4>
-
       <div className='px-3'>
         <ol type='1'>
           {data.map((item, index) => {

@@ -119,7 +119,7 @@ const ProductSlider = ({}) => {
   return (
     <>
       <div className='section-head text-black text-center'>
-        <h2 className='title'>Products We cater</h2>
+        <h2 className='title'>Products We Cater</h2>
       </div>
 
       <Slider

@@ -109,6 +109,15 @@ import BlogLeftBase from "./pages/Blog/BlogLeftBase";
 import PowerPressBlog from "./pages/Blog/Posts/PowerPressBlog";
 import PowerPressAutomationBlog from "./pages/Blog/Posts/PowerPressAutomationBlog";
 import Abf from "./pages/Products/PowerPressAutomation/PressFeeder/Abf";
+import ElectricalPanels from "./pages/Products/ElectricalPanels/ElectricalPanels";
+import APFCPanel from "./pages/Products/ElectricalPanels/ApfcPanel";
+import DOLPanel from "./pages/Products/ElectricalPanels/DolPanel";
+import HVACPanel from "./pages/Products/ElectricalPanels/HvacPanel";
+import ApfcPanel from "./pages/Products/ElectricalPanels/ApfcPanel";
+import DolPanel from "./pages/Products/ElectricalPanels/DolPanel";
+import HvacPanel from "./pages/Products/ElectricalPanels/HvacPanel";
+import MccPanel from "./pages/Products/ElectricalPanels/MccPanel";
+import PccPanel from "./pages/Products/ElectricalPanels/PccPanel";
 const Router = () => {
   const location = useLocation();
   const { pathname, hash, key } = useLocation();
@@ -174,7 +183,6 @@ const Router = () => {
             <Route path='press-feeders' element={<PressFeeders />} />
             <Route path='press-feeders/asrf' element={<Asrf />} />
             <Route path='press-feeders/ampf' element={<Ampf />} />
-            <Route path="press-feeders/abf" element={<Abf />} />
           </Route>
           <Route path='special-purpose-machines' element={<Base />}>
             <Route index element={<SpecialPurposeMachines />} />
@@ -184,6 +192,14 @@ const Router = () => {
 
           <Route path='vision-inspection-system' element={<Base />}>
             <Route index element={<VisionInspectionSystems />} />
+          </Route>
+          <Route path='electrical-panels' element={<Base />}>
+            <Route index element={<ElectricalPanels />} />
+            <Route path='apfc-panel' element={<ApfcPanel />} />
+            <Route path='dol-panel' element={<DolPanel />} />
+            <Route path='hvac-panel' element={<HvacPanel />} />
+            <Route path='mcc-panel' element={<MccPanel />} />
+            <Route path='pcc-panel' element={<PccPanel />} />
           </Route>
         </Route>
         <Route path='enguiry' element={<Quote />} />

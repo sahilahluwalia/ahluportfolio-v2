@@ -56,6 +56,14 @@ const abfCollection = importAll(
     require.context("asserts/machine-pics/Design Image Data/abf")
 );
 
+const  electricalPanelCollection =importAll(  require.context( "asserts/machine-pics/electrical-panels"))
+const randomizeArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return [...array];
+}
 // console.log(ast2aiiCollection);
 
 const allPicCollections = [
@@ -96,14 +104,13 @@ const masterProductLink = [
       assemblySPMImage,
     ]),
   },
-  // {
-  //   name: "Vision Inspection System",
-  //   link: "vision-inspection-system",
-  //   fullLink: "/products/vision-inspection-system",
-
-  //   image:
-  //     "https://www.bansalpresses.com/wp-content/uploads/2022/11/accessories.jpg",
-  // },
+  {
+    name: "Electrical Panels",
+    nameHTML:   "<span className='highlight-serial'>Electrical</span> Panels",
+    link: "electrical-panels",
+    fullLink: "/products/electrical-panels",
+    image: getRandomItemFromArray(electricalPanelCollection),
+  },
 ];
 
 const productIDMaker = (str, index) => {
@@ -585,28 +592,25 @@ const subProductList = [
 
 const sheetMetalProductList = [
   {
-    name: "<span className='highlight-serial'>  Transfer </span> Dies",
+    name: "<span className='highlight-serial'>Transfer </span> Dies",
     // link: "transfer-dies",
     // cover: true,
     hideButton: true,
-
     image: transferImage,
   },
   {
-    name: "<span className='highlight-serial'>  Progressive</span> Dies",
+    name: "<span className='highlight-serial'>Progressive </span> Dies",
     // link: "progressive-dies",
     // cover: true,
     hideButton: true,
-
     image: progesssiveDieImage,
   },
 
   {
-    name: "<span className='highlight-serial'> Compound </span> Dies",
+    name: "<span className='highlight-serial'>Compound </span> Dies",
     // link: "compound-dies",
     // cover: true,
     hideButton: true,
-
     image: compoundDieImage,
   },
 ];
@@ -617,7 +621,6 @@ const specialPurposeProductList = [
     link: "",
     image: operationalSPMImage,
     hideButton: true,
-
     cover: true,
   },
   {
@@ -625,7 +628,6 @@ const specialPurposeProductList = [
     link: "",
     image: assemblySPMImage,
     hideButton: true,
-
     cover: true,
   },
   {
@@ -633,11 +635,31 @@ const specialPurposeProductList = [
     link: "",
     image: visionSPMImage,
     hideButton: true,
-
     cover: true,
   },
 ];
-
+const electricalPanelProductList=[
+    {
+  name: "<span className='highlight-serial'>PCC</span> Panel ",
+  link: "pcc-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+},{
+  name: "<span className='highlight-serial'>MCC </span> Panel ",
+  link: "mcc-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+},{
+  name: "<span className='highlight-serial'>APFC  </span> Panel ",
+  link: "apfc-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+},{
+  name: "<span className='highlight-serial'>DOL  </span> Panel ",
+  link: "dol-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+},{
+  name: "<span className='highlight-serial'>HVAC   </span> Panel ",
+  link: "hvac-panel",
+  image: getRandomItemFromArray(electricalPanelCollection),
+}]
 const powerPressAutomationProductList = [
   {
     name: "<span className='highlight-serial'>Transfer</span> System ",
@@ -721,6 +743,186 @@ const powerpressAutomation ={
     ]
   }
 }
+
+const electricalPanelsProducts = {
+  apfc: {
+    name: "APFC Panel",
+    features: [ 	'Dimensional accuracy',
+ 'Long life',
+ 	'High tensile strength',
+ 	'Minimum maintenance'
+],
+    standardFeatures: [	"Compact design",
+	"Trouble free functionality",
+	"Durability",
+	"Negligible maintenance"
+],
+    description: ["The heart of any electrical system in varied industries is its Power Control Centre. It assures the users utmost safety, long term reliability, less maintenance cost and testing time. The company manufactures and supplies PCC panels, widely used for various industrial applications. The panels are developed with the use of quality-tested raw materials and applauded for their extremely sturdy construction. Diverse designs/ specifications are provided in PCC such as Top/ Middle/ Horizontal/ Bottom bus chambers, Panel with copper/aluminium bus bars, Top/ Bottom/ Front/ Rear cable termination and Panels with ABB, L&T, Siemens, and Schneider make Switchgear. Our PCC Panels also come with ABB, Siemens, etc. protection Relays.\n"],
+  },
+  pcc: {
+    name: "PCC Panel",
+    features: []
+
+  }
+}
+const subElectricalPanelsList=[
+  {
+    code: "pcc",
+    name: "PCC Panel",
+    description: "description of the item",
+    link: universalPath(
+        "products/power-press-automation/transfer-system/ast2aii"
+    ),
+    tableContentInJSON: [
+      {
+        Item: "X Axis / Transfer pitch",
+        Unit: "mm",
+        "AST2AII-125L": "0-125",
+        "AST2AII-250L": "0-250",
+        "AST2AII-500L": "0-500",
+      },
+      {
+        Item: "Y Axis / Clamping Stroke",
+        Unit: "mm",
+        "AST2AII-125L": "0-40",
+        "AST2AII-250L": "0-65",
+        "AST2AII-500L": "0-125",
+      },
+      {
+        Item: "Feed Bar Size",
+        Unit: "mm",
+        "AST2AII-125L": "65",
+        "AST2AII-250L": "80",
+        "AST2AII-500L": "90",
+      },
+      {
+        Item: "Weight Capacity",
+        Unit: "kg",
+        "AST2AII-125L": "2",
+        "AST2AII-250L": "3",
+        "AST2AII-500L": "5",
+      },
+      {
+        Item: "Feeding Accuracy",
+        Unit: "mm",
+        "AST2AII-125L": "± 0.1",
+        "AST2AII-250L": "± 0.1",
+        "AST2AII-500L": "± 0.1",
+      },
+      {
+        Item: "Maximum Stroke Feed",
+        Unit: "spm",
+        "AST2AII-125L": "40",
+        "AST2AII-250L": "30",
+        "AST2AII-500L": "20",
+      },
+      {
+        Item: "Main Dimensions",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+      {
+        Item: "Supported Bolster Width",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+    ],
+    imageCollection: randomizeArray(electricalPanelCollection),
+    catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
+    image: ast2aii,
+    layout: asr2aii_layout,
+    catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
+  },{
+  code:'dol',
+    name:'Direct-On-Line Starter Panel',
+    imageCollection: randomizeArray(electricalPanelCollection),
+  },
+  {
+    code:'hvac',
+    name:'HVAC Panel',
+    imageCollection: randomizeArray(electricalPanelCollection),
+  },
+  {
+    code:'mcc',
+    imageCollection: randomizeArray(electricalPanelCollection),
+    name: 'Motor Control Canter (MCC) Panel'
+  },
+  {
+    code: "apfc",
+    name: "APFC Panel",
+    imageCollection: randomizeArray(electricalPanelCollection),
+    description: "description of the item",
+    link: universalPath(
+        "products/power-press-automation/transfer-system/ast2aii"
+    ),
+    tableContentInJSON: [
+      {
+        Item: "X Axis / Transfer pitch",
+        Unit: "mm",
+        "AST2AII-125L": "0-125",
+        "AST2AII-250L": "0-250",
+        "AST2AII-500L": "0-500",
+      },
+      {
+        Item: "Y Axis / Clamping Stroke",
+        Unit: "mm",
+        "AST2AII-125L": "0-40",
+        "AST2AII-250L": "0-65",
+        "AST2AII-500L": "0-125",
+      },
+      {
+        Item: "Feed Bar Size",
+        Unit: "mm",
+        "AST2AII-125L": "65",
+        "AST2AII-250L": "80",
+        "AST2AII-500L": "90",
+      },
+      {
+        Item: "Weight Capacity",
+        Unit: "kg",
+        "AST2AII-125L": "2",
+        "AST2AII-250L": "3",
+        "AST2AII-500L": "5",
+      },
+      {
+        Item: "Feeding Accuracy",
+        Unit: "mm",
+        "AST2AII-125L": "± 0.1",
+        "AST2AII-250L": "± 0.1",
+        "AST2AII-500L": "± 0.1",
+      },
+      {
+        Item: "Maximum Stroke Feed",
+        Unit: "spm",
+        "AST2AII-125L": "40",
+        "AST2AII-250L": "30",
+        "AST2AII-500L": "20",
+      },
+      {
+        Item: "Main Dimensions",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+      {
+        Item: "Supported Bolster Width",
+        Unit: "mm",
+        "AST2AII-125L": "Please Contact",
+        "AST2AII-250L": "",
+        "AST2AII-500L": "",
+      },
+    ],
+    catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
+    image: ast2aii,
+    layout: asr2aii_layout,
+    catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
+  },
+]
 
 const transferSystemData = {
   double_bar_system: {
@@ -857,5 +1059,8 @@ export {
   allPicCollections,
   specialPurposeProductList,
   sheetMetalProductList,
+  electricalPanelProductList,
+  subElectricalPanelsList,
+  electricalPanelsProducts
   powerpressAutomation,
 };
