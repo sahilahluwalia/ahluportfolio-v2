@@ -71,7 +71,7 @@ function DolPanel(props) {
                 <FirstRow
                     name={item?.name}
                     // description={item?.description}
-                    // imageArray={item?.imageCollection}
+                    imageArray={item?.imageCollection}
                 >
                     <div className='product-description'>
                         The <span>Direct-On-Line Starter Panel</span> is manufactured in Standard Design as well as customized design. The standard model consists of two nos. <span>DOL Starter Panel</span> of ratings ranging from 0.25HP to 10HP as per customer requirement along with Ampere Meter, Volt Meter, Starter Start/Stop Push Buttons, On/Off LEDs, Three Phase R,Y,B LEDs, Incoming 4Pole MCB, and Outgoing Terminal Blocks. The customized design is also manufactured as per customer requirement. The main application of these panels are Agricultural machines like Gravity Separators, Destoners, Polishers, etc.

@@ -13,6 +13,7 @@ import {subElectricalPanelsList, electricalPanelsProducts} from "../../../../dat
 import SpecificationTab from "../../../../components/Products/Tabs/SpecificationTab";
 import BaseTable from "../../../../components/Products/BaseTable";
 import DescriptionTab from "../../../../components/Products/Tabs/DescriptionTab";
+import FeaturesComponent from "../../../../components/Products/FeaturesComponent";
 const item = subElectricalPanelsList.find((item) => item.code === "apfc");
 const {apfc}=electricalPanelsProducts
 const { standardFeatures, description } = apfc
@@ -62,6 +63,24 @@ function ST() {
     );
 }
 
+const featureList=[{
+    title:
+        'Construction/Specification:',
+    list: [
+        'Draw-out / Fixed Type',
+        'Box Type for panels less than 50 KVAR',
+        'Fully compartmentalized type construction for panels within 50KVAR to 1000KVAR.',
+        'It consists of Capacitor, Contactor, Mains Bus Bars, Mains MCCB, MCB, and Relay, of suitable rating']
+},{
+    title:'Features:',
+    list:[
+     	'Dimensional accuracy',
+                             	'Long life',
+                             	'High tensile strength',
+                             	'Minimum maintenance']
+}]
+
+
 function ApfcPanel(props) {
     return (
         <ProductItemBase>
@@ -86,20 +105,11 @@ function ApfcPanel(props) {
                         <Tab eventKey='overview' title='Overview'>
                             {/*<DescriptionTab  data={description} />*/}
 
-                            Construction/Specification:
-                            	Draw-out / Fixed Type
-                            	Box Type for panels less than 50 KVAR
-                            	Fully compartmentalized type construction for panels within 50KVAR to 1000KVAR.
-                            	It consists of Capacitor, Contactor, Mains Bus Bars, Mains MCCB, MCB, and Relay, of suitable rating
-                            Features:
-                            	Dimensional accuracy
-                            	Long life
-                            	High tensile strength
-                            	Minimum maintenance
-                            Power Factor Concept:
-                            Inductive loads are the result of maximum motors, which enhances the rate of power loss.
-                            Watt = Voltage x Current x Power Factor
-                            Power Factor = cos ø , where ø is the angle between current wave and voltage wave. The least value of phase angle (current wave) will result in least power losses.
+                            <FeaturesComponent featureList={featureList}/>
+                            <h4>3. Power Factor Concept:</h4>
+                            Inductive loads are the result of maximum motors, which enhances the rate of power loss.<br/>
+                            <h6>Watt = Voltage x Current x Power Factor</h6>
+                            <h6>Power Factor = cos ø , where ø is the angle between current wave and voltage wave. </h6>The least value of phase angle (current wave) will result in least power losses.
                             For the improvement of power factor, parallel construction of capacitors is preferred with the mains supply which results in leading power factor. Consequently, the effect of lagging power factor is neutralized due to inductive loads.
 
                         </Tab>

@@ -52,7 +52,13 @@ const a2iCollection = importAll(
   require.context("asserts/machine-pics/Design Image Data/2aii")
 );
 const  electricalPanelCollection =importAll(  require.context( "asserts/machine-pics/electrical-panels"))
-
+const randomizeArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return [...array];
+}
 // console.log(ast2aiiCollection);
 
 const allPicCollections = [
@@ -570,14 +576,14 @@ const subProductList = [
 
 const sheetMetalProductList = [
   {
-    name: "<span className='highlight-serial'>  Transfer </span> Dies",
+    name: "<span className='highlight-serial'>Transfer </span> Dies",
     // link: "transfer-dies",
     // cover: true,
     hideButton: true,
     image: transferImage,
   },
   {
-    name: "<span className='highlight-serial'>  Progressive</span> Dies",
+    name: "<span className='highlight-serial'>Progressive </span> Dies",
     // link: "progressive-dies",
     // cover: true,
     hideButton: true,
@@ -585,7 +591,7 @@ const sheetMetalProductList = [
   },
 
   {
-    name: "<span className='highlight-serial'> Compound </span> Dies",
+    name: "<span className='highlight-serial'>Compound </span> Dies",
     // link: "compound-dies",
     // cover: true,
     hideButton: true,
@@ -619,7 +625,7 @@ const specialPurposeProductList = [
 const electricalPanelProductList=[
     {
   name: "<span className='highlight-serial'>PCC</span> Panel ",
-  link: "apfc-panel",
+  link: "pcc-panel",
   image: getRandomItemFromArray(electricalPanelCollection),
 },{
   name: "<span className='highlight-serial'>MCC </span> Panel ",
@@ -790,26 +796,30 @@ const subElectricalPanelsList=[
         "AST2AII-500L": "",
       },
     ],
-    imageCollection: ast2aiiCollection,
+    imageCollection: randomizeArray(electricalPanelCollection),
     catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
     image: ast2aii,
     layout: asr2aii_layout,
     catalogueImage: addCatalogueImageFromListByItsName("AST2AII Series"),
   },{
   code:'dol',
-    name:'Direct-On-Line Starter Panel'
+    name:'Direct-On-Line Starter Panel',
+    imageCollection: randomizeArray(electricalPanelCollection),
   },
   {
     code:'hvac',
-    name:'HVAC Panel'
+    name:'HVAC Panel',
+    imageCollection: randomizeArray(electricalPanelCollection),
   },
   {
     code:'mcc',
+    imageCollection: randomizeArray(electricalPanelCollection),
     name: 'Motor Control Canter (MCC) Panel'
   },
   {
     code: "apfc",
     name: "APFC Panel",
+    imageCollection: randomizeArray(electricalPanelCollection),
     description: "description of the item",
     link: universalPath(
         "products/power-press-automation/transfer-system/ast2aii"
@@ -872,7 +882,6 @@ const subElectricalPanelsList=[
         "AST2AII-500L": "",
       },
     ],
-    imageCollection: ast2aiiCollection,
     catalogueLink: addCatalogueFromListByItsName("AST2AII Series"),
     image: ast2aii,
     layout: asr2aii_layout,

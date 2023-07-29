@@ -11,6 +11,7 @@ import ProductList from "../../../../components/Products/ProductList";
 import parse from "html-react-parser";
 import BaseTable from "../../../../components/Products/BaseTable";
 import {subElectricalPanelsList} from "../../../../data/productsData";
+import FeaturesComponent from "../../../../components/Products/FeaturesComponent";
 const item = subElectricalPanelsList.find((item) => item.code === "mcc");
 const featureList=[
     {
@@ -38,7 +39,7 @@ const featureList=[
 	'Feeder fusible disconnects',
 ]},
     {
-        title:`Technical Specifications of Motor Control Centre Panel`,
+        title:`Technical Specifications of Motor Control Centre Panel:`,
     list:[
         	'Operational Current: 32A to 1600A',
 	'Ambient Temperature: 40.50 degree Celsius in single and double front',
@@ -117,10 +118,10 @@ function MccPanel(props) {
                 <FirstRow
                     name={item?.name}
                     // description={item?.description}
-                    // imageArray={item?.imageCollection}
+                    imageArray={item?.imageCollection}
                 >
                     <div className='product-description'>
-                        The <span>Motor Control Canter (MCC) Panel</span> is a panel consisting of one or more 'enclosed sections'. All of these sections have a communal power bus. Also, these are mainly composed of motor control units. We offer these MCCs with the option of number of latest technology starters such as AC/DC drive starter (covariant frequency drive), direct-on-line starter, soft starter, star delta starter, submersible starter, etc. Their main function is related to induction motors, which inrush starting current is minimized. In addition, there are a number of motor protection equipment in the <span>Motor Control canter (MCC) Panel</span>, such as overload protection, short circuit protection, and single phasing protection, that are useful in safeguarding the motor.
+                        The <span>Motor Control Canter (MCC) Panel</span> is a panel consisting of one or more 'enclosed sections'. <br/> All of these sections have a communal power bus. Also, these are mainly composed of motor control units. We offer these MCCs with the option of number of latest technology starters such as AC/DC drive starter (covariant frequency drive), direct-on-line starter, soft starter, star delta starter, submersible starter, etc. Their main function is related to induction motors, which inrush starting current is minimized.<br/> In addition, there are a number of motor protection equipment in the <span>Motor Control canter (MCC) Panel</span>, such as overload protection, short circuit protection, and single phasing protection, that are useful in safeguarding the motor.
                     </div>
                 </FirstRow>
 
@@ -132,38 +133,7 @@ function MccPanel(props) {
                     >
 
                         <Tab eventKey='feature' title='Features'>
-                            <div className='px-3'>
-                                <ol type='1'>
-                                    {featureList.map((item, index) => {
-                                        return (
-                                            <li
-                                                style={{
-                                                    textAlign: "left",
-                                                }}
-                                                key={index}
-                                            >
-                                                <h4> {item.title}</h4>
-                                                <ol type='a'>
-                                                    {item.list.map((item, index) => {
-                                                        return (
-                                                            <li
-                                                                style={{
-                                                                    textAlign: "left",
-                                                                }}
-                                                                key={index}
-                                                            >
-                                                                {parse(item)}
-                                                            </li>
-                                                        );
-
-                                                    }
-                                                    )}
-                                                </ol>
-                                            </li>
-                                        );
-                                    })}
-                                </ol>
-                            </div>
+                            <FeaturesComponent featureList={featureList}/>
                         </Tab>
 
                         <Tab eventKey='specification' title='Specification'>

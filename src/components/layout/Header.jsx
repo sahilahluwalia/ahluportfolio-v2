@@ -171,7 +171,7 @@ class Header extends Component {
                     <span></span>
                   </button>
 
-                  <Link to='/quote#quote'>
+                  <Link to='/quote'>
                     {" "}
                     {/* <div className="bigger-hover">helo</div> */}
                     <div className='extra-nav border-0'>

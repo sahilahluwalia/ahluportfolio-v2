@@ -9,6 +9,7 @@ import {RightSection} from "../../../../components/Products/RightSection";
 import ProductList from "../../../../components/Products/ProductList";
 import {subElectricalPanelsList} from "../../../../data/productsData";
 import parse from "html-react-parser";
+import FeaturesComponent from "../../../../components/Products/FeaturesComponent";
 const item = subElectricalPanelsList.find((item) => item.code === "hvac");
 
 function ST() {
@@ -79,53 +80,22 @@ function HvacPanel(props) {
                 <FirstRow
                     name={item?.name}
                     // description={item?.description}
-                    // imageArray={item?.imageCollection}
+                    imageArray={item?.imageCollection}
                 >
                     <div className='product-description'>
-                        With our two decades of experience, we are fulfilling the wide demands of clients by offering supreme grade collection of <span>HVAC Panels</span>. The provided panels are well-suited for protecting centralized heating, ventilating and air conditioning systems from electrical hazards at different places. Manufactured using optimum quality components and progressive techniques, the offered panels are also tested on several parameters by our inspectors. Available in various technical specifications, these <span>HVAC Control Panels</span> can be purchased from us at affordable prices.
+                        With our two decades of experience, we are fulfilling the wide demands of clients by offering supreme grade collection of <span>HVAC Panels</span>.<br/> The provided panels are well-suited for protecting centralized heating, ventilating and air conditioning systems from electrical hazards at different places.<br/> Manufactured using optimum quality components and progressive techniques, the offered panels are also tested on several parameters by our inspectors. Available in various technical specifications, these <span>HVAC Control Panels</span> can be purchased from us at affordable prices.
 
                     </div>
                 </FirstRow>
 
                 <div className='row'>
                     <Tabs
-                        defaultActiveKey='specification'
+                        defaultActiveKey='feature'
                         id='noanim-tab-example'
                         className='mb-3  col-md-12 '
                     >
                         <Tab eventKey='feature' title='Features'>
-                            <div className='px-3'>
-                                <ol type='1'>
-                                    {featureList.map((item, index) => {
-                                        return (
-                                            <li
-                                                style={{
-                                                    textAlign: "left",
-                                                }}
-                                                key={index}
-                                            >
-                                                <h4> {item.title}</h4>
-                                                <ol type='a'>
-                                                    {item.list.map((item, index) => {
-                                                            return (
-                                                                <li
-                                                                    style={{
-                                                                        textAlign: "left",
-                                                                    }}
-                                                                    key={index}
-                                                                >
-                                                                    {parse(item)}
-                                                                </li>
-                                                            );
-
-                                                        }
-                                                    )}
-                                                </ol>
-                                            </li>
-                                        );
-                                    })}
-                                </ol>
-                            </div>
+                           <FeaturesComponent featureList={featureList}/>
                         </Tab>
                         <Tab eventKey='specification' title='Product Details'>
                             <ST />
