@@ -91,9 +91,10 @@ const Contact = () => {
                   <ul className='no-margin'>
                     <li className='icon-bx-wraper left m-b30'>
                       <div className='icon-bx-xs border-1'>
-                        <Link  className='icon-cell'>
+                        {" "}
+                        <Link to='/#' className='icon-cell'>
                           <i className='ti-location-pin'></i>
-                        </Link>
+                        </Link>{" "}
                       </div>
                       <div className='icon-content'>
                         <h6 className='text-uppercase m-tb0 dlab-tilte'>
@@ -115,10 +116,10 @@ const Contact = () => {
                     </li>
                     <li className='icon-bx-wraper left  m-b30'>
                       <div className='icon-bx-xs border-1'>
-
-                        <Link className='icon-cell'>
+                        {" "}
+                        <Link to='/#' className='icon-cell'>
                           <i className='ti-email'></i>
-                        </Link>
+                        </Link>{" "}
                       </div>
                       <div className='icon-content'>
                         <h6 className='text-uppercase m-tb0 dlab-tilte'>
@@ -135,13 +136,13 @@ const Contact = () => {
                     <li className='icon-bx-wraper left'>
                       <div className='icon-bx-xs border-1'>
                         {" "}
-                        <Link to={companyDetails.phoneTo} className='icon-cell'>
+                        <Link to='/#' className='icon-cell'>
                           <i className='ti-mobile'></i>
                         </Link>{" "}
                       </div>
                       <div className='icon-content'>
                         <h6 className='text-uppercase m-tb0 dlab-tilte'>
-                          PHONE:
+                          PHONE
                         </h6>
                         <a href={companyDetails.phoneTo}>
                           <p>{companyDetails.phone}</p>
