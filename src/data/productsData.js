@@ -23,6 +23,7 @@ import compoundDieImage from "asserts/machine-pics/SheetMetal/Compound Die.jpg";
 import transferImage from "asserts/machine-pics/SheetMetal/Transfer 1.jpg";
 // import ast2aii1 from "asserts/machine-pics/Design Image Data/2axis db";
 import ampf_top from "asserts/machine-pics/topFlap.png";
+import abf from "asserts/machine-pics/Design Image Data/abf/Blank Feeder.png";
 function importAll(r) {
   return r.keys().map(r);
 }
@@ -51,6 +52,10 @@ const sheetMetalCollection = importAll(
 const a2iCollection = importAll(
   require.context("asserts/machine-pics/Design Image Data/2aii")
 );
+const abfCollection = importAll(
+    require.context("asserts/machine-pics/Design Image Data/abf")
+);
+
 const  electricalPanelCollection =importAll(  require.context( "asserts/machine-pics/electrical-panels"))
 const randomizeArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -153,6 +158,7 @@ const universalPath = (str) => {
 const subProductList = [
   {
     code: "ast2aii",
+    embedId: "ymIeMa8neWE",
     name: "Ahlu Servo Transfer 2 Axis Double Bar type- AST2AII",
     description: "description of the item",
     link: universalPath(
@@ -482,6 +488,7 @@ const subProductList = [
     name: "Ahlu Multi Press Transfer System- AMPTS Series",
     code: "ampts",
     image: ampts,
+    embedId:'QPgI53pfguc',
     tableContentInJSON: [
       {
         "Sr. No.": 1,
@@ -572,6 +579,15 @@ const subProductList = [
     link: universalPath("products/power-press-automation/press-feeders/asrf"),
     catalogueImage: addCatalogueImageFromListByItsName("ASRF Series"),
   },
+  {
+    name: "Ahlu Blank Feeder- ABF Series",
+    code: "abf",
+    image: abf,
+    imageCollection: abfCollection,
+    catalogueLink: addCatalogueFromListByItsName("ABF Series"),
+    link: universalPath("products/power-press-automation/press-feeders/abf"),
+    catalogueImage: addCatalogueImageFromListByItsName("ABF Series"),
+    }
 ];
 
 const sheetMetalProductList = [
@@ -707,7 +723,26 @@ const pressFeederProducts = [
     link: "ampf",
     image: flap,
   },
+  {
+    name: "Blank Feeder",
+    subheading: "<span className='highlight-serial'>ABF</span> Series",
+    series: "abf",
+    link: "abf",
+    image: abf,
+  },
 ];
+
+const powerpressAutomation ={
+  abf:{
+    commonCharacteristics:[
+        "Blank Feeder is synchronised with Press Ram movement with the help of Encoders / Cam box / Sensor arrangement based on the applicational requirements.",
+        "As Feeding of Blanks is performed based on Press Ram positioning, it provides max. utilization of time with respect to Press operation cycle.",
+        "This accessory provides continuous operation capability to the Press which not only doubles the existing production rate but also can be increased on multiple multiplier rate based on component variant.",
+        "It eliminates the need of operator in Loading & Unloading of Blanks for certain set of operations after blanking. Similar operations performed on adjacent machines can be easily handled by the single operator.",
+        "Magzine Feeding is manual but can be top up easily by the single operator for such multiple machines.",
+    ]
+  }
+}
 
 const electricalPanelsProducts = {
   apfc: {
@@ -1027,4 +1062,5 @@ export {
   electricalPanelProductList,
   subElectricalPanelsList,
   electricalPanelsProducts
+  powerpressAutomation,
 };

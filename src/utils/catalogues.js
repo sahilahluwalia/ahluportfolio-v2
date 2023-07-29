@@ -61,7 +61,7 @@ const catalogueListMaker = (pdfNames, pdfLinks, images) => {
       link: pdfLinks[i],
       image: images[i],
     });
-    if (catalogueList.length === 7) break;
+    if (catalogueList.length === 8) break;
   }
   return catalogueList;
 };

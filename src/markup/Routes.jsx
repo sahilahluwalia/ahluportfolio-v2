@@ -108,6 +108,7 @@ import BlogMainPage from "./pages/Blog/BlogMainPage";
 import BlogLeftBase from "./pages/Blog/BlogLeftBase";
 import PowerPressBlog from "./pages/Blog/Posts/PowerPressBlog";
 import PowerPressAutomationBlog from "./pages/Blog/Posts/PowerPressAutomationBlog";
+import Abf from "./pages/Products/PowerPressAutomation/PressFeeder/Abf";
 import ElectricalPanels from "./pages/Products/ElectricalPanels/ElectricalPanels";
 import APFCPanel from "./pages/Products/ElectricalPanels/ApfcPanel";
 import DOLPanel from "./pages/Products/ElectricalPanels/DolPanel";
