@@ -67,7 +67,7 @@ function Featurestab() {
 function ST() {
   return (
     <>
-      <SpecificationTab image={asr2aii_layout}>
+      <SpecificationTab image={item.layout}>
         <BaseTable>
           <table
             className='table table-bordered table-striped'
