@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "../../components/layout/Header";
-import Footer from "../../components/layout/Footer";
 import { contactForm } from "../../fetchers";
 import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 import { specialPurposeMachineImage as bg } from "data/imagesData";

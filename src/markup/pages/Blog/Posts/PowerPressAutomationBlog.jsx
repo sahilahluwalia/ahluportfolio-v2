@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { blogLists } from "data/BlogData";
 import dayjs from "dayjs";
 import BlogUpperText from "components/Blog/BlogUpperText";
-import bluepress from "asserts/Blog/bluepress.png";
-import greenpress from "asserts/Blog/greenpress.png";
 import press_automation from "asserts/Blog/press-automation.gif";
 import progessive_fleeding from "asserts/Blog/progessivefleeding.jpg";
 import automation_one from "asserts/Blog/automation.png";
@@ -189,7 +187,7 @@ const PowerPressAutomationBlog = () => {
             <div className='dlab-divider bg-gray-dark'></div>
             <h3>Future Growth Perspective of Power Press Automation</h3>
             {futureGrowth.map((item, index) => {
-              if (index == 1)
+              if (index === 1)
                 return (
                   <>
                     <img

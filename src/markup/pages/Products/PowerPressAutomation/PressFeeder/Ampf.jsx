@@ -3,15 +3,12 @@ import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 import DownloadCatalogue from "components/Products/DownloadCatalogue";
 // import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
-import asr3aii_layout from "asserts/machine-pics/asr3aii-layout.png";
-import timingDiagram from "asserts/machine-pics/timingAST2AII.png";
 import { subProductList, transferSystemData } from "data/productsData";
 import ProductList from "components/Products/ProductList";
 import { RightSection } from "components/Products/RightSection";
 import LeftSection from "components/Products/LeftSection";
 import FirstRow from "components/Products/FirstRow";
 import parse from "html-react-parser";
-import Table from "components/Products/Table";
 import BaseTable from "components/Products/BaseTable";
 import ProductItemBase from "components/Products/ProductItemBase";
 

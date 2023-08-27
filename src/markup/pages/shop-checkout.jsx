@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, {  useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../layout/header'
 import Footer from '../layout/footer'

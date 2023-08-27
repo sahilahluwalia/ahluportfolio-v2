@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactPlayer from 'react-player/lazy'
-import youtubeStyle from './youtubeStyle.css'
 function YoutubeVideoComponent({ embedId }) {
     return (
         <div className="player-wrapper my-5">

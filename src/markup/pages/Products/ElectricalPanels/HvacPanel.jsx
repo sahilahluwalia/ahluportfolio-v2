@@ -8,7 +8,6 @@ import Tab from "react-bootstrap/Tab";
 import {RightSection} from "../../../../components/Products/RightSection";
 import ProductList from "../../../../components/Products/ProductList";
 import {subElectricalPanelsList} from "../../../../data/productsData";
-import parse from "html-react-parser";
 import FeaturesComponent from "../../../../components/Products/FeaturesComponent";
 const item = subElectricalPanelsList.find((item) => item.code === "hvac");
 
