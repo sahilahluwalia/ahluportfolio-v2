@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import ImageRows from "components/Products/ImageRows";
 import LeftSection from "components/Products/LeftSection";
-import FirstRow from "components/Products/FirstRow";
 import { RightSection } from "components/Products/RightSection";
 import ProductList from "components/Products/ProductList";
-import ImageSlider from "components/Products/ImageSlider";
 import { sheetMetalProductList } from "data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 

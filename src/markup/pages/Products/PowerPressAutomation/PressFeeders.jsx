@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import asrf from "../../../../asserts/machine-pics/asrf.png";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 import ImageRows from "../../../../components/Products/ImageRows";
-import Flap from "asserts/machine-pics/Design Image Data/Flap/Flap1.png";
 import { pressFeederProducts } from "data/productsData";
 import LeftSection from "components/Products/LeftSection";
-import FirstRow from "components/Products/FirstRow";
 import { RightSection } from "components/Products/RightSection";
 import ProductList from "components/Products/ProductList";
 

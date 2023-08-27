@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import ImageRows from "../../../components/Products/ImageRows";
 
-import { companyDetails, socialMediaLinks } from "../../../data/websiteData";
 // import {  } from "react-router-dom";
 import { masterProductLink as productList } from "../../../data/productsData";
 

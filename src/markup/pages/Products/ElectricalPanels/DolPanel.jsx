@@ -4,7 +4,6 @@ import LeftSection from "../../../../components/Products/LeftSection";
 import FirstRow from "../../../../components/Products/FirstRow";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
-import parse from "html-react-parser";
 import {RightSection} from "../../../../components/Products/RightSection";
 import ProductList from "../../../../components/Products/ProductList";
 import BaseTable from "../../../../components/Products/BaseTable";

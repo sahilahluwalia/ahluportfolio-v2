@@ -1,6 +1,5 @@
 import React from "react";
 import { subProductList } from "data/productsData";
-import ast2aii from "asserts/machine-pics/ast2aii.png";
 import { Link } from "react-router-dom";
 
 function shuffleArray(array) {

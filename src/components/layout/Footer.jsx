@@ -1,17 +1,13 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
-import emailjs from "@emailjs/browser";
 import icon1 from "../../images/icon/icon1.png";
 import icon2 from "../../images/icon/icon2.png";
 import icon3 from "../../images/icon/icon3.png";
 import qrCode from "../../asserts/socialIcons/qr-code.png";
 import { ahluLogoWithName, socialMediaLinks } from "../../data/websiteData";
 import { companyDetails } from "../../data/websiteData";
-import SubscribeForm from "../SubscribeForm";
 import { subscribeToNewsletter } from "../../fetchers";
-import axios from "axios";
-import LogoSlider from "components/Homepage/LogoSlider";
 import tripod from "asserts/Catalogue PDF Files/Trifold_Minimum_Clarity.pdf";
 const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 const privateKey = process.env.REACT_APP_PRIVATE_KEY;
@@ -403,51 +399,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// mid-> other related links srtart icons remove underline
-// left -> ahlu enigneers
-// serving in 3 plus conutriy  read me about pageXOffset
-// right -> subscribe to our newsletter
-
-// const response = await axios.get(
-//   "https://gmail.us21.list-manage.com/subscribe/post-jsongd",
-//   {
-//     params: {
-//       u: "aa81d3bfc0c1f3ba793280b88",
-//       id: "b7f07f685e",
-//       f_id: "00238be1f0",
-//       EMAIL: email,
-//       subscribe: "Subscribe",
-//     },
-//   }
-// );
-// if (response.data.result == "success") {
-//   setSuccess(true);
-//   setTimeout(() => {
-//     setSuccess(false);
-//   }, 10000);
-// } else {
-//   setError(true);
-//   setTimeout(() => {
-//     setError(false);
-//   }, 7000);
-// }
-
-//  const sendEmail = (e) => {
-//    e.preventDefault();
-//    //emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
-//    emailjs.sendForm("gmail", "YOUR_TEMPLATE_ID", email, publicKey).then(
-//      (result) => {
-//        console.log(result.text);
-//      },
-//      (error) => {
-//        console.log(error.text);
-//      }
-//    );
-//    e.target.reset();
-//  };
-//  const handleSubmit = async (e) => {
-//    e.preventDefault();
-
-//    // console.log(response.data);
-//  };

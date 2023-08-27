@@ -4,15 +4,10 @@ import LeftSection from "../../../../components/Products/LeftSection";
 import FirstRow from "../../../../components/Products/FirstRow";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
-import OverviewTab from "../../../../components/Products/Tabs/OverviewTab";
-import FeaturesTab from "../../../../components/Products/Tabs/FeaturesTab";
 import {RightSection} from "../../../../components/Products/RightSection";
-import DownloadCatalogue from "../../../../components/Products/DownloadCatalogue";
 import ProductList from "../../../../components/Products/ProductList";
 import {subElectricalPanelsList, electricalPanelsProducts} from "../../../../data/productsData";
-import SpecificationTab from "../../../../components/Products/Tabs/SpecificationTab";
 import BaseTable from "../../../../components/Products/BaseTable";
-import DescriptionTab from "../../../../components/Products/Tabs/DescriptionTab";
 import FeaturesComponent from "../../../../components/Products/FeaturesComponent";
 const item = subElectricalPanelsList.find((item) => item.code === "apfc");
 const {apfc}=electricalPanelsProducts
