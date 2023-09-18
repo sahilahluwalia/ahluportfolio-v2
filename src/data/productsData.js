@@ -79,6 +79,27 @@ const getRandomItemFromArray = (arr) => {
 };
 
 const catalogueList = cl;
+
+const masterAboutUsLinks=[{
+  name:'Vision & Mission',
+  link: 'vision-mission'
+},{
+  name:"Story & Timeline",
+    link: 'story-timeline',
+},{
+  name: "Why Ahlu Engineers?",
+    link: 'why-ahlu-engineers'
+},
+//   {
+//   name: "Quality Policy & Certifications",
+//     link: 'quality-policy-certifications'
+// },{
+//     name: "Awards & Recognition",
+//     link: 'awards-recognition'
+// }
+
+]
+
 const masterProductLink = [
   {
     name: "Power Press Automation",
@@ -114,7 +135,7 @@ const masterProductLink = [
 ];
 
 const productIDMaker = (str, index) => {
-  if (index == 0) {
+  if (index === 0) {
     return str + "#powerpress";
   } else return str + "#specialpurpose";
 };
@@ -129,6 +150,23 @@ const masterProductListItems = masterProductLink.map((item, index) => {
     </li>
   );
 });
+
+const masterAboutUsListItems = masterAboutUsLinks.map((item, index) => {
+  return (
+    <li>
+      <Link to={item.link}>{item.name}</Link>
+    </li>
+  )
+}
+);
+const masterAboutUsListItemsWithSubmenu = (
+    <li>
+        <Link to={"#"}>
+            About Us<i className="fa fa-chevron-down"></i>
+        </Link>
+        <ul className="sub-menu">{masterAboutUsListItems}</ul>
+    </li>
+);
 const masterProductsListItemsWithSubmenu = (
   <li>
     <Link to={"#"}>
@@ -1063,4 +1101,5 @@ export {
   subElectricalPanelsList,
   electricalPanelsProducts,
   powerpressAutomation,
+  masterAboutUsListItemsWithSubmenu,
 };
