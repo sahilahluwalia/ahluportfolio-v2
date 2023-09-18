@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { blogLists } from "data/BlogData";
-import dayjs from "dayjs";
+// import dayjs from "dayjs";
 import BlogUpperText from "components/Blog/BlogUpperText";
 import press_automation from "asserts/Blog/press-automation.gif";
 import progessive_fleeding from "asserts/Blog/progessivefleeding.jpg";
 import automation_one from "asserts/Blog/automation.png";
 import automation_two from "asserts/Blog/automation_2.png";
-const bg = require("images/banner/bnr1.jpg");
-const item = blogLists.find((item) => item.code == 2);
+// const bg = require("images/banner/bnr1.jpg");
+const item = blogLists.find((item) => item.code === 2);
 // console.log(item);
 
 const commonMethod = [
@@ -187,7 +187,7 @@ const PowerPressAutomationBlog = () => {
             <div className='dlab-divider bg-gray-dark'></div>
             <h3>Future Growth Perspective of Power Press Automation</h3>
             {futureGrowth.map((item, index) => {
-              if (index === 1)
+              if (index == 1)
                 return (
                   <>
                     <img

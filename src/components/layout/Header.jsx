@@ -8,7 +8,7 @@ import {
   socialMediaLinks,
 } from "../../data/websiteData";
 import { catalogueListItemsWithSubmenu } from "../../utils/catalogues";
-import { masterProductsListItemsWithSubmenu } from "../../data/productsData";
+import {masterAboutUsListItemsWithSubmenu, masterProductsListItemsWithSubmenu} from "../../data/productsData";
 const navbarlinks = [
   {
     name: "Home",
@@ -211,12 +211,13 @@ class Header extends Component {
                           return catalogueListItemsWithSubmenu;
                         } else if (link.name === "Products") {
                           return masterProductsListItemsWithSubmenu;
-                        } else
-                          return (
+                        } else if(link.name==='About Us'){
+                          return masterAboutUsListItemsWithSubmenu;
+                        } else return (
                             <li
                               key={index}
                               className={
-                                activePageDetector(window) ==
+                                activePageDetector(window) ===
                                 link.name.toLowerCase()
                                   ? "active"
                                   : ""
