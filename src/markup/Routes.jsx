@@ -116,6 +116,7 @@ const Router = () => {
             <Route path='press-feeders' element={<PressFeeders />} />
             <Route path='press-feeders/asrf' element={<Asrf />} />
             <Route path='press-feeders/ampf' element={<Ampf />} />
+            <Route path="press-feeders/abf" element={<Abf/>}/>
           </Route>
           <Route path='special-purpose-machines' element={<Base />}>
             <Route index element={<SpecialPurposeMachines />} />

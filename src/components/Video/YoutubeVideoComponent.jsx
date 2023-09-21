@@ -9,7 +9,7 @@ function YoutubeVideoComponent({ embedId }) {
                 playing
                 controls
                 muted
-                height='100%'
+                height={500}
                 url={`https://www.youtube.com/watch?v=${embedId}`}
             />
         </div>
