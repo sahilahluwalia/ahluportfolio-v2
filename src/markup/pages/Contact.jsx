@@ -39,7 +39,7 @@ const Contact = () => {
       console.log(result);
       if (result.status === 200) {
         alertToggle("success");
-        setInputValues({ name: "", email: "", message: "" });
+        setInputValues({ name: "", email: "", message: "" ,subject: ""});
       } else {
         alertToggle("error");
       }
@@ -203,6 +203,7 @@ const Contact = () => {
                                   name: e.target.value,
                                 });
                               }}
+                              value={inputValues.name}
                               name='name'
                               type='text'
                               required
@@ -222,6 +223,7 @@ const Contact = () => {
                                   email: e.target.value,
                                 });
                               }}
+                              value={inputValues.email}
                               name='email'
                               type='email'
                               className='form-control'
@@ -241,6 +243,7 @@ const Contact = () => {
                                   subject: e.target.value,
                                 });
                               }}
+                              value={inputValues.subject}
                               name='subject'
                               type='text'
                               className='form-control'
@@ -260,6 +263,7 @@ const Contact = () => {
                                   message: e.target.value,
                                 });
                               }}
+                              value={inputValues.message}
                               name='message'
                               rows='11'
                               className='form-control'

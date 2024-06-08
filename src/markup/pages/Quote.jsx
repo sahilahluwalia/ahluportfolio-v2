@@ -28,6 +28,8 @@ const Quote = () => {
         return { ...state, industry: action.payload };
       case "message":
         return { ...state, message: action.payload };
+      case "success":
+        return { name:"", phone:"", email:"", industry:"", message:"" };
       default:
         return state;
     }
@@ -68,6 +70,7 @@ const Quote = () => {
       const result = await freeQuote(state);
       if (result.status === 200) {
         alertToggle("success");
+        dispatch({ type: "success" });
       } else {
         alertToggle("error");
       }
@@ -77,7 +80,7 @@ const Quote = () => {
   };
 
 
-  
+
   return (
     <>
       <div className='page-content bg-white'>
