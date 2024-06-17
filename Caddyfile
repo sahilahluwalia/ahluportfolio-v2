@@ -2,5 +2,5 @@ ahluengineers.com, www.ahluengineers.com {
 	encode gzip
 	root * /root/website/ahluPortfolio/build
 	try_files {path} /index.html
-	file_server 
+	file_server
 }
