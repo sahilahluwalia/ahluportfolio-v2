@@ -4,3 +4,11 @@ old2.ahluengineers.com, www.old2.ahluengineers.com {
 	try_files {path} /index.html
 	file_server
 }
+
+ahluengineers.com, www.ahluengineers.com {
+	encode gzip
+	root * /root/website/ahluportfolio-v2/build
+	try_files {path} /index.html
+	file_server
+}
+
