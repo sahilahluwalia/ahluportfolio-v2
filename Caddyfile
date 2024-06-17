@@ -1,4 +1,4 @@
-ahluengineers.com, www.ahluengineers.com {
+old2.ahluengineers.com, www.old2.ahluengineers.com {
 	encode gzip
 	root * /root/website/ahluPortfolio/build
 	try_files {path} /index.html
