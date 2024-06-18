@@ -702,6 +702,9 @@ const Ampts = () => {
               </Tab>
             </Tabs>
           </div>
+            <YoutubeVideoComponent
+                embedId={"HCHshvl9gUs"}
+            />
            <YoutubeVideoComponent
            embedId={item?.embedId}
            />
