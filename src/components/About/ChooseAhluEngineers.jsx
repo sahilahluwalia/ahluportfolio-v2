@@ -4,16 +4,15 @@ import Slider from "react-slick";
 //import responsive from './slider-resonsive'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import pic from "images/portfolio/mining/image_1.jpg";
-import iotPic from "asserts/About Us website related/1.jpg";
-import secondPic from "asserts/About Us website related/2.png";
-import thirdPic from "asserts/About Us website related/3.png";
-import fourthPic from "asserts/About Us website related/4.png";
-import fifthPic from "asserts/About Us website related/5.png";
-import sixthPic from "asserts/About Us website related/6.png";
-import seventhPic from "asserts/About Us website related/7.png";
-import eighthPic from "asserts/About Us website related/8.png";
-import ninthPic from "asserts/About Us website related/9.png";
+import iotPic from "../../asserts/About Us website related/1.jpg";
+import secondPic from "../../asserts/About Us website related/2.png";
+import thirdPic from "../../asserts/About Us website related/3.png";
+import fourthPic from "../../asserts/About Us website related/4.png";
+import fifthPic from "../../asserts/About Us website related/5.png";
+import sixthPic from "../../asserts/About Us website related/6.png";
+import seventhPic from "../../asserts/About Us website related/7.png";
+import eighthPic from "../../asserts/About Us website related/8.png";
+import ninthPic from "../../asserts/About Us website related/9.png";
 const contentMaster = [
   {
     image: secondPic,

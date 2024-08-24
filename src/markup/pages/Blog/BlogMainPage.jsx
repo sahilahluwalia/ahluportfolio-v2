@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { LatestBlogs } from "data/BlogData";
-import Sidebar from "markup/element/sidebar";
+import { LatestBlogs } from "../../../data/BlogData";
+import Sidebar from "../../../markup/element/sidebar";
 import dayjs from "dayjs";
 import "./pagination.css";
 import { useParams } from "react-router-dom";
 import ReactPaginate from "react-paginate";
-const bg = require("images/banner/bnr1.jpg");
+const bg = require("../../../images/banner/bnr1.jpg");
 const Post = ({ currentItems }) => {
   return (
     <>

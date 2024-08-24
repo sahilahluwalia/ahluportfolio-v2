@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { blogLists } from "data/BlogData";
+import { blogLists } from "../../../../data/BlogData";
 // import dayjs from "dayjs";
-import BlogUpperText from "components/Blog/BlogUpperText";
-import press_automation from "asserts/Blog/press-automation.gif";
-import progessive_fleeding from "asserts/Blog/progessivefleeding.jpg";
-import automation_one from "asserts/Blog/automation.png";
-import automation_two from "asserts/Blog/automation_2.png";
+import BlogUpperText from "../../../../components/Blog/BlogUpperText";
+import press_automation from "../../../../asserts/Blog/press-automation.gif";
+import progessive_fleeding from "../../../../asserts/Blog/progessivefleeding.jpg";
+import automation_one from "../../../../asserts/Blog/automation.png";
+import automation_two from "../../../../asserts/Blog/automation_2.png";
 // const bg = require("images/banner/bnr1.jpg");
 const item = blogLists.find((item) => item.code === 2);
 // console.log(item);

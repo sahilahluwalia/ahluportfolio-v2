@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ImageRows from "components/Products/ImageRows";
-import { electricalPanelProductList as productList } from "data/productsData";
+import ImageRows from "../../../../components/Products/ImageRows";
+import { electricalPanelProductList as productList } from "../../../../data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 
 const ElectricalPanels = () => {

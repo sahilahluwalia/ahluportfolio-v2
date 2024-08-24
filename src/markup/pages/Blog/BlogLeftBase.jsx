@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import Sidebar from "components/Blog/Sidebar";
+import Sidebar from "../../../components/Blog/Sidebar";
 import { Outlet } from "react-router-dom";
-const bg = require("images/banner/bnr1.jpg");
+const bg = require("../../../images/banner/bnr1.jpg");
 
 const BlogLeftBase = () => {
   return (

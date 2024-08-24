@@ -8,7 +8,7 @@ import qrCode from "../../asserts/socialIcons/qr-code.png";
 import { ahluLogoWithName, socialMediaLinks } from "../../data/websiteData";
 import { companyDetails } from "../../data/websiteData";
 import { subscribeToNewsletter } from "../../fetchers";
-import tripod from "asserts/Catalogue PDF Files/Trifold_Minimum_Clarity.pdf";
+// import tripod from "../../asserts/Catalogue PDF Files/Trifold_Minimum_Clarity.pdf";
 const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 const privateKey = process.env.REACT_APP_PRIVATE_KEY;
 
@@ -47,7 +47,7 @@ const usefulLinks = [
 
   {
     title: "Trifold",
-    link: tripod,
+    link: "tripod",
     href: true,
   },
 

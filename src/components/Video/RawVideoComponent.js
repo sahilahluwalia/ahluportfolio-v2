@@ -1,5 +1,5 @@
 import React from 'react';
-import video from '../../asserts/withouttext.mp4'
+// import video from '../../asserts/withouttext.mp4'
 import './rawVideoStyle.css'
 import {Link} from "react-router-dom";
 function RawVideoComponent(props) {
@@ -56,7 +56,7 @@ function RawVideoComponent(props) {
             </div>
             <div className="overlay"></div>
             <video
-                src={video}
+                src={"video"}
                 autoPlay loop muted />
 
         </div>

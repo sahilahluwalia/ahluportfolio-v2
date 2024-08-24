@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { contactForm } from "../../fetchers";
 import { companyDetails, socialMediaLinks } from "../../data/websiteData";
-import { specialPurposeMachineImage as bg } from "data/imagesData";
+import { specialPurposeMachineImage as bg } from "../../data/imagesData";
 
 const Contact = () => {
   const [inputValues, setInputValues] = useState({

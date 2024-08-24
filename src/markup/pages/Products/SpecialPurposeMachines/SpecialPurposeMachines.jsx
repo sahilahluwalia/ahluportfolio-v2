@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import ImageRows from "components/Products/ImageRows";
-import { specialPurposeProductList as productList } from "data/productsData";
+import ImageRows from "../../../../components/Products/ImageRows";
+import { specialPurposeProductList as productList } from "../../../../data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 
 const SpecialPurposeMachines = () => {

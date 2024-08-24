@@ -1,29 +1,29 @@
 import { Link } from "react-router-dom";
 import { catalogueList as cl } from "../utils/catalogues";
-import ast2aii from "asserts/machine-pics/ast2aii.png";
-import ast2ai from "asserts/machine-pics/ast2ai.png";
-import ast2ai_layout from "asserts/machine-pics/ast2ai-layout.png";
-import ast3aii from "asserts/machine-pics/ast3aii.png";
-import ast3aii_frontside from "asserts/machine-pics/Double Var Front View.png";
-import ampts from "asserts/machine-pics/ampts.png";
-import asrf from "asserts/machine-pics/asrf.png";
-import acsts from "asserts/machine-pics/acsts.png";
-import ampf from "asserts/machine-pics/ampf.png";
-import flap from "asserts/machine-pics/flap.png";
-import otherAccessories from "asserts/machine-pics/otheraccessories.png";
-import asr2aii_layout from "asserts/machine-pics/asr2aii-layout.png";
-import asr3aii_layout from "asserts/machine-pics/asr3aii-layout.png";
-import acsts_layout from "asserts/machine-pics/acsts-layout.png";
-import ampts_layout from "asserts/machine-pics/ampts-layout.png";
-import visionSPMImage from "asserts/Vision SPM.jpg";
-import assemblySPMImage from "asserts/Assembly SPM.jpg";
-import operationalSPMImage from "asserts/Operational SPM.jpg";
-import progesssiveDieImage from "asserts/machine-pics/SheetMetal/Progressive.jpg";
-import compoundDieImage from "asserts/machine-pics/SheetMetal/Compound Die.jpg";
-import transferImage from "asserts/machine-pics/SheetMetal/Transfer 1.jpg";
-// import ast2aii1 from "asserts/machine-pics/Design Image Data/2axis db";
-import ampf_top from "asserts/machine-pics/topFlap.png";
-import abf from "asserts/machine-pics/Design Image Data/abf/Blank Feeder.png";
+import ast2aii from "../asserts/machine-pics/ast2aii.png";
+import ast2ai from "../asserts/machine-pics/ast2ai.png";
+import ast2ai_layout from "../asserts/machine-pics/ast2ai-layout.png";
+import ast3aii from "../asserts/machine-pics/ast3aii.png";
+import ast3aii_frontside from "../asserts/machine-pics/Double Var Front View.png";
+import ampts from "../asserts/machine-pics/ampts.png";
+import asrf from "../asserts/machine-pics/asrf.png";
+import acsts from "../asserts/machine-pics/acsts.png";
+import ampf from "../asserts/machine-pics/ampf.png";
+import flap from "../asserts/machine-pics/flap.png";
+import otherAccessories from "../asserts/machine-pics/otheraccessories.png";
+import asr2aii_layout from "../asserts/machine-pics/asr2aii-layout.png";
+import asr3aii_layout from "../asserts/machine-pics/asr3aii-layout.png";
+import acsts_layout from "../asserts/machine-pics/acsts-layout.png";
+import ampts_layout from "../asserts/machine-pics/ampts-layout.png";
+import visionSPMImage from "../asserts/Vision SPM.jpg";
+import assemblySPMImage from "../asserts/Assembly SPM.jpg";
+import operationalSPMImage from "../asserts/Operational SPM.jpg";
+import progesssiveDieImage from "../asserts/machine-pics/SheetMetal/Progressive.jpg";
+import compoundDieImage from "../asserts/machine-pics/SheetMetal/Compound Die.jpg";
+import transferImage from "../asserts/machine-pics/SheetMetal/Transfer 1.jpg";
+// import ast2aii1 from "../asserts/machine-pics/Design Image Data/2axis db";
+import ampf_top from "../asserts/machine-pics/topFlap.png";
+import abf from "../asserts/machine-pics/Design Image Data/abf/Blank Feeder.png";
 function importAll(r) {
   return r.keys().map(r);
 }
@@ -32,31 +32,31 @@ const ast2aiiCollection = importAll(
 );
 
 const ast3aiiCollection = importAll(
-  require.context("asserts/machine-pics/Design Image Data/3 axis double bar")
+  require.context("../asserts/machine-pics/Design Image Data/3 axis double bar")
 );
 const acstsCollection = importAll(
-  require.context("asserts/machine-pics/Design Image Data/acsts")
+  require.context("../asserts/machine-pics/Design Image Data/acsts")
 );
 const asrfCollection = importAll(
-  require.context("asserts/machine-pics/Design Image Data/Feeder")
+  require.context("../asserts/machine-pics/Design Image Data/Feeder")
 );
 const ampfCollection = importAll(
-  require.context("asserts/machine-pics/Design Image Data/Flap")
+  require.context("../asserts/machine-pics/Design Image Data/Flap")
 );
 const transferSystemCollection = importAll(
-  require.context("asserts/machine-pics/transferSystem")
+  require.context("../asserts/machine-pics/transferSystem")
 );
 const sheetMetalCollection = importAll(
-  require.context("asserts/machine-pics/SheetMetal")
+  require.context("../asserts/machine-pics/SheetMetal")
 );
 const a2iCollection = importAll(
-  require.context("asserts/machine-pics/Design Image Data/2aii")
+  require.context("../asserts/machine-pics/Design Image Data/2aii")
 );
 const abfCollection = importAll(
-    require.context("asserts/machine-pics/Design Image Data/abf")
+    require.context("../asserts/machine-pics/Design Image Data/abf")
 );
 
-const  electricalPanelCollection =importAll(  require.context( "asserts/machine-pics/electrical-panels"))
+const  electricalPanelCollection =importAll(  require.context( "../asserts/machine-pics/electrical-panels"))
 const randomizeArray = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));

@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import {
   specialPurposeProductList,
   powerPressAutomationProductList,
-} from "data/productsData";
+} from "../../data/productsData";
 import parse from "html-react-parser";
 
 // add products/power-press-automation/ to every item.link

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { blogLists } from "data/BlogData";
-import BlogUpperText from "components/Blog/BlogUpperText";
-import bluepress from "asserts/Blog/bluepress.png";
-import greenpress from "asserts/Blog/greenpress.png";
-const bg = require("images/banner/bnr1.jpg");
+import { blogLists } from "../../../../data/BlogData";
+import BlogUpperText from "../../../../components/Blog/BlogUpperText";
+import bluepress from "../../../../asserts/Blog/bluepress.png";
+import greenpress from "../../../../asserts/Blog/greenpress.png";
+const bg = require("../../../../images/banner/bnr1.jpg");
 const item = blogLists.find((item) => item.code === 1);
 // console.log(item);
 

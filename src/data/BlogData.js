@@ -1,5 +1,5 @@
-import powerpress from "asserts/Blog/power-press.png";
-import powerpress_automation from "asserts/Blog/power-press-automation.png";
+import powerpress from "../asserts/Blog/power-press.png";
+import powerpress_automation from "../asserts/Blog/power-press-automation.png";
 export const blogLists = [
   {
     code: 1,

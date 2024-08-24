@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 import ImageRows from "../../../../components/Products/ImageRows";
-import { pressFeederProducts } from "data/productsData";
-import LeftSection from "components/Products/LeftSection";
-import { RightSection } from "components/Products/RightSection";
-import ProductList from "components/Products/ProductList";
+import { pressFeederProducts } from "../../../../data/productsData";
+import LeftSection from "../../../../components/Products/LeftSection";
+import { RightSection } from "../../../../components/Products/RightSection";
+import ProductList from "../../../../components/Products/ProductList";
 
 const PressFeeders = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ImageRows from "components/Products/ImageRows";
-import { powerPressAutomationProductList as productList } from "data/productsData";
+import ImageRows from "../../../../components/Products/ImageRows";
+import { powerPressAutomationProductList as productList } from "../../../../data/productsData";
 
 const PowerPressAutomation = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import { subProductList } from "data/productsData";
+import { subProductList } from "../../data/productsData";
 import { Link } from "react-router-dom";
 
 function shuffleArray(array) {

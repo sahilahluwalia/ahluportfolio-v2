@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { sandharImage } from "data/imagesData";
+import { sandharImage } from "../../data/imagesData";
 const Testimonial1_content = [
   {
     image: sandharImage,

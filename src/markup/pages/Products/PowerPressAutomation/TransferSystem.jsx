@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import ast2aii from "asserts/machine-pics/ast2aii.png";
-import ast3aii from "asserts/machine-pics/ast3aii.png";
-import acsts from "asserts/machine-pics/acsts.png";
-import ampts from "asserts/machine-pics/ampts.png";
-import ImageRows from "components/Products/ImageRows";
-import LeftSection from "components/Products/LeftSection";
-import FirstRow from "components/Products/FirstRow";
-import { RightSection } from "components/Products/RightSection";
-import ProductList from "components/Products/ProductList";
-import ImageSlider from "components/Products/ImageSlider";
-import { transferSystemProducts } from "data/productsData";
-import Testmonial from "components/Homepage/Testmonial";
+import ast2aii from "../../../../asserts/machine-pics/ast2aii.png";
+import ast3aii from "../../../../asserts/machine-pics/ast3aii.png";
+import acsts from "../../../../asserts/machine-pics/acsts.png";
+import ampts from "../../../../asserts/machine-pics/ampts.png";
+import ImageRows from "../../../../components/Products/ImageRows";
+import LeftSection from "../../../../components/Products/LeftSection";
+// import FirstRow from "components/Products/FirstRow";
+import { RightSection } from "../../../../components/Products/RightSection";
+import ProductList from "../../../../components/Products/ProductList";
+// import ImageSlider from "components/Products/ImageSlider";
+import { transferSystemProducts } from "../../../../data/productsData";
+// import Testmonial from "components/Homepage/Testmonial";
 
 const images = [ast3aii, ast2aii, acsts, ampts];
 

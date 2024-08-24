@@ -1,14 +1,14 @@
 import React from "react";
 
 import parse from "html-react-parser";
-import ChooseAhluEngineers from "components/About/ChooseAhluEngineers";
+import ChooseAhluEngineers from "../../components/About/ChooseAhluEngineers";
 import {
   storyImage,
   visionImage,
   missionImage,
   bannerImage,
   ahluSign
-} from "data/imagesData";
+} from "../../data/imagesData";
 import { Helmet } from "react-helmet";
 // var bnr3 = require("./../../images/banner/bnr3.jpg");
 // var bg1 = require("./../../images/background/bg-video.png");

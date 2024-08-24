@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { catalogueList } from "../../utils/catalogues";
-import { specialPurposeMachineImage as bg } from "data/imagesData";
+import { specialPurposeMachineImage as bg } from "../../data/imagesData";
 
 const Catalogues = () => {
   const editedCatalogueList = catalogueList.map((item) => {

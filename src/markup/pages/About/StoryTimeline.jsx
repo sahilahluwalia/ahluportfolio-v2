@@ -5,7 +5,7 @@ import {
     missionImage,
     bannerImage,
     ahluSign
-} from "data/imagesData";
+} from "../../../data/imagesData";
 import parse from "html-react-parser";
 
 const timeLineData = [

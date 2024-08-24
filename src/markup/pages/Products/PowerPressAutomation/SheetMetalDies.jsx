@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import ImageRows from "components/Products/ImageRows";
-import LeftSection from "components/Products/LeftSection";
-import { RightSection } from "components/Products/RightSection";
-import ProductList from "components/Products/ProductList";
-import { sheetMetalProductList } from "data/productsData";
+import ImageRows from "../../../../components/Products/ImageRows";
+import LeftSection from "../../../../components/Products/LeftSection";
+import { RightSection } from "../../../../components/Products/RightSection";
+import ProductList from "../../../../components/Products/ProductList";
+import { sheetMetalProductList } from "../../../../data/productsData";
 // import { companyDetails, socialMediaLinks } from "../../data/websiteData";
 
 

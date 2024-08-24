@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import DownloadCatalogue from "components/Products/DownloadCatalogue";
-import { subProductList, transferSystemData } from "data/productsData";
-import ProductList from "components/Products/ProductList";
-import { RightSection } from "components/Products/RightSection";
-import LeftSection from "components/Products/LeftSection";
-import FirstRow from "components/Products/FirstRow";
+import DownloadCatalogue from "../../../../../components/Products/DownloadCatalogue";
+import { subProductList, transferSystemData } from "../../../../../data/productsData";
+import ProductList from "../../../../../components/Products/ProductList";
+import { RightSection } from "../../../../../components/Products/RightSection";
+import LeftSection from "../../../../../components/Products/LeftSection";
+import FirstRow from "../../../../../components/Products/FirstRow";
 import parse from "html-react-parser";
-import BaseTable from "components/Products/BaseTable";
-import ProductItemBase from "components/Products/ProductItemBase";
+import BaseTable from "../../../../../components/Products/BaseTable";
+import ProductItemBase from "../../../../../components/Products/ProductItemBase";
 
 const item = subProductList.find((item) => item.code === "ast3aii");
 

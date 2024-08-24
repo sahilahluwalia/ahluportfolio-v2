@@ -15,16 +15,16 @@ import "../../css/style.css";
 import "../../css/skin/skin-1.css";
 import "../../css/templete.min.css";
 import ScrollToTop from "../element/scrollToTop";
-import bg from "asserts/bg.jpg";
+import bg from "../../asserts/bg.jpg";
 import { Accordion } from "react-bootstrap";
-import { companyDetails } from "data/websiteData";
+import { companyDetails } from "../../data/websiteData";
 // import ProductSlider from "components/Homepage/ProductSlider";
-import Testmonial from "components/Homepage/Testmonial";
+import Testmonial from "../../components/Homepage/Testmonial";
 // import Testimonial9 from "../element/testimonial9";
 // import Testmonial4 from "../element/testmonial4";
 // import Testimonial6 from "../element/testimonial6";
-import { youtubeLinkImage, sevenyearsImage } from "data/imagesData";
-import NewProductSlider from "components/Homepage/NewProductSlider";
+import { youtubeLinkImage, sevenyearsImage } from "../../data/imagesData";
+import NewProductSlider from "../../components/Homepage/NewProductSlider";
 import RawVideoComponent from "../../components/Video/RawVideoComponent";
 
 const faqContent = [
@@ -336,14 +336,14 @@ const Homepage = () => {
 																	className={`${ activeDefault === i ? '' : 'collapsed' }`}
 																	onClick={() => setActiveDefault(activeDefault === i ? -1 : i)}
 																>
-																	{faq.question} 
+																	{faq.question}
 																</Accordion.Toggle>
 															</h6>
-														</div>  		
+														</div>
 														<Accordion.Collapse className='acod-body' eventKey={`${i}`}>
 															<div className='acod-content'>{faq.answer}</div>
 														</Accordion.Collapse>
-													</div> 													
+													</div>
                                                 ))
                                             }
                                         </Accordion>*/}

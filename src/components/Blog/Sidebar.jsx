@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { LatestBlogs } from "data/BlogData";
+import { LatestBlogs } from "../../data/BlogData";
 import dayjs from "dayjs";
 import { useState, useRef } from "react";
-import { subscribeToNewsletter } from "fetchers";
+import { subscribeToNewsletter } from "../../fetchers";
 import { companyDetails } from "../../data/websiteData";
 
 const API_URL = process.env.REACT_APP_API_URL;
@@ -196,7 +196,7 @@ const Sidebar = () => {
                   className='check-km'
                   title='Image 1 Title will come here'
                 >
-                  <img src={require("images/gallery/pic1.jpg")} alt='' />
+                  <img src={require("../../images/gallery/pic1.jpg")} alt='' />
                 </span>
               </div>
             </li>
@@ -208,7 +208,7 @@ const Sidebar = () => {
                   className='check-km'
                   title='Image 2 Title will come here'
                 >
-                  <img src={require("images/gallery/pic2.jpg")} alt='' />
+                  <img src={require("../../images/gallery/pic2.jpg")} alt='' />
                 </span>
               </div>
             </li>
@@ -220,7 +220,7 @@ const Sidebar = () => {
                   className='check-km'
                   title='Image 3 Title will come here'
                 >
-                  <img src={require("images/gallery/pic3.jpg")} alt='' />
+                  <img src={require("../../images/gallery/pic3.jpg")} alt='' />
                 </span>
               </div>
             </li>
@@ -232,7 +232,7 @@ const Sidebar = () => {
                   className='check-km'
                   title='Image 4 Title will come here'
                 >
-                  <img src={require("images/gallery/pic4.jpg")} alt='' />
+                  <img src={require("../../images/gallery/pic4.jpg")} alt='' />
                 </span>
               </div>
             </li>
@@ -244,7 +244,7 @@ const Sidebar = () => {
                   className='check-km'
                   title='Image 5 Title will come here'
                 >
-                  <img src={require("images/gallery/pic5.jpg")} alt='' />
+                  <img src={require("../../images/gallery/pic5.jpg")} alt='' />
                 </span>
               </div>
             </li>
@@ -256,7 +256,7 @@ const Sidebar = () => {
                   className='check-km'
                   title='Image 6 Title will come here'
                 >
-                  <img src={require("images/gallery/pic6.jpg")} alt='' />
+                  <img src={require("../../images/gallery/pic6.jpg")} alt='' />
                 </span>
               </div>
             </li>
@@ -268,7 +268,7 @@ const Sidebar = () => {
                   className='check-km'
                   title='Image 7 Title will come here'
                 >
-                  <img src={require("images/gallery/pic7.jpg")} alt='' />
+                  <img src={require("../../images/gallery/pic7.jpg")} alt='' />
                 </span>
               </div>
             </li>
@@ -280,7 +280,7 @@ const Sidebar = () => {
                   className='check-km'
                   title='Image 8 Title will come here'
                 >
-                  <img src={require("images/gallery/pic8.jpg")} alt='' />
+                  <img src={require("../../images/gallery/pic8.jpg")} alt='' />
                 </span>
               </div>
             </li>

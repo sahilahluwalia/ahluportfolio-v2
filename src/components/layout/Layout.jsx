@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import onlyAhluLogo from "asserts/onlyAhluLogo.png";
+import onlyAhluLogo from "../../asserts/onlyAhluLogo.png";
 import Header from "./Header";
 import Footer from "./Footer";
 // import { WhatsAppWidget } from "react-whatsapp-widget";

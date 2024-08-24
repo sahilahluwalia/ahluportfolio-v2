@@ -69,7 +69,7 @@ const Router = () => {
   useEffect(() => {
     // console.log("location changed");
     // console.log(location.pathname);
-    ping(location);
+    // ping(location);
 
     // ipDataToLocalStorage(location);
     // fetcher();
@@ -138,7 +138,7 @@ const Router = () => {
         </Route>
         <Route path='enguiry' element={<Quote />} />
         <Route path='catalogues' element={<Catalogues />} />
-        <Route path='*' component={<Error404 />} />
+        {/*<Route path='*' component={<Error404 />} />*/}
       </Route>
     </Routes>
   );
