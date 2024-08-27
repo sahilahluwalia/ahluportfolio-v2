@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import parse from "html-react-parser";
+import Image from "next/image";
 const ImageRows = (props) => {
   const { data, noOfRows } = props;
   return (
@@ -37,7 +38,7 @@ const ImageRows = (props) => {
                 >
                   <div className='product-image'>
                     <figure>
-                      <img
+                      <Image
                         src={item?.image}
                         alt=''
                         style={{

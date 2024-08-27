@@ -1,4 +1,3 @@
-'use client'
 import React from "react";
 import Link from 'next/link'
 import LogoSlider from "../../components/Homepage/LogoSlider";
@@ -27,6 +26,7 @@ import { youtubeLinkImage, sevenyearsImage } from "../../data/imagesData";
 import NewProductSlider from "../../components/Homepage/NewProductSlider";
 import RawVideoComponent from "../../components/Video/RawVideoComponent";
 import Image from "next/image";
+import {HomePageAccordion} from "./client";
 
 const faqContent = [
   {
@@ -326,7 +326,7 @@ const Page = () => {
                       />
                     </div>
                   </div>
-                  <div className='col-lg-6 col-md-12 m-b30'>
+
                     {/* <Accordion className="accordian dlab-accordion faq-1 box-sort-in m-b30 faq" defaultActiveKey='-1'>
                                             {
                                                 faqContent.map((faq, i) =>(
@@ -348,21 +348,23 @@ const Page = () => {
                                                 ))
                                             }
                                         </Accordion>*/}
-                    <Accordion className='dlab-accordion faq-1 box-sort-in m-b30 faq'>
-                      {faqContent.map((faq, i) => (
-                        <div className='panel'>
-                          <Accordion.Item eventKey={`${i}`}>
-                            <Accordion.Header as='h6'>
-                              {faq.question}
-                            </Accordion.Header>
-                            <Accordion.Body eventKey={`${i}`}>
-                              <div>{faq.answer}</div>
-                            </Accordion.Body>
-                          </Accordion.Item>
-                        </div>
-                      ))}
-                    </Accordion>
+                  <div className='col-lg-6 col-md-12 m-b30'>
+                    <HomePageAccordion faqContent={faqContent} />
                   </div>
+                    {/*<Accordion className='dlab-accordion faq-1 box-sort-in m-b30 faq'>*/}
+                    {/*  {faqContent.map((faq, i) => (*/}
+                    {/*    <div className='panel'>*/}
+                    {/*      <Accordion.Item eventKey={`${i}`}>*/}
+                    {/*        <Accordion.Header as='h6'>*/}
+                    {/*          {faq.question}*/}
+                    {/*        </Accordion.Header>*/}
+                    {/*        <Accordion.Body eventKey={`${i}`}>*/}
+                    {/*          <div>{faq.answer}</div>*/}
+                    {/*        </Accordion.Body>*/}
+                    {/*      </Accordion.Item>*/}
+                    {/*    </div>*/}
+                    {/*  ))}*/}
+                    {/*</Accordion>*/}
                 </div>
 
                 {/* <div className='row'>
