@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Carousel from "nuka-carousel/lib/carousel";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -63,7 +64,7 @@ const LogoSlider = ({ hideBorder, allowPadding }) => {
             slidesToShow={4}
         >
           {images.map((item, index) => (
-              <img
+              <Image
                   key={index}
                   style={{
                     padding: "0px 5px 0px 5px",

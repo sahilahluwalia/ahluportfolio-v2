@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { sandharImage } from "../../data/imagesData";
+import Image from "next/image";
 
 const Testimonial1_content = [
   {
@@ -36,7 +37,7 @@ const Testimonial6 = () => {
               <div key={id} className='item'>
                 <div className='testimonial-1'>
                   <div>
-                    <img
+                    <Image
                         src={item.image}
                         style={{
                           margin: "auto",

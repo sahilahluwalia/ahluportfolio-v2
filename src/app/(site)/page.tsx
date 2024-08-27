@@ -26,6 +26,7 @@ import Testmonial from "../../components/Homepage/Testmonial";
 import { youtubeLinkImage, sevenyearsImage } from "../../data/imagesData";
 import NewProductSlider from "../../components/Homepage/NewProductSlider";
 import RawVideoComponent from "../../components/Video/RawVideoComponent";
+import Image from "next/image";
 
 const faqContent = [
   {
@@ -208,11 +209,11 @@ const Page = () => {
                 </div>
               </div>
               <div className='col-lg-6 col-md-6 col-sm-6'>
-                <img className='img-cover' src={sevenyearsImage} alt='' />
+                <Image className='img-cover' src={sevenyearsImage} alt='' />
               </div>
               <div className='col-lg-6 col-md-6 col-sm-6'>
                 <div className='video-bx radius-no h100'>
-                  <img
+                  <Image
                     src={youtubeLinkImage}
                     alt='Signature'
                     className='img-cover'
@@ -291,7 +292,7 @@ const Page = () => {
                   data-wow-duration='2s'
                   data-wow-delay='0.2s'
                 >
-                  <img src={require("../../images/pic1.png")} alt='' />
+                  <Image src={require("../../images/pic1.png")} alt='' />
                 </div>
               </div>
             </div>
@@ -318,7 +319,7 @@ const Page = () => {
                       >
                         <i className='flaticon-play-button text-white'></i>
                       </Link>
-                      <img
+                      <Image
                         src={require("../../images/about/pic5.jpg")}
                         alt=''
                         className='img-cover radius-sm'

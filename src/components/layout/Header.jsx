@@ -15,6 +15,7 @@ import {
   masterProductsListItemsWithSubmenu,
 } from "../../data/productsData";
 import { usePathname } from 'next/navigation'
+import Image from "next/image";
 const navbarlinks = [
   {
     name: "Home",
@@ -113,8 +114,8 @@ const Header = () => {
           <div className="container-fluid">
             <div className="middle-area">
               <div className="logo-header">
-                <Link href="/public">
-                  <img src={ahluLogoWithName} alt="ahlu logo" />
+                <Link href="/">
+                  <Image src={ahluLogoWithName} alt="ahlu logo" />
                 </Link>
               </div>
               <div className="service-list">
@@ -156,8 +157,8 @@ const Header = () => {
             <div className="main-bar clearfix ">
               <div className="container-fluid clearfix ">
                 <div className="logo-header mostion">
-                  <Link href="/public">
-                    <img src={ahluLogoWithName} alt="ahlu ahluLogoWithName" />
+                  <Link href="/">
+                    <Image src={ahluLogoWithName} alt="ahlu ahluLogoWithName" />
                   </Link>
                 </div>
 
@@ -203,8 +204,8 @@ const Header = () => {
                   id="navbarNavDropdown"
                 >
                   <div className="logo-header d-md-block d-lg-none">
-                    <Link href="/public">
-                      <img src={ahluLogoWithName} alt="" />
+                    <Link href="/">
+                      <Image src={ahluLogoWithName} alt="" />
                     </Link>
                   </div>
                   <ul className="nav navbar-nav">
@@ -244,7 +245,7 @@ const Header = () => {
                                 rel="noopener noreferrer"
                                 href={item.link}
                               >
-                                <img
+                                <Image
                                   style={{
                                     width: "1.5rem",
                                   }}

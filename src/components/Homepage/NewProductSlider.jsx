@@ -9,6 +9,7 @@ import {
   powerPressAutomationProductList,
 } from "../../data/productsData";
 import parse from "html-react-parser";
+import Image from "next/image";
 
 const forHomePowerPress = powerPressAutomationProductList.map((item) => ({
   ...item,
@@ -82,7 +83,7 @@ const ServicesSlider1 = () => {
                 <div className="dlab-box service-media-bx">
                   <div className="dlab-media dlab-img-effect zoom">
                     <Link href={item.link}>
-                      <img
+                      <Image
                           style={{
                             height: "400px",
                             objectFit: item.cover ? "cover" : "contain",
