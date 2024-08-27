@@ -1,10 +1,11 @@
+'use client'
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { contactForm } from "../../fetchers";
-import { companyDetails, socialMediaLinks } from "../../data/websiteData";
-import { specialPurposeMachineImage as bg } from "../../data/imagesData";
-
-const Contact = () => {
+import Link from 'next/link'
+import { contactForm } from "../../../fetchers";
+import { companyDetails, socialMediaLinks } from "../../../data/websiteData";
+import { specialPurposeMachineImage as bg } from "../../../data/imagesData";
+import Image from 'next/image'
+const Page = () => {
   const [inputValues, setInputValues] = useState({
     name: "",
     email: "",
@@ -64,7 +65,7 @@ const Contact = () => {
               <div className='breadcrumb-row'>
                 <ul className='list-inline'>
                   <li>
-                    <Link to='/'>Home</Link>
+                    <Link href='/'>Home</Link>
                   </li>
                   <li>Contact</li>
                 </ul>
@@ -90,7 +91,7 @@ const Contact = () => {
                     <li className='icon-bx-wraper left m-b30'>
                       <div className='icon-bx-xs border-1'>
                         {" "}
-                        <Link to='/#' className='icon-cell'>
+                        <Link href='https://www.google.com/maps?ll=19.198335,73.102031&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=11625934742252353196' className='icon-cell'>
                           <i className='ti-location-pin'></i>
                         </Link>{" "}
                       </div>
@@ -115,7 +116,7 @@ const Contact = () => {
                     <li className='icon-bx-wraper left  m-b30'>
                       <div className='icon-bx-xs border-1'>
                         {" "}
-                        <Link to='/#' className='icon-cell'>
+                        <Link href='/' className='icon-cell'>
                           <i className='ti-email'></i>
                         </Link>{" "}
                       </div>
@@ -123,18 +124,18 @@ const Contact = () => {
                         <h6 className='text-uppercase m-tb0 dlab-tilte'>
                           Email:
                         </h6>
-                        <a href={`mailto:${companyDetails.email}`}>
+                        <Link href={`mailto:${companyDetails.email}`}>
                           <p>{companyDetails.email}</p>
-                        </a>
-                        <a href={companyDetails.secondaryEmailTo}>
+                        </Link>
+                        <Link href={companyDetails.secondaryEmailTo}>
                           <p>{companyDetails.secondaryEmail}</p>
-                        </a>
+                        </Link>
                       </div>
                     </li>
                     <li className='icon-bx-wraper left'>
                       <div className='icon-bx-xs border-1'>
                         {" "}
-                        <Link to='/#' className='icon-cell'>
+                        <Link href={companyDetails.phoneTo} className='icon-cell'>
                           <i className='ti-mobile'></i>
                         </Link>{" "}
                       </div>
@@ -142,9 +143,9 @@ const Contact = () => {
                         <h6 className='text-uppercase m-tb0 dlab-tilte'>
                           PHONE
                         </h6>
-                        <a href={companyDetails.phoneTo}>
+                        <Link href={companyDetails.phoneTo}>
                           <p>{companyDetails.phone}</p>
-                        </a>
+                        </Link>
                       </div>
                     </li>
                   </ul>
@@ -154,31 +155,31 @@ const Contact = () => {
                         if (image)
                           return (
                             <li key={name}>
-                              <a
+                              <Link
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 href={link}
                               >
-                                <img
+                                <Image
                                   style={{
                                     width: "1.5rem",
                                   }}
                                   src={image}
                                   alt={name}
                                 />
-                              </a>
+                              </Link>
                             </li>
                           );
                         else
                           return (
                             <li key={name}>
-                              <a
+                              <Link
                                 href={link}
                                 // open in new tab
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 className={`${icon} bg-primary`}
-                              ></a>
+                              ></Link>
                             </li>
                           );
                       })}
@@ -310,7 +311,7 @@ const Contact = () => {
                   src={companyDetails.map}
                   className='align-self-stretch radius-sm'
                   style={{ border: "0", width: "100%", minHeight: "100%" }}
-                  allowfullscreen
+                  allowFullScreen
                 ></iframe>
               </div>
             </div>
@@ -321,4 +322,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Page;

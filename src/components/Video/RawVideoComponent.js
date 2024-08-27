@@ -1,7 +1,7 @@
 import React from 'react';
 // import video from '../../asserts/withouttext.mp4'
 import './rawVideoStyle.css'
-import {Link} from "react-router-dom";
+import Link from 'next/link'
 function RawVideoComponent(props) {
     return (
         <div
@@ -37,13 +37,13 @@ function RawVideoComponent(props) {
                                 <div>
                                     <Link
                                         className='site-button outline outline-2 white m-r15 radius-xl'
-                                        to='products#products'
+                                        href='products#products'
                                     >
                                         Products
                                     </Link>
                                     <Link
                                         className='site-button outline outline-2 white m-r15 radius-xl'
-                                        to='about'
+                                        href='about'
                                     >
                                         About Us
                                     </Link>

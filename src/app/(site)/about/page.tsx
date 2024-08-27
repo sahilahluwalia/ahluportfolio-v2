@@ -1,15 +1,16 @@
+'use client'
 import React from "react";
 
-import parse from "html-react-parser";
-import ChooseAhluEngineers from "../../components/About/ChooseAhluEngineers";
+// import parse from "html-react-parser";
+import ChooseAhluEngineers from "../../../components/About/ChooseAhluEngineers";
 import {
   storyImage,
   visionImage,
   missionImage,
   bannerImage,
   ahluSign
-} from "../../data/imagesData";
-import { Helmet } from "react-helmet";
+} from "../../../data/imagesData";
+import Image from "next/image";
 // var bnr3 = require("./../../images/banner/bnr3.jpg");
 // var bg1 = require("./../../images/background/bg-video.png");
 // var bg2 = require("./../../images/background/bg1.jpg");
@@ -55,14 +56,12 @@ const timeLineData = [
 const About = (props) => {
   return (
     <>
-      <Helmet>
         {/* <meta
           name='description'
           content='Our vision is to be the leading provider of cutting-edge manufacturing automation solutions that drive growth and success for our clients'
         /> */}
         {/* <title>My Title</title> */}
         {/* <meta name='description' content='Nested component' /> */}
-      </Helmet>
       <div className='page-content bg-white'>
         {/* <div
           className="dlab-bnr-inr overlay-black-middle text-center bg-pt"
@@ -139,7 +138,7 @@ const About = (props) => {
                   </div>
                 </div>
                 <div className='col-lg-6 col-md-12 m-b30 our-story-thum'>
-                  <img
+                  <Image
                     src={storyImage}
                     style={{
                       height: "800px",
@@ -156,7 +155,7 @@ const About = (props) => {
           <div className='container'>
             <div className='row align-items-center'>
               <div className='col-lg-6 col-md-12 m-b30 our-story-thum'>
-                <img
+                <Image
                   style={{
                     height: "700px",
                     objectFit: "cover",
@@ -177,7 +176,7 @@ const About = (props) => {
                     </span>{" "}
                     that drive growth and success for our clients
                   </h4>
-                  <p>
+                  <div>
                     <ul>
                       <li>
                         To empower our clients to stay ahead of the competition
@@ -204,7 +203,7 @@ const About = (props) => {
                         industry.
                       </li>
                     </ul>
-                  </p>
+                  </div>
                   {/* <Link to={"/#"} className="site-button">
                       Read More
                     </Link> */}
@@ -256,9 +255,10 @@ const About = (props) => {
                       />
                       <h4 className="m-b0">Tejendra Singh Ahluwalia</h4>
                       <span className="font-14">Company Director</span> */}
-                      <img
+                      <Image
                         src={ahluSign}
                         width='200'
+                        height={200}
                         alt='ahlu signature'
                       />
                       <h4 className='m-b0'>Satyam Ahluwalia</h4>
@@ -267,7 +267,8 @@ const About = (props) => {
                   </div>
                   <div className='col-lg-6 col-md-12 m-b30'>
                     <div className='video-bx'>
-                      <img src={missionImage} alt='Signature' />
+                      <Image
+                          src={missionImage} alt='Signature' />
                       {/* <div className='video-play-icon'>
                         <a
                           href='https://www.youtube.com/watch?v=_FRZVScwggM'
@@ -299,7 +300,7 @@ const About = (props) => {
                   satisfaction.
                 </p>
               </div>
-              <ChooseAhluEngineers />
+              {/*<ChooseAhluEngineers />*/}
             </div>
           </div>
           {/* <div
@@ -333,7 +334,8 @@ const About = (props) => {
                     </div>
                     <div className='timeline-content'>
                       {/* <h5 className="title">{item.title}</h5> */}
-                      {parse(item.description)}
+                      {/*{parse(item.description)}*/}
+                      {item.description}
                       {/* <p className="description">{item.description}</p> */}
                     </div>
                   </div>

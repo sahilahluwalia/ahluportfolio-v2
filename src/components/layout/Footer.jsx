@@ -1,6 +1,8 @@
-import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+'use client'
 
+import React, { useRef, useState } from "react";
+import Link from "next/link";
+import Image from 'next/image';
 import icon1 from "../../images/icon/icon1.png";
 import icon2 from "../../images/icon/icon2.png";
 import icon3 from "../../images/icon/icon3.png";
@@ -37,7 +39,8 @@ const usefulLinks = [
   },
   {
     title: "Career",
-    // link: "/career",
+    link: "/career",
+    href:false
   },
   {
     title: "Literature",
@@ -78,7 +81,7 @@ const QrCodeComponent = ({ qrShow, setQrShow }) => {
           setQrShow(false);
         }}
       >
-        <img src={qrCode} alt='qrcode' />
+        <Image src={qrCode} alt='qrcode'  width={300} height={300} />
       </div>
     );
 };
@@ -122,7 +125,6 @@ const Footer = () => {
     } catch (err) {
       console.log(err);
       onError();
-      // onSuccess();
     }
   };
 
@@ -138,12 +140,12 @@ const Footer = () => {
               data-wow-delay='0.6s'
             >
               <div className='ft-contact-bx'>
-                <a
+                <Link
                   href={companyDetails.googleMapLink}
                   rel='noreferrer'
                   target='_blank'
                 >
-                  <img src={icon1} alt='' />
+                  <Image src={icon1} alt=''  width={50} height={50} />
                   <h4 className='title'>Company Address</h4>
                   <p
                     style={{
@@ -152,15 +154,15 @@ const Footer = () => {
                   >
                     {companyDetails.address}
                   </p>
-                </a>
+                </Link>
               </div>
 
               <div className='ft-contact-bx'>
-                <a className='footer-col' href={companyDetails.phoneTo}>
-                  <img src={icon2} alt='' />
+                <Link className='footer-col' href={companyDetails.phoneTo}>
+                  <Image src={icon2} alt=''  width={50} height={50} />
                   <h4 className='title'>Phone</h4>
                   <p>{companyDetails.phone}</p>
-                </a>
+                </Link>
               </div>
 
               <div
@@ -169,15 +171,15 @@ const Footer = () => {
                 }}
                 className='ft-contact-bx'
               >
-                <img src={icon3} alt='' />
+                <Image src={icon3} alt=''  width={50} height={50} />
                 <h4 className='title'>Connect us via</h4>
-                <a href={`mailto:${companyDetails.email}`}>
+                <Link href={`mailto:${companyDetails.email}`}>
                   <p>{companyDetails.email}</p>
-                </a>
+                </Link>
 
-                <a href={companyDetails.secondaryEmailTo}>
+                <Link href={companyDetails.secondaryEmailTo}>
                   <p>{companyDetails.secondaryEmail}</p>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -192,7 +194,7 @@ const Footer = () => {
                     Serving in 3+ countries in Industrial Automation Solutions
                     for customized development.
                   </p>
-                  <Link to={"/about"}>Read More</Link>
+                  <Link href={"/about"}>Read More</Link>
                 </div>
               </div>
               <div className='col-md-4 col-sm-6'>
@@ -209,7 +211,7 @@ const Footer = () => {
                         return (
                           <li key={index}>
                             <Link
-                              to={item.link}
+                              href={item.link}
                               target='_blank'
                               style={{
                                 textDecoration: "none",
@@ -223,7 +225,7 @@ const Footer = () => {
                         return (
                           <li key={index}>
                             <Link
-                              to={item.link}
+                              href={item.link}
                               style={{
                                 textDecoration: "none",
                               }}
@@ -306,9 +308,9 @@ const Footer = () => {
                         ERROR PLEASE TRY AGAIN !!
                         <br />
                         email us at{" "}
-                        <a href={`mailto:${companyDetails.secondaryEmail}`}>
+                        <Link href={`mailto:${companyDetails.secondaryEmail}`}>
                           {companyDetails.secondaryEmail}
-                        </a>
+                        </Link>
                       </p>
                     </>
                   ) : (
@@ -318,11 +320,6 @@ const Footer = () => {
                   <div></div>
                 </div>
               </div>
-              <script
-                async
-                data-uid='569a3851ca'
-                src='https://home-industries.ck.page/569a3851ca/index.js'
-              ></script>
             </div>
           </div>
         </div>
@@ -330,8 +327,8 @@ const Footer = () => {
           <div className='container'>
             <div className='footer-bottom-in'>
               <div className='footer-bottom-logo'>
-                <Link to={"/"}>
-                  <img src={ahluLogoWithName} alt='ahlulogo' />
+                <Link href={"/"}>
+                  <Image src={ahluLogoWithName} alt='ahlulogo'  width={150} height={50} />
                 </Link>
               </div>
               <div className='footer-bottom-social'>
@@ -340,33 +337,33 @@ const Footer = () => {
                     if (item.image)
                       return (
                         <li key={index}>
-                          <a
+                          <Link
                             className={item.icon}
                             target='_blank'
                             rel='noopener noreferrer'
                             href={item.link}
                           >
-                            <img
+                            <Image
                               style={{
                                 width: "1.5rem",
                               }}
                               src={item.image}
                               alt=''
                             />
-                          </a>
+                          </Link>
                         </li>
                       );
                     else
                       return (
                         <li key={index}>
-                          <a
+                          <Link
                             className={item.icon}
                             target='_blank'
                             rel='noopener noreferrer'
                             href={item.link}
                           >
                             .
-                          </a>
+                          </Link>
                         </li>
                       );
                   })}
@@ -379,7 +376,7 @@ const Footer = () => {
                       qrShow ? setQrShow(false) : setQrShow(true);
                     }}
                   >
-                    <img
+                    <Image
                       style={{
                         width: "1.6rem",
                       }}

@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useReducer, useState } from "react";
 // import { Link } from 'react-router-dom';
 // import Footer from "../layout/footer";
@@ -5,13 +6,13 @@ import {
   freeQuote,
   currentUrlSender,
   ipDataToLocalStorage,
-} from "../../fetchers";
-import { companyDetails, headerDetails } from "../../data/websiteData";
-import { specialPurposeMachineImage as bg } from "../../data/imagesData";
+} from "../../../fetchers";
+import { companyDetails, headerDetails } from "../../../data/websiteData";
+import { specialPurposeMachineImage as bg } from "../../../data/imagesData";
 
 // const bg = require("../../images/background/bg5.jpg");
 
-const Quote = () => {
+const Page = () => {
   const reducer = (state, action) => {
     switch (action.type) {
       case "name":
@@ -317,4 +318,4 @@ const Quote = () => {
     </>
   );
 };
-export default Quote;
+export default Page;

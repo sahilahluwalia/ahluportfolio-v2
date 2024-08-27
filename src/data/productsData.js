@@ -190,7 +190,7 @@ const addCatalogueImageFromListByItsName = (name) => {
 };
 
 const universalPath = (str) => {
-  return window.location.origin + "/" + str;
+  return 'http://localhost:3000' + "/" + str;
 };
 
 const subProductList = [

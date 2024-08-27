@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import Index from "./pages/index";
+// import Index from "./pages/index";
 import Error404 from "./pages/error-404";
 import Homepage from "./pages/Homepage";
-import Contact from "./pages/Contact";
-import Quote from "./pages/Quote";
-import About from "./pages/About";
+// import Page from "../app/(site)/contact/page";
+// import Page from "../app/(site)/quote/page";
+import About from "../app/(site)/about/page";
 import Products from "./pages/Products/Products";
 import ProductBase from "./pages/Products/ProductBase";
 import Catalogues from "./pages/Catalogues";
@@ -91,10 +91,10 @@ const Router = () => {
           />
           <Route path=':name' element={<h1>ds</h1>} />
         </Route>
-        <Route index element={<Homepage />} />
-        <Route path='quote' element={<Quote />} />
-        <Route path='contact' element={<Contact />} />
-        <Route path='gg' element={<Index />} />
+        {/*<Route index element={<Homepage />} />*/}
+        {/*<Route path='quote' element={<Page />} />*/}
+        {/*<Route path='contact' element={<Page />} />*/}
+        {/*<Route path='gg' element={<Index />} />*/}
         <Route path='about' element={<About />} />
         <Route path='vision-mission' element={<VisionMission />} />
         <Route path='story-timeline' element={<StoryTimeline />} />
@@ -136,7 +136,7 @@ const Router = () => {
             <Route path='pcc-panel' element={<PccPanel />} />
           </Route>
         </Route>
-        <Route path='enguiry' element={<Quote />} />
+        {/*<Route path='enguiry' element={<Page />} />*/}
         <Route path='catalogues' element={<Catalogues />} />
         {/*<Route path='*' component={<Error404 />} />*/}
       </Route>

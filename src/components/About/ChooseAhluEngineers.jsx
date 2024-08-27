@@ -1,5 +1,7 @@
+'use client'
+
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Slider from "react-slick";
 //import responsive from './slider-resonsive'
 import "slick-carousel/slick/slick.css";
@@ -156,7 +158,7 @@ const ChooseAhluEngineers = ({}) => {
               </div>
               <div className='service-content'>
                 <h6 className='title'>
-                  <Link to='/services-details'>{item.title}</Link>
+                  <Link href='/services-details'>{item.title}</Link>
                 </h6>
                 <p>{item.description}</p>
               </div>
