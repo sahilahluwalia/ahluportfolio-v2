@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
+import {WhatsAppButton} from "./client";
 
 function Layout(props) {
     return (
@@ -9,6 +10,8 @@ function Layout(props) {
             <div>hello</div>
             {props.children}
         <Footer/>
+            <WhatsAppButton/>
+
         </div>
     );
 }

@@ -14,32 +14,32 @@ function Layout() {
 
       {/* An <Outlet> renders whatever child route is currently active in App.js */}
       <Outlet />
-      <WhatsAppWidget
-        phoneNo='+918295150210'
-        position='left'
-        iconSize='50'
-        iconColor='white'
-        iconBgColor='#4dc247'
-        headerIcon={onlyAhluLogo}
-        // headerIconColor='pink'
-        headerTxtColor='white'
-        headerBgColor='#0a5f54'
-        headerTitle='Ahlu Engineers'
-        headerCaption='Online'
-        bodyBgColor='#e5ddd5'
-        chatPersonName='Ahlu Engineers Support'
-        chatMessage={
-          <>
-            <div>
-              Hi there 👋
-              <br /> How can I help you?
-            </div>
-          </>
-        }
-        footerBgColor='white'
-        btnBgColor='#4dc247'
-        btnTxtColor='white'
-      />
+      {/*<WhatsAppWidget*/}
+      {/*  phoneNo='+918295150210'*/}
+      {/*  position='left'*/}
+      {/*  iconSize='50'*/}
+      {/*  iconColor='white'*/}
+      {/*  iconBgColor='#4dc247'*/}
+      {/*  headerIcon={onlyAhluLogo}*/}
+      {/*  // headerIconColor='pink'*/}
+      {/*  headerTxtColor='white'*/}
+      {/*  headerBgColor='#0a5f54'*/}
+      {/*  headerTitle='Ahlu Engineers'*/}
+      {/*  headerCaption='Online'*/}
+      {/*  bodyBgColor='#e5ddd5'*/}
+      {/*  chatPersonName='Ahlu Engineers Support'*/}
+      {/*  chatMessage={*/}
+      {/*    <>*/}
+      {/*      <div>*/}
+      {/*        Hi there 👋*/}
+      {/*        <br /> How can I help you?*/}
+      {/*      </div>*/}
+      {/*    </>*/}
+      {/*  }*/}
+      {/*  footerBgColor='white'*/}
+      {/*  btnBgColor='#4dc247'*/}
+      {/*  btnTxtColor='white'*/}
+      {/*/>*/}
       <Footer />
     </div>
   );

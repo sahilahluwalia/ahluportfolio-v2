@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 import { catalogueList as cl } from "../utils/catalogues";
 import ast2aii from "../asserts/machine-pics/ast2aii.png";
 import ast2ai from "../asserts/machine-pics/ast2ai.png";
@@ -146,7 +146,7 @@ const masterProductListItems = masterProductLink.map((item, index) => {
       {/* <a href={item.fullLink} rel="noreferrer" target="_blank">
         {item.name}
       </a>{" "} */}
-      <Link to={productIDMaker(item.fullLink, index)}>{item.name}</Link>
+      <Link key={item.fullLink}  href={productIDMaker(item.fullLink, index)}>{item.name}</Link>
     </li>
   );
 });
@@ -154,14 +154,14 @@ const masterProductListItems = masterProductLink.map((item, index) => {
 const masterAboutUsListItems = masterAboutUsLinks.map((item, index) => {
   return (
     <li>
-      <Link to={item.link}>{item.name}</Link>
+      <Link key={item.link} href={item.link}>{item.name}</Link>
     </li>
   )
 }
 );
 const masterAboutUsListItemsWithSubmenu = (
     <li>
-        <Link to={"#"}>
+        <Link href={"#"}>
             About Us<i className="fa fa-chevron-down"></i>
         </Link>
         <ul className="sub-menu">{masterAboutUsListItems}</ul>
@@ -169,7 +169,7 @@ const masterAboutUsListItemsWithSubmenu = (
 );
 const masterProductsListItemsWithSubmenu = (
   <li>
-    <Link to={"#"}>
+    <Link href={"#"}>
       Products<i className="fa fa-chevron-down"></i>
     </Link>
     <ul className="sub-menu">{masterProductListItems}</ul>

@@ -7,8 +7,8 @@ import "../plugins/flaticon/flaticon.css";
 import "../plugins/flaticon/beer/flaticon.css";
 
 export const metadata: Metadata = {
-    title: 'React App',
-    description: 'Web site created with Next.js.',
+    title: 'Ahlu Engineers - Advanced Manufacturing Solutions | Industrial Automation',
+    description:"Ahlu Engineers provides the one-stop hub for SPM solutions in Manufacturing, Assembly, Vision Inspection & Transfer Presses manufacturer."
 }
 
 export default function RootLayout({
@@ -39,7 +39,6 @@ export default function RootLayout({
     <meta name="theme-color" content="#000000" />
     <meta
         name="description"
-        content="Ahlu Engineers provides the one-stop hub for SPM solutions in Manufacturing, Assembly, Vision Inspection & Transfer Presses manufacturer."
     />
     {/*// <!--*/}
     {/*//   manifest.json provides metadata used when your web app is installed on a*/}
@@ -56,10 +55,7 @@ export default function RootLayout({
     {/*    Learn how to configure a non-root public URL by running `npm run build`.*/}
     {/*-->*/}
     {/*// <!-- <script src="./WhatsappChatBox.min.js"></script> -->*/}
-    <title
-    >Ahlu Engineers - Advanced Manufacturing Solutions | Industrial
-    Automation</title
-    >
+
     {/*// <!-- <link rel="stylesheet" href="/skin/skin-1.min.css"> -->*/}
     </head>
     <body id="bg">

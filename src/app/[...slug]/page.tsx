@@ -4,7 +4,8 @@ export function generateStaticParams() {
     const params = [
         { slug: ['quote'] },
         { slug: ['products'] },
-        { slug: ['categories'] },
+        { slug: ['catalogues'] },
+        { slug: ['*'] },
     ];
     console.log('Generated Static Params:', params);
     return params;
