@@ -69,7 +69,7 @@ const Router = () => {
   useEffect(() => {
     // console.log("location changed");
     // console.log(location.pathname);
-    ping(location);
+    // ping(location);
 
     // ipDataToLocalStorage(location);
     // fetcher();

@@ -102,7 +102,19 @@ const Quote = () => {
                           </span>
                           Factory Address
                         </h5>
-                        <p>{companyDetails.address}</p>
+                        <p
+                            style={{
+                              margin:'0'
+                            }}
+                        >{companyDetails.address}</p>
+                        <hr
+                            style={{
+                              margin: "0.5rem ",
+                            }}
+                            className="hr  hr-blurry"/>
+                        <p
+
+                        >{companyDetails.address2}</p>
                         <h6 className='m-b15 font-weight-400'>
                           <i className='ti-alarm-clock'></i> Office Hours
                         </h6>
@@ -114,7 +126,7 @@ const Quote = () => {
                   <div className='col-lg-12 col-md-6 m-b30'>
                     <div className='icon-bx-wraper bx-style-1 p-a20 radius-sm'>
                       <div className='icon-content'>
-                        <h5 className='dlab-tilte'>
+                      <h5 className='dlab-tilte'>
                           <span className='icon-sm text-primary'>
                             <i className='ti-email'></i>
                           </span>
