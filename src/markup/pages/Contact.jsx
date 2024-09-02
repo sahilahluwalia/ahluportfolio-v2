@@ -100,21 +100,33 @@ const Contact = () => {
                         </h6>
 
                         <span
-                          style={{
-                            display: "block",
-                            fontWeight: 600,
-                            color: "black",
-                          }}
+                            style={{
+                              display: "block",
+                              fontWeight: 600,
+                              color: "black",
+                            }}
                         >
                           Ahlu Engineers Pvt. Ltd.
                         </span>
 
-                        <p>{companyDetails.address}</p>
+                        <p
+                        style={{
+                          margin:'0'
+                        }}
+                        >{companyDetails.address}</p>
+                        <hr
+                            style={{
+                              margin: "0.5rem ",
+                            }}
+                            className="hr  hr-blurry"/>
+                        <p
+
+                        >{companyDetails.address2}</p>
                       </div>
                     </li>
                     <li className='icon-bx-wraper left  m-b30'>
                       <div className='icon-bx-xs border-1'>
-                        {" "}
+                      {" "}
                         <Link to='/#' className='icon-cell'>
                           <i className='ti-email'></i>
                         </Link>{" "}
