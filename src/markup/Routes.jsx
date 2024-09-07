@@ -21,7 +21,6 @@ import OperationalSPMS from "./pages/Products/SpecialPurposeMachines/Operational
 import VisionInspectionSystems from "./pages/Products/VisionInspectionSystems/VisionInspectionSystems";
 // import RootProduct from "./pages/Products/RootProduct";
 import Base from "./pages/Base";
-// import axios from "axios";
 import Layout from "../components/layout/Layout";
 import Ast3aii from "./pages/Products/PowerPressAutomation/TransferSystem/Ast3ii";
 import Acsts from "./pages/Products/PowerPressAutomation/TransferSystem/Acsts";
@@ -46,9 +45,7 @@ import VisionMission from "./pages/About/VisionMission";
 import StoryTimeline from "./pages/About/StoryTimeline.jsx";
 import WhyAhluEngineers from "./pages/About/WhyAhluEngineers";
 import VideosListPage from "./pages/Videos/VideosListPage";
-// import VideosListPage from "./pages/Videos/VideosListPage";
 const Router = () => {
-  const location = useLocation();
   const { pathname, hash, key } = useLocation();
 
   useEffect(() => {
@@ -67,15 +64,7 @@ const Router = () => {
       }, 0);
     }
   }, [pathname, hash, key]);
-  useEffect(() => {
-    // console.log("location changed");
-    // console.log(location.pathname);
-    // ping(location);
 
-    // ipDataToLocalStorage(location);
-    // fetcher();
-    // Track all subsequent pageviews
-  }, [location]);
 
   return (
     <Routes>
@@ -103,7 +92,6 @@ const Router = () => {
         <Route path='quality-policy-certifications' element={<About />} />
         <Route path='awards-recognition' element={<About />} />
         <Route path='videos' element={<VideosListPage />} />
-        {/*<Route path='videos' element={<VideosListPage />} />*/}
         <Route path='products' element={<ProductBase />}>
           <Route index element={<Products />} />
           {/* <Route path="transfer-system" element={<h2>sdvsdv</h2>} /> */}

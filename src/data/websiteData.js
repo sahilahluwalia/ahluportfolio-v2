@@ -9,10 +9,10 @@ import googleMyBusinessImage from "../asserts/socialIcons/googleMyBusiness.png";
 const headerDetails = {
   phoneNumber: "(+91) 8295 150 210",
   phoneNumberTo: "tel:+918295150210",
-  addressTitle: "Opp. Dombivali MIDC",
-  address: "Thane, Maharashtra",
-  officeHoursTitle: "10:00 AM - 07:00 PM",
-  officeHours: "Sunday close",
+  addressTitle: "Factory Unit 1",
+  address: "Rajkot, Gujarat, India",
+  officeHoursTitle: "9:00 AM - 7:00 PM",
+  officeHours: "Wednesday close",
 };
 
 const socialMediaLinks = [
@@ -74,9 +74,11 @@ const socialMediaLinks = [
 
 const companyDetails = {
   map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15072.384014845775!2d73.09079196993316!3d19.191008742350565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be795334c8fb9c5%3A0xa1579e0d1dd2f6ac!2sAhlu%20Engineers%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1676702264533!5m2!1sen!2sin",
+  map2:"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.530381563233!2d70.7205918!3d22.1438742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395835002a72b215%3A0x6221c83241993219!2sAhlu%20Engineers%20Pvt.%20Ltd.%20-%20Manufacturing%20Unit%201!5e0!3m2!1sen!2sin!4v1725702057653!5m2!1sen!2sin",
   googleMapLink: "https://maps.app.goo.gl/kDomKU9HhLp5Nzmd7",
   address: `Opposite Dombivali MIDC, Near Shiv Sena Office, Phase 2, Sonarpada, Kalyan Shil Rd, Dombivali (East) 421204, Thane, Maharashtra, India`,
-  address2:`Golden Green Industrial Park, Plot no 439, Near I khodal industries, Deva Tecnocast Street, Near Makhwad Chokdi, Khambha 360311, Lodhika, Rajkot, Gujarat, India`,
+  address2:`Golden Green Industrial Park, Plot no 439, Deva Tecnocast Street, Near Makhwad Chokdi, Khambha 360311, Lodhika, Rajkot, Gujarat, India`,
+  googleMapLink2: "https://maps.app.goo.gl/bbqZw4okQh5i7VGR6",
   aboutAhluDescription:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
   email: "sales@ahluengineers.com",

@@ -108,25 +108,29 @@ const Contact = () => {
                         >
                           Ahlu Engineers Pvt. Ltd.
                         </span>
-
-                        <p
-                        style={{
-                          margin:'0'
-                        }}
-                        >{companyDetails.address}</p>
+                        <p className='m-0 text-black'>Unit 1</p>
+                        <a className='m-0 text-black-50'
+                           target='_blank'
+                           href={companyDetails.googleMapLink2}
+                        >{companyDetails.address2}</a>
                         <hr
                             style={{
                               margin: "0.5rem ",
                             }}
                             className="hr  hr-blurry"/>
-                        <p
+                        <p className='m-0 text-black'>Unit 2</p>
 
-                        >{companyDetails.address2}</p>
+                        <a
+                            className='m-0 text-black-50 mb-3'
+                            target='_blank'
+                            href={companyDetails.googleMapLink}
+                        >{companyDetails.address}</a>
+
                       </div>
                     </li>
                     <li className='icon-bx-wraper left  m-b30'>
                       <div className='icon-bx-xs border-1'>
-                      {" "}
+                        {" "}
                         <Link to='/#' className='icon-cell'>
                           <i className='ti-email'></i>
                         </Link>{" "}
@@ -317,13 +321,25 @@ const Contact = () => {
               </div>
 
               <div className='col-lg-4 d-flex m-b30'>
-                <iframe
-                  title='map2'
-                  src={companyDetails.map}
-                  className='align-self-stretch radius-sm'
-                  style={{ border: "0", width: "100%", minHeight: "100%" }}
-                  allowfullscreen
-                ></iframe>
+                <div className='w-100 flex'>
+                  <p className='m-0 text-black'>Unit 1</p>
+                  <iframe
+                      title='map2'
+                      src={companyDetails.map2}
+                      className='align-self-stretch radius-sm'
+                      style={{border: "0", width: "100%", minHeight: "45%"}}
+                      allowFullScreen
+                  ></iframe>
+                  <p className='m-0 text-black'>Unit 2</p>
+
+                  <iframe
+                      title='map2'
+                      src={companyDetails.map}
+                      className='align-self-stretch radius-sm'
+                      style={{border: "0", width: "100%", minHeight: "45%"}}
+                      allowFullScreen
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
