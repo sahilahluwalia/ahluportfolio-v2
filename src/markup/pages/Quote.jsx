@@ -102,20 +102,24 @@ const Quote = () => {
                           </span>
                           Factory Address
                         </h5>
-                        <p
-                            style={{
-                              margin:'0'
-                            }}
-                        >{companyDetails.address}</p>
+                        <p className='m-0'>Unit 1</p>
+                        <a className='m-0 text-white'
+                           target='_blank'
+                           href={companyDetails.googleMapLink2}
+                        >{companyDetails.address2}</a>
                         <hr
                             style={{
                               margin: "0.5rem ",
                             }}
                             className="hr  hr-blurry"/>
-                        <p
+                        <p className='m-0'>Unit 2</p>
 
-                        >{companyDetails.address2}</p>
-                        <h6 className='m-b15 font-weight-400'>
+                        <a
+                            className='m-0 text-white'
+                            target='_blank'
+                            href={companyDetails.googleMapLink}
+                        >{companyDetails.address}</a>
+                        <h6 className='m-b15 font-weight-400 mt-3'>
                           <i className='ti-alarm-clock'></i> Office Hours
                         </h6>
                         <p className='m-b0'>{headerDetails.officeHoursTitle}</p>

@@ -21,8 +21,6 @@ import OperationalSPMS from "./pages/Products/SpecialPurposeMachines/Operational
 import VisionInspectionSystems from "./pages/Products/VisionInspectionSystems/VisionInspectionSystems";
 // import RootProduct from "./pages/Products/RootProduct";
 import Base from "./pages/Base";
-import { ipDataToLocalStorage, ping } from "../fetchers";
-// import axios from "axios";
 import Layout from "../components/layout/Layout";
 import Ast3aii from "./pages/Products/PowerPressAutomation/TransferSystem/Ast3ii";
 import Acsts from "./pages/Products/PowerPressAutomation/TransferSystem/Acsts";
@@ -66,15 +64,7 @@ const Router = () => {
       }, 0);
     }
   }, [pathname, hash, key]);
-  useEffect(() => {
-    // console.log("location changed");
-    // console.log(location.pathname);
-    // ping(location);
 
-    // ipDataToLocalStorage(location);
-    // fetcher();
-    // Track all subsequent pageviews
-  }, [location]);
 
   return (
     <Routes>

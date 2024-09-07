@@ -139,25 +139,13 @@ const Footer = () => {
             >
               <div className='ft-contact-bx'>
                 <a
-                    href={companyDetails.googleMapLink}
+                    href={companyDetails.googleMapLink2}
                     rel='noreferrer'
                     target='_blank'
                 >
                   <img src={icon1} alt=''/>
                   <h4 className='title'>Company Address</h4>
-                  <p
-                      style={{
-                        fontSize: "0.8rem",
-                      }}
-                  >
-                    {companyDetails.address}
-                  </p>
-                  <hr
-                      style={{
-                        borderColor:'white',
-                        margin: "0.5rem 0",
-                      }}
-                      className="hr  hr-blurry"/>
+
                   <p
                       style={{
                         fontSize: "0.8rem",

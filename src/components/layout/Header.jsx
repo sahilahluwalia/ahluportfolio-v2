@@ -123,7 +123,7 @@ class Header extends Component {
                       <span>{headerDetails.officeHours}</span>
                     </li>
                     <a
-                      href={companyDetails.googleMapLink}
+                      href={companyDetails.googleMapLink2}
                       rel='noreferrer'
                       target='_blank'
                     >
