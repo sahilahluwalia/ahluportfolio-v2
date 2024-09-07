@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import {Link, useSearchParams} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { catalogueList } from "../../utils/catalogues";
 import { specialPurposeMachineImage as bg } from "data/imagesData";
-const Catalogues = name => {
+
+const Catalogues = () => {
   const editedCatalogueList = catalogueList.map((item) => {
     return {
       ...item,
@@ -10,15 +11,6 @@ const Catalogues = name => {
       serialTag: item.name.split(" ")[2],
     };
   });
-
-  // get pathname in the url
-  let [searchParams, setSearchParams] = useSearchParams();
-    searchParams = searchParams.get("name");
-    console.log(searchParams);
-
-    const [email, setEmail] = useState("");
-  const [modal, setModal] = useState(false);
-
   return (
     <>
       <div className=" bg-white ">
@@ -72,23 +64,17 @@ const Catalogues = name => {
                             </span>{" "}
                             {catalogue.serialTag}
                           </h4>
-                          <div
-                          onClick={() => {
-                            setModal(true);
-                          }}
+
+                          <a
+                            href={catalogue.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
                           >
                             <img
-                                src={catalogue.image}
-                                alt={`catalog ${index}`}
+                              src={catalogue.image}
+                              alt={`catalog ${index}`}
                             />
-                          </div>
-                          {/*<a*/}
-                          {/*  href={catalogue.link}*/}
-                          {/*  target="_blank"*/}
-                          {/*  rel="noopener noreferrer"*/}
-                          {/*>*/}
-
-                          {/*</a>*/}
+                          </a>
                         </div>
                       </>
                     );
