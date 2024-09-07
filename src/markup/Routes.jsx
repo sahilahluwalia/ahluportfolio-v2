@@ -44,8 +44,8 @@ import PccPanel from "./pages/Products/ElectricalPanels/PccPanel";
 import VisionMission from "./pages/About/VisionMission";
 import StoryTimeline from "./pages/About/StoryTimeline.jsx";
 import WhyAhluEngineers from "./pages/About/WhyAhluEngineers";
+import VideosListPage from "./pages/Videos/VideosListPage";
 const Router = () => {
-  const location = useLocation();
   const { pathname, hash, key } = useLocation();
 
   useEffect(() => {
@@ -91,6 +91,7 @@ const Router = () => {
         <Route path='why-ahlu-engineers' element={<WhyAhluEngineers />} />
         <Route path='quality-policy-certifications' element={<About />} />
         <Route path='awards-recognition' element={<About />} />
+        <Route path='videos' element={<VideosListPage />} />
         <Route path='products' element={<ProductBase />}>
           <Route index element={<Products />} />
           {/* <Route path="transfer-system" element={<h2>sdvsdv</h2>} /> */}
