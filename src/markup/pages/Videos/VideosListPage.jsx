@@ -17,8 +17,11 @@ const videoList=[{
 },{
     link:"ymIeMa8neWE"
 }]
-
+const shortsList=[{
+    link:"K-0EZSRyeqE"
+}]
 const randomVideos = videoList.sort(() => Math.random() - Math.random()).slice(0, videoList.length);
+const randomShorts = shortsList.sort(() => Math.random() - Math.random()).slice(0, shortsList.length);
 const  VideosListPage=()=>{
     return (
       <>
@@ -42,6 +45,27 @@ const  VideosListPage=()=>{
                   </div>
                 ))}
               </div>
+                        <div
+                        // className="row justify-content-center"
+                        >
+                    {
+                        randomShorts.map((video, index) => (
+                            <div key={index} className="col-md-6 mb-4">
+                                <div className="player-wrapper" style={{ paddingTop: '177.78%', position: 'relative' }}>
+                                    <ReactPlayer
+                                        className="react-player"
+                                        width="100%"
+                                        height="100%"
+                                        style={{ position: 'absolute', top: 0, left: 0 }}
+                                        controls
+                                        muted
+                                        url={`https://www.youtube.com/shorts/${video.link}`}
+                                    />
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
 
           </LeftSection>
