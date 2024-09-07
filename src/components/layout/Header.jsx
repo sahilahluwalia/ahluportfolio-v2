@@ -27,6 +27,10 @@ const navbarlinks = [
     link: "/catalogues",
   },
   {
+    name:'Videos',
+    link:'/videos'
+  },
+  {
     name: "Contact Us",
     link: "/contact",
   },
