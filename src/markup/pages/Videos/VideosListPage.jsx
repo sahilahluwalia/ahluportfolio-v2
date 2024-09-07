@@ -2,12 +2,8 @@ import React from 'react';
 import SubHeader from '../Components/SubHeader.jsx';
 import ProductList from "../../../components/Products/ProductList";
 import {RightSection} from "../../../components/Products/RightSection";
-import DownloadCatalogue from "../../../components/Products/DownloadCatalogue";
-import Tabs from "react-bootstrap/Tabs";
-import Tab from "react-bootstrap/Tab";
 import LeftSection from "../../../components/Products/LeftSection";
 import ProductItemBase from "../../../components/Products/ProductItemBase";
-import YoutubeVideoComponent from "../../../components/Video/YoutubeVideoComponent";
 import ReactPlayer from "react-player/lazy";
 
 

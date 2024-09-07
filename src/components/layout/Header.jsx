@@ -1,5 +1,5 @@
-import React, { useState, useEffect, Component } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, {  Component } from "react";
+import { Link } from "react-router-dom";
 import Sticky from "react-stickynode";
 import {
   headerDetails,
