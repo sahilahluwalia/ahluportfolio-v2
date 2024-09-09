@@ -211,9 +211,7 @@ class Header extends Component {
                     </div>
                     <ul className='nav navbar-nav'>
                       {navbarlinks.map((link, index) => {
-                        if (link.name === "Catalogues") {
-                          return catalogueListItemsWithSubmenu;
-                        } else if (link.name === "Products") {
+                          if (link.name === "Products") {
                           return masterProductsListItemsWithSubmenu;
                         } else if(link.name==='About Us'){
                           return masterAboutUsListItemsWithSubmenu;
