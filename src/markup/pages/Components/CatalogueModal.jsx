@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 function CatalogueModal(props:{
     modal:boolean,
@@ -15,14 +15,12 @@ function CatalogueModal(props:{
     singlePage?:boolean
 }) {
     const {modal, setModal, userDetails, setUserDetails,singlePage} = props;
-    console.log(userDetails)
     const handleChange = (e) => {
         setUserDetails({...userDetails, [e.target.name]: e.target.value});
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(userDetails);
         // check if number is valid
         if(userDetails.mobileNumber.length !== 10) {
             alert("Please enter a valid mobile number.");
@@ -53,7 +51,7 @@ function CatalogueModal(props:{
                 name: "",
                 mobileNumber: "",
                 companyName: "",
-                post: "",
+                designation: "",
                 email: "",
                 catalogue: "",
             });
@@ -118,8 +116,8 @@ function CatalogueModal(props:{
                                     <input
                                         type="text"
                                         className="form-control"
-                                        name="post"
-                                        placeholder="Post"
+                                        name="designation"
+                                        placeholder="Designation"
                                         value={userDetails.designation}
                                         onChange={handleChange}
                                     />
