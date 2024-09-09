@@ -1355,7 +1355,7 @@ const Asrf = () => {
           <div className='widget'>
             <DownloadCatalogue
               image={item?.catalogueImage}
-              link={item?.catalogueLink}
+              code={item?.code}
             />
           </div>
           <div className='widget sidebar-widget ext-sidebar-menu widget_nav_menu'>
