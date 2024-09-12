@@ -1,16 +1,14 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
-
 import icon1 from "../../images/icon/icon1.png";
 import icon2 from "../../images/icon/icon2.png";
 import icon3 from "../../images/icon/icon3.png";
 import qrCode from "../../asserts/socialIcons/qr-code.png";
-import { ahluLogoWithName, socialMediaLinks } from "../../data/websiteData";
+import {  socialMediaLinks } from "../../data/websiteData";
 import { companyDetails } from "../../data/websiteData";
 import { subscribeToNewsletter } from "../../fetchers";
 import tripod from "asserts/Catalogue PDF Files/Trifold_Minimum_Clarity.pdf";
-const publicKey = process.env.REACT_APP_PUBLIC_KEY;
-const privateKey = process.env.REACT_APP_PRIVATE_KEY;
+import AhluText from "../../asserts/ahlu_word.png";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
@@ -332,7 +330,7 @@ const Footer = () => {
             <div className='footer-bottom-in'>
               <div className='footer-bottom-logo'>
                 <Link to={"/"}>
-                  <img src={ahluLogoWithName} alt='ahlulogo' />
+                  <img src={AhluText} alt='ahlulogo' />
                 </Link>
               </div>
               <div className='footer-bottom-social'>

@@ -24,7 +24,7 @@ const ProductList = ({ withoutImage }) => {
             style={{
               backgroundColor: "white",
               padding: "20px",
-              border: "1px solid #ff5e14",
+              border: "1px solid #0091d2",
 
               // borderRadius: "0.5rem",
             }}
@@ -91,7 +91,7 @@ const ProductList = ({ withoutImage }) => {
               backgroundColor: "white",
               padding: "20px",
               borderRadius: "0.5rem",
-              border: "1px solid #ff5e14",
+              border: "1px solid #0091d2",
             }}
           >
             <h6>Our Products</h6>

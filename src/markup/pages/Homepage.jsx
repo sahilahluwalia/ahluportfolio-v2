@@ -11,8 +11,8 @@ import LogoSlider from "../../components/Homepage/LogoSlider";
 // import Team1 from "../element/team1";
 // import ServicesSlider4 from "../element/servicesSlider4";
 import "../../css/plugins.css";
-import "../../css/style.css";
-import "../../css/skin/skin-1.css";
+// import "../../css/style.css";
+import "../../css/skin/skin-blue.css";
 import "../../css/templete.min.css";
 import ScrollToTop from "../element/scrollToTop";
 import bg from "asserts/bg.jpg";
@@ -90,7 +90,7 @@ const whyToAutomate = [
 
 const Homepage = () => {
   return (
-    <div className='skin-1'>
+    <div >
       {/*<Parallax bgImage={bg} strength={20}>*/}
       {/*  <div*/}
       {/*    style={{*/}
@@ -336,14 +336,14 @@ const Homepage = () => {
 																	className={`${ activeDefault === i ? '' : 'collapsed' }`}
 																	onClick={() => setActiveDefault(activeDefault === i ? -1 : i)}
 																>
-																	{faq.question} 
+																	{faq.question}
 																</Accordion.Toggle>
 															</h6>
-														</div>  		
+														</div>
 														<Accordion.Collapse className='acod-body' eventKey={`${i}`}>
 															<div className='acod-content'>{faq.answer}</div>
 														</Accordion.Collapse>
-													</div> 													
+													</div>
                                                 ))
                                             }
                                         </Accordion>*/}
@@ -351,7 +351,8 @@ const Homepage = () => {
                       {faqContent.map((faq, i) => (
                         <div className='panel'>
                           <Accordion.Item eventKey={`${i}`}>
-                            <Accordion.Header as='h6'>
+                            <Accordion.Header
+                                as='h6'>
                               {faq.question}
                             </Accordion.Header>
                             <Accordion.Body eventKey={`${i}`}>
