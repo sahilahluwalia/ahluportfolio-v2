@@ -5,12 +5,16 @@ import Footer from "./Footer";
 // import { WhatsAppWidget } from "react-whatsapp-widget";
 // import "react-whatsapp-widget/dist/index.css";
 // If you use CSS/SCSS vs. styled components
+import HeaderTwo from './HeaderTwo'
+
+
 import WhatsAppWidget from "react-whatsapp-chat-widget";
 import "react-whatsapp-chat-widget/index.css";
 function Layout() {
   return (
-    <div>
-      <Header />
+    <>
+      {/*<Header />*/}
+    <HeaderTwo/>
 
       {/* An <Outlet> renders whatever child route is currently active in App.js */}
       <Outlet />
@@ -41,7 +45,7 @@ function Layout() {
         btnTxtColor='white'
       />
       <Footer />
-    </div>
+        </>
   );
 }
 

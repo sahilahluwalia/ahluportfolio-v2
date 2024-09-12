@@ -1,6 +1,6 @@
 /*
 ======================================
-  * CSS TABLE CONTENT *  
+  * CSS TABLE CONTENT *
 ======================================
 
 1. GENERAL
@@ -14,7 +14,7 @@
 5. BOX SPACING (inner & outer)
 	>padding
 	>marging
-	
+
 6. BOX MAX-WIDTH CSS
 
 7. POSITIONS ( absolute & relative & statice & z-index )
@@ -33,17 +33,17 @@
 	 >image-side-pan
 	 >image-vertical-pan
 	 >image-fade-in
-	 >image-fade-out 
+	 >image-fade-out
 	 >image-rotate
 	 >image-sepia
 	 >image-blurr
 	 >image-blurr-invert
 	 >image off color
 	 >image on color
- 
+
 
 11. CONTENT SHOW ON IMAGE BOX
- 
+
 12. FORM ELEMENTS
 
 13. WP DEFAULT
@@ -60,33 +60,33 @@
 	>mena-menu
 	>mobile-menu
 	>footer-menu
-	
+
 19. BANNER
 
 20. SLIDER
 	>rs slider
 	>owl slider
-	
+
 21. BLOG
-	
+
 22. WIDGETS
 
 23. CUSTOMIZE CSS
 	>set-radius
 	>transition
 	>float-clearfix
-	
-24. SORTCODES 
+
+24. SORTCODES
 	>Buttons
-	>Title separators		
-	>Deviders	
-	>Lists & bullets	
+	>Title separators
+	>Deviders
+	>Lists & bullets
 	>Tabs
-	>Accordians		
-	>Carousels	
-	>Testimonials	
+	>Accordians
+	>Carousels
+	>Testimonials
 	>Pricing table
-	>Alert box	
+	>Alert box
 	>Modal pop
 	>Social icons
 	>Breadcrumb
@@ -108,7 +108,7 @@
 31. SHOPPING
 
 ======================================
-  * END TABLE CONTENT *  
+  * END TABLE CONTENT *
 ======================================
 */
 /*--------------------------------------------------------------
@@ -1717,7 +1717,7 @@ dl dd {
 	 >image-side-pan
 	 >image-vertical-pan
 	 >image-fade-in
-	 >image-fade-out 
+	 >image-fade-out
 	 >image-rotate
 	 >image-sepia
 	 >image-blurr
@@ -6463,24 +6463,24 @@ a,
   border-color: #3c763d !important;
 }
 /*---------------------------------------------------------------
-24. SORTCODES 
+24. SORTCODES
 	>Buttons
-	>Title separators		
-	>Deviders	
-	>Lists & bullets	
+	>Title separators
+	>Deviders
+	>Lists & bullets
 	>Tabs
-	>Accordians		
+	>Accordians
 	>Carousels
-	>Testimonials	
+	>Testimonials
 	>Pricing table
-	>Alert box	
+	>Alert box
 	>Modal pop
 	>Social icons
 	>Breadcrumb
 	>Tables
 	>Image effects
 	>Icon boxes
-	>Box New Style 
+	>Box New Style
 ---------------------------------------------------------------*/
 /*==== Shortcode Css ====*/
 .sort-title {
@@ -12688,8 +12688,8 @@ ol.commentlist li .star-rating {
 /* ------------------------------------------------
 31. SHOPPING
 ------------------------------------------------ */
-/* 
-	1.0 Checkout 
+/*
+	1.0 Checkout
 */
 /*===== 1.0 Checkout =====*/
 .shop-form .form-control,
@@ -13189,7 +13189,7 @@ ol.commentlist li .star-rating {
   margin-right: 10px;
 }
 /* =============================
-	Spacing End Alignment	
+	Spacing End Alignment
 ============================= */
 .site-footer .widget_getintuch {
   padding-top: 0;
@@ -13859,7 +13859,7 @@ ol.commentlist li .star-rating {
 /* Plugine box */
 .plugine-box {
 }
-/* 	Hover Effects 
+/* 	Hover Effects
 	> Box Shadow Hover
 
 */
@@ -14680,7 +14680,7 @@ ol.commentlist li .star-rating {
     font-family: Raleway;
     background-color: transparent;
     font-size:17px;
-    
+
     width:620px;
     max-width:inherit
 } */
@@ -15062,7 +15062,7 @@ ol.commentlist li .star-rating {
     background-color: rgba(0,0,0,0.9);
 } */
 
-/* 
+/*
 
 .skin-1 .text-primary,
 .skin-1 .contact-no .no,
@@ -16067,8 +16067,14 @@ ol.commentlist li .star-rating {
   padding: 8px 15px 8px;
   top: 0;
   height: 90px;
-  width: 125px;
+  /*width: 125px;*/
   border-radius: 0 0 15px 15px;
+  /*box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px ,rgba(0, 145, 210, 0.4) 0px 2px, rgba(0, 145, 210, 0.3) 0px 4px, rgba(0, 145, 210, 0.2) 0px 6px, rgba(0, 145, 210, 0.1) 0px 8px, rgba(0, 145, 210, 0.05) 0px 10px;*/
+  /*box-shadow: rgba(0, 145, 210, 0.4) 0px 5px, rgba(0, 145, 210, 0.3) 0px 10px, rgba(0, 145, 210, 0.2) 0px 15px, rgba(0, 145, 210, 0.1) 0px 20px, rgba(0, 145, 210, 0.05) 0px 25px;*/
+  /*box-shadow: rgb(38, 57, 77) 0px 10px 5px -1px;*/
+  /*box-shadow: ;*/
+  /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;*/
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
 }
 .frame-box .area-frame .container::after {
   content: "";
@@ -16212,7 +16218,7 @@ ol.commentlist li .star-rating {
   width: 100%;
 }
 .faq-1 .accordion-button:hover {
-  color: #ff5e14;
+  color: var(--color-primary)
 }
 .faq-1 .accodion-button {
   border: 1px solid #ddd;
@@ -16327,7 +16333,7 @@ ol.commentlist li .star-rating {
 .readMoreButton:hover {
   /* zoom a bit */
   /* transform: scale(1.1); */
-  background-color: #ff8022;
+  background-color: var(--color-hover);
   /* transition: cubic-bezier(0.165, 0.84, 0.44, 1); */
 }
 
@@ -16347,7 +16353,7 @@ font-weight: 700;
 }
 
 /* .box-images {
-  
+
   overflow: hidden;
 }
 

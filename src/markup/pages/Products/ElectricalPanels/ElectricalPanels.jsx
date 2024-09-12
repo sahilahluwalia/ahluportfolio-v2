@@ -9,7 +9,7 @@ const ElectricalPanels = () => {
     return (
         <>
             <div className='blue-bg '>
-                <div className='midContent'>
+                <div id={'specialpurpose'} className='midContent'>
                     {/* make a section where you can download the Products on desktop it would show 4 images on one row in flex position and in mobile it would go in columne direction use bootstrap css classes */}
                     <div className='py-2 section-full'>
                         <div className='container'>
