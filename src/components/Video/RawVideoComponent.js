@@ -87,7 +87,6 @@ function VideoSlideshow() {
         slidesToScroll: 1,
         beforeChange: (current, next) => setCurrentSlide(next),
         arrows: false,
-        autoplay: true,
         cssEase: "linear"
     }
 
