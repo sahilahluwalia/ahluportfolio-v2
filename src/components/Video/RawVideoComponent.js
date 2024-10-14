@@ -70,6 +70,11 @@ const videos = [
         title: 'Explore AMPTS Series with Multi Press Transfer Arrangement',
         link: '/products/power-press-automation/transfer-system/ampts',
     },
+    {
+        url:'https://ahlu.shortsgenie.ai/ampts-cycle.mp4',
+        title:"Transform your Production Line with AMPTS series",
+        link: '/products/power-press-automation/transfer-system/ampts',
+    }
 ]. sort(() => Math.random() - 0.5)
 // randomize the array
 
@@ -119,6 +124,7 @@ function VideoSlideshow() {
                                 height="100%"
                                 playing={currentSlide === idx}
                                 muted
+                                loop
                             />
                             <div
                                 style={{
