@@ -398,3 +398,27 @@ button.scroltop{
 .navstyle2 .header-nav .nav > li:hover > a:after {
     box-shadow: inset 0 0 0 2px #0091d2;
 }
+
+
+
+
+.awssld__container {
+	display: block;
+	width: 100%;
+	height: 100%;
+	/*margin top of product we cater */
+	padding-bottom: min(calc(var(--slider-height-percentage)), 760px);
+}
+.awssld__content {
+	background-color: unset;
+
+}
+
+.awssld__container figure, .awssld__content, .awssld__box{
+	height: unset;
+}
+/*@media all and (max-width: 500px) {*/
+/*	.awssld__container {*/
+/*		!*padding-bottom: calc(var(--slider-height-percentage) * 1.25);*!*/
+/*	}*/
+/*}*/

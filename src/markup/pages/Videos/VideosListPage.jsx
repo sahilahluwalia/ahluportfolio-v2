@@ -19,6 +19,8 @@ const videoList=[{
 }]
 const shortsList=[{
     link:"K-0EZSRyeqE"
+},{
+    link:"9wFA1WkOrFE"
 }]
 const randomVideos = videoList.sort(() => Math.random() - Math.random()).slice(0, videoList.length);
 const randomShorts = shortsList.sort(() => Math.random() - Math.random()).slice(0, shortsList.length);
@@ -46,7 +48,7 @@ const  VideosListPage=()=>{
                 ))}
               </div>
                         <div
-                        // className="row justify-content-center"
+                        className="row justify-content-center"
                         >
                     {
                         randomShorts.map((video, index) => (

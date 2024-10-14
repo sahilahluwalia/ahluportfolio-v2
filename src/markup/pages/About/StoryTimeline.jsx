@@ -42,7 +42,22 @@ const timeLineData = [
         yearNumber: "2022-23",
         title: "Visual Art & Design",
         description:
-            "Designed & Successfully commisioned <span> Multi Press Transfer System </span> as a Made in India Product",
+        "Developed the <span>AMPTS Series</span> for a<span> Multi-Station, Multi-Press Transfer System</span> as a completely <span>Made-in-India product</span> to cater to the Indian market"
+            // "Designed & Successfully commisioned <span> Multi Press Transfer System </span> as a Made in India Product",
+    },
+    {
+        year: "1 Year",
+        yearNumber: "2023-24",
+        title: "Visual Art & Design",
+        description:
+        "Constant innovation led to the introduction of a <span>3-Servo Motor design</span> on the <span>AST2AII series</span>, replacing the old 5-Servo Motor design, thereby improving <span>power efficiency, build quality,</span> and <span>system rigidity</span> for <span>end-user standardization</span>."
+    },
+    {
+        year: "1 Year",
+        yearNumber: "2024-25",
+        title: "Visual Art & Design",
+        description:
+        "In order to meet growing demand and scale up production, the existing <span>machine manufacturing unit</span> was relocated from <span>Kalyan (Mumbai)</span> to <span>Khambha (Rajkot)</span> and expanded from <span>2,000 sq. ft</span>. to a <span>5,000 sq. ft. facility</span>. The old unit was repurposed for further <span>product expansion</span> beyond the machine division."
     },
 ];
 function StoryTimelineJsx(props) {

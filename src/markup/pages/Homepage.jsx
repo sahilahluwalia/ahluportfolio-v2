@@ -12,7 +12,6 @@ import LogoSlider from "../../components/Homepage/LogoSlider";
 // import ServicesSlider4 from "../element/servicesSlider4";
 import "../../css/plugins.css";
 // import "../../css/style.css";
-import "../../css/skin/skin-blue.css";
 import "../../css/templete.min.css";
 import ScrollToTop from "../element/scrollToTop";
 import bg from "asserts/bg.jpg";
@@ -26,6 +25,10 @@ import Testmonial from "components/Homepage/Testmonial";
 import { youtubeLinkImage, sevenyearsImage } from "data/imagesData";
 import NewProductSlider from "components/Homepage/NewProductSlider";
 import RawVideoComponent from "../../components/Video/RawVideoComponent";
+import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
+
+import 'react-awesome-slider/dist/styles.css';
+import "../../css/skin/skin-blue.css";
 
 const faqContent = [
   {
@@ -91,6 +94,7 @@ const whyToAutomate = [
 const Homepage = () => {
   return (
     <div >
+
       {/*<Parallax bgImage={bg} strength={20}>*/}
       {/*  <div*/}
       {/*    style={{*/}
@@ -141,7 +145,14 @@ const Homepage = () => {
       </div>
 
 
-      <div className='section-full bg-gray content-inner about-carousel-ser'>
+      <div
+          style={{
+            paddingTop: '0px',
+            // '@media (min-width: 180px)': {
+              // paddingTop: '0px'
+            // }
+          }}
+          className='section-full bg-gray content-inner about-carousel-ser'>
         <div className='container'>
           <div className='section-head text-center'>
             <h2 className='title'>
