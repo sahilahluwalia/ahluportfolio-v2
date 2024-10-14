@@ -7602,3 +7602,13 @@ ol.commentlist li .meta span {
     font-size: 28px;
   }
 }
+
+
+.hover-dark-circle {
+  transition: all 0.3s ease;
+}
+
+.hover-dark-circle:hover {
+  background-color: black;
+  border-radius: 50%;
+}
